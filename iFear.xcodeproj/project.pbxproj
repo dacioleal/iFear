@@ -22,6 +22,7 @@
 		F32D9942187D53700004D618 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9926187D536F0004D618 /* CoreData.framework */; };
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
+		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F32D9947187D53700004D618 /* iFearTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iFearTests-Info.plist"; sourceTree = "<group>"; };
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
+		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
 				F32D9932187D536F0004D618 /* AppDelegate.m */,
+				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
@@ -230,6 +233,7 @@
 			files = (
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
+				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
