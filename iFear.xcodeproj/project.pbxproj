@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F321C4341880064A00B02097 /* EntrarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F321C4331880064A00B02097 /* EntrarViewController.m */; };
+		F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F321C4371880074F00B02097 /* fondo_ppal.jpg */; };
+		F321C43B1880128100B02097 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F321C43A1880128100B02097 /* MenuViewController.m */; };
 		F32D9921187D536F0004D618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9920187D536F0004D618 /* Foundation.framework */; };
 		F32D9923187D536F0004D618 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9922187D536F0004D618 /* CoreGraphics.framework */; };
 		F32D9925187D536F0004D618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9924187D536F0004D618 /* UIKit.framework */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F321C4321880064A00B02097 /* EntrarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntrarViewController.h; sourceTree = "<group>"; };
+		F321C4331880064A00B02097 /* EntrarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntrarViewController.m; sourceTree = "<group>"; };
+		F321C4371880074F00B02097 /* fondo_ppal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_ppal.jpg; sourceTree = "<group>"; };
+		F321C4391880128100B02097 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		F321C43A1880128100B02097 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		F32D991D187D536F0004D618 /* iFear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32D9920187D536F0004D618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F32D9922187D536F0004D618 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +91,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F321C4351880065400B02097 /* EntrarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F321C4321880064A00B02097 /* EntrarViewController.h */,
+				F321C4331880064A00B02097 /* EntrarViewController.m */,
+			);
+			name = EntrarViewController;
+			sourceTree = "<group>";
+		};
+		F321C4361880070500B02097 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F321C4371880074F00B02097 /* fondo_ppal.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		F321C43C1880128700B02097 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F321C4391880128100B02097 /* MenuViewController.h */,
+				F321C43A1880128100B02097 /* MenuViewController.m */,
+			);
+			name = MenuViewController;
+			sourceTree = "<group>";
+		};
 		F32D9914187D536F0004D618 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +151,15 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
+				F321C4361880070500B02097 /* images */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
 				F32D9932187D536F0004D618 /* AppDelegate.m */,
 				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
+				F321C4351880065400B02097 /* EntrarViewController */,
+				F321C43C1880128700B02097 /* MenuViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -234,6 +271,7 @@
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
+				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F321C4341880064A00B02097 /* EntrarViewController.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
+				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +497,7 @@
 				F32D9951187D53700004D618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F32D9952187D53700004D618 /* Build configuration list for PBXNativeTarget "iFearTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +506,7 @@
 				F32D9954187D53700004D618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
