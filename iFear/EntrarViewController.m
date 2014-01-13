@@ -49,12 +49,12 @@
     
     
         initialOpacity = 1.0;
-        finalOpacity = 0.3;
+        finalOpacity = 0.4;
     
         CABasicAnimation *animacionUno = [CABasicAnimation animationWithKeyPath:@"opacity"];
         animacionUno.fromValue = [NSNumber numberWithFloat:initialOpacity];
         animacionUno.toValue = [NSNumber numberWithFloat:finalOpacity];
-        animacionUno.duration = 1.5;
+        animacionUno.duration = 2.2;
         animacionUno.delegate = self;
     
         [self.logoImageView.layer addAnimation:animacionUno forKey:@"parpadeo"];
@@ -75,7 +75,7 @@
         CABasicAnimation *animacionDos = [CABasicAnimation animationWithKeyPath:@"opacity"];
         animacionDos.fromValue = [NSNumber numberWithFloat:initialOpacity];
         animacionDos.toValue = [NSNumber numberWithFloat:finalOpacity];
-        animacionDos.duration = 1.5;
+        animacionDos.duration = 2.2;
         animacionDos.delegate = self;
     
         [self.logoImageView.layer addAnimation:animacionDos forKey:@"parpadeo"];
