@@ -48,6 +48,7 @@
 - (void) viewDidAppear:(BOOL)animated {
     
     
+        // Animacion para bajar la opacidad del logo creando efecto de atenuacion
         initialOpacity = 1.0;
         finalOpacity = 0.4;
     
@@ -63,6 +64,7 @@
 
 - (void) animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
+    // Uso de un flag que alterna entre la animacion de atenuacion y la de vuelta a opacidad normal
      static BOOL repeticion;
     
     if (flag) {
@@ -71,6 +73,8 @@
         float temp = finalOpacity;
         finalOpacity = initialOpacity;
         initialOpacity = temp;
+        
+        // Animacion de regreso del logo a opacidad normal
         
         CABasicAnimation *animacionDos = [CABasicAnimation animationWithKeyPath:@"opacity"];
         animacionDos.fromValue = [NSNumber numberWithFloat:initialOpacity];
