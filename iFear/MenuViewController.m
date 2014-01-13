@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)volverPushButton:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

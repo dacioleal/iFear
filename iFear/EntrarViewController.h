@@ -12,4 +12,6 @@
 
 - (IBAction)entrarPushButton:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+
 @end

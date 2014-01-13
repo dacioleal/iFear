@@ -26,6 +26,8 @@
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
+		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
+		F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
+		F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_logo_provisional.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,9 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */,
 				F321C4371880074F00B02097 /* fondo_ppal.jpg */,
+				F3E85D601880559D00EA17E2 /* icons */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -193,6 +199,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F3E85D601880559D00EA17E2 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				F3E85D5E1880539800EA17E2 /* icono_volver.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
+				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
+				F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */,
 				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
