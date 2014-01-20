@@ -26,6 +26,14 @@
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
+		F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BF77D918844D9600818986 /* CarteleraViewController.m */; };
+		F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */; };
+		F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DD188450CC00818986 /* icono_ajustes.png */; };
+		F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DE188450CC00818986 /* icono_buscar.png */; };
+		F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DF188450CC00818986 /* icono_cartelera.png */; };
+		F3BF77E7188450CC00818986 /* icono_info.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E0188450CC00818986 /* icono_info.png */; };
+		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
+		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
 		F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */; };
 /* End PBXBuildFile section */
@@ -65,6 +73,15 @@
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F3BF77D818844D9600818986 /* CarteleraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraViewController.h; sourceTree = "<group>"; };
+		F3BF77D918844D9600818986 /* CarteleraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarteleraViewController.m; sourceTree = "<group>"; };
+		F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_actividad_zombie.png; sourceTree = "<group>"; };
+		F3BF77DD188450CC00818986 /* icono_ajustes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_ajustes.png; sourceTree = "<group>"; };
+		F3BF77DE188450CC00818986 /* icono_buscar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_buscar.png; sourceTree = "<group>"; };
+		F3BF77DF188450CC00818986 /* icono_cartelera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cartelera.png; sourceTree = "<group>"; };
+		F3BF77E0188450CC00818986 /* icono_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_info.png; sourceTree = "<group>"; };
+		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
+		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
 		F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_logo_provisional.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +183,7 @@
 				F32D9929187D536F0004D618 /* Supporting Files */,
 				F321C4351880065400B02097 /* EntrarViewController */,
 				F321C43C1880128700B02097 /* MenuViewController */,
+				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -199,9 +217,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F3BF77DB18844D9B00818986 /* CarteleraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3BF77D818844D9600818986 /* CarteleraViewController.h */,
+				F3BF77D918844D9600818986 /* CarteleraViewController.m */,
+			);
+			name = CarteleraViewController;
+			sourceTree = "<group>";
+		};
 		F3E85D601880559D00EA17E2 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */,
+				F3BF77DD188450CC00818986 /* icono_ajustes.png */,
+				F3BF77DE188450CC00818986 /* icono_buscar.png */,
+				F3BF77DF188450CC00818986 /* icono_cartelera.png */,
+				F3BF77E0188450CC00818986 /* icono_info.png */,
+				F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */,
+				F3BF77E2188450CC00818986 /* icono_menu.png */,
 				F3E85D5E1880539800EA17E2 /* icono_volver.png */,
 			);
 			name = icons;
@@ -282,9 +316,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
+				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
+				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
+				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
+				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
+				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
 				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
+				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */,
 				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
@@ -310,6 +351,7 @@
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
+				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
