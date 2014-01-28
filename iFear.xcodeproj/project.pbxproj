@@ -26,6 +26,7 @@
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
+		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
 		F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BF77D918844D9600818986 /* CarteleraViewController.m */; };
 		F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */; };
 		F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DD188450CC00818986 /* icono_ajustes.png */; };
@@ -83,6 +84,7 @@
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
 		F3BF77D818844D9600818986 /* CarteleraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraViewController.h; sourceTree = "<group>"; };
 		F3BF77D918844D9600818986 /* CarteleraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarteleraViewController.m; sourceTree = "<group>"; };
 		F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_actividad_zombie.png; sourceTree = "<group>"; };
@@ -204,8 +206,7 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
-				F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */,
-				F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */,
+				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
 				F32D9932187D536F0004D618 /* AppDelegate.m */,
@@ -249,6 +250,16 @@
 				F32D9948187D53700004D618 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F392B4D91898176A00BAFA21 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */,
+				F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */,
+				F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 		F3BF77DB18844D9B00818986 /* CarteleraViewController */ = {
@@ -371,6 +382,7 @@
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
+				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
 				F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */,

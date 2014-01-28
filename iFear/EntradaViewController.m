@@ -50,6 +50,7 @@
     
     [self playEntranceSound];
     [self playTorchsSound];
+    [self playBackgroundSound];
     
     
    
@@ -80,6 +81,18 @@
     [self.audioPlayerTwo playAtTime:self.audioPlayerTwo.deviceCurrentTime + 2.0];
 }
 
+- (void) playBackgroundSound
+{
+    NSString *backgroundSoundPath = [[NSBundle mainBundle] pathForResource:@"sonido_fondo" ofType:@"mp3"];
+    NSURL *backgroundAudioURL = [NSURL fileURLWithPath:backgroundSoundPath];
+    NSError *error;
+    self.audioPlayerThree = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundAudioURL error:&error];
+    self.audioPlayerThree.numberOfLoops = -1;
+    [self.audioPlayerThree prepareToPlay];
+    [self.audioPlayerThree playAtTime:self.audioPlayerThree.deviceCurrentTime + 2.0];
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning
@@ -89,3 +102,7 @@
 }
 
 @end
+
+
+
+

@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayerOne;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayerTwo;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerThree;
 
 @end
