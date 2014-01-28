@@ -44,7 +44,8 @@
 		F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DB1897BC5200BE7964 /* FireParticle.sks */; };
 		F3F927DF1897BC5200BE7964 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DC1897BC5200BE7964 /* spark.png */; };
 		F3F927E11897BCA300BE7964 /* entrada_muestra_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E01897BCA300BE7964 /* entrada_muestra_01.jpg */; };
-		F3F927E31897BFDF00BE7964 /* sonido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido.mp3 */; };
+		F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */; };
+		F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +104,8 @@
 		F3F927DB1897BC5200BE7964 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
 		F3F927DC1897BC5200BE7964 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F3F927E01897BCA300BE7964 /* entrada_muestra_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = entrada_muestra_01.jpg; sourceTree = "<group>"; };
-		F3F927E21897BFDE00BE7964 /* sonido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido.mp3; path = ../sonido.mp3; sourceTree = "<group>"; };
+		F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido_entrada.mp3; path = ../sonido_entrada.mp3; sourceTree = "<group>"; };
+		F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_antorcha.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +204,8 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
-				F3F927E21897BFDE00BE7964 /* sonido.mp3 */,
+				F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */,
+				F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */,
 				F321C4361880070500B02097 /* images */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
 				F32D9932187D536F0004D618 /* AppDelegate.m */,
@@ -365,11 +368,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
-				F3F927E31897BFDF00BE7964 /* sonido.mp3 in Resources */,
+				F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */,
 				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,

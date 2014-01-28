@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface EntradaViewController : UIViewController
+
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerOne;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayerTwo;
 
 @end

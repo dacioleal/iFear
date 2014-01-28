@@ -9,6 +9,7 @@
 #import "EntradaViewController.h"
 #import "MainScene.h"
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface EntradaViewController ()
 
@@ -43,22 +44,42 @@
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
     opacityAnimation.toValue = [NSNumber numberWithFloat:0.9];
-    opacityAnimation.duration = 2.0;
+    opacityAnimation.duration = 2.5;
     
     [spriteView.layer addAnimation:opacityAnimation forKey:@"opacity"];
     
+    [self playEntranceSound];
+    [self playTorchsSound];
     
-    AVAudioPlayer *audioPlayer;
-    NSString *audioPath = [[NSBundle mainBundle] pathForResource:@"sonido" ofType:@"mp3"];
-    NSURL *audioURL = [NSURL fileURLWithPath:audioPath];
-    NSError *error;
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audioURL error:&error];
-    //audioPlayer.delegate = self;
     
-    [audioPlayer prepareToPlay];
-    [audioPlayer play];
+   
     
 }
+
+- (void) playEntranceSound
+{
+    NSString *entranceSoundPath = [[NSBundle mainBundle] pathForResource:@"sonido_entrada" ofType:@"mp3"];
+    NSURL *entranceAudioURL = [NSURL fileURLWithPath:entranceSoundPath];
+    NSError *error;
+    self.audioPlayerOne = [[AVAudioPlayer alloc] initWithContentsOfURL:entranceAudioURL error:&error];
+    
+    [self.audioPlayerOne prepareToPlay];
+    [self.audioPlayerOne playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
+    
+}
+
+
+- (void) playTorchsSound
+{
+    NSString *torchsSoundPath = [[NSBundle mainBundle] pathForResource:@"sonido_antorcha" ofType:@"mp3"];
+    NSURL *torchAudioURL = [NSURL fileURLWithPath:torchsSoundPath];
+    NSError *error;
+    self.audioPlayerTwo = [[AVAudioPlayer alloc] initWithContentsOfURL:torchAudioURL error:&error];
+    self.audioPlayerTwo.numberOfLoops = -1;
+    [self.audioPlayerTwo prepareToPlay];
+    [self.audioPlayerTwo playAtTime:self.audioPlayerTwo.deviceCurrentTime + 2.0];
+}
+
 
 
 - (void)didReceiveMemoryWarning

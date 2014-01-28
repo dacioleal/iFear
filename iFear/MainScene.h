@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
-#import <AVFoundation/AVFoundation.h>
+
 
 @interface MainScene : SKScene
 
