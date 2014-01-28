@@ -36,6 +36,15 @@
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
 		F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */; };
+		F3F927CF1897B2E800BE7964 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F927CE1897B2E800BE7964 /* SpriteKit.framework */; };
+		F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D11897B35B00BE7964 /* EntradaViewController.m */; };
+		F3F927D61897B68E00BE7964 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D51897B68E00BE7964 /* MainScene.m */; };
+		F3F927D91897BA1600BE7964 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F927D81897BA1600BE7964 /* AVFoundation.framework */; };
+		F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DA1897BC5200BE7964 /* SmokeParticle.sks */; };
+		F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DB1897BC5200BE7964 /* FireParticle.sks */; };
+		F3F927DF1897BC5200BE7964 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DC1897BC5200BE7964 /* spark.png */; };
+		F3F927E11897BCA300BE7964 /* entrada_muestra_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E01897BCA300BE7964 /* entrada_muestra_01.jpg */; };
+		F3F927E31897BFDF00BE7964 /* sonido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +93,17 @@
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
 		F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_logo_provisional.png; sourceTree = "<group>"; };
+		F3F927CE1897B2E800BE7964 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		F3F927D01897B35B00BE7964 /* EntradaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntradaViewController.h; sourceTree = "<group>"; };
+		F3F927D11897B35B00BE7964 /* EntradaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntradaViewController.m; sourceTree = "<group>"; };
+		F3F927D41897B68E00BE7964 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		F3F927D51897B68E00BE7964 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		F3F927D81897BA1600BE7964 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F3F927DA1897BC5200BE7964 /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
+		F3F927DB1897BC5200BE7964 /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		F3F927DC1897BC5200BE7964 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F3F927E01897BCA300BE7964 /* entrada_muestra_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = entrada_muestra_01.jpg; sourceTree = "<group>"; };
+		F3F927E21897BFDE00BE7964 /* sonido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido.mp3; path = ../sonido.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F927D91897BA1600BE7964 /* AVFoundation.framework in Frameworks */,
+				F3F927CF1897B2E800BE7964 /* SpriteKit.framework in Frameworks */,
 				F32D9923187D536F0004D618 /* CoreGraphics.framework in Frameworks */,
 				F32D9927187D536F0004D618 /* CoreData.framework in Frameworks */,
 				F32D9925187D536F0004D618 /* UIKit.framework in Frameworks */,
@@ -124,6 +146,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3F927E01897BCA300BE7964 /* entrada_muestra_01.jpg */,
 				F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */,
 				F321C4371880074F00B02097 /* fondo_ppal.jpg */,
 				F3E85D601880559D00EA17E2 /* icons */,
@@ -143,6 +166,9 @@
 		F32D9914187D536F0004D618 = {
 			isa = PBXGroup;
 			children = (
+				F3F927DA1897BC5200BE7964 /* SmokeParticle.sks */,
+				F3F927DB1897BC5200BE7964 /* FireParticle.sks */,
+				F3F927DC1897BC5200BE7964 /* spark.png */,
 				F32D9928187D536F0004D618 /* iFear */,
 				F32D9945187D53700004D618 /* iFearTests */,
 				F32D991F187D536F0004D618 /* Frameworks */,
@@ -162,6 +188,8 @@
 		F32D991F187D536F0004D618 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3F927D81897BA1600BE7964 /* AVFoundation.framework */,
+				F3F927CE1897B2E800BE7964 /* SpriteKit.framework */,
 				F32D9920187D536F0004D618 /* Foundation.framework */,
 				F32D9922187D536F0004D618 /* CoreGraphics.framework */,
 				F32D9924187D536F0004D618 /* UIKit.framework */,
@@ -174,6 +202,7 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
+				F3F927E21897BFDE00BE7964 /* sonido.mp3 */,
 				F321C4361880070500B02097 /* images */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
 				F32D9932187D536F0004D618 /* AppDelegate.m */,
@@ -184,6 +213,8 @@
 				F321C4351880065400B02097 /* EntrarViewController */,
 				F321C43C1880128700B02097 /* MenuViewController */,
 				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
+				F3F927D31897B36100BE7964 /* EntradaViewController */,
+				F3F927D71897B69700BE7964 /* MainScene */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -239,6 +270,24 @@
 				F3E85D5E1880539800EA17E2 /* icono_volver.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		F3F927D31897B36100BE7964 /* EntradaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3F927D01897B35B00BE7964 /* EntradaViewController.h */,
+				F3F927D11897B35B00BE7964 /* EntradaViewController.m */,
+			);
+			name = EntradaViewController;
+			sourceTree = "<group>";
+		};
+		F3F927D71897B69700BE7964 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				F3F927D41897B68E00BE7964 /* MainScene.h */,
+				F3F927D51897B68E00BE7964 /* MainScene.m */,
+			);
+			name = MainScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +367,10 @@
 			files = (
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
+				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
+				F3F927E31897BFDF00BE7964 /* sonido.mp3 in Resources */,
+				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
@@ -327,6 +379,8 @@
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
+				F3F927E11897BCA300BE7964 /* entrada_muestra_01.jpg in Resources */,
+				F3F927DF1897BC5200BE7964 /* spark.png in Resources */,
 				F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */,
 				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
 			);
@@ -348,7 +402,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F321C4341880064A00B02097 /* EntrarViewController.m in Sources */,
+				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
+				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
