@@ -39,6 +39,7 @@
     MainScene *mainScene = [MainScene sceneWithSize:CGSizeMake(1024, 768)];
     
     SKView *spriteView = (SKView *) self.view;
+   
     [spriteView presentScene:mainScene];
     
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
@@ -93,6 +94,18 @@
     
 }
 
+- (void) playDoorSound
+{
+    NSString *doorSoundPath = [[NSBundle mainBundle] pathForResource:@"sonido_reja" ofType:@"mp3"];
+    NSURL *doorAudioURL = [NSURL fileURLWithPath:doorSoundPath];
+    NSError *error;
+    self.audioPlayerFour = [[AVAudioPlayer alloc] initWithContentsOfURL:doorAudioURL error:&error];
+    
+    [self.audioPlayerFour prepareToPlay];
+    [self.audioPlayerFour playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning
@@ -105,7 +118,7 @@
 {
     
     [self.audioPlayerTwo stop];
-    //[self.audioPlayerThree stop];
+    //[self playDoorSound];
 }
 @end
 

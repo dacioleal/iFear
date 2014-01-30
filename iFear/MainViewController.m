@@ -8,7 +8,10 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () {
+    
+    NSArray *menuButtonsArray;
+}
 
 @end
 
@@ -27,6 +30,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    menuButtonsArray = @[self.homeButton, self.buscarButton, self.carteleraButton, self.actividadButton, self.mentesButton];
+    [self selectIcon:self.homeButton];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +60,8 @@
 {
     UIView *homeView = [self.view viewWithTag:1];
     UIView *menuView = [self.view viewWithTag:10];
+    
+    [self selectIcon:self.homeButton];
     [self animateMenuOut];
     [self.view insertSubview:homeView belowSubview:menuView];
 }
@@ -60,6 +70,8 @@
 {
     UIView *buscarView = [self.view viewWithTag:2];
     UIView *menuView = [self.view viewWithTag:10];
+    
+    [self selectIcon:self.buscarButton];
     [self animateMenuOut];
     [self.view insertSubview:buscarView belowSubview:menuView];
 }
@@ -68,14 +80,19 @@
 {
     UIView *carteleraView = [self.view viewWithTag:3];
     UIView *menuView = [self.view viewWithTag:10];
+    
+    [self selectIcon:self.carteleraButton];
     [self animateMenuOut];
     [self.view insertSubview:carteleraView belowSubview:menuView];
+    
 }
 
 - (IBAction)actividadPushButton:(id)sender
 {
     UIView *actividadView = [self.view viewWithTag:4];
     UIView *menuView = [self.view viewWithTag:10];
+    
+    [self selectIcon:self.actividadButton];
     [self animateMenuOut];
     [self.view insertSubview:actividadView belowSubview:menuView];
 }
@@ -84,6 +101,8 @@
 {
     UIView *mentesView = [self.view viewWithTag:5];
     UIView *menuView = [self.view viewWithTag:10];
+    
+    [self selectIcon:self.mentesButton];
     [self animateMenuOut];
     [self.view insertSubview:mentesView belowSubview:menuView];
 }
@@ -114,9 +133,42 @@
     UIView *menuView = [self.view viewWithTag:10];
     
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionShowHideTransitionViews animations:^(void) {
-        menuView.center = CGPointMake(menuView.center.x + 290,menuView.center.y);
+        menuView.center = CGPointMake(menuView.center.x + 290, menuView.center.y);
     }completion:nil];
     
 }
 
+- (void) selectIcon: (UIButton *) button
+{
+    for (UIButton *buttonEnumerator in menuButtonsArray) {
+        buttonEnumerator.layer.opacity = 1.0;
+    }
+    button.layer.opacity = 0.6;
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
