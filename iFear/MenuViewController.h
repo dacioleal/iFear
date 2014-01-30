@@ -10,5 +10,5 @@
 
 @interface MenuViewController : UIViewController
 
-- (IBAction)volverPushButton:(id)sender;
+
 @end

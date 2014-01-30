@@ -14,5 +14,6 @@
 @property (nonatomic, strong) AVAudioPlayer *audioPlayerOne;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayerTwo;
 @property (nonatomic, strong) AVAudioPlayer *audioPlayerThree;
+- (IBAction)entrarPushButton:(id)sender;
 
 @end

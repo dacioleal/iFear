@@ -10,8 +10,5 @@
 
 @interface CarteleraViewController : UIViewController
 
-- (IBAction)volverPushButton:(id)sender;
-- (IBAction)buscarPushButton:(id)sender;
-- (IBAction)menuPushButton:(id)sender;
 
 @end

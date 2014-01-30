@@ -1,18 +1,18 @@
 //
-//  CarteleraViewController.m
+//  MentesViewController.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 13/01/14.
+//  Created by Dacio Leal Rodriguez on 30/01/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "CarteleraViewController.h"
+#import "MentesViewController.h"
 
-@interface CarteleraViewController ()
+@interface MentesViewController ()
 
 @end
 
-@implementation CarteleraViewController
+@implementation MentesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

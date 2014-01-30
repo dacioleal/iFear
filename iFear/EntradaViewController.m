@@ -78,7 +78,7 @@
     self.audioPlayerTwo = [[AVAudioPlayer alloc] initWithContentsOfURL:torchAudioURL error:&error];
     self.audioPlayerTwo.numberOfLoops = -1;
     [self.audioPlayerTwo prepareToPlay];
-    [self.audioPlayerTwo playAtTime:self.audioPlayerTwo.deviceCurrentTime + 2.0];
+    [self.audioPlayerTwo playAtTime:self.audioPlayerTwo.deviceCurrentTime + 1.6];
 }
 
 - (void) playBackgroundSound
@@ -101,6 +101,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)entrarPushButton:(id)sender
+{
+    
+    [self.audioPlayerTwo stop];
+    //[self.audioPlayerThree stop];
+}
 @end
 
 
