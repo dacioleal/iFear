@@ -42,6 +42,8 @@
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
+		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
+		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
 		F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BF77D918844D9600818986 /* CarteleraViewController.m */; };
 		F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */; };
 		F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77DD188450CC00818986 /* icono_ajustes.png */; };
@@ -117,6 +119,8 @@
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
+		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
+		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
 		F3BF77D818844D9600818986 /* CarteleraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraViewController.h; sourceTree = "<group>"; };
 		F3BF77D918844D9600818986 /* CarteleraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarteleraViewController.m; sourceTree = "<group>"; };
 		F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_actividad_zombie.png; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 		F3E85D601880559D00EA17E2 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */,
+				F3BCF0BE189ECBCF0059974A /* icono_home.png */,
 				F3BF77DC188450CC00818986 /* icono_actividad_zombie.png */,
 				F3BF77DD188450CC00818986 /* icono_ajustes.png */,
 				F3BF77DE188450CC00818986 /* icono_buscar.png */,
@@ -452,10 +458,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
+				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
 				F3144A00189ABC890007B9B6 /* cadena.png in Resources */,
 				F31449FE189ABC890007B9B6 /* boton_entrar.png in Resources */,
+				F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */,
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
