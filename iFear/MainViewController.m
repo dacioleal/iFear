@@ -121,8 +121,9 @@
 
 - (void) animateMenuIn
 {
-    UIView *menuView = [self.view viewWithTag:10];
+    [self.menuButton setSelected:YES];
     
+    UIView *menuView = [self.view viewWithTag:10];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionShowHideTransitionViews animations:^(void) {
         menuView.center = CGPointMake(menuView.center.x - 290,menuView.center.y);
     }completion:nil];
@@ -130,11 +131,14 @@
 
 - (void) animateMenuOut
 {
-    UIView *menuView = [self.view viewWithTag:10];
+    [self.menuButton setSelected:NO];
     
+    UIView *menuView = [self.view viewWithTag:10];    
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionShowHideTransitionViews animations:^(void) {
         menuView.center = CGPointMake(menuView.center.x + 290, menuView.center.y);
     }completion:nil];
+    
+    
     
 }
 

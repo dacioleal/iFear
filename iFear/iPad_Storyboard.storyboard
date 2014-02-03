@@ -133,6 +133,7 @@
                                         <state key="normal" image="icono_menu.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" image="icono_menu_invertido.png"/>
                                         <connections>
                                             <action selector="menuPushButton:" destination="NOX-yb-x9h" eventType="touchUpInside" id="Hrv-JY-CgM"/>
                                         </connections>
@@ -201,6 +202,7 @@
                         <outlet property="carteleraButton" destination="AXc-kn-04V" id="TSC-gN-n7R"/>
                         <outlet property="homeButton" destination="Njk-EA-Fpb" id="Q4I-Pv-T4T"/>
                         <outlet property="mentesButton" destination="fi2-DD-qGl" id="wjq-b8-8E7"/>
+                        <outlet property="menuButton" destination="d0w-zy-MLH" id="ABt-cE-XpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVu-lD-g1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,6 +403,7 @@
         <image name="icono_home.png" width="100" height="100"/>
         <image name="icono_mentes_oscuras.png" width="100" height="100"/>
         <image name="icono_menu.png" width="100" height="100"/>
+        <image name="icono_menu_invertido.png" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>

@@ -10,6 +10,7 @@
 
 @interface MainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet UIButton *homeButton;
 @property (weak, nonatomic) IBOutlet UIButton *buscarButton;
 @property (weak, nonatomic) IBOutlet UIButton *carteleraButton;
