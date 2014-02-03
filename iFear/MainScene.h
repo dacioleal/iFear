@@ -12,4 +12,6 @@
 
 @interface MainScene : SKScene
 
+- (void) riseDoor;
+
 @end

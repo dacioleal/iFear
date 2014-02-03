@@ -53,7 +53,7 @@
     [self playTorchsSound];
     [self playBackgroundSound];
     
-    
+        
    
     
 }
@@ -94,18 +94,6 @@
     
 }
 
-- (void) playDoorSound
-{
-    NSString *doorSoundPath = [[NSBundle mainBundle] pathForResource:@"sonido_reja" ofType:@"mp3"];
-    NSURL *doorAudioURL = [NSURL fileURLWithPath:doorSoundPath];
-    NSError *error;
-    self.audioPlayerFour = [[AVAudioPlayer alloc] initWithContentsOfURL:doorAudioURL error:&error];
-    
-    [self.audioPlayerFour prepareToPlay];
-    [self.audioPlayerFour playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
-    
-}
-
 
 
 - (void)didReceiveMemoryWarning
@@ -116,9 +104,20 @@
 
 - (IBAction)entrarPushButton:(id)sender
 {
+    SKView *spriteView = (SKView *) self.view;
+    MainScene *scene = (MainScene *)[spriteView scene];
+    [scene riseDoor];
     
+    
+    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:6.0];
+    
+    
+}
+
+- (void) loadMainScreen
+{
     [self.audioPlayerTwo stop];
-    //[self playDoorSound];
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:YES completion:nil];
 }
 @end
 

@@ -57,7 +57,6 @@
                                 </state>
                                 <connections>
                                     <action selector="entrarPushButton:" destination="1wh-Mf-Exn" eventType="touchUpInside" id="1ef-9c-ZkV"/>
-                                    <segue destination="NOX-yb-x9h" kind="modal" identifier="goToMain" modalTransitionStyle="crossDissolve" id="Nlm-KA-fnf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +73,7 @@
         <!--Main View Controller-->
         <scene sceneID="D55-0w-DMU">
             <objects>
-                <viewController id="NOX-yb-x9h" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="NOX-yb-x9h" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SE4-Xm-499"/>
                         <viewControllerLayoutGuide type="bottom" id="TSg-hn-8AX"/>

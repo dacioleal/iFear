@@ -34,6 +34,9 @@
     menuButtonsArray = @[self.homeButton, self.buscarButton, self.carteleraButton, self.actividadButton, self.mentesButton];
     [self selectIcon:self.homeButton];
     
+   
+
+    
     
 }
 
