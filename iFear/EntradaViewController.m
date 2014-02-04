@@ -66,7 +66,7 @@
     self.audioPlayerOne = [[AVAudioPlayer alloc] initWithContentsOfURL:entranceAudioURL error:&error];
     
     [self.audioPlayerOne prepareToPlay];
-    [self.audioPlayerOne playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
+    //[self.audioPlayerOne playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
     
 }
 
@@ -108,17 +108,27 @@
     MainScene *scene = (MainScene *)[spriteView scene];
     [scene riseDoor];
     
+    [self makeChainAnimation];
     
-    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:6.0];
-    
+    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:8.0];    
     
 }
+
+- (void) makeChainAnimation {
+    
+    UIView *view = [self.view viewWithTag:1];
+    [UIView animateWithDuration:2.0 animations:^{
+        view.center = CGPointMake(view.center.x - 770, view.center.y);
+    }];
+}
+
 
 - (void) loadMainScreen
 {
     [self.audioPlayerTwo stop];
     [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:YES completion:nil];
 }
+
 @end
 
 

@@ -91,7 +91,7 @@
 - (SKSpriteNode *) newDoor
 {
     SKSpriteNode *door = [SKSpriteNode spriteNodeWithImageNamed:@"reja.png"];
-    door.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 60);
+    door.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 90);
     door.size = CGSizeMake(791, 884);
     door.name = @"door";
     return door;
@@ -108,7 +108,7 @@
 - (void) riseDoor
 {
     SKSpriteNode *door = (SKSpriteNode *) [self childNodeWithName:@"door"];
-    SKAction *rise = [SKAction moveToY:door.position.y + 700 duration:2.4];
+    SKAction *rise = [SKAction moveToY:door.position.y + 730 duration:2.4];
     SKAction *sound = [SKAction playSoundFileNamed:@"sonido_reja.mp3" waitForCompletion:YES];
     rise.timingMode = SKActionTimingEaseInEaseOut;
     SKAction *riseAndSound = [SKAction group:@[rise,sound]];
