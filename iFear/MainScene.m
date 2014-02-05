@@ -32,11 +32,15 @@
     
     [self addChild:[self newBackgroundImage]];
     [self addChild:[self newDoor]];
-    [self addChild:[self newFrontImage]];
+    [self addChild:[self newFrontImageColor]];
+    [self addChild:[self newTorchsLightEffect]];
+    [self addChild:[self newFrontImageLines]];
+    [self addChild:[self newLogo]];
     [self addChild:[self newSmokeEmitter1]];
     [self addChild:[self newSmokeEmitter2]];
     [self addChild:[self newFireEmitter1]];
     [self addChild:[self newFireEmitter2]];
+    [self fadeTorchs];
     
     
 }
@@ -83,8 +87,8 @@
 {
     
     SKSpriteNode *backgroundImage = [SKSpriteNode spriteNodeWithImageNamed:@"arco_interior.png"];
-    backgroundImage.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-    backgroundImage.size = CGSizeMake(1024, 768);
+    backgroundImage.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - 30);
+    backgroundImage.size = CGSizeMake(789, 699);
     return backgroundImage;
 }
 
@@ -97,13 +101,43 @@
     return door;
 }
 
-- (SKSpriteNode *) newFrontImage
+- (SKSpriteNode *) newFrontImageColor
 {
-    SKSpriteNode *frontImage = [SKSpriteNode spriteNodeWithImageNamed:@"arco_exterior_logo.png"];
-    frontImage.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-    frontImage.size = CGSizeMake(1024, 768);
-    return frontImage;
+    SKSpriteNode *frontImageColor = [SKSpriteNode spriteNodeWithImageNamed:@"color_arco_exterior.png"];
+    frontImageColor.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    frontImageColor.size = CGSizeMake(1024, 768);
+    
+    return frontImageColor;
 }
+
+- (SKSpriteNode *) newTorchsLightEffect
+{
+    SKSpriteNode *torchsLightEffect = [SKSpriteNode spriteNodeWithImageNamed:@"efecto_antorchas.png"];
+    torchsLightEffect.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    torchsLightEffect.size = CGSizeMake(1024, 768);
+    torchsLightEffect.alpha = 0.5;
+    torchsLightEffect.name = @"torchsLightEffect";
+    return torchsLightEffect;
+}
+
+- (SKSpriteNode *) newFrontImageLines
+{
+    SKSpriteNode *frontImageLines = [SKSpriteNode spriteNodeWithImageNamed:@"lineas_arco.png"];
+    frontImageLines.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    frontImageLines.size = CGSizeMake(1024, 768);
+    return frontImageLines;
+}
+
+- (SKSpriteNode *) newLogo
+{
+    SKSpriteNode *logo = [SKSpriteNode spriteNodeWithImageNamed:@"logo_ifear.png"];
+    logo.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    logo.size = CGSizeMake(651, 495);
+    logo.name = @"logo";
+    return logo;
+}
+
+
 
 - (void) riseDoor
 {
@@ -113,6 +147,28 @@
     rise.timingMode = SKActionTimingEaseInEaseOut;
     SKAction *riseAndSound = [SKAction group:@[rise,sound]];
     [door runAction:riseAndSound];
+    [self fadeOutLogo];
+    
+}
+
+- (void) fadeOutLogo
+{
+    SKSpriteNode *logo = (SKSpriteNode *) [self childNodeWithName:@"logo"];
+    SKAction *wait = [SKAction waitForDuration:2.4];
+    SKAction *fadeOut = [SKAction fadeOutWithDuration:2.0];
+    SKAction *fadeGroup = [SKAction sequence:@[wait,fadeOut]];
+    [logo runAction:fadeGroup];
+    
+}
+
+- (void) fadeTorchs
+{
+    SKSpriteNode *torchsLightEffect = (SKSpriteNode *) [self childNodeWithName:@"torchsLightEffect"];
+    SKAction *fadeAlphaDown = [SKAction fadeAlphaBy:-0.07 duration:0.1];
+    SKAction *fadeAlphaUp = [SKAction fadeAlphaBy:0.07 duration:0.1];
+    SKAction *fadeAlpha = [SKAction sequence:@[fadeAlphaDown, fadeAlphaUp]];
+    SKAction *fadeLights = [SKAction repeatActionForever:fadeAlpha];
+    [torchsLightEffect runAction:fadeLights];
     
 }
 

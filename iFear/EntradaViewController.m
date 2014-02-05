@@ -117,7 +117,7 @@
 - (void) makeChainAnimation {
     
     UIView *view = [self.view viewWithTag:1];
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:2.4 animations:^{
         view.center = CGPointMake(view.center.x - 770, view.center.y);
     }];
 }
@@ -126,7 +126,8 @@
 - (void) loadMainScreen
 {
     [self.audioPlayerTwo stop];
-    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:YES completion:nil];
+    
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:NO completion:nil];
 }
 
 @end

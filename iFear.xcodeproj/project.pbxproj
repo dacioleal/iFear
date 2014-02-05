@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */; };
+		F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B818A23AF60040CCDD /* lineas_arco.png */; };
+		F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B918A23AF60040CCDD /* logo_ifear.png */; };
+		F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */; };
 		F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F314498D189A47FC0007B9B6 /* MainViewController.m */; };
 		F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144991189A50180007B9B6 /* BusquedaViewController.m */; };
 		F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144995189A515A0007B9B6 /* ActividadViewController.m */; };
@@ -76,6 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = efecto_antorchas.png; sourceTree = "<group>"; };
+		F30EE4B818A23AF60040CCDD /* lineas_arco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineas_arco.png; sourceTree = "<group>"; };
+		F30EE4B918A23AF60040CCDD /* logo_ifear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_ifear.png; sourceTree = "<group>"; };
+		F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_arco_exterior.png; sourceTree = "<group>"; };
 		F314498C189A47FC0007B9B6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F314498D189A47FC0007B9B6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F3144990189A50180007B9B6 /* BusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaViewController.h; sourceTree = "<group>"; };
@@ -225,6 +233,10 @@
 				F314499F189A55920007B9B6 /* fondo_menu.jpg */,
 				F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */,
 				F321C4371880074F00B02097 /* fondo_ppal.jpg */,
+				F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */,
+				F30EE4B818A23AF60040CCDD /* lineas_arco.png */,
+				F30EE4B918A23AF60040CCDD /* logo_ifear.png */,
+				F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */,
 				F3E85D601880559D00EA17E2 /* icons */,
 			);
 			name = images;
@@ -429,6 +441,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dacio Leal Rodriguez";
 				TargetAttributes = {
+					F32D991C187D536F0004D618 = {
+						DevelopmentTeam = 3CAF8YGZEM;
+					};
 					F32D993C187D53700004D618 = {
 						TestTargetID = F32D991C187D536F0004D618;
 					};
@@ -457,8 +472,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */,
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
+				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
 				F3144A00189ABC890007B9B6 /* cadena.png in Resources */,
@@ -466,6 +483,7 @@
 				F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */,
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
+				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
@@ -480,6 +498,7 @@
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
 				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
 				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
+				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F31449A2189A55920007B9B6 /* fondo_menu.jpg in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
@@ -639,10 +658,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iFear/iFear-Prefix.pch";
 				INFOPLIST_FILE = "iFear/iFear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -652,10 +674,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iFear/iFear-Prefix.pch";
 				INFOPLIST_FILE = "iFear/iFear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
