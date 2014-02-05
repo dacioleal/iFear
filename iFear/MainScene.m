@@ -154,8 +154,8 @@
 - (void) fadeOutLogo
 {
     SKSpriteNode *logo = (SKSpriteNode *) [self childNodeWithName:@"logo"];
-    SKAction *wait = [SKAction waitForDuration:2.4];
-    SKAction *fadeOut = [SKAction fadeOutWithDuration:2.0];
+    SKAction *wait = [SKAction waitForDuration:1.0];
+    SKAction *fadeOut = [SKAction fadeOutWithDuration:1.5];
     SKAction *fadeGroup = [SKAction sequence:@[wait,fadeOut]];
     [logo runAction:fadeGroup];
     

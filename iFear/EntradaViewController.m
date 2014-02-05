@@ -110,7 +110,7 @@
     
     [self makeChainAnimation];
     
-    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:8.0];    
+    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0];
     
 }
 
