@@ -33,7 +33,7 @@
     [self addChild:[self newBackgroundImage]];
     [self addChild:[self newDoor]];
     [self addChild:[self newFrontImageColor]];
-    [self addChild:[self newTorchsLightEffect]];
+    //[self addChild:[self newTorchsLightEffect]];
     [self addChild:[self newFrontImageLines]];
     [self addChild:[self newLogo]];
     [self addChild:[self newSmokeEmitter1]];

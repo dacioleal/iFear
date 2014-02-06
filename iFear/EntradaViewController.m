@@ -11,7 +11,10 @@
 #import <SpriteKit/SpriteKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface EntradaViewController ()
+@interface EntradaViewController () {
+    
+    
+}
 
 @end
 
