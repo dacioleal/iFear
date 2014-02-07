@@ -40,7 +40,7 @@
         <!--Entrada View Controller-->
         <scene sceneID="YtC-9c-Ijf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1wh-Mf-Exn" customClass="EntradaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="entradaViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1wh-Mf-Exn" customClass="EntradaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QZv-uh-a5X"/>
                         <viewControllerLayoutGuide type="bottom" id="9Xc-Kr-4Zp"/>
@@ -100,7 +100,7 @@
         <!--Main View Controller-->
         <scene sceneID="D55-0w-DMU">
             <objects>
-                <viewController storyboardIdentifier="mainViewController" id="NOX-yb-x9h" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NOX-yb-x9h" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SE4-Xm-499"/>
                         <viewControllerLayoutGuide type="bottom" id="TSg-hn-8AX"/>

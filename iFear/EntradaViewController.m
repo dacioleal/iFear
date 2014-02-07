@@ -13,7 +13,7 @@
 
 @interface EntradaViewController () {
     
-    
+   
 }
 
 @end
@@ -34,6 +34,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+        
+    
     
 }
 
@@ -45,6 +47,9 @@
    
     [spriteView presentScene:mainScene];
     
+    
+    // Animacion para la aparicion de la pantalla suavemente modificando la opacidad
+    
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
     opacityAnimation.toValue = [NSNumber numberWithFloat:0.9];
@@ -52,14 +57,29 @@
     
     [spriteView.layer addAnimation:opacityAnimation forKey:@"opacity"];
     
+    
+    // Reproduce los sonidos
+    
     [self playEntranceSound];
     [self playTorchsSound];
     [self playBackgroundSound];
-    
-        
    
     
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+
+
+#pragma mark - Métodos propios
+
+
+// Método para reproducir sonido inicial de entrada
 
 - (void) playEntranceSound
 {
@@ -73,6 +93,7 @@
     
 }
 
+// Método para reproducir sonido de las antorchas
 
 - (void) playTorchsSound
 {
@@ -84,6 +105,8 @@
     [self.audioPlayerTwo prepareToPlay];
     [self.audioPlayerTwo playAtTime:self.audioPlayerTwo.deviceCurrentTime + 1.6];
 }
+
+// Método para reproducir sonido de fondo
 
 - (void) playBackgroundSound
 {
@@ -97,25 +120,7 @@
     
 }
 
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)entrarPushButton:(id)sender
-{
-    SKView *spriteView = (SKView *) self.view;
-    MainScene *scene = (MainScene *)[spriteView scene];
-    [scene riseDoor];
-    
-    [self makeChainAnimation];
-    
-    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0];
-    
-}
+// Método para realizar la animación de la cadena
 
 - (void) makeChainAnimation {
     
@@ -125,13 +130,35 @@
     }];
 }
 
+// Método para cargar la pantalla del menu
 
 - (void) loadMainScreen
 {
     [self.audioPlayerTwo stop];
+    [self.audioPlayerThree stop];
     
     [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:NO completion:nil];
+    
+    
 }
+
+
+
+#pragma mark - IBActions
+
+- (IBAction)entrarPushButton:(id)sender
+{
+    SKView *spriteView = (SKView *) self.view;
+    MainScene *scene = (MainScene *)[spriteView scene];
+    [scene riseDoor];
+    
+    [self makeChainAnimation];
+    
+    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
+    
+}
+
+
 
 @end
 

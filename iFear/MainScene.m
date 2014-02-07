@@ -10,7 +10,7 @@
 
 @interface MainScene ()
 
-@property BOOL contentCreated;
+@property BOOL contentCreated; // Variable para controlar si la escena esta creada
 
 @end
 
@@ -24,6 +24,10 @@
         self.contentCreated = YES;
     }
 }
+
+#pragma mark - Métodos propios
+
+// Crea el contenido de la escena
 
 - (void) createSceneContents
 {
@@ -45,6 +49,8 @@
     
 }
 
+// Crea emisor de particulas de fuego 1
+
 - (SKEmitterNode *) newFireEmitter1
 {
     NSString *firePath = [[NSBundle mainBundle] pathForResource:@"FireParticle"
@@ -54,6 +60,8 @@
     
     return fire;
 }
+
+// Crea emisor de particulas de fuego 2
 
 - (SKEmitterNode *) newFireEmitter2
 {
@@ -65,6 +73,8 @@
     return fire;
 }
 
+// Crea emisor de particulas de humo 1
+
 - (SKEmitterNode *) newSmokeEmitter1
 {
     NSString *smokePath = [[NSBundle mainBundle] pathForResource:@"SmokeParticle"
@@ -73,6 +83,8 @@
     smoke.position = CGPointMake(55, 452);
     return smoke;
 }
+
+// Crea emisor de particulas de humo 2
 
 - (SKEmitterNode *) newSmokeEmitter2
 {
@@ -83,6 +95,8 @@
     return smoke;
 }
 
+// Crea la imagen de fondo
+
 - (SKSpriteNode *) newBackgroundImage
 {
     
@@ -91,6 +105,8 @@
     backgroundImage.size = CGSizeMake(789, 699);
     return backgroundImage;
 }
+
+// Crea la imagen de la reja
 
 - (SKSpriteNode *) newDoor
 {
@@ -101,6 +117,8 @@
     return door;
 }
 
+// Crea la imagen de color del arco
+
 - (SKSpriteNode *) newFrontImageColor
 {
     SKSpriteNode *frontImageColor = [SKSpriteNode spriteNodeWithImageNamed:@"color_arco_exterior.png"];
@@ -109,6 +127,8 @@
     
     return frontImageColor;
 }
+
+// Crea efectos de luz para las antorchas
 
 - (SKSpriteNode *) newTorchsLightEffect
 {
@@ -120,6 +140,8 @@
     return torchsLightEffect;
 }
 
+// Crea la imagen o capa de las líneas del arco
+
 - (SKSpriteNode *) newFrontImageLines
 {
     SKSpriteNode *frontImageLines = [SKSpriteNode spriteNodeWithImageNamed:@"lineas_arco.png"];
@@ -127,6 +149,8 @@
     frontImageLines.size = CGSizeMake(1024, 768);
     return frontImageLines;
 }
+
+// Crea el logo iFear
 
 - (SKSpriteNode *) newLogo
 {
@@ -138,6 +162,7 @@
 }
 
 
+// Metodo que realiza la animación de subir la reja
 
 - (void) riseDoor
 {
@@ -151,6 +176,8 @@
     
 }
 
+// Metodo que realiza la animacion de atenuacion del logo
+
 - (void) fadeOutLogo
 {
     SKSpriteNode *logo = (SKSpriteNode *) [self childNodeWithName:@"logo"];
@@ -160,6 +187,8 @@
     [logo runAction:fadeGroup];
     
 }
+
+// Metodo para atenuacion de los efectos de luz de las antorchas
 
 - (void) fadeTorchs
 {
