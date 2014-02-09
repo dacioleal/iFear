@@ -11,6 +11,8 @@
 		F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B818A23AF60040CCDD /* lineas_arco.png */; };
 		F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B918A23AF60040CCDD /* logo_ifear.png */; };
 		F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */; };
+		F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */ = {isa = PBXBuildFile; fileRef = F30F42DF18A4E9BD005841A6 /* Pelicula.m */; };
+		F30F42E418A4EB81005841A6 /* CarteleraPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */; };
 		F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F314498D189A47FC0007B9B6 /* MainViewController.m */; };
 		F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144991189A50180007B9B6 /* BusquedaViewController.m */; };
 		F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144995189A515A0007B9B6 /* ActividadViewController.m */; };
@@ -84,6 +86,10 @@
 		F30EE4B818A23AF60040CCDD /* lineas_arco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineas_arco.png; sourceTree = "<group>"; };
 		F30EE4B918A23AF60040CCDD /* logo_ifear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_ifear.png; sourceTree = "<group>"; };
 		F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_arco_exterior.png; sourceTree = "<group>"; };
+		F30F42DE18A4E9BD005841A6 /* Pelicula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pelicula.h; sourceTree = "<group>"; };
+		F30F42DF18A4E9BD005841A6 /* Pelicula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pelicula.m; sourceTree = "<group>"; };
+		F30F42E218A4EB81005841A6 /* CarteleraPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraPageViewController.h; sourceTree = "<group>"; };
+		F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarteleraPageViewController.m; sourceTree = "<group>"; };
 		F314498C189A47FC0007B9B6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F314498D189A47FC0007B9B6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F3144990189A50180007B9B6 /* BusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaViewController.h; sourceTree = "<group>"; };
@@ -181,6 +187,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F30F42DD18A4E7B0005841A6 /* CarteleraPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F30F42E218A4EB81005841A6 /* CarteleraPageViewController.h */,
+				F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */,
+			);
+			name = CarteleraPageViewController;
+			sourceTree = "<group>";
+		};
+		F30F42E118A4E9C5005841A6 /* Pelicula */ = {
+			isa = PBXGroup;
+			children = (
+				F30F42DE18A4E9BD005841A6 /* Pelicula.h */,
+				F30F42DF18A4E9BD005841A6 /* Pelicula.m */,
+			);
+			name = Pelicula;
+			sourceTree = "<group>";
+		};
 		F314498F189A48010007B9B6 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +322,7 @@
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
+				F30F42E118A4E9C5005841A6 /* Pelicula */,
 				F3F927D31897B36100BE7964 /* EntradaViewController */,
 				F3F927D71897B69700BE7964 /* MainScene */,
 				F314498F189A48010007B9B6 /* MainViewController */,
@@ -306,6 +331,7 @@
 				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
 				F314499C189A53890007B9B6 /* MentesViewController */,
+				F30F42DD18A4E7B0005841A6 /* CarteleraPageViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -533,7 +559,9 @@
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
+				F30F42E418A4EB81005841A6 /* CarteleraPageViewController.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
+				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
