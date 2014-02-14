@@ -47,6 +47,7 @@
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
+		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
 		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
@@ -132,6 +133,8 @@
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
 		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
 		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
 				F314499C189A53890007B9B6 /* MentesViewController */,
 				F30F42DD18A4E7B0005841A6 /* CarteleraPageViewController */,
+				F332F85418AA99D800A12CEE /* PageContentViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -363,6 +367,15 @@
 				F32D9948187D53700004D618 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F332F85418AA99D800A12CEE /* PageContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F332F85118AA99D200A12CEE /* PageContentViewController.h */,
+				F332F85218AA99D200A12CEE /* PageContentViewController.m */,
+			);
+			name = PageContentViewController;
 			sourceTree = "<group>";
 		};
 		F392B4D91898176A00BAFA21 /* sounds */ = {
@@ -562,6 +575,7 @@
 				F30F42E418A4EB81005841A6 /* CarteleraPageViewController.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
+				F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,

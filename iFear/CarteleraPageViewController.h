@@ -8,15 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarteleraPageViewController : UIPageViewController <NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, UIPageViewControllerDataSource,UIPageViewControllerDelegate>
+@interface CarteleraPageViewController : UIPageViewController
 
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicadorDeCargo;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenUno;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenDos;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenTres;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenCuatro;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenCinco;
-
-- (IBAction)pulsarObtenDatos:(id)sender;
 
 @end
