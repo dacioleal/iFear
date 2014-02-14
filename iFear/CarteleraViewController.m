@@ -18,9 +18,9 @@
     
     int _moviesPerPage;  // Número de películas por página
     
-    NSMutableArray *pages;  // Array que almacena los objetos pageData con los datos de cada página
+    NSMutableArray *pages;  // Array que almacena los pageData de todas las páginas
     
-    NSMutableArray *pageData; // Almacena los datos de cada página, las objetos Pelicula que van a ir en cada página
+    NSMutableArray *pageData; // Almacena los datos una página, las objetos Pelicula de esa página
     
     NSArray *viewControllersArray;
 }
