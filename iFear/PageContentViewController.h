@@ -8,21 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageContentViewController : UIViewController
+@interface PageContentViewController : UIViewController 
 
-@property (weak, nonatomic) IBOutlet UIImageView *imagenUno;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenDos;
-@property (weak, nonatomic) IBOutlet UIImageView *imagenTres;
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *midImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomImageView;
 
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicadorDeCargo;
+@property (weak, nonatomic) IBOutlet UITableView *topTableView;
 
-@property (nonatomic) NSArray * peliculasArray; // Array que contiene las tres peliculas a mostrar
+
+@property (nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
 @property (nonatomic) NSUInteger index;
 @property (nonatomic) NSUInteger numberOfPages;
 
-@property (weak, nonatomic) IBOutlet UILabel *etiquetaLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pageLabel;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
-- (id) initWithPeliculas: (NSArray *) peliculas withIndex:(NSUInteger)index andNumberOfPages:(NSUInteger)numberOfPages;
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 
 @end

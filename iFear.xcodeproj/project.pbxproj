@@ -12,7 +12,6 @@
 		F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B918A23AF60040CCDD /* logo_ifear.png */; };
 		F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */; };
 		F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */ = {isa = PBXBuildFile; fileRef = F30F42DF18A4E9BD005841A6 /* Pelicula.m */; };
-		F30F42E418A4EB81005841A6 /* CarteleraPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */; };
 		F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F314498D189A47FC0007B9B6 /* MainViewController.m */; };
 		F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144991189A50180007B9B6 /* BusquedaViewController.m */; };
 		F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3144995189A515A0007B9B6 /* ActividadViewController.m */; };
@@ -89,8 +88,6 @@
 		F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_arco_exterior.png; sourceTree = "<group>"; };
 		F30F42DE18A4E9BD005841A6 /* Pelicula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pelicula.h; sourceTree = "<group>"; };
 		F30F42DF18A4E9BD005841A6 /* Pelicula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pelicula.m; sourceTree = "<group>"; };
-		F30F42E218A4EB81005841A6 /* CarteleraPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraPageViewController.h; sourceTree = "<group>"; };
-		F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarteleraPageViewController.m; sourceTree = "<group>"; };
 		F314498C189A47FC0007B9B6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		F314498D189A47FC0007B9B6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		F3144990189A50180007B9B6 /* BusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaViewController.h; sourceTree = "<group>"; };
@@ -190,15 +187,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F30F42DD18A4E7B0005841A6 /* CarteleraPageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F30F42E218A4EB81005841A6 /* CarteleraPageViewController.h */,
-				F30F42E318A4EB81005841A6 /* CarteleraPageViewController.m */,
-			);
-			name = CarteleraPageViewController;
-			sourceTree = "<group>";
-		};
 		F30F42E118A4E9C5005841A6 /* Pelicula */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,10 +237,10 @@
 			children = (
 				F3144A03189AC9560007B9B6 /* entrada_muestra_01.jpg */,
 				F31449F5189ABC890007B9B6 /* arco_exterior_logo.png */,
+				F31449F9189ABC890007B9B6 /* cadena.png */,
 				F31449F6189ABC890007B9B6 /* arco_interior.png */,
 				F31449F7189ABC890007B9B6 /* boton_entrar.png */,
 				F31449F8189ABC890007B9B6 /* cadena_completa.png */,
-				F31449F9189ABC890007B9B6 /* cadena.png */,
 				F31449FA189ABC890007B9B6 /* calavera.png */,
 				F31449FB189ABC890007B9B6 /* reja.png */,
 				F314499D189A55920007B9B6 /* fondo_actividad_zombie.jpg */,
@@ -332,10 +320,9 @@
 				F321C43C1880128700B02097 /* MenuViewController */,
 				F3144993189A501D0007B9B6 /* BusquedaViewController */,
 				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
+				F332F85418AA99D800A12CEE /* PageContentViewController */,
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
 				F314499C189A53890007B9B6 /* MentesViewController */,
-				F30F42DD18A4E7B0005841A6 /* CarteleraPageViewController */,
-				F332F85418AA99D800A12CEE /* PageContentViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -572,7 +559,6 @@
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
-				F30F42E418A4EB81005841A6 /* CarteleraPageViewController.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
 				F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */,

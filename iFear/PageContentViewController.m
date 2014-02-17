@@ -20,35 +20,29 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+       
     }
     return self;
 }
 
-- (id) initWithPeliculas: (NSArray *) peliculas withIndex:(NSUInteger)index andNumberOfPages:(NSUInteger)numberOfPages
-{
-    
-    self = [super init];
-    self.peliculasArray = peliculas;
-    self.index = index;
-    self.numberOfPages = numberOfPages;
-    
-    self.pageControl.currentPage = index;
-    self.pageControl.numberOfPages = numberOfPages - 1;
-    
-    self.etiquetaLabel.text = [NSString stringWithFormat:@"Pagina %d", index ];
-    
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
+    self.view.frame = CGRectMake(0, 0, 618, 874);
     
+    self.pageControl.currentPage = self.index;
+    self.pageControl.numberOfPages = self.numberOfPages;
+    [self.view addSubview:self.pageControl];
     
+    self.pageLabel.text = [NSString stringWithFormat:@"Página %d", _index + 1 ];
     
-    
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
     
 }
 
@@ -57,6 +51,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - TableViewDataSource methods
+
+
 
 
 @end
