@@ -60,6 +60,7 @@
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
 		F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */; };
+		F3F7530518B3D2F100F0D9CE /* MovieTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7530418B3D2F100F0D9CE /* MovieTableView.m */; };
 		F3F927CF1897B2E800BE7964 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F927CE1897B2E800BE7964 /* SpriteKit.framework */; };
 		F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D11897B35B00BE7964 /* EntradaViewController.m */; };
 		F3F927D61897B68E00BE7964 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D51897B68E00BE7964 /* MainScene.m */; };
@@ -146,6 +147,8 @@
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
 		F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_logo_provisional.png; sourceTree = "<group>"; };
+		F3F7530318B3D2F100F0D9CE /* MovieTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableView.h; sourceTree = "<group>"; };
+		F3F7530418B3D2F100F0D9CE /* MovieTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableView.m; sourceTree = "<group>"; };
 		F3F927CE1897B2E800BE7964 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		F3F927D01897B35B00BE7964 /* EntradaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntradaViewController.h; sourceTree = "<group>"; };
 		F3F927D11897B35B00BE7964 /* EntradaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntradaViewController.m; sourceTree = "<group>"; };
@@ -361,6 +364,7 @@
 			children = (
 				F332F85118AA99D200A12CEE /* PageContentViewController.h */,
 				F332F85218AA99D200A12CEE /* PageContentViewController.m */,
+				F3F7530618B3D2F700F0D9CE /* MovieTableView */,
 			);
 			name = PageContentViewController;
 			sourceTree = "<group>";
@@ -400,6 +404,15 @@
 				F3E85D5E1880539800EA17E2 /* icono_volver.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		F3F7530618B3D2F700F0D9CE /* MovieTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F3F7530318B3D2F100F0D9CE /* MovieTableView.h */,
+				F3F7530418B3D2F100F0D9CE /* MovieTableView.m */,
+			);
+			name = MovieTableView;
 			sourceTree = "<group>";
 		};
 		F3F927D31897B36100BE7964 /* EntradaViewController */ = {
@@ -553,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F7530518B3D2F100F0D9CE /* MovieTableView.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,

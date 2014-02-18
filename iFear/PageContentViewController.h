@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageContentViewController : UIViewController 
+@interface PageContentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *midImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *bottomImageView;
 
 @property (weak, nonatomic) IBOutlet UITableView *topTableView;
+@property (weak, nonatomic) IBOutlet UITableView *midTableView;
+@property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
 
 
 @property (nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
@@ -22,10 +24,7 @@
 @property (nonatomic) NSUInteger numberOfPages;
 
 @property (weak, nonatomic) IBOutlet UILabel *pageLabel;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
-
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 @end
