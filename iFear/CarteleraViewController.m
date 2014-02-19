@@ -202,9 +202,17 @@
 
 #pragma mark - UIPageViewControllerDelegate methods
 
-
-
-
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    
+    PageContentViewController * currentPageContentViewController = [pageViewController.viewControllers objectAtIndex:0];
+    
+    if (completed) {
+       
+        self.pageControl.currentPage = currentPageContentViewController.index;    // Se actualiza el pageControl para marcar la página actual
+    }
+    
+}
 
 
 

@@ -101,11 +101,11 @@
             return cell;
             break;
         case 1:
-            cell.textLabel.text = [NSString stringWithFormat:@"Año: %d  País: %@", movie.anio, movie.pais];
+            cell.textLabel.text = [NSString stringWithFormat:@"Director: %@", movie.director];
             return cell;
             break;
         case 2:
-            cell.textLabel.text = [NSString stringWithFormat:@"Director: %@", movie.director];
+            cell.textLabel.text = [NSString stringWithFormat:@"Año: %d  País: %@", movie.anio, movie.pais];
             return cell;
             break;
         case 3:
@@ -113,7 +113,7 @@
             return cell;
             break;
         case 4:
-            cell.textLabel.text = [NSString stringWithFormat:@"Reparto: %@", movie.reparto];
+            cell.textLabel.text = [NSString stringWithFormat:@"Actores: %@", movie.reparto];
             return cell;
             break;
         case 5:
