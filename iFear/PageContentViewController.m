@@ -8,7 +8,7 @@
 
 #import "PageContentViewController.h"
 #import "Pelicula.h"
-#import "MovieTableView.h"
+
 
 @interface PageContentViewController ()
 
@@ -22,7 +22,6 @@
     if (self) {
         // Custom initialization
         
-       
     }
     return self;
 }
@@ -32,37 +31,54 @@
 {
     [super viewDidLoad];
     
-   
+    
+    _topMovieTableView.dataSource = self;
+    _topMovieTableView.delegate = self;
+    
+    _midMovieTableView.dataSource = self;
+    _midMovieTableView.delegate = self;
+    
+    _bottomMovieTableView.dataSource = self;
+    _bottomMovieTableView.delegate = self;
+    
+    _topMovieTableView.layer.cornerRadius = 10;
+    _midMovieTableView.layer.cornerRadius = 10;
+    _bottomMovieTableView.layer.cornerRadius = 10;
     
     
-    self.pageLabel.text = [NSString stringWithFormat:@"Página %d", _index + 1 ];
+    NSArray *tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
     
-    self.topTableView.dataSource = self;
-    self.topTableView.delegate = self;
     
-    self.midTableView.dataSource = self;
-    self.midTableView.delegate = self;
+    if (_moviesArray)
+    {
+        for (int i = 0; i < _moviesArray.count ; i++) {
+            
+            MovieTableView *movieTableView = [tableViewsArray objectAtIndex:i];
+            
+            movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
+        }
+        
+    }
     
-    self.bottomTableView.dataSource = self;
-    self.bottomTableView.delegate = self;
-    
-    self.topTableView.layer.cornerRadius = 10;
-    self.midTableView.layer.cornerRadius = 10;
-    self.bottomTableView.layer.cornerRadius = 10;
-    
+    for (MovieTableView *movieTableView in tableViewsArray) {
+        if (!movieTableView.movie) {                            // Si el TableView no tiene asignada una película no se muestra 
+            
+            movieTableView.hidden = YES;
+            
+            
+        }
+    }
     
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - TableViewDataSource methods
 
@@ -72,97 +88,69 @@
     return numberOfRows;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.backgroundColor = [UIColor lightGrayColor];
+    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
+    
+   
     Pelicula *movie;
     
-    if (tableView == self.topTableView && self.moviesArray.count > 0) {
-        movie = [self.moviesArray objectAtIndex:0];
-    }
-    
-    if (tableView == self.midTableView && self.moviesArray.count > 1) {
-        movie = [self.moviesArray objectAtIndex:1];
-    }
-    
-    if (tableView == self.bottomTableView && self.moviesArray.count > 2) {
-        movie = [self.moviesArray objectAtIndex:2];
-    }
-    
-       
-    switch (indexPath.row) {
-        case 0:
-            cell.textLabel.text = movie.titulo;
+    if ([tableView isKindOfClass:[MovieTableView class]])
+    {
+        if (((MovieTableView *) tableView).movie)
+        {
+            movie = ((MovieTableView *) tableView).movie;
             
-            return cell;
-            break;
-        case 1:
-            cell.textLabel.text = [NSString stringWithFormat:@"Director: %@", movie.director];
-            return cell;
-            break;
-        case 2:
-            cell.textLabel.text = [NSString stringWithFormat:@"Año: %d  País: %@", movie.anio, movie.pais];
-            return cell;
-            break;
-        case 3:
-            cell.textLabel.text = [NSString stringWithFormat:@"Sinopsis: %@", movie.sinopsis];
-            return cell;
-            break;
-        case 4:
-            cell.textLabel.text = [NSString stringWithFormat:@"Actores: %@", movie.reparto];
-            return cell;
-            break;
-        case 5:
-            cell.textLabel.text = [NSString stringWithFormat:@"Guión: %@", movie.guion];
-            return cell;
-            break;
-        case 6:
-            cell.textLabel.text = [NSString stringWithFormat:@"Música: %@", movie.musica];
-            return cell;
-            break;
-        case 7:
-            cell.textLabel.text = [NSString stringWithFormat:@"Fotografía: %@", movie.fotografia];
-            return cell;
-            break;
-        case 8:
-            cell.textLabel.text = [NSString stringWithFormat:@"Productora: %@", movie.productora];
-            return cell;
-            break;
-        case 9:
-            cell.textLabel.text = [NSString stringWithFormat:@"Web: %@", movie.web];
-            return cell;
-            break;
-        default:
-            cell.textLabel.text = @"";
-            return cell;
-            break;
+          NSArray *stringsArray = [movie stringsArrayToMakeTableView];
+
+          cell.textLabel.text = [stringsArray objectAtIndex:indexPath.row];
+
+        }
     }
+    
+    return cell;
     
 }
 
 #pragma mark - UITableViewDelegate methods
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    CGFloat height = 0;
-//
-//    Noticias *noticia = [noticiasArray objectAtIndex:indexPath.row];
-//
-//    UIFont *font = [UIFont systemFontOfSize:17.0];
-//    NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:noticia.titulo attributes:@{NSFontAttributeName:font}];
-//
-//    CGRect rect = [attributes boundingRectWithSize:(CGSize){710, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
-//
-//    height = rect.size.height + 48;
-//
-//
-//
-//    return height;
-//}
+// Método para calcular el alto de la celda en función del contenido
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    CGFloat height = 0;
+    
+    Pelicula *movie;
+    
+    if ([tableView isKindOfClass:[MovieTableView class]])
+    {
+        if (((MovieTableView *) tableView).movie)
+        {
+            movie = ((MovieTableView *) tableView).movie;
+            
+            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
+            NSString *string = (NSString *)[stringsArray objectAtIndex:indexPath.row];
+            
+            UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+            NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName:font}];
+            CGRect rect = [attributes boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+            
+            height = rect.size.height + 5;
+            
+            
+        }
+    }
+
+    return height;
+}
 
 
 

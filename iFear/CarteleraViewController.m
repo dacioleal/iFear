@@ -100,8 +100,8 @@
     [moviesList addObject:movie2];
     [moviesList addObject:movie];
     [moviesList addObject:movie];
-    [moviesList addObject:movie2];
-    [moviesList addObject:movie2];
+//    [moviesList addObject:movie2];
+//    [moviesList addObject:movie2];
     
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -237,9 +237,6 @@
     [pageContentViewController setIndex:index];
     [pageContentViewController setNumberOfPages:_numberOfPages];
     [pageContentViewController setMoviesArray:movies];
-    
-    
-    
     
     return pageContentViewController;
 }

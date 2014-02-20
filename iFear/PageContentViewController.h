@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieTableView.h"
 
 @interface PageContentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -14,17 +15,15 @@
 @property (weak, nonatomic) IBOutlet UIImageView *midImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *bottomImageView;
 
-@property (weak, nonatomic) IBOutlet UITableView *topTableView;
-@property (weak, nonatomic) IBOutlet UITableView *midTableView;
-@property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
+@property (weak, nonatomic) IBOutlet MovieTableView *topMovieTableView;
+@property (weak, nonatomic) IBOutlet MovieTableView *midMovieTableView;
+@property (weak, nonatomic) IBOutlet MovieTableView *bottomMovieTableView;
 
 
-@property (nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
+
+@property (strong, nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
 @property (nonatomic) NSUInteger index;
 @property (nonatomic) NSUInteger numberOfPages;
-
-@property (weak, nonatomic) IBOutlet UILabel *pageLabel;
-
 
 
 @end

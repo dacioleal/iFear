@@ -11,6 +11,6 @@
 
 @interface MovieTableView : UITableView
 
-@property (weak, nonatomic) Pelicula *movie;
+@property (strong, nonatomic) Pelicula *movie;
 
 @end

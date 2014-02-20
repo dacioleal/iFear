@@ -71,13 +71,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqd-U8-pfN">
-                                <rect key="frame" x="418" y="0.0" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-xc-8ko" customClass="MovieTableView">
                                 <rect key="frame" x="173" y="29" width="710" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +86,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eRP-XE-krg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eRP-XE-krg" customClass="MovieTableView">
                                 <rect key="frame" x="173" y="217" width="710" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <prototypes>
@@ -108,7 +101,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-cM-J8D">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gpt-cM-J8D" customClass="MovieTableView">
                                 <rect key="frame" x="173" y="405" width="710" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <prototypes>
@@ -131,12 +124,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bottomImageView" destination="5K8-Dd-67u" id="II5-GH-x1w"/>
-                        <outlet property="bottomTableView" destination="gpt-cM-J8D" id="EwZ-7e-qSY"/>
+                        <outlet property="bottomMovieTableView" destination="gpt-cM-J8D" id="y3e-wB-Avw"/>
                         <outlet property="midImageView" destination="BhT-MB-i0v" id="XhL-hI-Ghd"/>
-                        <outlet property="midTableView" destination="eRP-XE-krg" id="5Y6-Kb-gTl"/>
-                        <outlet property="pageLabel" destination="bqd-U8-pfN" id="RaO-6d-Zke"/>
+                        <outlet property="midMovieTableView" destination="eRP-XE-krg" id="kk6-NS-Tql"/>
                         <outlet property="topImageView" destination="vRz-Ur-1ZL" id="ZlW-Yv-drH"/>
-                        <outlet property="topTableView" destination="fHz-xc-8ko" id="ug6-ey-Ao1"/>
+                        <outlet property="topMovieTableView" destination="fHz-xc-8ko" id="HKz-Ma-Hed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wiu-ta-WxI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -46,5 +46,8 @@
     portadaDeLaPelicula:(NSString *) portada;
 
 
+- (NSArray *) stringsArrayToMakeTableView;
+
+
 
 @end
