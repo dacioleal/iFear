@@ -84,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger numberOfRows = 10;
+    NSInteger numberOfRows = 11;
     return numberOfRows;
 }
 
@@ -109,9 +109,29 @@
         {
             movie = ((MovieTableView *) tableView).movie;
             
-          NSArray *stringsArray = [movie stringsArrayToMakeTableView];
-
-          cell.textLabel.text = [stringsArray objectAtIndex:indexPath.row];
+            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
+            NSArray *titlesArray = [movie titlesArrayToMakeTableView];
+            
+            NSMutableString *string = [[NSMutableString alloc] init];
+            NSMutableAttributedString *attributedString;
+            
+            
+            [string appendString:[titlesArray objectAtIndex:indexPath.row]];
+            [string appendString:[stringsArray objectAtIndex:indexPath.row]];
+            
+            if ( indexPath.row == 0 ) {
+                UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0];
+                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
+                
+            } else {
+                UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
+                
+            }
+            
+            cell.textLabel.attributedText = attributedString;
+            
+            
 
         }
     }
@@ -143,7 +163,7 @@
             NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName:font}];
             CGRect rect = [attributes boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
             
-            height = rect.size.height + 5;
+            height = rect.size.height + 6;
             
             
         }

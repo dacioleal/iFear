@@ -45,6 +45,7 @@
    sinopsisDeLaPelicula:(NSString *) sinopsis
     portadaDeLaPelicula:(NSString *) portada;
 
+- (NSArray *) titlesArrayToMakeTableView;
 
 - (NSArray *) stringsArrayToMakeTableView;
 

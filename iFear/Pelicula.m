@@ -69,10 +69,16 @@ tituloOriginalDePelicula:(NSString *)titulo_original
     return self;
 }
 
+- (NSArray *) titlesArrayToMakeTableView
+{
+    NSArray *array = @[@"",@"Año: ", @"País: ", @"Director: ", @"Sinopsis: ", @"Guión: ", @"Reparto: ", @"Música: ", @"Fotografía: ", @"Productora: ", @"Web: "];
+    return array;
+}
+
 - (NSArray *) stringsArrayToMakeTableView
 {
     NSString * anio = [NSString stringWithFormat:@"%d", _anio];
-    NSArray *array = @[_titulo, anio, _pais, _director, _sinopsis, _reparto, _guion, _musica, _productora, _web];
+    NSArray *array = @[_titulo, anio, _pais, _director, _sinopsis, _guion, _reparto, _musica, _fotografia, _productora, _web];
     
     return array;
 }
