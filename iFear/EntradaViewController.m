@@ -154,7 +154,7 @@
     
     [self makeChainAnimation];
     
-    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
+    //[self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
     
 }
 

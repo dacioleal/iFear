@@ -36,4 +36,21 @@
 }
 
 
+- (IBAction)carteleraPushButton:(UIButton *)sender {
+}
+
+- (IBAction)buscarPushButton:(UIButton *)sender {
+}
+
+- (IBAction)mentesPushButton:(UIButton *)sender {
+}
+
+- (IBAction)queEsPushButton:(UIButton *)sender {
+}
+
+- (IBAction)opcionesPushButton:(UIButton *)sender {
+}
+
+- (IBAction)disparaPushButton:(UIButton *)sender {
+}
 @end

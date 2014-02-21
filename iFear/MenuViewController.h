@@ -10,5 +10,14 @@
 
 @interface MenuViewController : UIViewController
 
+- (IBAction)carteleraPushButton:(UIButton *)sender;
+- (IBAction)buscarPushButton:(UIButton *)sender;
+- (IBAction)mentesPushButton:(UIButton *)sender;
+- (IBAction)queEsPushButton:(UIButton *)sender;
+- (IBAction)opcionesPushButton:(UIButton *)sender;
+- (IBAction)disparaPushButton:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *manImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *zombieImageView;
 
 @end

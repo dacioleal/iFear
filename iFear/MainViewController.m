@@ -11,6 +11,8 @@
 @interface MainViewController () {
     
     NSArray *menuButtonsArray;
+    UIViewController * onScreenViewController;
+    
 }
 
 @end
@@ -32,11 +34,11 @@
 	// Do any additional setup after loading the view.
     
     menuButtonsArray = @[self.homeButton, self.buscarButton, self.carteleraButton, self.actividadButton, self.mentesButton];
-    [self selectIcon:self.homeButton];
-    
    
-
     
+    [self hideMenuBar];
+    [self displayContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"entradaViewController"]];
+    [self showMenuBar];
     
 }
 
@@ -45,6 +47,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Menu Buttons action methods
 
 - (IBAction)menuPushButton:(id)sender
 {
@@ -61,54 +66,52 @@
 
 - (IBAction)homePushButton:(id)sender
 {
-    UIView *homeView = [self.view viewWithTag:1];
-    UIView *menuView = [self.view viewWithTag:10];
-    
     [self selectIcon:self.homeButton];
     [self animateMenuOut];
-    [self.view insertSubview:homeView belowSubview:menuView];
+    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
 }
 
 - (IBAction)buscarPushButton:(id)sender
 {
-    UIView *buscarView = [self.view viewWithTag:2];
-    UIView *menuView = [self.view viewWithTag:10];
     
     [self selectIcon:self.buscarButton];
     [self animateMenuOut];
-    [self.view insertSubview:buscarView belowSubview:menuView];
+    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
 }
 
 - (IBAction)carteleraPushButton:(id)sender
 {
-    UIView *carteleraView = [self.view viewWithTag:3];
-    UIView *menuView = [self.view viewWithTag:10];
-    
     [self selectIcon:self.carteleraButton];
     [self animateMenuOut];
-    [self.view insertSubview:carteleraView belowSubview:menuView];
+    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carteleraViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
     
 }
 
 - (IBAction)actividadPushButton:(id)sender
 {
-    UIView *actividadView = [self.view viewWithTag:4];
-    UIView *menuView = [self.view viewWithTag:10];
-    
     [self selectIcon:self.actividadButton];
     [self animateMenuOut];
-    [self.view insertSubview:actividadView belowSubview:menuView];
+    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"actividadViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
 }
 
 - (IBAction)mentesPushButton:(id)sender
 {
-    UIView *mentesView = [self.view viewWithTag:5];
-    UIView *menuView = [self.view viewWithTag:10];
-    
     [self selectIcon:self.mentesButton];
     [self animateMenuOut];
-    [self.view insertSubview:mentesView belowSubview:menuView];
+    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mentesViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    
 }
+
+
+#pragma mark - ViewController animated menu methods
 
 - (BOOL) menuBarIsHidden
 {
@@ -141,17 +144,80 @@
         menuView.center = CGPointMake(menuView.center.x + 290, menuView.center.y);
     }completion:nil];
     
-    
-    
 }
 
 - (void) selectIcon: (UIButton *) button
 {
     for (UIButton *buttonEnumerator in menuButtonsArray) {
-        buttonEnumerator.layer.opacity = 1.0;
+        
+        buttonEnumerator.enabled = YES;
     }
-    button.layer.opacity = 0.6;
+    button.enabled = NO;
+}
+
+- (void) hideMenuBar
+{
+    UIView *menuBarView = [self.view viewWithTag:10];
+    menuBarView.hidden = YES;
+}
+
+- (void) showMenuBar
+{
+    UIView *menuBarView = [self.view viewWithTag:10];
+    menuBarView.layer.opacity = 0;
+    menuBarView.hidden = NO;
+    [UIView animateWithDuration:3.0 animations:^{
+        menuBarView.layer.opacity = 1.0;
+    }];
+}
+
+#pragma  mark - ViewController display methods
+
+- (void) displayContentViewController: (UIViewController *) contentViewController
+{
+    [self addChildViewController:contentViewController];
+    contentViewController.view.frame = _contentView.frame;
+    [_contentView addSubview:contentViewController.view];
+    [contentViewController didMoveToParentViewController:self];
     
+    onScreenViewController = contentViewController;
+}
+
+- (void) hideContentViewController: (UIViewController *) contentViewController
+{
+    [contentViewController willMoveToParentViewController:nil];
+    [contentViewController.view removeFromSuperview];
+    [contentViewController removeFromParentViewController];
+}
+
+- (void) cycleFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController
+{
+    
+    [oldViewController willMoveToParentViewController:nil];
+    [self addChildViewController:newViewController];
+    
+    newViewController.view.frame = _contentView.frame;
+    
+    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 0.25 options:0
+                            animations:^{
+                            
+                            }
+                            completion:^(BOOL finished) {
+                                [oldViewController removeFromParentViewController];
+                                [newViewController didMoveToParentViewController:self];
+                            }];
+    onScreenViewController = newViewController;
+    
+}
+
+#pragma mark - Menu Buttons setter method
+
+- (NSArray *) menuButtonsArray
+{
+    if (!menuButtonsArray) {
+        menuButtonsArray = [[NSArray alloc] init];
+    }
+    return nil;
 }
 
 @end
