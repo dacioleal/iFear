@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F304101E18B752CC006273F0 /* ahorcado.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101018B752CC006273F0 /* ahorcado.png */; };
+		F304101F18B752CC006273F0 /* barrotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101118B752CC006273F0 /* barrotes.png */; };
+		F304102018B752CC006273F0 /* boton_buscar.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101218B752CC006273F0 /* boton_buscar.png */; };
+		F304102118B752CC006273F0 /* boton_cartelera.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101318B752CC006273F0 /* boton_cartelera.png */; };
+		F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101418B752CC006273F0 /* boton_mentes_oscuras.png */; };
+		F304102318B752CC006273F0 /* boton_opciones.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101518B752CC006273F0 /* boton_opciones.png */; };
+		F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101618B752CC006273F0 /* boton_que_es_iFear.png */; };
+		F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F304101718B752CC006273F0 /* fondo_menu2.jpg */; };
+		F304102618B752CC006273F0 /* punto_de_mira.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101818B752CC006273F0 /* punto_de_mira.png */; };
+		F304102718B752CC006273F0 /* zombie_01.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101918B752CC006273F0 /* zombie_01.png */; };
+		F304102818B752CC006273F0 /* zombie_02.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101A18B752CC006273F0 /* zombie_02.png */; };
+		F304102918B752CC006273F0 /* zombie_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101B18B752CC006273F0 /* zombie_03.png */; };
+		F304102A18B752CC006273F0 /* zombie_04.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101C18B752CC006273F0 /* zombie_04.png */; };
+		F304102B18B752CC006273F0 /* zombie_05.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101D18B752CC006273F0 /* zombie_05.png */; };
 		F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */; };
 		F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B818A23AF60040CCDD /* lineas_arco.png */; };
 		F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B918A23AF60040CCDD /* logo_ifear.png */; };
@@ -18,7 +32,6 @@
 		F314499B189A53840007B9B6 /* MentesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F314499A189A53840007B9B6 /* MentesViewController.m */; };
 		F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F314499D189A55920007B9B6 /* fondo_actividad_zombie.jpg */; };
 		F31449A1189A55920007B9B6 /* fondo_mentes_oscuras.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F314499E189A55920007B9B6 /* fondo_mentes_oscuras.jpg */; };
-		F31449A2189A55920007B9B6 /* fondo_menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F314499F189A55920007B9B6 /* fondo_menu.jpg */; };
 		F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F31449F3189AB93D0007B9B6 /* sonido_reja.mp3 */; };
 		F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F31449F5189ABC890007B9B6 /* arco_exterior_logo.png */; };
 		F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */ = {isa = PBXBuildFile; fileRef = F31449F6189ABC890007B9B6 /* arco_interior.png */; };
@@ -59,7 +72,6 @@
 		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
-		F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */; };
 		F3F7530518B3D2F100F0D9CE /* MovieTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7530418B3D2F100F0D9CE /* MovieTableView.m */; };
 		F3F927CF1897B2E800BE7964 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F927CE1897B2E800BE7964 /* SpriteKit.framework */; };
 		F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D11897B35B00BE7964 /* EntradaViewController.m */; };
@@ -83,6 +95,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F304101018B752CC006273F0 /* ahorcado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ahorcado.png; sourceTree = "<group>"; };
+		F304101118B752CC006273F0 /* barrotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrotes.png; sourceTree = "<group>"; };
+		F304101218B752CC006273F0 /* boton_buscar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_buscar.png; sourceTree = "<group>"; };
+		F304101318B752CC006273F0 /* boton_cartelera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_cartelera.png; sourceTree = "<group>"; };
+		F304101418B752CC006273F0 /* boton_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_mentes_oscuras.png; sourceTree = "<group>"; };
+		F304101518B752CC006273F0 /* boton_opciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_opciones.png; sourceTree = "<group>"; };
+		F304101618B752CC006273F0 /* boton_que_es_iFear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_que_es_iFear.png; sourceTree = "<group>"; };
+		F304101718B752CC006273F0 /* fondo_menu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_menu2.jpg; sourceTree = "<group>"; };
+		F304101818B752CC006273F0 /* punto_de_mira.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = punto_de_mira.png; sourceTree = "<group>"; };
+		F304101918B752CC006273F0 /* zombie_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_01.png; sourceTree = "<group>"; };
+		F304101A18B752CC006273F0 /* zombie_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_02.png; sourceTree = "<group>"; };
+		F304101B18B752CC006273F0 /* zombie_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_03.png; sourceTree = "<group>"; };
+		F304101C18B752CC006273F0 /* zombie_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_04.png; sourceTree = "<group>"; };
+		F304101D18B752CC006273F0 /* zombie_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_05.png; sourceTree = "<group>"; };
 		F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = efecto_antorchas.png; sourceTree = "<group>"; };
 		F30EE4B818A23AF60040CCDD /* lineas_arco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineas_arco.png; sourceTree = "<group>"; };
 		F30EE4B918A23AF60040CCDD /* logo_ifear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_ifear.png; sourceTree = "<group>"; };
@@ -99,7 +125,6 @@
 		F314499A189A53840007B9B6 /* MentesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentesViewController.m; sourceTree = "<group>"; };
 		F314499D189A55920007B9B6 /* fondo_actividad_zombie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_actividad_zombie.jpg; sourceTree = "<group>"; };
 		F314499E189A55920007B9B6 /* fondo_mentes_oscuras.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_mentes_oscuras.jpg; sourceTree = "<group>"; };
-		F314499F189A55920007B9B6 /* fondo_menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_menu.jpg; sourceTree = "<group>"; };
 		F31449F3189AB93D0007B9B6 /* sonido_reja.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_reja.mp3; sourceTree = "<group>"; };
 		F31449F5189ABC890007B9B6 /* arco_exterior_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arco_exterior_logo.png; sourceTree = "<group>"; };
 		F31449F6189ABC890007B9B6 /* arco_interior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arco_interior.png; sourceTree = "<group>"; };
@@ -146,7 +171,6 @@
 		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
-		F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mini_logo_provisional.png; sourceTree = "<group>"; };
 		F3F7530318B3D2F100F0D9CE /* MovieTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableView.h; sourceTree = "<group>"; };
 		F3F7530418B3D2F100F0D9CE /* MovieTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableView.m; sourceTree = "<group>"; };
 		F3F927CE1897B2E800BE7964 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
@@ -190,6 +214,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F304100F18B752A5006273F0 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				F304101018B752CC006273F0 /* ahorcado.png */,
+				F304101118B752CC006273F0 /* barrotes.png */,
+				F304101218B752CC006273F0 /* boton_buscar.png */,
+				F304101318B752CC006273F0 /* boton_cartelera.png */,
+				F304101418B752CC006273F0 /* boton_mentes_oscuras.png */,
+				F304101518B752CC006273F0 /* boton_opciones.png */,
+				F304101618B752CC006273F0 /* boton_que_es_iFear.png */,
+				F304101718B752CC006273F0 /* fondo_menu2.jpg */,
+				F304101818B752CC006273F0 /* punto_de_mira.png */,
+				F304101918B752CC006273F0 /* zombie_01.png */,
+				F304101A18B752CC006273F0 /* zombie_02.png */,
+				F304101B18B752CC006273F0 /* zombie_03.png */,
+				F304101C18B752CC006273F0 /* zombie_04.png */,
+				F304101D18B752CC006273F0 /* zombie_05.png */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		F304102C18B752D8006273F0 /* entrada */ = {
+			isa = PBXGroup;
+			children = (
+				F31449F5189ABC890007B9B6 /* arco_exterior_logo.png */,
+				F31449F9189ABC890007B9B6 /* cadena.png */,
+				F31449F6189ABC890007B9B6 /* arco_interior.png */,
+				F31449F7189ABC890007B9B6 /* boton_entrar.png */,
+				F31449F8189ABC890007B9B6 /* cadena_completa.png */,
+				F31449FA189ABC890007B9B6 /* calavera.png */,
+				F31449FB189ABC890007B9B6 /* reja.png */,
+				F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */,
+				F30EE4B818A23AF60040CCDD /* lineas_arco.png */,
+				F30EE4B918A23AF60040CCDD /* logo_ifear.png */,
+				F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */,
+			);
+			name = entrada;
+			sourceTree = "<group>";
+		};
 		F30F42E118A4E9C5005841A6 /* Pelicula */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,23 +301,12 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F304102C18B752D8006273F0 /* entrada */,
+				F304100F18B752A5006273F0 /* menu */,
 				F3144A03189AC9560007B9B6 /* entrada_muestra_01.jpg */,
-				F31449F5189ABC890007B9B6 /* arco_exterior_logo.png */,
-				F31449F9189ABC890007B9B6 /* cadena.png */,
-				F31449F6189ABC890007B9B6 /* arco_interior.png */,
-				F31449F7189ABC890007B9B6 /* boton_entrar.png */,
-				F31449F8189ABC890007B9B6 /* cadena_completa.png */,
-				F31449FA189ABC890007B9B6 /* calavera.png */,
-				F31449FB189ABC890007B9B6 /* reja.png */,
 				F314499D189A55920007B9B6 /* fondo_actividad_zombie.jpg */,
 				F314499E189A55920007B9B6 /* fondo_mentes_oscuras.jpg */,
-				F314499F189A55920007B9B6 /* fondo_menu.jpg */,
-				F3E952671883EC5C002B0ABD /* mini_logo_provisional.png */,
 				F321C4371880074F00B02097 /* fondo_ppal.jpg */,
-				F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */,
-				F30EE4B818A23AF60040CCDD /* lineas_arco.png */,
-				F30EE4B918A23AF60040CCDD /* logo_ifear.png */,
-				F30EE4BA18A23AF60040CCDD /* color_arco_exterior.png */,
 				F3E85D601880559D00EA17E2 /* icons */,
 			);
 			name = images;
@@ -513,6 +565,7 @@
 			files = (
 				F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */,
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
+				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
@@ -521,32 +574,43 @@
 				F31449FE189ABC890007B9B6 /* boton_entrar.png in Resources */,
 				F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */,
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
+				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
+				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
+				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
+				F304101F18B752CC006273F0 /* barrotes.png in Resources */,
 				F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */,
 				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
+				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
+				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
+				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
+				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,
 				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
 				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
-				F31449A2189A55920007B9B6 /* fondo_menu.jpg in Resources */,
+				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
+				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
+				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
+				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
+				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
 				F31449A1189A55920007B9B6 /* fondo_mentes_oscuras.jpg in Resources */,
 				F3F927DF1897BC5200BE7964 /* spark.png in Resources */,
-				F3E952681883EC5C002B0ABD /* mini_logo_provisional.png in Resources */,
 				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
