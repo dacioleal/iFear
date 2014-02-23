@@ -164,10 +164,10 @@
 - (void) showMenuBar
 {
     UIView *menuBarView = [self.view viewWithTag:10];
-    menuBarView.layer.opacity = 0;
+    menuBarView.alpha = 0;
     menuBarView.hidden = NO;
-    [UIView animateWithDuration:4.0 animations:^{
-        menuBarView.layer.opacity = 1.0;
+    [UIView animateWithDuration:5.0 animations:^{
+        menuBarView.alpha = 1.0;
     }];
 }
 
@@ -216,19 +216,24 @@
     [oldViewController willMoveToParentViewController:nil];
     [self addChildViewController:newViewController];
     
+    newViewController.view.frame = _contentView.frame;
+    newViewController.view.alpha = 0;
     
-    CGRect startFrame = CGRectMake(CGRectGetMidX(_contentView.frame), CGRectGetMidY(_contentView.frame), 0, 0);
-    CGRect endFrame = _contentView.frame;
-    
-    newViewController.view.frame = startFrame;
-    newViewController.view.layer.opacity = 0;
-    
-    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 5.5 options:0
+    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 1.0 options:0
                             animations:^{
                                 
-                                newViewController.view.frame = endFrame;
-                                newViewController.view.layer.opacity = 1.0;
-                                oldViewController.view.layer.opacity = 0;
+                                newViewController.view.alpha = 1.0;
+                                oldViewController.view.alpha = 0.5;
+                                
+                                CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+
+                                scaleAnimation.fromValue = [NSNumber numberWithFloat:0];
+                                scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+                                scaleAnimation.duration = 0.7;
+                                
+                                [newViewController.view.layer addAnimation:scaleAnimation forKey:@"scale"];
+                                
+                                
                                 
                             }
                             completion:^(BOOL finished) {
