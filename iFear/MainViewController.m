@@ -38,7 +38,7 @@
     
     [self hideMenuBar];
     [self displayContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"entradaViewController"]];
-    //[self showMenuBar];
+    
     
 }
 
@@ -66,47 +66,48 @@
 
 - (IBAction)homePushButton:(id)sender
 {
-    [self selectIcon:self.homeButton];
-    [self animateMenuOut];
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
     [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    [self selectIcon:self.homeButton];
 }
 
 - (IBAction)buscarPushButton:(id)sender
 {
-    
-    [self selectIcon:self.buscarButton];
-    [self animateMenuOut];
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaViewController"];
     [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    [self selectIcon:self.buscarButton];
     
 }
 
 - (IBAction)carteleraPushButton:(id)sender
 {
-    [self selectIcon:self.carteleraButton];
-    [self animateMenuOut];
+    
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carteleraViewController"];
     [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    [self selectIcon:self.carteleraButton];
     
 }
 
 - (IBAction)actividadPushButton:(id)sender
 {
-    [self selectIcon:self.actividadButton];
-    [self animateMenuOut];
+    
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"actividadViewController"];
     [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    [self selectIcon:self.actividadButton];
     
 }
 
 - (IBAction)mentesPushButton:(id)sender
 {
-    [self selectIcon:self.mentesButton];
-    [self animateMenuOut];
+    
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mentesViewController"];
     [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
-    
+    [self selectIcon:self.mentesButton];
     
 }
 
@@ -159,6 +160,7 @@
 {
     UIView *menuBarView = [self.view viewWithTag:10];
     menuBarView.hidden = YES;
+    
 }
 
 - (void) showMenuBar
@@ -166,7 +168,7 @@
     UIView *menuBarView = [self.view viewWithTag:10];
     menuBarView.alpha = 0;
     menuBarView.hidden = NO;
-    [UIView animateWithDuration:5.0 animations:^{
+    [UIView animateWithDuration:3.0 animations:^{
         menuBarView.alpha = 1.0;
     }];
 }
@@ -192,6 +194,7 @@
 
 - (void) cycleFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController
 {
+    if (![self menuBarIsHidden]) [self animateMenuOut];
     
     [oldViewController willMoveToParentViewController:nil];
     [self addChildViewController:newViewController];

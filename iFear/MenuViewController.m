@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "MainViewController.h"
 
 @interface MenuViewController ()
 
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,12 +39,22 @@
 
 
 - (IBAction)carteleraPushButton:(UIButton *)sender {
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController performSelector:@selector(carteleraPushButton:) withObject:mainViewController];
+
 }
 
 - (IBAction)buscarPushButton:(UIButton *)sender {
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController performSelector:@selector(buscarPushButton:) withObject:mainViewController];
 }
 
 - (IBAction)mentesPushButton:(UIButton *)sender {
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController performSelector:@selector(mentesPushButton:) withObject:mainViewController];
 }
 
 - (IBAction)queEsPushButton:(UIButton *)sender {
@@ -51,6 +63,10 @@
 - (IBAction)opcionesPushButton:(UIButton *)sender {
 }
 
+
 - (IBAction)disparaPushButton:(UIButton *)sender {
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController performSelector:@selector(actividadPushButton:) withObject:mainViewController];
 }
 @end
