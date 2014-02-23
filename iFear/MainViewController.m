@@ -38,7 +38,7 @@
     
     [self hideMenuBar];
     [self displayContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"entradaViewController"]];
-    [self showMenuBar];
+    //[self showMenuBar];
     
 }
 
@@ -166,7 +166,7 @@
     UIView *menuBarView = [self.view viewWithTag:10];
     menuBarView.layer.opacity = 0;
     menuBarView.hidden = NO;
-    [UIView animateWithDuration:3.0 animations:^{
+    [UIView animateWithDuration:4.0 animations:^{
         menuBarView.layer.opacity = 1.0;
     }];
 }
@@ -209,6 +209,38 @@
     onScreenViewController = newViewController;
     
 }
+
+- (void) specialTransitionFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController
+{
+    
+    [oldViewController willMoveToParentViewController:nil];
+    [self addChildViewController:newViewController];
+    
+    
+    CGRect startFrame = CGRectMake(CGRectGetMidX(_contentView.frame), CGRectGetMidY(_contentView.frame), 0, 0);
+    CGRect endFrame = _contentView.frame;
+    
+    newViewController.view.frame = startFrame;
+    newViewController.view.layer.opacity = 0;
+    
+    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 5.5 options:0
+                            animations:^{
+                                
+                                newViewController.view.frame = endFrame;
+                                newViewController.view.layer.opacity = 1.0;
+                                oldViewController.view.layer.opacity = 0;
+                                
+                            }
+                            completion:^(BOOL finished) {
+                                [oldViewController removeFromParentViewController];
+                                [newViewController didMoveToParentViewController:self];
+                            }];
+    onScreenViewController = newViewController;
+    
+}
+
+
+
 
 #pragma mark - Menu Buttons setter method
 

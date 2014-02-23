@@ -10,6 +10,7 @@
 #import "MainScene.h"
 #import <SpriteKit/SpriteKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "MainViewController.h"
 
 @interface EntradaViewController () {
     
@@ -34,21 +35,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-        
-    
-    
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
     MainScene *mainScene = [MainScene sceneWithSize:CGSizeMake(1024, 768)];
     
     SKView *spriteView = (SKView *) self.view;
-   
+    
     [spriteView presentScene:mainScene];
     
     
-    // Animacion para la aparicion de la pantalla suavemente modificando la opacidad
+    // Animación para la aparición de la pantalla suavemente modificando la opacidad
     
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
@@ -60,12 +54,14 @@
     
     // Reproduce los sonidos
     
-    [self playEntranceSound];
+    //[self playEntranceSound];
     [self playTorchsSound];
     [self playBackgroundSound];
-   
+        
+    
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -89,7 +85,7 @@
     self.audioPlayerOne = [[AVAudioPlayer alloc] initWithContentsOfURL:entranceAudioURL error:&error];
     
     [self.audioPlayerOne prepareToPlay];
-    //[self.audioPlayerOne playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
+    [self.audioPlayerOne playAtTime:self.audioPlayerOne.deviceCurrentTime + 0.3];
     
 }
 
@@ -137,8 +133,12 @@
     [self.audioPlayerTwo stop];
     [self.audioPlayerThree stop];
     
-    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"] animated:NO completion:nil];
     
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    UIViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
+    [mainViewController specialTransitionFromViewController:self toViewController:menuViewController];
+    [mainViewController showMenuBar];
     
 }
 
@@ -154,7 +154,7 @@
     
     [self makeChainAnimation];
     
-    //[self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
+    [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:9.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
     
 }
 

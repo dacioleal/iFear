@@ -25,11 +25,16 @@
 - (IBAction)actividadPushButton:(id)sender;
 - (IBAction)mentesPushButton:(id)sender;
 
+- (void) showMenuBar;
+
+- (void) hideMenuBar;
 
 - (void) displayContentViewController: (UIViewController *) contentViewController;
 
 - (void) hideContentViewController: (UIViewController *) contentViewController;
 
 - (void) cycleFromViewController: (UIViewController *) oldViewController toViewController: (UIViewController *) newViewController;
+
+- (void) specialTransitionFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController;
 
 @end
