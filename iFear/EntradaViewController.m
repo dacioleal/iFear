@@ -137,7 +137,6 @@
     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     UIViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
     [mainViewController specialTransitionFromViewController:self toViewController:menuViewController];
-    [mainViewController showMenuBar];
     
 }
 
@@ -150,9 +149,7 @@
     SKView *spriteView = (SKView *) self.view;
     MainScene *scene = (MainScene *)[spriteView scene];
     [scene riseDoor];
-    
     [self makeChainAnimation];
-    
     [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:6.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
     
 }

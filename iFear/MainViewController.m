@@ -159,7 +159,11 @@
 - (void) hideMenuBar
 {
     UIView *menuBarView = [self.view viewWithTag:10];
+    menuBarView.alpha = 1.0;
     menuBarView.hidden = YES;
+    [UIView animateWithDuration:1.0 animations:^{
+        menuBarView.alpha = 0.0;
+    }];
     
 }
 
@@ -168,7 +172,7 @@
     UIView *menuBarView = [self.view viewWithTag:10];
     menuBarView.alpha = 0;
     menuBarView.hidden = NO;
-    [UIView animateWithDuration:3.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
         menuBarView.alpha = 1.0;
     }];
 }

@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController hideMenuBar];
    
 }
 
@@ -42,6 +45,7 @@
     
     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController performSelector:@selector(carteleraPushButton:) withObject:mainViewController];
+    [mainViewController showMenuBar];
 
 }
 
@@ -49,12 +53,14 @@
     
     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController performSelector:@selector(buscarPushButton:) withObject:mainViewController];
+    [mainViewController showMenuBar];
 }
 
 - (IBAction)mentesPushButton:(UIButton *)sender {
     
     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController performSelector:@selector(mentesPushButton:) withObject:mainViewController];
+    [mainViewController showMenuBar];
 }
 
 - (IBAction)queEsPushButton:(UIButton *)sender {
@@ -68,5 +74,7 @@
     
     MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController performSelector:@selector(actividadPushButton:) withObject:mainViewController];
+    [mainViewController showMenuBar];
 }
+
 @end
