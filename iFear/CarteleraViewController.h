@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarteleraViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface CarteleraViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource, NSURLConnectionDataDelegate, NSURLSessionDownloadDelegate>
 
 @property (strong, nonatomic) UIPageViewController *carteleraPageViewController;
 
