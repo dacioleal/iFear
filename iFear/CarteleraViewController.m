@@ -49,115 +49,30 @@
     
     moviesList = [[NSMutableArray alloc] init];
     
-    
-    //////////////////////////////////////////////////////////////////////////////////////////
-    
-    // Aquí debe ir la llamada a la base de datos para traer las películas
-    // Creamos dos objetos película ficticios y lo añadimos al array 'moviesList'
-    
-    ///////////////////////////////////////////////////////////////////////////////////////////
-    
-    Pelicula *movie = [[Pelicula alloc] initConParametros:1
-                                        tituloDePelicula:@"Carrie"
-                                tituloOriginalDePelicula:@"Carrie"
-                                        anioDeLaPelicula:2013
-                                      duracionDePelicula:100
-                                          paisDePelicula:@"Estados Unidos"
-                                      directorDePelicula:@"Kimberly Peirce"
-                                         guionDePelicula:@"Marco Beltrami"
-                                        musicaDePelicula:@"---"
-                                  fotografiaDeLaPelicula:@"Steve Yedlin"
-                                     repartoDeLaPelicula:@"Chloe Grace Moretz, Julianne Moore, Gabriella Wilde, Portia Doubleday, Judy Greer, Alex Russell, ZoÃ« Belkin, Ansel Elgort, Samantha Weinstein, Karissa Strain, Barry Shabaka Henley, Demetrius Joyette, Cynthia Preston, Arlene Mazerolle, Karissa Strain, Evan Gilchrist, Eddie Max Huband, Tyler Rushton, "
-                                  productoraDeLaPelicula:@"Metro Goldwyn Mayer, Screen Gems"
-                                         webDeLaPelicula:@"http://www.carrie-movie.com/site/"
-                                    sinopsisDeLaPelicula:@"Carrie White, una adolescente a la que sus compañeros humillan constantemente, posee poderes psíquicos que se manifiestan cuando se siente dominada por la ira. El dí­a del baile de graduación la situación llega a hacérsele insoportable."
-                                     portadaDeLaPelicula:@"www.carrie.com"];
-    
-    Pelicula *movie2 = [[Pelicula alloc] initConParametros:2
-                                         tituloDePelicula:@"13 Eerie"
-                                 tituloOriginalDePelicula:@"13 Eerie"
-                                         anioDeLaPelicula:2010
-                                       duracionDePelicula:86
-                                           paisDePelicula:@"Canadá"
-                                       directorDePelicula:@"Lowell Dean"
-                                          guionDePelicula:@"Igor Vrabac, Ken Worth"
-                                         musicaDePelicula:@"----"
-                                   fotografiaDeLaPelicula:@"Mark Dobrescu"
-                                      repartoDeLaPelicula:@"Katharine Isabelle, Michael Shanks, Brendan Fletcher, Nick Moran, Brendan Fehr, Jesse Moss, Kristie Patterson, Michael Eisner, Shannon Jardine"
-                                   productoraDeLaPelicula:@"Don Carmody Productions, Minds Eye Entertainment"
-                                          webDeLaPelicula:@"www.13erie.com"
-                                     sinopsisDeLaPelicula:@"Seis estudiantes de medicina forense realizan un trabajo de campo en una isla remota. Sin saberlo, se adentran en una base anteriormente utilizada para realizar experimentos biológicos ilegales, usando peligrosos criminales como cobayas. El lugar está plagado de cadáveres deformes, putrefactos e inertes... O no tanto."
-                                      portadaDeLaPelicula:@"www.13erie.com"];
-    
-    [moviesList addObject:movie];
-    [moviesList addObject:movie2];
-    [moviesList addObject:movie2];
-    [moviesList addObject:movie];
-    [moviesList addObject:movie];
-    [moviesList addObject:movie2];
-    [moviesList addObject:movie2];
-//    [moviesList addObject:movie];
-//    [moviesList addObject:movie2];
-//    [moviesList addObject:movie];
-//    [moviesList addObject:movie];
-//    [moviesList addObject:movie2];
-//    [moviesList addObject:movie2];
-    
-    
-    
-    
-    
-//    // Parametros
-//    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                                @"getTodasPeliculas", @"f",nil];
-//    NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
-//    [self setConnectionWithParameters:parameters toUrl:direccion];
-//    /////////////////////////////////////////////////////////////////////////////////////////////////////
-//    
-//    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//    NSLog(@"%@", moviesList);  /// Alberto aquí el array moviesList debería estar lleno con las películas y sigue estando vacío //
-//    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-//    
-//    
-//    /////////////////////////////////////////////////////////////////////////////////////////////////////
-//    
-    
-    // Se establece el número de películas por página y se calcula el número de páginas
-    
-    _moviesPerPage = 3;
-    
-    _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
-    
-    
-    
-    [self setMoviesForAllPages];
-    
-    
-    
     self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
-    
-    PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[pageContentViewController];
-    
-    [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     self.carteleraPageViewController.delegate = self;
     self.carteleraPageViewController.dataSource = self;
     
-    [self addChildViewController: self.carteleraPageViewController];
-    
+    [self addChildViewController: self.carteleraPageViewController];   
     
     
     self.carteleraPageViewController.view.frame = CGRectMake(0, 0, 718, 874);
     self.carteleraPageViewController.view.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame) + 10);
-   
-   
+    
+    
     [self.view addSubview:self.carteleraPageViewController.view];
+
     
     
-    self.pageControl.numberOfPages = _numberOfPages;
+    
+    
+    // Parametros
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                @"getTodasPeliculas", @"f",nil];
+    NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    [self setConnectionWithParameters:parameters toUrl:direccion];
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
     
     
     
@@ -396,6 +311,7 @@
     
     
     for (int i = 0; i < moviesList.count; i ++) {
+        
         NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/"];
         NSString * urlImagenPelicula = [[moviesList objectAtIndex:i] portada];
         
@@ -484,6 +400,16 @@
     
     
     [self downloadFileWithProgress:@""];
+    
+    self.pageControl.numberOfPages = _numberOfPages;
+    
+    
+    PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
+    NSArray *viewControllers = @[pageContentViewController];
+    
+    [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    
     
 }
 
