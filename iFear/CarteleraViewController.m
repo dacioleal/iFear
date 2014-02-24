@@ -203,9 +203,9 @@
             moviesPerPageForLoop = moviesList.count % _moviesPerPage;     //Si es la última página el número de películas en la página es el resto de la división
         }
         
-        for (int j = 0; j < moviesPerPageForLoop; j++) {
+        for (int j = 0; j <  moviesPerPageForLoop; j++) {
             
-            Pelicula *movie = [ moviesList objectAtIndex:i+j ];
+            Pelicula *movie = [ moviesList objectAtIndex: i*_moviesPerPage+j];
             
             [pageData addObject:movie];
             
@@ -380,7 +380,7 @@
                                   sinopsisDeLaPelicula:sinopsis
                                    portadaDeLaPelicula:portada];
         
-        NSLog(@"%@",pelicula.titulo);
+       // NSLog(@"%@",pelicula.titulo);
         [moviesList addObject:pelicula];
         
     }
@@ -391,20 +391,18 @@
     
     _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
     
-    [self setMoviesForAllPages];
-    
-    
-    [self downloadFileWithProgress:@""];
-    
     self.pageControl.numberOfPages = _numberOfPages;
     
+    NSLog(@"Cartelera Movies: %@", moviesList);
+    
+    [self setMoviesForAllPages];
+    
+    [self downloadFileWithProgress:@""];
     
     PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[pageContentViewController];
     
     [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    
     
 }
 
@@ -415,14 +413,14 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
-    if(error == nil)
-    {
-        NSLog(@"Éxito al bajar");
-        
-    }
-    else{
-        NSLog(@"Error %@",[error userInfo]);
-    }
+//    if(error == nil)
+//    {
+//        NSLog(@"Éxito al bajar");
+//        
+//    }
+//    else{
+//        NSLog(@"Error %@",[error userInfo]);
+//    }
 }
 
 
@@ -432,10 +430,13 @@ didCompleteWithError:(NSError *)error
 {
     // Se obtiene la imagen
     //UIImage *imagenDescargada = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
+    
+    [_activityIndicator stopAnimating];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         
         // BLOQUE DONDE ACTUALIZAR LA UI
-        [_activityIndicator stopAnimating];
+        
     });
 }
 
