@@ -13,5 +13,6 @@
 @property (strong, nonatomic) UIPageViewController *carteleraPageViewController;
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

@@ -54,7 +54,7 @@
     self.carteleraPageViewController.delegate = self;
     self.carteleraPageViewController.dataSource = self;
     
-    [self addChildViewController: self.carteleraPageViewController];   
+    [self addChildViewController: self.carteleraPageViewController];
     
     
     self.carteleraPageViewController.view.frame = CGRectMake(0, 0, 718, 874);
@@ -65,15 +65,10 @@
 
     
     
-    
-    
-    // Parametros
     NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 @"getTodasPeliculas", @"f",nil];
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:direccion];
-    /////////////////////////////////////////////////////////////////////////////////////////////////////
-    
     
     
 }
@@ -440,7 +435,7 @@ didCompleteWithError:(NSError *)error
     dispatch_async(dispatch_get_main_queue(), ^{
         
         // BLOQUE DONDE ACTUALIZAR LA UI
-        
+        [_activityIndicator stopAnimating];
     });
 }
 
