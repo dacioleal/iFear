@@ -307,7 +307,7 @@
     
     for (int i = 0; i < moviesList.count; i ++) {
         
-        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/"];
+        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
         NSString * urlImagenPelicula = [[moviesList objectAtIndex:i] portada];
         
         [strUrlImagen appendString:urlImagenPelicula];
@@ -380,7 +380,7 @@
                                   sinopsisDeLaPelicula:sinopsis
                                    portadaDeLaPelicula:portada];
         
-       // NSLog(@"%@",pelicula.titulo);
+        NSLog(@"%@",pelicula.titulo);
         [moviesList addObject:pelicula];
         
     }
@@ -413,14 +413,14 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
-//    if(error == nil)
-//    {
-//        NSLog(@"Éxito al bajar");
-//        
-//    }
-//    else{
-//        NSLog(@"Error %@",[error userInfo]);
-//    }
+    if(error == nil)
+    {
+        NSLog(@"Éxito al bajar");
+        
+    }
+    else{
+        NSLog(@"Error %@",[error userInfo]);
+    }
 }
 
 
