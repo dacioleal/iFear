@@ -63,13 +63,7 @@
     
     [self.view addSubview:self.carteleraPageViewController.view];
 
-    
-    
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                @"getTodasPeliculas", @"f",nil];
-    NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
-    [self setConnectionWithParameters:parameters toUrl:direccion];
-    
+    [self retrieveData];
     
 }
 
@@ -151,7 +145,7 @@
 
 - (PageContentViewController *) viewControllerAtIndex: (NSUInteger) index
 {
-    if ( ( pages.count == 0 ) || (index >= _numberOfPages) ) {
+    if ( ( _numberOfPages == 0 ) || (index >= _numberOfPages) ) {
         
         return nil;
     }
@@ -162,7 +156,8 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"pageContentViewController"];
     [pageContentViewController setIndex:index];
     [pageContentViewController setNumberOfPages:_numberOfPages];
-    [pageContentViewController setMoviesArray:movies];
+    if ( movies )
+        [pageContentViewController setMoviesArray:movies];
     
     return pageContentViewController;
 }
@@ -215,6 +210,23 @@
         
         pageData = [[NSMutableArray alloc] init];
     }
+    
+}
+
+- (void) displayAlertView
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error downloading data" message:@"Tap to retry" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alertView show];
+}
+
+- (void) retrieveData {
+    
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                @"getTodasPeliculas", @"f",nil];
+    NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    [self setConnectionWithParameters:parameters toUrl:direccion];
+
     
 }
 
@@ -380,29 +392,10 @@
                                   sinopsisDeLaPelicula:sinopsis
                                    portadaDeLaPelicula:portada];
         
-        NSLog(@"%@",pelicula.titulo);
+        //NSLog(@"%@",pelicula.titulo);
         [moviesList addObject:pelicula];
         
     }
-    
-    
-    // Se establece el número de películas por página y se calcula el número de páginas
-    _moviesPerPage = 3;
-    
-    _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
-    
-    self.pageControl.numberOfPages = _numberOfPages;
-    
-    [self setMoviesForAllPages];
-    
-    [self downloadFileWithProgress:@""];
-    
-    PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
-    NSArray *viewControllers = @[pageContentViewController];
-    
-    [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    [_activityIndicator stopAnimating];
     
 }
 
@@ -417,9 +410,38 @@ didCompleteWithError:(NSError *)error
     {
         NSLog(@"Éxito al bajar");
         
+        
+        // Se establece el número de películas por página y se calcula el número de páginas
+        _moviesPerPage = 3;
+        
+        _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
+        
+        self.pageControl.numberOfPages = _numberOfPages;
+        
+        [self setMoviesForAllPages];
+        
+        //[self downloadFileWithProgress:@""];
+        
+        PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
+        
+        if ( pageContentViewController ) {
+            NSArray *viewControllers = @[pageContentViewController];
+            
+            [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+            
+            [_activityIndicator stopAnimating];
+            
+        } else {
+            
+            [self retrieveData];
+        }
+        
     }
-    else{
+    
+    else {
+        
         NSLog(@"Error %@",[error userInfo]);
+        [self displayAlertView];
     }
 }
 
@@ -448,6 +470,13 @@ didCompleteWithError:(NSError *)error
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes
 {
     // METODO NO IMPLEMENTADO DE MOMENTO
+}
+
+#pragma mark - AlertView Delegate method
+
+- (void) alertViewCancel:(UIAlertView *)alertView {
+    
+    [self retrieveData];
 }
 
 
