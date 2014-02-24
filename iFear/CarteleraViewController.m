@@ -402,6 +402,8 @@
     
     [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
+    [_activityIndicator stopAnimating];
+    
 }
 
 
@@ -429,7 +431,7 @@ didCompleteWithError:(NSError *)error
     // Se obtiene la imagen
     //UIImage *imagenDescargada = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
     
-    [_activityIndicator stopAnimating];
+    
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
