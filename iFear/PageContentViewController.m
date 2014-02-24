@@ -69,8 +69,6 @@
         }
     }
     
-    NSLog(@"PageContent Movies: %@", _moviesArray);
-    
 }
 
 

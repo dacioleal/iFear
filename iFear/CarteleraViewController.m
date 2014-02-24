@@ -393,8 +393,6 @@
     
     self.pageControl.numberOfPages = _numberOfPages;
     
-    NSLog(@"Cartelera Movies: %@", moviesList);
-    
     [self setMoviesForAllPages];
     
     [self downloadFileWithProgress:@""];
