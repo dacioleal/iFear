@@ -47,6 +47,7 @@
     
     
     NSArray *tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
+    NSArray *imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
     
     
     if (_moviesArray)
@@ -56,6 +57,10 @@
             MovieTableView *movieTableView = [tableViewsArray objectAtIndex:i];
             
             movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
+            
+            UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:i];
+            
+            imageView.image = movieTableView.movie.imagen;
            
         }
         
@@ -65,6 +70,9 @@
         if (!movieTableView.movie) {                            // Si el TableView no tiene asignada una película no se muestra 
             
             movieTableView.hidden = YES;
+            int index = [tableViewsArray indexOfObject:movieTableView];
+            UIImageView *imageView = [imageViewsArray objectAtIndex:index];
+            imageView.hidden = YES;                                // Y tampoco se muestra la imagen de la película
             
             
         }
