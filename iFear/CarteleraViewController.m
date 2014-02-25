@@ -272,7 +272,7 @@
             [mutableStr appendString:@"&"];
         }
         
-                NSString * key = [keys objectAtIndex:i];
+        NSString * key = [keys objectAtIndex:i];
         [mutableStr appendString:key];
         [mutableStr appendString:@"="];
         
