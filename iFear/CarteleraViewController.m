@@ -14,6 +14,8 @@
 {
     NSMutableArray *moviesList; // Array con la lista de películas
     
+    NSMutableArray *imagesList; // Array con las imágenes de las películas
+    
     int _numberOfPages;  // Número de páginas
     
     int _moviesPerPage;  // Número de películas por página
@@ -48,6 +50,7 @@
 
     
     moviesList = [[NSMutableArray alloc] init];
+    imagesList = [[NSMutableArray alloc] init];
     
     self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
@@ -73,6 +76,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 
@@ -120,6 +125,8 @@
 
 
 
+
+
 #pragma mark - UIPageViewControllerDelegate methods
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
@@ -133,6 +140,8 @@
     }
     
 }
+
+
 
 
 
@@ -226,7 +235,16 @@
                                 @"getTodasPeliculas", @"f",nil];
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:direccion];
+    
+    for (int i = 0; i < moviesList.count; i ++) {
 
+        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+        NSString * urlImagenPelicula = [[moviesList objectAtIndex:i] portada];
+
+        [strUrlImagen appendString:urlImagenPelicula];
+    
+        [self downloadFileWithProgress:strUrlImagen];
+    }
     
 }
 
@@ -237,32 +255,28 @@
  */
 - (NSString *)createStringWithParameters: (NSDictionary *)parameters
 {
-    // Se obtienen todas las claves que vengan en los parametros
+    
     NSArray *keys = [parameters allKeys];
     
-    // String donde se irá concatenando los parametros
     NSMutableString* mutableStr = [[NSMutableString alloc] initWithString:@""];
     
-    // Valor devuelto
     NSString *retorno;
     
     for (int i = 0; i < keys.count; i++) {
-        // Esto es para filtrar que la primera vez no ponga el signo de  "&"
+        
         if (i != 0){
             [mutableStr appendString:@"&"];
         }
-        // Se obtienen los valores de cada parametro
-        // Key
-        NSString * key = [keys objectAtIndex:i];
+        
+                NSString * key = [keys objectAtIndex:i];
         [mutableStr appendString:key];
         [mutableStr appendString:@"="];
-        // Parámetro
+        
         NSString * parametro = [parameters objectForKey:key];
         [mutableStr appendString:parametro];
         
     }
     
-    // Se convierte a String
     retorno = [NSString stringWithString:mutableStr];
     
     return retorno;
@@ -272,33 +286,26 @@
 // Método que realiza la petición para obtener el listado de peliculas
 -(void) setConnectionWithParameters: (NSDictionary *)parameters toUrl: (NSString *) serverUrl
 {
-    // En este caso se pone una configuración por defecto. Hay varios tipos de configuracion
+    
     NSURLSessionConfiguration * configuracionConexion = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    // Tiempo de espera
+    
     configuracionConexion.timeoutIntervalForRequest = 10.0;
     configuracionConexion.timeoutIntervalForResource = 10.0;
     
-    // Conexión
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: configuracionConexion delegate: self delegateQueue: [NSOperationQueue mainQueue]];
     
-    // URL
     NSURL * url = [NSURL URLWithString:serverUrl];
     
-    // Petición URL
     NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
     
-    // Parámetros
     NSString * strParametros = [self createStringWithParameters:parameters];
     
-    // Método de envío
     [urlRequest setHTTPMethod:@"POST"];
     [urlRequest setHTTPBody:[strParametros dataUsingEncoding:NSUTF8StringEncoding]];
     
-    // Controla la conexión
     NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithRequest:urlRequest];
     
-    // Inicia la conexión
     [dataTask resume];
     
 }
@@ -317,20 +324,24 @@
     
     
     
-    for (int i = 0; i < moviesList.count; i ++) {
-        
-        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
-        NSString * urlImagenPelicula = [[moviesList objectAtIndex:i] portada];
-        
-        [strUrlImagen appendString:urlImagenPelicula];
-        
-        NSURL * url = [NSURL URLWithString:[NSString stringWithString:strUrlImagen]];
-        
-        NSURLSessionDownloadTask * downloadTask =[ defaultSession downloadTaskWithURL:url];
-        [downloadTask resume];
-        
-    }
+//    for (int i = 0; i < moviesList.count; i ++) {
+//        
+//        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+//        NSString * urlImagenPelicula = [[moviesList objectAtIndex:i] portada];
+//        
+//        [strUrlImagen appendString:urlImagenPelicula];
+//        
+//        NSURL * url = [NSURL URLWithString:[NSString stringWithString:strUrlImagen]];
+//        
+//        NSURLSessionDownloadTask * downloadTask =[ defaultSession downloadTaskWithURL:url];
+//        [downloadTask resume];
+//        
+//    }
 }
+
+
+
+
 
 #pragma mark - NSURLSessionDataDelegate
 
@@ -347,18 +358,18 @@
 // Al recibir los datos
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    // Se obtiene la respuesta del servidor
+    
     NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     
-    // Se trae todo lo que venga en retorno
+    
     NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
     
-    // Se va iterando sobre el array para obtener todas las peliculas
+    
     Pelicula * pelicula;
     NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
     int idPelicula,anio,duracion;
     for (NSDictionary * fila in retorno) {
-        // Se obtienen los campos de cada película
+        
         titulo = [fila objectForKey:@"titulo"];
         titulo_original = [fila objectForKey:@"titulo_original"];
         pais = [fila objectForKey:@"pais"];
@@ -375,7 +386,7 @@
         duracion = [[fila objectForKey:@"duracion"] intValue];
         idPelicula = [[fila objectForKey:@"id"] intValue];
         
-        // Se crea el objeto pelicula
+       
         pelicula = [[Pelicula alloc] initConParametros:idPelicula
                                       tituloDePelicula:titulo
                               tituloOriginalDePelicula:titulo_original
@@ -392,7 +403,7 @@
                                   sinopsisDeLaPelicula:sinopsis
                                    portadaDeLaPelicula:portada];
         
-        //NSLog(@"%@",pelicula.titulo);
+        
         [moviesList addObject:pelicula];
         
     }
@@ -420,8 +431,6 @@ didCompleteWithError:(NSError *)error
         
         [self setMoviesForAllPages];
         
-        //[self downloadFileWithProgress:@""];
-        
         PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
         
         if ( pageContentViewController ) {
@@ -430,7 +439,7 @@ didCompleteWithError:(NSError *)error
             [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
             
             [_activityIndicator stopAnimating];
-            
+
         } else {
             
             [self retrieveData];
@@ -450,8 +459,9 @@ didCompleteWithError:(NSError *)error
 #pragma mark - NSURLSessionDownloadDelegate
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
 {
-    // Se obtiene la imagen
-    //UIImage *imagenDescargada = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
+    [imagesList addObject:image];
+    NSLog(@"%@", imagesList);
     
     
     
@@ -471,6 +481,8 @@ didCompleteWithError:(NSError *)error
 {
     // METODO NO IMPLEMENTADO DE MOMENTO
 }
+
+
 
 #pragma mark - AlertView Delegate method
 
