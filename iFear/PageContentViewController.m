@@ -56,6 +56,7 @@
             MovieTableView *movieTableView = [tableViewsArray objectAtIndex:i];
             
             movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
+           
         }
         
     }
