@@ -222,12 +222,14 @@
     
 }
 
+
 - (void) displayAlertView
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error downloading data" message:@"Tap to retry" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [alertView show];
 }
+
 
 - (void) retrieveData {
     
@@ -284,7 +286,8 @@
 
 
 // Método que realiza la petición para obtener el listado de peliculas
--(void) setConnectionWithParameters: (NSDictionary *)parameters toUrl: (NSString *) serverUrl
+
+- (void) setConnectionWithParameters: (NSDictionary *)parameters toUrl: (NSString *) serverUrl
 {
     
     NSURLSessionConfiguration * configuracionConexion = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -311,7 +314,8 @@
 }
 
 
-// Método para obtener las fotografias
+// Método para obtener las imágenes
+
 -(void) downloadFileWithProgress: (NSString *) strUrl
 {
     
@@ -414,6 +418,7 @@
 
 
 // Al finalizar
+
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
@@ -457,6 +462,7 @@ didCompleteWithError:(NSError *)error
 
 
 #pragma mark - NSURLSessionDownloadDelegate
+
 -(void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
 {
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];

@@ -12,6 +12,7 @@
 
 
 #pragma mark - Atributos
+
 @property int idPelicula;
 @property (strong, nonatomic) NSString * titulo;
 @property (strong, nonatomic) NSString * titulo_original;
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) NSString * portada;
 
 #pragma  mark - Inicializador con parámetros
+
 - (id)initConParametros:(int) idPelicula
          tituloDePelicula:(NSString *) titulo
  tituloOriginalDePelicula:(NSString *) titulo_original
