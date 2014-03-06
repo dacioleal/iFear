@@ -10,7 +10,10 @@
 #import "Pelicula.h"
 
 
-@interface PageContentViewController ()
+@interface PageContentViewController () {
+    
+    
+}
 
 @end
 
@@ -31,7 +34,6 @@
 {
     [super viewDidLoad];
     
-    
     _topMovieTableView.dataSource = self;
     _topMovieTableView.delegate = self;
     
@@ -41,14 +43,8 @@
     _bottomMovieTableView.dataSource = self;
     _bottomMovieTableView.delegate = self;
     
-    _topMovieTableView.layer.cornerRadius = 10;
-    _midMovieTableView.layer.cornerRadius = 10;
-    _bottomMovieTableView.layer.cornerRadius = 10;
-    
-    
     NSArray *tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
     NSArray *imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
-    
     
     if (_moviesArray)
     {
@@ -59,9 +55,9 @@
             movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
             
             UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:i];
+                
+            imageView.image = movieTableView.movie.imagen;  // Asignamos la imagen de la película a su ImageView
             
-            imageView.image = movieTableView.movie.imagen;
-           
         }
         
     }
@@ -72,14 +68,12 @@
             movieTableView.hidden = YES;
             int index = [tableViewsArray indexOfObject:movieTableView];
             UIImageView *imageView = [imageViewsArray objectAtIndex:index];
-            imageView.hidden = YES;                                // Y tampoco se muestra la imagen de la película
-            
+            imageView.hidden = YES;                                // Y tampoco se muestra el ImageView de la película
             
         }
     }
     
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -139,8 +133,6 @@
             }
             
             cell.textLabel.attributedText = attributedString;
-            
-            
 
         }
     }

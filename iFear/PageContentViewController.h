@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet MovieTableView *bottomMovieTableView;
 
 
-
 @property (strong, nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
 @property (nonatomic) NSUInteger index;
 @property (nonatomic) NSUInteger numberOfPages;

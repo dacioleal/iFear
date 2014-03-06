@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarteleraViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource, NSURLConnectionDataDelegate, NSURLSessionDownloadDelegate, UIAlertViewDelegate>
+@interface CarteleraViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource, NSURLSessionDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIPageViewController *carteleraPageViewController;
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 
 @end

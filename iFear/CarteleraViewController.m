@@ -31,6 +31,7 @@
 
 @implementation CarteleraViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,7 +40,6 @@
     }
     return self;
 }
-
 
 
 - (void)viewDidLoad
@@ -51,6 +51,8 @@
     
     moviesList = [[NSMutableArray alloc] init];
     imagesList = [[NSMutableArray alloc] init];
+    
+    
     
     self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
@@ -65,6 +67,8 @@
     
     
     [self.view addSubview:self.carteleraPageViewController.view];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configurePageContentViewController) name:@"imagesSetFinished" object:self];
 
     [self retrieveData];
     
@@ -76,8 +80,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 
 
@@ -95,10 +97,7 @@
     
     index--;
     
-   
-    
     return [self viewControllerAtIndex:index];
-    
     
 }
 
@@ -125,8 +124,6 @@
 
 
 
-
-
 #pragma mark - UIPageViewControllerDelegate methods
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
@@ -140,11 +137,6 @@
     }
     
 }
-
-
-
-
-
 
 
 #pragma mark - Personalized methods
@@ -233,22 +225,12 @@
 
 - (void) retrieveData {
     
+    _loadingLabel.text = @"Cargando datos";
+    
     NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 @"getTodasPeliculas", @"f",nil];
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:direccion];
-    
-}
-
-- (void) retrieveImageForMovie: (Pelicula *) movie
-{
-        
-    NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
-    NSString * urlImagenPelicula = movie.portada;
-        
-    [strUrlImagen appendString:urlImagenPelicula];
-    
-    [self downloadFileWithProgress:strUrlImagen];
     
 }
 
@@ -287,6 +269,11 @@
 }
 
 
+
+
+
+
+
 // Método que realiza la petición para obtener el listado de peliculas
 
 - (void) setConnectionWithParameters: (NSDictionary *)parameters toUrl: (NSString *) serverUrl
@@ -316,33 +303,9 @@
 }
 
 
-// Método para obtener las imágenes
-
--(void) downloadFileWithProgress: (NSString *) strUrl
-{
-    NSURL * url = [NSURL URLWithString:strUrl];
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate:self delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSURLSessionDownloadTask * downloadTask =[ defaultSession downloadTaskWithURL:url];
-    [downloadTask resume];
-
-}
-
-
-
 
 
 #pragma mark - NSURLSessionDataDelegate
-
-// Donde primero entra al realizar la petición
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler
-{
-    
-    // Para que la tarea continue normalmente.
-    completionHandler(NSURLSessionResponseAllow);
-}
-
 
 
 // Al recibir los datos
@@ -350,8 +313,7 @@
 {
     
     NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    
+   
     NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
     
     
@@ -394,9 +356,11 @@
                                   sinopsisDeLaPelicula:sinopsis
                                    portadaDeLaPelicula:portada];
         
+        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+        [strUrlImagen appendString:portada];
+        pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
         
         [moviesList addObject:pelicula];
-        [self retrieveImageForMovie:pelicula];
         
     }
     
@@ -414,40 +378,9 @@ didCompleteWithError:(NSError *)error
     {
         NSLog(@"Éxito al bajar");
         
+        [self retrieveImages];   // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
         
-        if (moviesList.count != 0  && moviesList.count == imagesList.count) {
-            
-            // Se establece el número de películas por página y se calcula el número de páginas
-            
-            _moviesPerPage = 3;
-            
-            _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
-            
-            self.pageControl.numberOfPages = _numberOfPages;
-            
-            [self setMoviesForAllPages];
-            
-            for (Pelicula *movie in moviesList) {
-                int index = [moviesList indexOfObject:movie];
-                movie.imagen = (UIImage *)[imagesList objectAtIndex:index];
-            }
-            
-            PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
-            
-            if ( pageContentViewController ) {
-                NSArray *viewControllers = @[pageContentViewController];
-                
-                [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-                
-                [_activityIndicator stopAnimating];
-                
-                
-            } else {
-                
-                [self retrieveData];
-                
-            }
-        }
+        
         
     } else {
         
@@ -457,31 +390,56 @@ didCompleteWithError:(NSError *)error
 }
 
 
-
-#pragma mark - NSURLSessionDownloadDelegate
-
-- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
+- (void) retrieveImages
 {
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
-    [imagesList addObject:image];
-    //NSLog(@"%@", image.description);
-
-    dispatch_async(dispatch_get_main_queue(), ^{
+    _loadingLabel.text = @"Cargando imágenes";
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        // BLOQUE DONDE ACTUALIZAR LA UI
+        for (Pelicula *movie in moviesList) {
+            movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"imagesSetFinished" object:self];
         
     });
+    
 }
 
-- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
+- (void) configurePageContentViewController
 {
-    // METODO NO IMPLEMENTADO DE MOMENTO
+    [_activityIndicator stopAnimating];
+    _loadingLabel.hidden = YES;
+    
+    if (moviesList.count) {
+        
+        // Se establece el número de películas por página y se calcula el número de páginas
+        
+        _moviesPerPage = 3;
+        
+        _numberOfPages = ( moviesList.count % _moviesPerPage == 0 ) ? (moviesList.count / _moviesPerPage) : ( moviesList.count / _moviesPerPage + 1);
+        
+        self.pageControl.numberOfPages = _numberOfPages;
+        
+        [self setMoviesForAllPages];
+        
+        
+        PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
+        
+        if ( pageContentViewController ) {
+            NSArray *viewControllers = @[pageContentViewController];
+            
+            [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+            
+        } else {
+            
+            [self retrieveData];
+            
+        }
+    }
+
+    
 }
 
-- (void) URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes
-{
-    // METODO NO IMPLEMENTADO DE MOMENTO
-}
+
 
 
 

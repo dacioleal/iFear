@@ -65,9 +65,12 @@ tituloOriginalDePelicula:(NSString *)titulo_original
         [self setWeb:web];
         [self setSinopsis:sinopsis];
         [self setPortada:portada];
+        
+        
     }
     return self;
 }
+ 
 
 - (NSArray *) titlesArrayToMakeTableView
 {
@@ -83,4 +86,21 @@ tituloOriginalDePelicula:(NSString *)titulo_original
     return array;
 }
 
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
