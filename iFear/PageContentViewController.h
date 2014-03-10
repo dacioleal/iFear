@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MovieTableView.h"
 
+
 @interface PageContentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;

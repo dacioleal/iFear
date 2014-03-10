@@ -52,6 +52,8 @@
     moviesList = [[NSMutableArray alloc] init];
     imagesList = [[NSMutableArray alloc] init];
     
+    _loadingView.layer.cornerRadius = 10.0;
+    
     
     
     self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -62,13 +64,13 @@
     [self addChildViewController: self.carteleraPageViewController];
     
     
-    self.carteleraPageViewController.view.frame = CGRectMake(0, 0, 718, 874);
-    self.carteleraPageViewController.view.center = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame) + 10);
+    self.carteleraPageViewController.view.bounds = _contentView.bounds;
+    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x + 20), (_contentView.center.y - _contentView.frame.origin.y + 20) );
     
     
-    [self.view addSubview:self.carteleraPageViewController.view];
+    [self.contentView addSubview:self.carteleraPageViewController.view];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configurePageContentViewController) name:@"imagesSetFinished" object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configurePageContentViewController) name:@"dataDownloaded" object:self];
 
     [self retrieveData];
     
@@ -378,9 +380,17 @@ didCompleteWithError:(NSError *)error
     {
         NSLog(@"Éxito al bajar");
         
-        [self retrieveImages];   // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
-        
-        
+        if (moviesList.count != 0) {
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"dataDownloaded" object:self];
+            
+            [self retrieveImages];   // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
+            
+        } else {
+            
+            [self retrieveData];
+            
+        }
         
     } else {
         
@@ -393,6 +403,7 @@ didCompleteWithError:(NSError *)error
 - (void) retrieveImages
 {
     _loadingLabel.text = @"Cargando imágenes";
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         for (Pelicula *movie in moviesList) {
@@ -400,14 +411,16 @@ didCompleteWithError:(NSError *)error
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"imagesSetFinished" object:self];
         
+        [_activityIndicator stopAnimating];
+        _loadingView.hidden = YES;
     });
     
 }
 
+
+
 - (void) configurePageContentViewController
 {
-    [_activityIndicator stopAnimating];
-    _loadingLabel.hidden = YES;
     
     if (moviesList.count) {
         

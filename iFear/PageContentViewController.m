@@ -12,7 +12,8 @@
 
 @interface PageContentViewController () {
     
-    
+    NSArray *tableViewsArray;
+    NSArray *imageViewsArray;
 }
 
 @end
@@ -34,6 +35,8 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addImages) name:@"imagesSetFinished" object:nil];
+    
     _topMovieTableView.dataSource = self;
     _topMovieTableView.delegate = self;
     
@@ -43,8 +46,8 @@
     _bottomMovieTableView.dataSource = self;
     _bottomMovieTableView.delegate = self;
     
-    NSArray *tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
-    NSArray *imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
+    tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
+    imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
     
     if (_moviesArray)
     {
@@ -55,7 +58,8 @@
             movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
             
             UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:i];
-                
+            
+            if ( movieTableView.movie.imagen )
             imageView.image = movieTableView.movie.imagen;  // Asignamos la imagen de la película a su ImageView
             
         }
@@ -81,6 +85,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) addImages
+{
+    for (Pelicula *movie in _moviesArray) {
+        NSInteger index = [self.moviesArray indexOfObject:movie];
+        UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:index];
+        imageView.image = movie.imagen;
+    }
+}
+
 
 
 #pragma mark - TableViewDataSource methods
@@ -102,8 +115,6 @@
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
-    
-   
     Pelicula *movie;
     
     if ([tableView isKindOfClass:[MovieTableView class]])
@@ -123,20 +134,19 @@
             [string appendString:[stringsArray objectAtIndex:indexPath.row]];
             
             if ( indexPath.row == 0 ) {
-                UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0];
-                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
+                UIFont *font = [UIFont fontWithName:@"Futura" size:28.0];
+                UIColor *textColor = [UIColor brownColor];
+                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
                 
             } else {
-                UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+                UIFont *font = [UIFont fontWithName:@"Futura" size:20.0];
                 attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
                 
             }
             
             cell.textLabel.attributedText = attributedString;
-
         }
     }
-    
     return cell;
     
 }
@@ -160,13 +170,12 @@
             NSArray *stringsArray = [movie stringsArrayToMakeTableView];
             NSString *string = (NSString *)[stringsArray objectAtIndex:indexPath.row];
             
-            UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+            //UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+            UIFont *font = [UIFont fontWithName:@"Futura" size:20.0];
             NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName:font}];
             CGRect rect = [attributes boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
             
             height = rect.size.height + 6;
-            
-            
         }
     }
 

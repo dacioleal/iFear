@@ -13,6 +13,12 @@
     NSArray *menuButtonsArray;
     UIViewController * onScreenViewController;
     
+    UIViewController *menuViewController;
+    UIViewController *busquedaViewController;
+    UIViewController *carteleraViewController;
+    UIViewController *actividadViewController;
+    UIViewController *mentesViewController;
+    
 }
 
 @end
@@ -38,8 +44,11 @@
     
     [self hideMenuBar];
     [self displayContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"entradaViewController"]];
-    
-    
+    menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
+    busquedaViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaViewController"];
+    carteleraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carteleraViewController"];
+    actividadViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"actividadViewController"];
+    mentesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mentesViewController"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,16 +76,16 @@
 - (IBAction)homePushButton:(id)sender
 {
     if (![self menuBarIsHidden]) [self animateMenuOut];
-    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
-    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    [self cycleFromViewController:onScreenViewController toViewController:menuViewController];
     [self selectIcon:self.homeButton];
 }
 
 - (IBAction)buscarPushButton:(id)sender
 {
     if (![self menuBarIsHidden]) [self animateMenuOut];
-    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaViewController"];
-    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    [self cycleFromViewController:onScreenViewController toViewController:busquedaViewController];
     [self selectIcon:self.buscarButton];
     
 }
@@ -85,8 +94,8 @@
 {
     
     if (![self menuBarIsHidden]) [self animateMenuOut];
-    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"carteleraViewController"];
-    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    [self cycleFromViewController:onScreenViewController toViewController:carteleraViewController];
     [self selectIcon:self.carteleraButton];
     
 }
@@ -95,8 +104,8 @@
 {
     
     if (![self menuBarIsHidden]) [self animateMenuOut];
-    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"actividadViewController"];
-    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    [self cycleFromViewController:onScreenViewController toViewController:actividadViewController];
     [self selectIcon:self.actividadButton];
     
 }
@@ -105,8 +114,8 @@
 {
     
     if (![self menuBarIsHidden]) [self animateMenuOut];
-    UIViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mentesViewController"];
-    [self cycleFromViewController:onScreenViewController toViewController:destinationViewController];
+    
+    [self cycleFromViewController:onScreenViewController toViewController:mentesViewController];
     [self selectIcon:self.mentesButton];
     
 }
