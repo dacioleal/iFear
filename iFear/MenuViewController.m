@@ -15,6 +15,7 @@
 
 @implementation MenuViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,7 +32,8 @@
     
      MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController hideMenuBar];
-   
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,4 +79,35 @@
     [mainViewController showMenuBar];
 }
 
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

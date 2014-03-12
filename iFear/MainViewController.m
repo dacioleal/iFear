@@ -79,6 +79,7 @@
     
     [self cycleFromViewController:onScreenViewController toViewController:menuViewController];
     [self selectIcon:self.homeButton];
+    [self hideMenuBar];
 }
 
 - (IBAction)buscarPushButton:(id)sender

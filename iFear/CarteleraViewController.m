@@ -65,7 +65,7 @@
     
     
     self.carteleraPageViewController.view.bounds = _contentView.bounds;
-    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x + 20), (_contentView.center.y - _contentView.frame.origin.y + 20) );
+    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x + 20), (_contentView.center.y - _contentView.frame.origin.y + 30) );
     
     
     [self.contentView addSubview:self.carteleraPageViewController.view];
@@ -410,9 +410,9 @@ didCompleteWithError:(NSError *)error
             movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"imagesSetFinished" object:self];
-        
         [_activityIndicator stopAnimating];
         _loadingView.hidden = YES;
+        
     });
     
 }

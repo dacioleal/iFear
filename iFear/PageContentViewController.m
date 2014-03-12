@@ -15,10 +15,21 @@
     NSArray *tableViewsArray;
     NSArray *imageViewsArray;
 }
+@property (nonatomic, strong) NSMutableAttributedString *attributedString;
 
 @end
 
 @implementation PageContentViewController
+
+- (NSMutableAttributedString *) attributedString
+{
+    if (!_attributedString) {
+        _attributedString = [[NSMutableAttributedString alloc] initWithString:@""];
+    }
+    return _attributedString;
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -127,24 +138,32 @@
             NSArray *titlesArray = [movie titlesArrayToMakeTableView];
             
             NSMutableString *string = [[NSMutableString alloc] init];
-            NSMutableAttributedString *attributedString;
             
+            NSMutableAttributedString *attributedTitleString, *attributedDescriptionString;
+            NSString *titleString = [titlesArray objectAtIndex:indexPath.row];
             
-            [string appendString:[titlesArray objectAtIndex:indexPath.row]];
-            [string appendString:[stringsArray objectAtIndex:indexPath.row]];
             
             if ( indexPath.row == 0 ) {
-                UIFont *font = [UIFont fontWithName:@"Futura" size:28.0];
+                
+                UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:26.0];
                 UIColor *textColor = [UIColor brownColor];
-                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+                string = [stringsArray objectAtIndex:0];
+                _attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
                 
             } else {
-                UIFont *font = [UIFont fontWithName:@"Futura" size:20.0];
-                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
                 
+                UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
+                attributedTitleString = [[NSMutableAttributedString alloc] initWithString:titleString attributes:@{NSFontAttributeName: font}];
+                [_attributedString appendAttributedString:attributedTitleString];
+                
+                NSString *descriptionString = [stringsArray objectAtIndex:indexPath.row];
+                font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0];
+                attributedDescriptionString = [[NSMutableAttributedString alloc] initWithString:descriptionString attributes:@{NSFontAttributeName: font}];
+                [_attributedString appendAttributedString:attributedDescriptionString];
             }
             
-            cell.textLabel.attributedText = attributedString;
+            cell.textLabel.attributedText = _attributedString;
+            _attributedString = [[NSMutableAttributedString alloc] init];
         }
     }
     return cell;
@@ -167,15 +186,40 @@
         {
             movie = ((MovieTableView *) tableView).movie;
             
-            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
-            NSString *string = (NSString *)[stringsArray objectAtIndex:indexPath.row];
             
-            //UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-            UIFont *font = [UIFont fontWithName:@"Futura" size:20.0];
-            NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName:font}];
-            CGRect rect = [attributes boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
+            NSArray *titlesArray = [movie titlesArrayToMakeTableView];
+            
+            NSMutableString *string = [[NSMutableString alloc] init];
+            
+            NSMutableAttributedString *attributedTitleString, *attributedDescriptionString;
+            NSString *titleString = [titlesArray objectAtIndex:indexPath.row];
+            
+            
+            
+            if ( indexPath.row == 0 ) {
+                
+                UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:26.0];
+                UIColor *textColor = [UIColor brownColor];
+                string = [stringsArray objectAtIndex:0];
+                _attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+                
+            } else {
+                
+                UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
+                attributedTitleString = [[NSMutableAttributedString alloc] initWithString:titleString attributes:@{NSFontAttributeName: font}];
+                [_attributedString appendAttributedString:attributedTitleString];
+                
+                NSString *descriptionString = [stringsArray objectAtIndex:indexPath.row];
+                font = [UIFont fontWithName:@"HelveticaNeue" size:18.0];
+                attributedDescriptionString = [[NSMutableAttributedString alloc] initWithString:descriptionString attributes:@{NSFontAttributeName: font}];
+                [_attributedString appendAttributedString:attributedDescriptionString];
+            }
+
+            CGRect rect = [_attributedString boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
             
             height = rect.size.height + 6;
+            _attributedString = [[NSMutableAttributedString alloc] init];
         }
     }
 
