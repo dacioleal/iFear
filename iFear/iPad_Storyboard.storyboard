@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Cartelera View Controller-->
@@ -58,6 +58,7 @@
                         <outlet property="loadingLabel" destination="t9G-dK-pcQ" id="cWZ-eX-Ylx"/>
                         <outlet property="loadingView" destination="oIS-9T-Pg0" id="f2G-h4-RbP"/>
                         <outlet property="pageControl" destination="VAE-Rk-8ws" id="Vvs-eY-XkE"/>
+                        <segue destination="shG-3t-WQ0" kind="modal" identifier="goToMovieDetail" modalTransitionStyle="coverVertical" id="Myq-yO-dIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUv-0T-x2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,23 +77,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="974" height="618"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRz-Ur-1ZL">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRz-Ur-1ZL">
                                 <rect key="frame" x="76" y="11" width="120" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sil-2Z-RZV" appends="YES" id="e4t-Zc-6yl"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-MB-i0v">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-MB-i0v">
                                 <rect key="frame" x="76" y="213" width="120" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RvR-ZZ-9Ig" appends="YES" id="7U4-SO-kIO"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5K8-Dd-67u">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5K8-Dd-67u">
                                 <rect key="frame" x="76" y="414" width="120" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vdr-Cb-12u" appends="YES" id="n4p-ak-dZM"/>
+                                </connections>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="28" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-xc-8ko" customClass="MovieTableView">
                                 <rect key="frame" x="196" y="11" width="710" height="192"/>
@@ -151,6 +161,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="974" height="618"/>
                     <connections>
                         <outlet property="bottomImageView" destination="5K8-Dd-67u" id="II5-GH-x1w"/>
                         <outlet property="bottomMovieTableView" destination="gpt-cM-J8D" id="y3e-wB-Avw"/>
@@ -161,8 +172,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wiu-ta-WxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Sil-2Z-RZV">
+                    <connections>
+                        <action selector="topImageTap:" destination="IDY-nl-Dgq" id="8NB-hX-geI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RvR-ZZ-9Ig">
+                    <connections>
+                        <action selector="midImageTap:" destination="IDY-nl-Dgq" id="eez-UD-Oju"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vdr-Cb-12u">
+                    <connections>
+                        <action selector="bottomImageTap:" destination="IDY-nl-Dgq" id="I67-lj-iE9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4710" y="-840"/>
+            <point key="canvasLocation" x="5428" y="-712"/>
         </scene>
         <!--Detalle View Controller-->
         <scene sceneID="4s2-wb-gmk">
@@ -181,19 +207,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-7S-f8p">
-                                <rect key="frame" x="31" y="58" width="180" height="270"/>
+                                <rect key="frame" x="31" y="58" width="200" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-6a-lcc">
+                                <rect key="frame" x="967" y="30" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icono_volver.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="YeB-f7-nJm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wwa-MQ-7yQ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="movieImageView" destination="jW3-7S-f8p" id="5Gp-bc-bWE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3r-nf-2Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6123" y="-954"/>
+            <point key="canvasLocation" x="6625" y="-1456"/>
         </scene>
         <!--Entrada View Controller-->
         <scene sceneID="YtC-9c-Ijf">
@@ -253,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpJ-lz-rpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-1191"/>
+            <point key="canvasLocation" x="2389" y="-1183"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="D55-0w-DMU">
@@ -357,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVu-lD-g1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="-1191"/>
+            <point key="canvasLocation" x="1178" y="-1183"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="1F7-wP-Nkq">
@@ -601,6 +640,7 @@
         <image name="icono_mentes_oscuras.png" width="100" height="100"/>
         <image name="icono_menu.png" width="100" height="100"/>
         <image name="icono_menu_invertido.png" width="100" height="100"/>
+        <image name="icono_volver.png" width="100" height="100"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>

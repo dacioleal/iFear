@@ -17,6 +17,11 @@
 }
 @property (nonatomic, strong) NSMutableAttributedString *attributedString;
 
+- (IBAction)topImageTap:(UITapGestureRecognizer *)sender;
+- (IBAction)midImageTap:(UITapGestureRecognizer *)sender;
+- (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender;
+
+
 @end
 
 
@@ -29,6 +34,33 @@
         _attributedString = [[NSMutableAttributedString alloc] initWithString:@""];
     }
     return _attributedString;
+}
+
+- (IBAction)topImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:0];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
+    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
+   
+}
+
+- (IBAction)midImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:1];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
+    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
+    
+}
+
+- (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:2];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
+    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
+    
 }
 
 

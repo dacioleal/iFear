@@ -7,9 +7,11 @@
 //
 
 #import "DetalleViewController.h"
+#import "Pelicula.h"
 
 @interface DetalleViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 @end
 
 @implementation DetalleViewController
@@ -27,6 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    _movieImageView.image = _movie.imagen;
+    
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +41,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+- (IBAction)backPushButton:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

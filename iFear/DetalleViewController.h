@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pelicula.h"
 
 @interface DetalleViewController : UIViewController
+
+@property (strong, nonatomic) Pelicula * movie;
+
+- (IBAction)backPushButton:(UIButton *)sender;
 
 @end

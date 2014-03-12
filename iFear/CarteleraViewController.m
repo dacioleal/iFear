@@ -24,6 +24,8 @@
     
     NSMutableArray *pageData; // Almacena los datos de una página, las objetos Pelicula de esa página
     
+    Pelicula *movieForSegue;
+    
     
 }
 
@@ -55,7 +57,8 @@
     _loadingView.layer.cornerRadius = 10.0;
     
     
-    
+    // Creamos e inicializamos el pageViewController para las páginas de las películas, establecemos sus delegados y datasource y lo añadimos a como
+    // childviewcontroller
     self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     self.carteleraPageViewController.delegate = self;
@@ -64,14 +67,22 @@
     [self addChildViewController: self.carteleraPageViewController];
     
     
+    
+    // Establecemos la vista de carteleraPageViewController que va a manejar las páginas de las película
     self.carteleraPageViewController.view.bounds = _contentView.bounds;
     self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x + 20), (_contentView.center.y - _contentView.frame.origin.y + 30) );
     
-    
+    // Añadimos la vista del pageViewController como subvista de la vista ContentView definida en el storyboard
     [self.contentView addSubview:self.carteleraPageViewController.view];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configurePageContentViewController) name:@"dataDownloaded" object:self];
-
+    
+    // Añadimos este ViewController (self) como observador para recibir las notificaciones de que se han terminado de descargar los datos
+    // y de que se pulsa sobre la portada de una película para ir a la pantalla de detalle.
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(configurePageContentViewController) name:@"dataDownloaded" object:self];
+    [defaultCenter addObserver:self selector:@selector(goToMovieDetail:) name:@"goToMovieDetail" object:nil];
+    
+    // Llamamos al método para la petición de los datos de las películas.
     [self retrieveData];
     
 }
@@ -273,9 +284,6 @@
 
 
 
-
-
-
 // Método que realiza la petición para obtener el listado de peliculas
 
 - (void) setConnectionWithParameters: (NSDictionary *)parameters toUrl: (NSString *) serverUrl
@@ -378,7 +386,7 @@ didCompleteWithError:(NSError *)error
 {
     if(error == nil)
     {
-        NSLog(@"Éxito al bajar");
+        //NSLog(@"Éxito al bajar");
         
         if (moviesList.count != 0) {
             
@@ -450,6 +458,22 @@ didCompleteWithError:(NSError *)error
     }
 
     
+}
+
+- (void) goToMovieDetail: (NSNotification *) notification
+{
+    movieForSegue = (Pelicula *) [[notification userInfo] objectForKey:@"movie"];
+    [self performSegueWithIdentifier:@"goToMovieDetail" sender:self];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqual: @"goToMovieDetail"])
+    {
+        if ([segue.destinationViewController respondsToSelector:@selector(setMovie:)]) {
+            [segue.destinationViewController performSelector:@selector(setMovie:) withObject:movieForSegue];
+        }
+    }
 }
 
 
