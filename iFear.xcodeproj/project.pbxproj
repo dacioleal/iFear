@@ -42,6 +42,7 @@
 		F3144A01189ABC890007B9B6 /* calavera.png in Resources */ = {isa = PBXBuildFile; fileRef = F31449FA189ABC890007B9B6 /* calavera.png */; };
 		F3144A02189ABC890007B9B6 /* reja.png in Resources */ = {isa = PBXBuildFile; fileRef = F31449FB189ABC890007B9B6 /* reja.png */; };
 		F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3144A03189AC9560007B9B6 /* entrada_muestra_01.jpg */; };
+		F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31CB03418D0774200E6DF2C /* DetalleViewController.m */; };
 		F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F321C4371880074F00B02097 /* fondo_ppal.jpg */; };
 		F321C43B1880128100B02097 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F321C43A1880128100B02097 /* MenuViewController.m */; };
 		F32D9921187D536F0004D618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9920187D536F0004D618 /* Foundation.framework */; };
@@ -136,6 +137,8 @@
 		F31449FA189ABC890007B9B6 /* calavera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calavera.png; sourceTree = "<group>"; };
 		F31449FB189ABC890007B9B6 /* reja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reja.png; sourceTree = "<group>"; };
 		F3144A03189AC9560007B9B6 /* entrada_muestra_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = entrada_muestra_01.jpg; sourceTree = "<group>"; };
+		F31CB03318D0774200E6DF2C /* DetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleViewController.h; sourceTree = "<group>"; };
+		F31CB03418D0774200E6DF2C /* DetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleViewController.m; sourceTree = "<group>"; };
 		F321C4371880074F00B02097 /* fondo_ppal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_ppal.jpg; sourceTree = "<group>"; };
 		F321C4391880128100B02097 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F321C43A1880128100B02097 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -308,6 +311,15 @@
 			name = MentesViewController;
 			sourceTree = "<group>";
 		};
+		F31CB03618D0774B00E6DF2C /* DetalleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F31CB03318D0774200E6DF2C /* DetalleViewController.h */,
+				F31CB03418D0774200E6DF2C /* DetalleViewController.m */,
+			);
+			name = DetalleViewController;
+			sourceTree = "<group>";
+		};
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +401,7 @@
 				F332F85418AA99D800A12CEE /* PageContentViewController */,
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
 				F314499C189A53890007B9B6 /* MentesViewController */,
+				F31CB03618D0774B00E6DF2C /* DetalleViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -645,6 +658,7 @@
 				F3F7530518B3D2F100F0D9CE /* MovieTableView.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
+				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,

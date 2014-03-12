@@ -19,6 +19,8 @@
 
 @end
 
+
+
 @implementation PageContentViewController
 
 - (NSMutableAttributedString *) attributedString
@@ -59,6 +61,8 @@
     
     tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
     imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
+    
+    
     
     if (_moviesArray)
     {
@@ -146,7 +150,7 @@
             if ( indexPath.row == 0 ) {
                 
                 UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:26.0];
-                UIColor *textColor = [UIColor brownColor];
+                UIColor *textColor = [UIColor colorWithRed:0.478   green:0.176 blue:0.153 alpha:1.0];
                 string = [stringsArray objectAtIndex:0];
                 _attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
                 
