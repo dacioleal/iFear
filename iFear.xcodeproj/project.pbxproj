@@ -67,6 +67,10 @@
 		F358E28B18E09BD200F6C934 /* EstrenosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F358E28A18E09BD200F6C934 /* EstrenosViewController.m */; };
 		F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28E18E09CC200F6C934 /* triangulo_abajo_96x42.png */; };
 		F358E29118E09CC200F6C934 /* triangulo_arriba_96x42.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28F18E09CC200F6C934 /* triangulo_arriba_96x42.png */; };
+		F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29318E0BDE300F6C934 /* icono_app_152x152.png */; };
+		F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */; };
+		F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */; };
+		F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
 		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
@@ -174,6 +178,10 @@
 		F358E28A18E09BD200F6C934 /* EstrenosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstrenosViewController.m; sourceTree = "<group>"; };
 		F358E28E18E09CC200F6C934 /* triangulo_abajo_96x42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangulo_abajo_96x42.png; sourceTree = "<group>"; };
 		F358E28F18E09CC200F6C934 /* triangulo_arriba_96x42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangulo_arriba_96x42.png; sourceTree = "<group>"; };
+		F358E29318E0BDE300F6C934 /* icono_app_152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_app_152x152.png; sourceTree = "<group>"; };
+		F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_appstore_1024x1024.png; sourceTree = "<group>"; };
+		F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_settings_58x58.png; sourceTree = "<group>"; };
+		F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_spotlight_80x80.png; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
 		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
 		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
@@ -336,6 +344,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F358E29218E0BDBE00F6C934 /* app icons */,
 				F307D08518CDC94800F7A50C /* cartelera */,
 				F304102C18B752D8006273F0 /* entrada */,
 				F304100F18B752A5006273F0 /* menu */,
@@ -476,6 +485,17 @@
 				F358E28718E096BC00F6C934 /* fondo_estrenos_2004x1324.png */,
 			);
 			name = estrenos;
+			sourceTree = "<group>";
+		};
+		F358E29218E0BDBE00F6C934 /* app icons */ = {
+			isa = PBXGroup;
+			children = (
+				F358E29318E0BDE300F6C934 /* icono_app_152x152.png */,
+				F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */,
+				F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */,
+				F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */,
+			);
+			name = "app icons";
 			sourceTree = "<group>";
 		};
 		F392B4D91898176A00BAFA21 /* sounds */ = {
@@ -624,11 +644,13 @@
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
 				F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */,
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
+				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
+				F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */,
 				F3144A00189ABC890007B9B6 /* cadena.png in Resources */,
 				F358E29118E09CC200F6C934 /* triangulo_arriba_96x42.png in Resources */,
 				F31449FE189ABC890007B9B6 /* boton_entrar.png in Resources */,
@@ -665,9 +687,11 @@
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
+				F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */,
 				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
+				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
 				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
