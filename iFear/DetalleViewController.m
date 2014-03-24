@@ -12,6 +12,9 @@
 @interface DetalleViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
+
+- (IBAction)imageTap:(UITapGestureRecognizer *)sender;
+
 @end
 
 @implementation DetalleViewController
@@ -47,4 +50,42 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)imageTap:(UITapGestureRecognizer *)sender {
+    
+    
+        CGRect newBounds = CGRectMake(0, 0, _movieImageView.bounds.size.width * 2.2,  _movieImageView.bounds.size.height * 2.2);
+        CGPoint newCenter = CGPointMake(512, 384);
+        [UIView animateWithDuration:0.3 animations:^{
+            _movieImageView.center = newCenter;
+            _movieImageView.bounds = newBounds;
+            
+        }];
+    
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

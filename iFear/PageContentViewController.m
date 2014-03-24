@@ -22,6 +22,9 @@
 - (IBAction)midImageTap:(UITapGestureRecognizer *)sender;
 - (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender;
 
+- (IBAction)topTitleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)midTitleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)bottomTitleTap:(UITapGestureRecognizer *)sender;
 
 @end
 
@@ -40,24 +43,39 @@
 - (IBAction)topImageTap:(UITapGestureRecognizer *)sender
 {
     Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:0];
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
-    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
-   
+    [self goToMovieDetail:movie];
 }
 
 - (IBAction)midImageTap:(UITapGestureRecognizer *)sender
 {
     Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:1];
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
-    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
+    [self goToMovieDetail:movie];
     
 }
 
 - (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender
 {
     Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:2];
+    [self goToMovieDetail:movie];
+}
+
+- (IBAction)topTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self topImageTap:sender];
+}
+
+- (IBAction)midTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self midImageTap:sender];
+}
+
+- (IBAction)bottomTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self bottomImageTap:sender];
+}
+
+- (void) goToMovieDetail: (Pelicula *) movie {
+    
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
     [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
@@ -113,6 +131,18 @@
             textView.attributedText = textAttributedString;
             imageView.image = movie.imagen;
             
+        }
+        
+        switch (_moviesArray.count) {
+            case 1:
+                _midImageView.hidden = _midMovieTitleLabel.hidden = _midMovieTitleLabel.hidden = YES;
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = YES;
+                break;
+            case 2:
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = YES;
+                break;
+            default:
+                break;
         }
         
     }

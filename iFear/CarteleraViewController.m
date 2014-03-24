@@ -26,6 +26,8 @@
     
     Pelicula *movieForSegue;
     
+    BOOL estrenosViewIsHidden;
+    
     
 }
 
@@ -49,7 +51,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
+    estrenosViewIsHidden = YES;
     
     moviesList = [[NSMutableArray alloc] init];
     imagesList = [[NSMutableArray alloc] init];
@@ -66,6 +68,8 @@
     
     [self addChildViewController: self.carteleraPageViewController];
     
+    UIViewController *estrenosViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"estrenosViewController"];
+    [self addChildViewController:estrenosViewController];
     
     
     // Establecemos la vista de carteleraPageViewController que va a manejar las páginas de las película
@@ -81,6 +85,7 @@
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(configurePageContentViewController) name:@"dataDownloaded" object:self];
     [defaultCenter addObserver:self selector:@selector(goToMovieDetail:) name:@"goToMovieDetail" object:nil];
+    [defaultCenter addObserver:self selector:@selector(showEstrenosView) name:@"showEstrenosView" object:nil];
     
     // Llamamos al método para la petición de los datos de las películas.
     [self retrieveData];
@@ -476,7 +481,23 @@ didCompleteWithError:(NSError *)error
     }
 }
 
-
+- (void) showEstrenosView
+{
+    UIView *estrenosView = [self.view viewWithTag:1];
+    
+    if (estrenosViewIsHidden == YES) {
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y - 600);
+        } completion:nil];
+        estrenosViewIsHidden = NO;
+        
+    } else if (estrenosViewIsHidden == NO) {
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y + 600);
+        } completion:nil];
+        estrenosViewIsHidden = YES;
+    }
+}
 
 
 
