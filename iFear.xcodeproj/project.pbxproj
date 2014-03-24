@@ -21,7 +21,6 @@
 		F304102918B752CC006273F0 /* zombie_03.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101B18B752CC006273F0 /* zombie_03.png */; };
 		F304102A18B752CC006273F0 /* zombie_04.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101C18B752CC006273F0 /* zombie_04.png */; };
 		F304102B18B752CC006273F0 /* zombie_05.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101D18B752CC006273F0 /* zombie_05.png */; };
-		F307D08718CDC95C00F7A50C /* fondo_cartelera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F307D08618CDC95C00F7A50C /* fondo_cartelera.jpg */; };
 		F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */; };
 		F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B818A23AF60040CCDD /* lineas_arco.png */; };
 		F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */ = {isa = PBXBuildFile; fileRef = F30EE4B918A23AF60040CCDD /* logo_ifear.png */; };
@@ -62,6 +61,8 @@
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
+		F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */; };
+		F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
 		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
@@ -111,7 +112,6 @@
 		F304101B18B752CC006273F0 /* zombie_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_03.png; sourceTree = "<group>"; };
 		F304101C18B752CC006273F0 /* zombie_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_04.png; sourceTree = "<group>"; };
 		F304101D18B752CC006273F0 /* zombie_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie_05.png; sourceTree = "<group>"; };
-		F307D08618CDC95C00F7A50C /* fondo_cartelera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cartelera.jpg; sourceTree = "<group>"; };
 		F30EE4B718A23AF60040CCDD /* efecto_antorchas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = efecto_antorchas.png; sourceTree = "<group>"; };
 		F30EE4B818A23AF60040CCDD /* lineas_arco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lineas_arco.png; sourceTree = "<group>"; };
 		F30EE4B918A23AF60040CCDD /* logo_ifear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_ifear.png; sourceTree = "<group>"; };
@@ -163,6 +163,8 @@
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cartelera_2048x1536.jpg; sourceTree = "<group>"; };
+		F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base_cuchillo_2020x348.png; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
 		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
 		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
@@ -261,7 +263,8 @@
 		F307D08518CDC94800F7A50C /* cartelera */ = {
 			isa = PBXGroup;
 			children = (
-				F307D08618CDC95C00F7A50C /* fondo_cartelera.jpg */,
+				F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */,
+				F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */,
 			);
 			name = cartelera;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */,
 				F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */,
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
@@ -605,7 +609,6 @@
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
 				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
-				F307D08718CDC95C00F7A50C /* fondo_cartelera.jpg in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
@@ -623,6 +626,7 @@
 				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,
 				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
 				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
+				F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,

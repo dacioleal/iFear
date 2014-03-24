@@ -70,7 +70,7 @@
     
     // Establecemos la vista de carteleraPageViewController que va a manejar las páginas de las película
     self.carteleraPageViewController.view.bounds = _contentView.bounds;
-    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x + 20), (_contentView.center.y - _contentView.frame.origin.y + 30) );
+    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x), (_contentView.center.y - _contentView.frame.origin.y) );
     
     // Añadimos la vista del pageViewController como subvista de la vista ContentView definida en el storyboard
     [self.contentView addSubview:self.carteleraPageViewController.view];

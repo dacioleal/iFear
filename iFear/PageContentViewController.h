@@ -10,15 +10,19 @@
 #import "MovieTableView.h"
 
 
-@interface PageContentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PageContentViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *midImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *bottomImageView;
 
-@property (weak, nonatomic) IBOutlet MovieTableView *topMovieTableView;
-@property (weak, nonatomic) IBOutlet MovieTableView *midMovieTableView;
-@property (weak, nonatomic) IBOutlet MovieTableView *bottomMovieTableView;
+@property (weak, nonatomic) IBOutlet UILabel *topMovieTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *midMovieTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottomMovieTitleLabel;
+
+@property (weak, nonatomic) IBOutlet UITextView *topMovieTextView;
+@property (weak, nonatomic) IBOutlet UITextView *midMovieTextView;
+@property (weak, nonatomic) IBOutlet UITextView *bottomMovieTextView;
 
 
 @property (strong, nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
