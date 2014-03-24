@@ -12,7 +12,8 @@
 
 @interface PageContentViewController () {
     
-    //NSArray *tableViewsArray;
+    NSArray *titleLabelsArray;
+    NSArray *textViewsArray;
     NSArray *imageViewsArray;
 }
 @property (nonatomic, strong) NSMutableAttributedString *attributedString;
@@ -83,8 +84,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addImages) name:@"imagesSetFinished" object:nil];
     
    
-    
-   // tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
+    titleLabelsArray = @[_topMovieTitleLabel, _midMovieTitleLabel, _bottomMovieTitleLabel];
+    textViewsArray = @[_topMovieTextView, _midMovieTextView, _bottomMovieTextView];
     imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
     
     
@@ -93,10 +94,24 @@
     {
         for (int i = 0; i < _moviesArray.count ; i++) {
             
-            
             Pelicula *movie = (Pelicula *) [_moviesArray objectAtIndex:i];
+            UILabel *titleLabel = (UILabel *) [titleLabelsArray objectAtIndex:i];
+            UITextView *textView = (UITextView *) [textViewsArray objectAtIndex:i];
             UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:i];
             
+            textView.layer.opacity = 0.9;
+            UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:28.0];
+            UIColor *textColor = [UIColor colorWithRed:0.65 green:0.24 blue:0.21 alpha:1.0];
+            NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+            
+            titleLabel.attributedText = titleAttributedString;
+            
+            font = [UIFont fontWithName:@"TeluguSangamMN" size:15.0];
+            textColor = [UIColor whiteColor];
+            NSAttributedString *textAttributedString = [[NSAttributedString alloc] initWithString:movie.sinopsis attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+            
+            textView.attributedText = textAttributedString;
+            imageView.image = movie.imagen;
             
         }
         
