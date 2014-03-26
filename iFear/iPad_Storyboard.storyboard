@@ -751,10 +751,10 @@
             </objects>
             <point key="canvasLocation" x="5428" y="-46"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Estrenos Collection View Controller-->
         <scene sceneID="F7N-0Y-L2D">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="IFG-vT-KA9" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="IFG-vT-KA9" customClass="EstrenosCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="0Km-Bu-hHN">
                         <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -765,10 +765,37 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="30" minY="70" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_estrenos_2004x1324.png" id="ItQ-Zb-Aan">
+                        <view key="backgroundView" contentMode="scaleToFill" id="poG-Lb-9T4">
                             <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_estrenos_2004x1324.png" translatesAutoresizingMaskIntoConstraints="NO" id="sol-Gf-ueN">
+                                    <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3R-yK-xxu">
+                                    <rect key="frame" x="884" y="22" width="48" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="triangulo_arriba_96x42.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="slideTwoPushButton:" destination="IFG-vT-KA9" eventType="touchUpInside" id="K7b-8d-IK4"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl8-bP-axU">
+                                    <rect key="frame" x="70" y="22" width="48" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="triangulo_arriba_96x42.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="slideOnePushButton:" destination="IFG-vT-KA9" eventType="touchUpInside" id="NOl-a9-c6v"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="MQQ-pz-ZTb">
                                 <rect key="frame" x="30" y="71" width="250" height="590"/>
@@ -799,6 +826,10 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1002" height="662"/>
+                    <connections>
+                        <outlet property="slideButtonOne" destination="vl8-bP-axU" id="g1T-nl-QPf"/>
+                        <outlet property="slideButtonTwo" destination="J3R-yK-xxu" id="7H0-BG-Uh0"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-RU-Dtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

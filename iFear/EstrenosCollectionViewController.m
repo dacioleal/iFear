@@ -8,7 +8,12 @@
 
 #import "EstrenosCollectionViewController.h"
 
-@interface EstrenosCollectionViewController ()
+@interface EstrenosCollectionViewController () {
+    
+     BOOL estrenosViewisHidden;
+}
+
+- (IBAction)titleTap:(UITapGestureRecognizer *)sender;
 
 @end
 
@@ -45,5 +50,63 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)slideOnePushButton:(UIButton *)sender {
+    
+    if (estrenosViewisHidden == YES) {
+        estrenosViewisHidden = NO;
+        [sender setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        
+    } else if (estrenosViewisHidden == NO) {
+        estrenosViewisHidden = YES;
+        [sender setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+    }
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
+    
+}
+
+- (IBAction)slideTwoPushButton:(UIButton *)sender {
+    
+    
+    if (estrenosViewisHidden == YES) {
+        estrenosViewisHidden = NO;
+        [sender setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        
+    } else if (estrenosViewisHidden == NO) {
+        estrenosViewisHidden = YES;
+        [sender setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+    }
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
+    
+}
+
+- (IBAction)titleTap:(UITapGestureRecognizer *)sender {
+    
+    
+    if (estrenosViewisHidden == YES) {
+        estrenosViewisHidden = NO;
+        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
+        
+    } else if (estrenosViewisHidden == NO) {
+        estrenosViewisHidden = YES;
+        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
+    }
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
+    
+    
+}
+
 
 @end
