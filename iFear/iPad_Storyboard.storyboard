@@ -53,7 +53,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="zHC-CA-XRj" kind="embed" id="W4A-N2-FGr"/>
+                                    <segue destination="IFG-vT-KA9" kind="embed" id="7Ku-bO-kuS"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -734,6 +734,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1002" height="662"/>
                     <connections>
@@ -750,11 +751,65 @@
             </objects>
             <point key="canvasLocation" x="5428" y="-46"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="F7N-0Y-L2D">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="IFG-vT-KA9" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="0Km-Bu-hHN">
+                        <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KEc-9s-w5S">
+                            <size key="itemSize" width="280" height="562"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="30" minY="70" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_estrenos_2004x1324.png" id="ItQ-Zb-Aan">
+                            <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="MQQ-pz-ZTb">
+                                <rect key="frame" x="30" y="71" width="250" height="590"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="250" height="590"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_estreno_421x1177.png" translatesAutoresizingMaskIntoConstraints="NO" id="O0q-DB-10Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="590"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TmQ-Eb-IbN">
+                                            <rect key="frame" x="35" y="124" width="180" height="267"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="250" height="590"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="IFG-vT-KA9" id="pL2-Xu-Nzb"/>
+                            <outlet property="delegate" destination="IFG-vT-KA9" id="pIc-rd-bsY"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1002" height="662"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-RU-Dtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6525" y="-46"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ahorcado.png" width="278" height="1194"/>
         <image name="barrotes.png" width="2048" height="1536"/>
         <image name="base_cuchillo_2020x348.png" width="2020" height="348"/>
+        <image name="base_estreno_421x1177.png" width="425" height="1177"/>
         <image name="boton_buscar.png" width="595" height="231"/>
         <image name="boton_cartelera.png" width="482" height="144"/>
         <image name="boton_entrar.png" width="843" height="284"/>
