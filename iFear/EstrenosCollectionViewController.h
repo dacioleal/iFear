@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pelicula.h"
 
-@interface EstrenosCollectionViewController : UICollectionViewController
+@interface EstrenosCollectionViewController : UICollectionViewController <NSURLSessionDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 
-- (IBAction)slideOnePushButton:(UIButton *)sender;
-- (IBAction)slideTwoPushButton:(UIButton *)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *slideButtonOne;
-@property (weak, nonatomic) IBOutlet UIButton *slideButtonTwo;
 
 @end

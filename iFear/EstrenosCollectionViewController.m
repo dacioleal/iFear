@@ -7,11 +7,14 @@
 //
 
 #import "EstrenosCollectionViewController.h"
+#import "MovieCell.h"
+#import "MoviesSearch.h"
 
 @interface EstrenosCollectionViewController () {
     
      BOOL estrenosViewisHidden;
 }
+@property (strong, nonatomic) NSArray *moviesList;
 
 - (IBAction)titleTap:(UITapGestureRecognizer *)sender;
 
@@ -32,7 +35,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
+    MoviesSearch *moviesSearch = [[MoviesSearch alloc] init];
+    _moviesList = [moviesSearch searchWithParameters:parameters];
+    
+    NSLog(@"%@", _moviesList);
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,62 +62,68 @@
 }
 */
 
-- (IBAction)slideOnePushButton:(UIButton *)sender {
-    
-    if (estrenosViewisHidden == YES) {
-        estrenosViewisHidden = NO;
-        [sender setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        
-    } else if (estrenosViewisHidden == NO) {
-        estrenosViewisHidden = YES;
-        [sender setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-    }
-    
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
-    
-}
 
-- (IBAction)slideTwoPushButton:(UIButton *)sender {
-    
-    
-    if (estrenosViewisHidden == YES) {
-        estrenosViewisHidden = NO;
-        [sender setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        
-    } else if (estrenosViewisHidden == NO) {
-        estrenosViewisHidden = YES;
-        [sender setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-    }
-    
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
-    
-}
+
 
 - (IBAction)titleTap:(UITapGestureRecognizer *)sender {
     
     
-    if (estrenosViewisHidden == YES) {
-        estrenosViewisHidden = NO;
-        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_abajo_96x42.png"] forState:UIControlStateNormal];
-        
-    } else if (estrenosViewisHidden == NO) {
-        estrenosViewisHidden = YES;
-        [_slideButtonOne setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-        [_slideButtonTwo setImage:[UIImage imageNamed:@"triangulo_arriba_96x42.png"] forState:UIControlStateNormal];
-    }
-    
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter postNotificationName:@"showEstrenosView" object:self];
     
     
 }
 
+#pragma mark - UICollectionViewDataSource methods
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"movieCell" forIndexPath:indexPath];
+    
+    Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:(NSUInteger)indexPath];
+    cell.movieCellImageView.image = movie.imagen;
+    cell.movieCellTitleLabel.text = movie.titulo;
+    
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return _moviesList.count;
+}
+
+
+
+#pragma mark - UICollectionViewDelegate methods
+
+
+
+
+
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

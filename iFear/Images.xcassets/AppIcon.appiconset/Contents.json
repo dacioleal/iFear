@@ -8,7 +8,7 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "icono_settings_58x58.png",
+      "filename" : "icono_settings@2x.png",
       "scale" : "2x"
     },
     {
@@ -19,7 +19,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "icono_spotlight_80x80.png",
+      "filename" : "icono_spotlight@2x.png",
       "scale" : "2x"
     },
     {
@@ -30,7 +30,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icono_app_152x152.png",
+      "filename" : "icono_app@2x.png",
       "scale" : "2x"
     }
   ],

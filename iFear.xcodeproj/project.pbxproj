@@ -61,6 +61,9 @@
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
+		F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C0E2B18E4369E0032C1C4 /* icono_app@2x.png */; };
+		F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C0E2C18E4369E0032C1C4 /* icono_settings@2x.png */; };
+		F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F34C0E2D18E4369E0032C1C4 /* icono_spotlight@2x.png */; };
 		F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */; };
 		F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */; };
 		F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28718E096BC00F6C934 /* fondo_estrenos_2004x1324.png */; };
@@ -74,6 +77,8 @@
 		F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */ = {isa = PBXBuildFile; fileRef = F3926F7218E2FBD2004A7570 /* base_estreno_421x1177.png */; };
 		F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
+		F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CD718E57ED7008929FA /* MovieCell.m */; };
+		F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CDE18E59415008929FA /* MoviesSearch.m */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
 		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
 		F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BF77D918844D9600818986 /* CarteleraViewController.m */; };
@@ -173,6 +178,9 @@
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F34C0E2B18E4369E0032C1C4 /* icono_app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icono_app@2x.png"; sourceTree = "<group>"; };
+		F34C0E2C18E4369E0032C1C4 /* icono_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icono_settings@2x.png"; sourceTree = "<group>"; };
+		F34C0E2D18E4369E0032C1C4 /* icono_spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icono_spotlight@2x.png"; sourceTree = "<group>"; };
 		F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cartelera_2048x1536.jpg; sourceTree = "<group>"; };
 		F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base_cuchillo_2020x348.png; sourceTree = "<group>"; };
 		F358E28718E096BC00F6C934 /* fondo_estrenos_2004x1324.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo_estrenos_2004x1324.png; sourceTree = "<group>"; };
@@ -188,6 +196,10 @@
 		F3926F7418E2FD3B004A7570 /* EstrenosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstrenosCollectionViewController.h; sourceTree = "<group>"; };
 		F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstrenosCollectionViewController.m; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
+		F3A68CD618E57ED7008929FA /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		F3A68CD718E57ED7008929FA /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		F3A68CDD18E59415008929FA /* MoviesSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesSearch.h; sourceTree = "<group>"; };
+		F3A68CDE18E59415008929FA /* MoviesSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesSearch.m; sourceTree = "<group>"; };
 		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
 		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
 		F3BF77D818844D9600818986 /* CarteleraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraViewController.h; sourceTree = "<group>"; };
@@ -501,6 +513,9 @@
 				F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */,
 				F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */,
 				F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */,
+				F34C0E2B18E4369E0032C1C4 /* icono_app@2x.png */,
+				F34C0E2C18E4369E0032C1C4 /* icono_settings@2x.png */,
+				F34C0E2D18E4369E0032C1C4 /* icono_spotlight@2x.png */,
 			);
 			name = "app icons";
 			sourceTree = "<group>";
@@ -510,6 +525,9 @@
 			children = (
 				F3926F7418E2FD3B004A7570 /* EstrenosCollectionViewController.h */,
 				F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */,
+				F3A68CD918E581B7008929FA /* MovieCell */,
+				F3A68CDD18E59415008929FA /* MoviesSearch.h */,
+				F3A68CDE18E59415008929FA /* MoviesSearch.m */,
 			);
 			name = EstrenosCollectionViewController;
 			sourceTree = "<group>";
@@ -523,6 +541,15 @@
 				F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */,
 			);
 			name = sounds;
+			sourceTree = "<group>";
+		};
+		F3A68CD918E581B7008929FA /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				F3A68CD618E57ED7008929FA /* MovieCell.h */,
+				F3A68CD718E57ED7008929FA /* MovieCell.m */,
+			);
+			name = MovieCell;
 			sourceTree = "<group>";
 		};
 		F3BF77DB18844D9B00818986 /* CarteleraViewController */ = {
@@ -674,6 +701,7 @@
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
+				F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
@@ -687,6 +715,7 @@
 				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
 				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
+				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
@@ -701,6 +730,7 @@
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
+				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
@@ -741,6 +771,7 @@
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				F358E28B18E09BD200F6C934 /* EstrenosViewController.m in Sources */,
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
+				F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
@@ -748,6 +779,7 @@
 				F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
+				F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 			);
