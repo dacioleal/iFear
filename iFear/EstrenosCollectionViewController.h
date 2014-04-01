@@ -11,6 +11,7 @@
 
 @interface EstrenosCollectionViewController : UICollectionViewController <NSURLSessionDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 
+@property (strong, nonatomic) NSArray *moviesList;
 
 
 @end

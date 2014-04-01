@@ -67,7 +67,6 @@
 		F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */; };
 		F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */; };
 		F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28718E096BC00F6C934 /* fondo_estrenos_2004x1324.png */; };
-		F358E28B18E09BD200F6C934 /* EstrenosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F358E28A18E09BD200F6C934 /* EstrenosViewController.m */; };
 		F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28E18E09CC200F6C934 /* triangulo_abajo_96x42.png */; };
 		F358E29118E09CC200F6C934 /* triangulo_arriba_96x42.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E28F18E09CC200F6C934 /* triangulo_arriba_96x42.png */; };
 		F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29318E0BDE300F6C934 /* icono_app_152x152.png */; };
@@ -184,8 +183,6 @@
 		F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cartelera_2048x1536.jpg; sourceTree = "<group>"; };
 		F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base_cuchillo_2020x348.png; sourceTree = "<group>"; };
 		F358E28718E096BC00F6C934 /* fondo_estrenos_2004x1324.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo_estrenos_2004x1324.png; sourceTree = "<group>"; };
-		F358E28918E09BD200F6C934 /* EstrenosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstrenosViewController.h; sourceTree = "<group>"; };
-		F358E28A18E09BD200F6C934 /* EstrenosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstrenosViewController.m; sourceTree = "<group>"; };
 		F358E28E18E09CC200F6C934 /* triangulo_abajo_96x42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangulo_abajo_96x42.png; sourceTree = "<group>"; };
 		F358E28F18E09CC200F6C934 /* triangulo_arriba_96x42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangulo_arriba_96x42.png; sourceTree = "<group>"; };
 		F358E29318E0BDE300F6C934 /* icono_app_152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_app_152x152.png; sourceTree = "<group>"; };
@@ -441,7 +438,6 @@
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
 				F314499C189A53890007B9B6 /* MentesViewController */,
 				F31CB03618D0774B00E6DF2C /* DetalleViewController */,
-				F358E28C18E09BDB00F6C934 /* EstrenosViewController */,
 				F3926F7718E2FD62004A7570 /* EstrenosCollectionViewController */,
 			);
 			path = iFear;
@@ -486,13 +482,13 @@
 			name = PageContentViewController;
 			sourceTree = "<group>";
 		};
-		F358E28C18E09BDB00F6C934 /* EstrenosViewController */ = {
+		F336503018EAAE8A00947CD9 /* MoviesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				F358E28918E09BD200F6C934 /* EstrenosViewController.h */,
-				F358E28A18E09BD200F6C934 /* EstrenosViewController.m */,
+				F3A68CDD18E59415008929FA /* MoviesSearch.h */,
+				F3A68CDE18E59415008929FA /* MoviesSearch.m */,
 			);
-			name = EstrenosViewController;
+			name = MoviesSearch;
 			sourceTree = "<group>";
 		};
 		F358E28D18E09C9A00F6C934 /* estrenos */ = {
@@ -526,8 +522,7 @@
 				F3926F7418E2FD3B004A7570 /* EstrenosCollectionViewController.h */,
 				F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */,
 				F3A68CD918E581B7008929FA /* MovieCell */,
-				F3A68CDD18E59415008929FA /* MoviesSearch.h */,
-				F3A68CDE18E59415008929FA /* MoviesSearch.m */,
+				F336503018EAAE8A00947CD9 /* MoviesSearch */,
 			);
 			name = EstrenosCollectionViewController;
 			sourceTree = "<group>";
@@ -769,7 +764,6 @@
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
-				F358E28B18E09BD200F6C934 /* EstrenosViewController.m in Sources */,
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
 				F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,

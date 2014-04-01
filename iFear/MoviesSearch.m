@@ -32,8 +32,6 @@
     movies = [[NSMutableArray alloc] init];
     parameters = param;
     [self retrieveData];
-    
-    
     return movies;
     
 }
@@ -94,7 +92,6 @@
     
     configuration.timeoutIntervalForRequest = 10.0;
     configuration.timeoutIntervalForResource = 10.0;
-    
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     
     NSURL * url = [NSURL URLWithString:serverUrl];
@@ -191,7 +188,8 @@ didCompleteWithError:(NSError *)error
             for (Pelicula *movie in movies) {
                 movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
             }
-            NSLog(@"%@", movies);
+            NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+            [defaultCenter postNotificationName:@"dataFinished" object:self];
             
         } else {
             

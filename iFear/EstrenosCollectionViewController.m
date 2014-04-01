@@ -8,13 +8,14 @@
 
 #import "EstrenosCollectionViewController.h"
 #import "MovieCell.h"
-#import "MoviesSearch.h"
+#import "CarteleraViewController.h"
 
 @interface EstrenosCollectionViewController () {
     
-     BOOL estrenosViewisHidden;
+    BOOL estrenosViewisHidden;
+   
 }
-@property (strong, nonatomic) NSArray *moviesList;
+
 
 - (IBAction)titleTap:(UITapGestureRecognizer *)sender;
 
@@ -27,6 +28,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -35,12 +37,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
-    MoviesSearch *moviesSearch = [[MoviesSearch alloc] init];
-    _moviesList = [moviesSearch searchWithParameters:parameters];
-    
-    NSLog(@"%@", _moviesList);
+
     
 }
 
@@ -74,10 +71,13 @@
     
 }
 
+
 #pragma mark - UICollectionViewDataSource methods
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    CarteleraViewController *carteleraViewController = (CarteleraViewController *) self.parentViewController;
+    _moviesList = carteleraViewController.estrenosMoviesList;
     MovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"movieCell" forIndexPath:indexPath];
     
     Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:(NSUInteger)indexPath];
