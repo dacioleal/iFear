@@ -427,6 +427,7 @@
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
+				F336503018EAAE8A00947CD9 /* MoviesSearch */,
 				F30F42E118A4E9C5005841A6 /* Pelicula */,
 				F3F927D31897B36100BE7964 /* EntradaViewController */,
 				F3F927D71897B69700BE7964 /* MainScene */,
@@ -522,7 +523,6 @@
 				F3926F7418E2FD3B004A7570 /* EstrenosCollectionViewController.h */,
 				F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */,
 				F3A68CD918E581B7008929FA /* MovieCell */,
-				F336503018EAAE8A00947CD9 /* MoviesSearch */,
 			);
 			name = EstrenosCollectionViewController;
 			sourceTree = "<group>";
