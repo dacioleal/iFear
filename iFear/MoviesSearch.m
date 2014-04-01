@@ -92,7 +92,7 @@
     
     configuration.timeoutIntervalForRequest = 10.0;
     configuration.timeoutIntervalForResource = 10.0;
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
     
     NSURL * url = [NSURL URLWithString:serverUrl];
     
@@ -188,8 +188,13 @@ didCompleteWithError:(NSError *)error
             for (Pelicula *movie in movies) {
                 movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
             }
-            NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-            [defaultCenter postNotificationName:@"dataFinished" object:self];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+                [defaultCenter postNotificationName:@"dataFinished" object:self];
+            });
+            
             
         } else {
             
