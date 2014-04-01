@@ -82,7 +82,11 @@
     
     Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:indexPath.item];
     cell.movieCellImageView.image = movie.imagen;
-    cell.movieCellTitleLabel.text = movie.titulo;
+    UIFont *font = [UIFont fontWithName:@"TeluguSangamMN" size:20.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:movie.titulo attributes:@{NSFontAttributeName: font}];
+    cell.movieCellTitleLabel.attributedText = attributedString;
+    cell.movieCellTitleLabel.shadowColor = [UIColor blackColor];
+    cell.movieCellTitleLabel.shadowOffset = CGSizeMake(0, 1);
     
     return cell;
 }
