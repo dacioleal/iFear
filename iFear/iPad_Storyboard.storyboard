@@ -52,9 +52,6 @@
                                 <rect key="frame" x="16" y="705" width="1002" height="662"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="IFG-vT-KA9" kind="embed" id="Ea0-Cz-rzP"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -65,6 +62,7 @@
                         <outlet property="activityIndicator" destination="m23-WC-6dl" id="Q26-OZ-U2G"/>
                         <outlet property="containerView" destination="Urr-5y-ReV" id="hJK-gh-3Ai"/>
                         <outlet property="contentView" destination="8Yv-g3-StG" id="HZs-EA-xxD"/>
+                        <outlet property="estrenosContentView" destination="Urr-5y-ReV" id="jAH-Tf-VlA"/>
                         <outlet property="loadingLabel" destination="t9G-dK-pcQ" id="cWZ-eX-Ylx"/>
                         <outlet property="loadingView" destination="oIS-9T-Pg0" id="f2G-h4-RbP"/>
                         <outlet property="pageControl" destination="VAE-Rk-8ws" id="Vvs-eY-XkE"/>

@@ -22,4 +22,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *estrenosContentView;
 @end

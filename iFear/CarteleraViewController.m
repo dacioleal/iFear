@@ -141,10 +141,6 @@
 
 
 
-
-
-
-
 - (void) goToMovieDetail: (NSNotification *) notification
 {
     movieForSegue = (Pelicula *) [[notification userInfo] objectForKey:@"movie"];
@@ -186,7 +182,7 @@
 
 - (void) configurePageContentViewController
 {
-    NSLog(@"%@", _moviesList);
+    
     [_activityIndicator stopAnimating];
     _loadingView.hidden = YES;
     
@@ -296,9 +292,24 @@
 
 - (void) configureEstrenosViewController
 {
-     NSLog(@"%@", _estrenosMoviesList);
+    
+    _estrenosViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"estrenosViewController"];
+    _estrenosViewController.moviesList = _estrenosMoviesList;
+    [self addChildViewController:_estrenosViewController];
+    
+    _estrenosViewController.view.bounds = self.estrenosContentView.bounds;
+    _estrenosViewController.view.center = CGPointMake((_estrenosContentView.center.x - _estrenosContentView.frame.origin.x), (_estrenosContentView.center.y - _estrenosContentView.frame.origin.y) + 40);
+    [_estrenosContentView addSubview:_estrenosViewController.view];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        _estrenosViewController.view.center = CGPointMake((_estrenosContentView.center.x - _estrenosContentView.frame.origin.x), (_estrenosContentView.center.y - _estrenosContentView.frame.origin.y));
+    }];
     
 }
+
+
+
+
 
 #pragma mark - UIPageViewControllerDataSource methods
 

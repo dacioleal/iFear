@@ -33,11 +33,11 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     
 }
 
@@ -80,7 +80,7 @@
     _moviesList = carteleraViewController.estrenosMoviesList;
     MovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"movieCell" forIndexPath:indexPath];
     
-    Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:(NSUInteger)indexPath];
+    Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:indexPath.item];
     cell.movieCellImageView.image = movie.imagen;
     cell.movieCellTitleLabel.text = movie.titulo;
     
