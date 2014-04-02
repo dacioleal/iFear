@@ -24,9 +24,6 @@
     
     Pelicula *movieForSegue;
     
-    BOOL estrenosViewIsHidden;
-    
-    
     MoviesSearch *moviesSearch;
     
     MoviesSearch *estrenosSearch;
@@ -59,7 +56,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    estrenosViewIsHidden = YES;
+
     
     _moviesList = [[NSArray alloc] init];
     _estrenosMoviesList = [[NSArray alloc] init];
@@ -161,18 +158,28 @@
 {
     UIView *estrenosView = [self.view viewWithTag:1];
     
-    if (estrenosViewIsHidden == YES) {
+    if ([self estrenosViewIsVisible] == NO) {
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y - 600);
         } completion:nil];
-        estrenosViewIsHidden = NO;
+       
         
-    } else if (estrenosViewIsHidden == NO) {
+    } else if ([self estrenosViewIsVisible] == YES) {
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y + 600);
         } completion:nil];
-        estrenosViewIsHidden = YES;
+       
     }
+}
+
+- (BOOL) estrenosViewIsVisible
+{
+    UIView *estrenosView = [self.view viewWithTag:1];
+    CGPoint centerForEstrenosViewVisible = CGPointMake(517, 436);
+    if (estrenosView.center.y == centerForEstrenosViewVisible.y ) {
+        return YES;
+    }
+    return NO;
 }
 
 
@@ -304,7 +311,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         _estrenosViewController.view.center = CGPointMake((_estrenosContentView.center.x - _estrenosContentView.frame.origin.x), (_estrenosContentView.center.y - _estrenosContentView.frame.origin.y));
     }];
-    
+        
 }
 
 
