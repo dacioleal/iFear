@@ -40,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIEdgeInsets edgeInset = UIEdgeInsetsMake(0, 20, 0, 20);
+   //self.collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20);
     
     
     
