@@ -15,6 +15,7 @@
     NSArray *titleLabelsArray;
     NSArray *textViewsArray;
     NSArray *imageViewsArray;
+    NSArray *soporteImageViewsArray;
 }
 @property (nonatomic, strong) NSMutableAttributedString *attributedString;
 
@@ -105,6 +106,7 @@
     titleLabelsArray = @[_topMovieTitleLabel, _midMovieTitleLabel, _bottomMovieTitleLabel];
     textViewsArray = @[_topMovieTextView, _midMovieTextView, _bottomMovieTextView];
     imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
+    soporteImageViewsArray = @[_topMovieSoporteImageView, _midMovieSoporteImageView, _bottomMovieSoporteImageView];
     
     
     
@@ -119,7 +121,7 @@
             
             textView.layer.opacity = 0.9;
             UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:28.0];
-            UIColor *textColor = [UIColor colorWithRed:0.65 green:0.24 blue:0.21 alpha:1.0];
+            UIColor *textColor = [UIColor colorWithRed:0.57 green:0.18 blue:0.19 alpha:1.0];
             NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
             
             titleLabel.attributedText = titleAttributedString;
@@ -135,11 +137,11 @@
         
         switch (_moviesArray.count) {
             case 1:
-                _midImageView.hidden = _midMovieTitleLabel.hidden = _midMovieTitleLabel.hidden = YES;
-                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = YES;
+                _midImageView.hidden = _midMovieTitleLabel.hidden = _midMovieTitleLabel.hidden = _midMovieBackgroundImageView.hidden = _midMovieSoporteImageView.hidden = _midMovieTextView.hidden = YES;
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieBackgroundImageView.hidden = _bottomMovieSoporteImageView.hidden = _bottomMovieTextView.hidden = YES;
                 break;
             case 2:
-                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = YES;
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieBackgroundImageView.hidden = _bottomMovieSoporteImageView.hidden = _bottomMovieTextView.hidden = YES;
                 break;
             default:
                 break;

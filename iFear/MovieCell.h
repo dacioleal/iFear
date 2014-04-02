@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *movieCellImageView;
 @property (strong, nonatomic) IBOutlet UILabel *movieCellTitleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *movieCellDateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *movieCellSoporteLabel;
 
 
 @end

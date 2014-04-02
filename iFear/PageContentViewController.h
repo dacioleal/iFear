@@ -24,6 +24,15 @@
 @property (weak, nonatomic) IBOutlet UITextView *midMovieTextView;
 @property (weak, nonatomic) IBOutlet UITextView *bottomMovieTextView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *topMovieSoporteImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *midMovieSoporteImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomMovieSoporteImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *topMovieBackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *midMovieBackgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomMovieBackgroundImageView;
+
+
 
 @property (strong, nonatomic) NSArray * moviesArray; // Array que contiene las tres peliculas a mostrar
 @property (nonatomic) NSUInteger index;

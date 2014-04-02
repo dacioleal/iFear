@@ -35,6 +35,7 @@
 
 
 
+
 #pragma  mark - Inicializador con parámetros
 
 - (id)initConParametros:(int) idPelicula

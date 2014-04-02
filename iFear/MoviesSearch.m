@@ -205,7 +205,11 @@ didCompleteWithError:(NSError *)error
     } else {
         
         NSLog(@"Error %@",[error userInfo]);
-        [self displayAlertView];
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+             [self displayAlertView];
+        });
     }
 }
 

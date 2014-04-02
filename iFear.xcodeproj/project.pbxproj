@@ -76,6 +76,10 @@
 		F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */ = {isa = PBXBuildFile; fileRef = F3926F7218E2FBD2004A7570 /* base_estreno_421x1177.png */; };
 		F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */; };
 		F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */; };
+		F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25218EC2470000D6309 /* icono_cine_197x148.png */; };
+		F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25318EC2470000D6309 /* icono_cine_estrenos_194x143.png */; };
+		F397F25818EC2493000D6309 /* icono_blu_ray_246x188.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25618EC2493000D6309 /* icono_blu_ray_246x188.png */; };
+		F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25718EC2493000D6309 /* icono_DVD_estrenos_245x174.png */; };
 		F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CD718E57ED7008929FA /* MovieCell.m */; };
 		F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CDE18E59415008929FA /* MoviesSearch.m */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
@@ -193,6 +197,10 @@
 		F3926F7418E2FD3B004A7570 /* EstrenosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstrenosCollectionViewController.h; sourceTree = "<group>"; };
 		F3926F7518E2FD3B004A7570 /* EstrenosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstrenosCollectionViewController.m; sourceTree = "<group>"; };
 		F392B4D71898176100BAFA21 /* sonido_fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_fondo.mp3; sourceTree = "<group>"; };
+		F397F25218EC2470000D6309 /* icono_cine_197x148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cine_197x148.png; sourceTree = "<group>"; };
+		F397F25318EC2470000D6309 /* icono_cine_estrenos_194x143.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cine_estrenos_194x143.png; sourceTree = "<group>"; };
+		F397F25618EC2493000D6309 /* icono_blu_ray_246x188.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_blu_ray_246x188.png; sourceTree = "<group>"; };
+		F397F25718EC2493000D6309 /* icono_DVD_estrenos_245x174.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_DVD_estrenos_245x174.png; sourceTree = "<group>"; };
 		F3A68CD618E57ED7008929FA /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		F3A68CD718E57ED7008929FA /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		F3A68CDD18E59415008929FA /* MoviesSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesSearch.h; sourceTree = "<group>"; };
@@ -294,9 +302,11 @@
 		F307D08518CDC94800F7A50C /* cartelera */ = {
 			isa = PBXGroup;
 			children = (
-				F358E28D18E09C9A00F6C934 /* estrenos */,
+				F397F25618EC2493000D6309 /* icono_blu_ray_246x188.png */,
+				F397F25218EC2470000D6309 /* icono_cine_197x148.png */,
 				F358E28318E0271100F6C934 /* fondo_cartelera_2048x1536.jpg */,
 				F358E28518E0271E00F6C934 /* base_cuchillo_2020x348.png */,
+				F358E28D18E09C9A00F6C934 /* estrenos */,
 			);
 			name = cartelera;
 			sourceTree = "<group>";
@@ -495,6 +505,8 @@
 		F358E28D18E09C9A00F6C934 /* estrenos */ = {
 			isa = PBXGroup;
 			children = (
+				F397F25718EC2493000D6309 /* icono_DVD_estrenos_245x174.png */,
+				F397F25318EC2470000D6309 /* icono_cine_estrenos_194x143.png */,
 				F358E28E18E09CC200F6C934 /* triangulo_abajo_96x42.png */,
 				F358E28F18E09CC200F6C934 /* triangulo_arriba_96x42.png */,
 				F3926F7218E2FBD2004A7570 /* base_estreno_421x1177.png */,
@@ -684,7 +696,9 @@
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
+				F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
+				F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
@@ -705,6 +719,7 @@
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
+				F397F25818EC2493000D6309 /* icono_blu_ray_246x188.png in Resources */,
 				F304101F18B752CC006273F0 /* barrotes.png in Resources */,
 				F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */,
 				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
@@ -724,6 +739,7 @@
 				F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
+				F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,

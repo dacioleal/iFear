@@ -82,11 +82,17 @@
     
     Pelicula *movie = (Pelicula * ) [_moviesList objectAtIndex:indexPath.item];
     cell.movieCellImageView.image = movie.imagen;
-    UIFont *font = [UIFont fontWithName:@"TeluguSangamMN" size:20.0];
-    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:movie.titulo attributes:@{NSFontAttributeName: font}];
+    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:20.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:[movie.titulo uppercaseString] attributes:@{NSFontAttributeName: font}];
     cell.movieCellTitleLabel.attributedText = attributedString;
     cell.movieCellTitleLabel.shadowColor = [UIColor blackColor];
-    cell.movieCellTitleLabel.shadowOffset = CGSizeMake(0, 1);
+    cell.movieCellTitleLabel.shadowOffset = CGSizeMake(0, 2);
+    
+    UIColor *textColor = [UIColor colorWithRed:0.98 green:0.89 blue:0.51 alpha:1.0];
+    attributedString = [[NSAttributedString alloc] initWithString:@"21 marzo 2014" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.movieCellDateLabel.attributedText = attributedString;
+    cell.movieCellDateLabel.shadowColor = [UIColor blackColor];
+    cell.movieCellDateLabel.shadowOffset = CGSizeMake(0, 2);
     
     return cell;
 }

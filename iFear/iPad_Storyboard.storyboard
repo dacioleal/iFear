@@ -66,7 +66,7 @@
                         <outlet property="loadingLabel" destination="t9G-dK-pcQ" id="cWZ-eX-Ylx"/>
                         <outlet property="loadingView" destination="oIS-9T-Pg0" id="f2G-h4-RbP"/>
                         <outlet property="pageControl" destination="VAE-Rk-8ws" id="Vvs-eY-XkE"/>
-                        <segue destination="shG-3t-WQ0" kind="modal" identifier="goToMovieDetail" modalTransitionStyle="coverVertical" id="Myq-yO-dIP"/>
+                        <segue destination="shG-3t-WQ0" kind="modal" identifier="goToMovieDetail" modalTransitionStyle="flipHorizontal" id="Myq-yO-dIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUv-0T-x2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,6 +214,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_cine_197x148.png" translatesAutoresizingMaskIntoConstraints="NO" id="q2t-Gc-aOq">
+                                <rect key="frame" x="802" y="69" width="98" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_cine_197x148.png" translatesAutoresizingMaskIntoConstraints="NO" id="sXZ-Z5-DkF">
+                                <rect key="frame" x="802" y="254" width="98" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_cine_197x148.png" translatesAutoresizingMaskIntoConstraints="NO" id="B5e-Ud-H38">
+                                <rect key="frame" x="802" y="442" width="98" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -223,12 +235,18 @@
                     <size key="freeformSize" width="1024" height="550"/>
                     <connections>
                         <outlet property="bottomImageView" destination="5K8-Dd-67u" id="II5-GH-x1w"/>
+                        <outlet property="bottomMovieBackgroundImageView" destination="VAq-Rc-73W" id="VQi-e5-tSy"/>
+                        <outlet property="bottomMovieSoporteImageView" destination="B5e-Ud-H38" id="HM8-E7-8oZ"/>
                         <outlet property="bottomMovieTextView" destination="sFI-ce-6f7" id="mvq-k5-4QB"/>
                         <outlet property="bottomMovieTitleLabel" destination="L1G-v1-UiJ" id="2ES-ZO-y1P"/>
                         <outlet property="midImageView" destination="BhT-MB-i0v" id="XhL-hI-Ghd"/>
+                        <outlet property="midMovieBackgroundImageView" destination="BZc-qz-obh" id="sXc-Kp-fKV"/>
+                        <outlet property="midMovieSoporteImageView" destination="sXZ-Z5-DkF" id="O07-8l-GgK"/>
                         <outlet property="midMovieTextView" destination="Rvg-Gi-ZqO" id="ZVo-pF-rXm"/>
                         <outlet property="midMovieTitleLabel" destination="lJp-hX-Fl0" id="atZ-i4-qEl"/>
                         <outlet property="topImageView" destination="vRz-Ur-1ZL" id="ZlW-Yv-drH"/>
+                        <outlet property="topMovieBackgroundImageView" destination="SVi-Y4-Ew1" id="MzZ-C7-9Ad"/>
+                        <outlet property="topMovieSoporteImageView" destination="q2t-Gc-aOq" id="Y6K-px-hUd"/>
                         <outlet property="topMovieTextView" destination="xE0-Hl-9Px" id="sDO-S3-Ssx"/>
                         <outlet property="topMovieTitleLabel" destination="Do8-2p-k6N" id="TpB-yk-gn9"/>
                     </connections>
@@ -742,8 +760,8 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-n6-NgE">
-                                            <rect key="frame" x="17" y="411" width="180" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-n6-NgE">
+                                            <rect key="frame" x="17" y="402" width="180" height="52"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
@@ -756,12 +774,32 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCO-O5-3uQ">
+                                            <rect key="frame" x="20" y="462" width="175" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_cine_estrenos_194x143.png" translatesAutoresizingMaskIntoConstraints="NO" id="91U-i9-IO5">
+                                            <rect key="frame" x="59" y="20" width="97" height="71"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <size key="customSize" width="215" height="590"/>
                                 <connections>
+                                    <outlet property="movieCellDateLabel" destination="gCO-O5-3uQ" id="j5S-vH-9Zc"/>
                                     <outlet property="movieCellImageView" destination="TmQ-Eb-IbN" id="ibA-U7-0iH"/>
+                                    <outlet property="movieCellSoporteLabel" destination="91U-i9-IO5" id="g6R-co-1IY"/>
                                     <outlet property="movieCellTitleLabel" destination="rNS-n6-NgE" id="2iy-ag-GJk"/>
                                 </connections>
                             </collectionViewCell>
@@ -807,6 +845,8 @@
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_buscar.png" width="100" height="100"/>
         <image name="icono_cartelera.png" width="100" height="100"/>
+        <image name="icono_cine_197x148.png" width="197" height="148"/>
+        <image name="icono_cine_estrenos_194x143.png" width="194" height="143"/>
         <image name="icono_home.png" width="100" height="100"/>
         <image name="icono_mentes_oscuras.png" width="100" height="100"/>
         <image name="icono_menu.png" width="100" height="100"/>
