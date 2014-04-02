@@ -13,6 +13,7 @@
 @interface EstrenosCollectionViewController () {
     
     BOOL estrenosViewisHidden;
+    Pelicula *movieForSegue;
    
 }
 
@@ -39,6 +40,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    UIEdgeInsets edgeInset = UIEdgeInsetsMake(0, 20, 0, 20);
+    
+    
+    
 }
 
 
@@ -48,16 +53,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual: @"goToMovieDetailTwo"])
+    {
+        if ([segue.destinationViewController respondsToSelector:@selector(setMovie:)]) {
+            [segue.destinationViewController performSelector:@selector(setMovie:) withObject:movieForSegue];
+        }
+    }
 }
-*/
+
 
 
 
@@ -106,7 +115,11 @@
 
 #pragma mark - UICollectionViewDelegate methods
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    movieForSegue = (Pelicula *) [_moviesList objectAtIndex:indexPath.item];
+    [self performSegueWithIdentifier:@"goToMovieDetailTwo" sender:self];
+}
 
 
 
