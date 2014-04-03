@@ -48,11 +48,32 @@
                                 <rect key="frame" x="493" y="665" width="39" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <containerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-5y-ReV">
-                                <rect key="frame" x="16" y="705" width="1002" height="662"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nF1-F2-8Eq">
+                                <rect key="frame" x="17" y="705" width="1002" height="662"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_estrenos_2004x1324.png" translatesAutoresizingMaskIntoConstraints="NO" id="7a4-34-dPC">
+                                        <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-5y-ReV">
+                                        <rect key="frame" x="24" y="72" width="942" height="590"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-32-wyc">
+                                        <rect key="frame" x="20" y="6" width="955" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Lgi-7D-rhP" appends="YES" id="ndg-Oi-ezV"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </containerView>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -60,9 +81,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="activityIndicator" destination="m23-WC-6dl" id="Q26-OZ-U2G"/>
-                        <outlet property="containerView" destination="Urr-5y-ReV" id="hJK-gh-3Ai"/>
+                        <outlet property="containerView" destination="Urr-5y-ReV" id="DOC-FI-EvO"/>
                         <outlet property="contentView" destination="8Yv-g3-StG" id="HZs-EA-xxD"/>
-                        <outlet property="estrenosContentView" destination="Urr-5y-ReV" id="jAH-Tf-VlA"/>
+                        <outlet property="estrenosContentView" destination="nF1-F2-8Eq" id="Ymg-eZ-MFL"/>
                         <outlet property="loadingLabel" destination="t9G-dK-pcQ" id="cWZ-eX-Ylx"/>
                         <outlet property="loadingView" destination="oIS-9T-Pg0" id="f2G-h4-RbP"/>
                         <outlet property="pageControl" destination="VAE-Rk-8ws" id="Vvs-eY-XkE"/>
@@ -70,25 +91,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUv-0T-x2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view alpha="0.85000002384185791" contentMode="scaleToFill" id="6ee-vP-z4r">
-                    <rect key="frame" x="0.0" y="0.0" width="197" height="101"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-se-oMP">
-                            <rect key="frame" x="80" y="20" width="37" height="37"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </activityIndicatorView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qev-9A-WHy">
-                            <rect key="frame" x="8" y="64" width="181" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
+                <tapGestureRecognizer id="Lgi-7D-rhP">
+                    <connections>
+                        <action selector="tapEstrenosContentView:" destination="uAS-7p-n1F" id="HCR-n6-dGd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3607" y="-937"/>
         </scene>
@@ -294,7 +301,7 @@
                         <viewControllerLayoutGuide type="bottom" id="gWW-tb-Rfc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0wQ-Gx-taX">
-                        <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_ppal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vkS-8D-O8y">
@@ -302,7 +309,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-7S-f8p">
-                                <rect key="frame" x="31" y="58" width="180" height="258"/>
+                                <rect key="frame" x="31" y="58" width="202" height="364"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -725,7 +732,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="estrenosViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IFG-vT-KA9" customClass="EstrenosCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="0Km-Bu-hHN">
-                        <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
+                        <rect key="frame" x="0.0" y="0.0" width="942" height="590"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -733,19 +740,11 @@
                             <size key="itemSize" width="215" height="590"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="30" minY="70" maxX="30" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_estrenos_2004x1324.png" id="DUs-WB-aVg">
-                            <rect key="frame" x="0.0" y="0.0" width="1002" height="662"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <gestureRecognizers/>
-                            <connections>
-                                <outletCollection property="gestureRecognizers" destination="kr5-Cn-HLl" appends="YES" id="OUU-a4-sfo"/>
-                            </connections>
-                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="MQQ-pz-ZTb" customClass="MovieCell">
-                                <rect key="frame" x="30" y="71" width="215" height="590"/>
+                                <rect key="frame" x="0.0" y="0.0" width="215" height="590"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="215" height="590"/>
@@ -811,17 +810,12 @@
                     </collectionView>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1002" height="662"/>
+                    <size key="freeformSize" width="942" height="590"/>
                     <connections>
                         <segue destination="shG-3t-WQ0" kind="modal" identifier="goToMovieDetailTwo" modalTransitionStyle="flipHorizontal" id="QAW-fE-eLw"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-RU-Dtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="kr5-Cn-HLl">
-                    <connections>
-                        <action selector="titleTap:" destination="IFG-vT-KA9" id="yGM-E4-kUO"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6525" y="-46"/>
         </scene>
@@ -865,6 +859,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QAW-fE-eLw"/>
+        <segue reference="Myq-yO-dIP"/>
     </inferredMetricsTieBreakers>
 </document>

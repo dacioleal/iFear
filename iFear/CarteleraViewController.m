@@ -28,11 +28,7 @@
     
     MoviesSearch *estrenosSearch;
     
-    
-    
 }
-
-@property (strong, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -85,13 +81,17 @@
     [self.contentView addSubview:self.carteleraPageViewController.view];
     
     
+    // Ocultamos la vista de estrenos, cuando se termine la carga de las películas de estrenos la haremos visible
+    _estrenosContentView.hidden = YES;
+    
+    
     // Añadimos este ViewController (self) como observador para recibir las notificaciones de que se han terminado de descargar los datos
     // y de que se pulsa sobre la portada de una película para ir a la pantalla de detalle.
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(configurePageContentViewController) name:@"dataFinished" object:moviesSearch];
     [defaultCenter addObserver:self selector:@selector(configureEstrenosViewController) name:@"dataFinished" object:estrenosSearch];
     [defaultCenter addObserver:self selector:@selector(goToMovieDetail:) name:@"goToMovieDetail" object:nil];
-    [defaultCenter addObserver:self selector:@selector(showEstrenosView) name:@"showEstrenosView" object:nil];
+    
     
     // Llamamos al método para la petición de los datos de las películas.
     
@@ -156,17 +156,16 @@
 
 - (void) showEstrenosView
 {
-    UIView *estrenosView = [self.view viewWithTag:1];
     
     if ([self estrenosViewIsVisible] == NO) {
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y - 600);
+            _estrenosContentView.center = CGPointMake(_estrenosContentView.center.x, _estrenosContentView.center.y - (_estrenosContentView.frame.size.height - 63));
         } completion:nil];
        
         
     } else if ([self estrenosViewIsVisible] == YES) {
         [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            estrenosView.center = CGPointMake(estrenosView.center.x, estrenosView.center.y + 600);
+            _estrenosContentView.center = CGPointMake(_estrenosContentView.center.x, _estrenosContentView.center.y + (_estrenosContentView.frame.size.height - 63));
         } completion:nil];
        
     }
@@ -174,15 +173,13 @@
 
 - (BOOL) estrenosViewIsVisible
 {
-    UIView *estrenosView = [self.view viewWithTag:1];
-    CGPoint centerForEstrenosViewVisible = CGPointMake(517, 436);
-    if (estrenosView.center.y == centerForEstrenosViewVisible.y ) {
+
+    CGPoint centerForEstrenosViewVisible = CGPointMake(518, 437);
+    if (_estrenosContentView.center.y == centerForEstrenosViewVisible.y ) {
         return YES;
     }
     return NO;
 }
-
-
 
 
 #pragma mark - Configure PageContentViewController
@@ -304,14 +301,19 @@
     _estrenosViewController.moviesList = _estrenosMoviesList;
     [self addChildViewController:_estrenosViewController];
     
-    _estrenosViewController.view.bounds = self.estrenosContentView.bounds;
-    _estrenosViewController.view.center = CGPointMake((_estrenosContentView.center.x - _estrenosContentView.frame.origin.x), (_estrenosContentView.center.y - _estrenosContentView.frame.origin.y) + 40);
-    [_estrenosContentView addSubview:_estrenosViewController.view];
+    _estrenosViewController.view.bounds = _containerView.bounds;
+    [_containerView addSubview:_estrenosViewController.view];
+    
+    CGPoint center = [_containerView convertPoint:_containerView.center fromView:_containerView.superview];
+    _estrenosViewController.view.center = center;
+    
+    _estrenosContentView.center = CGPointMake(_estrenosContentView.center.x, _estrenosContentView.center.y + 63);
+    _estrenosContentView.hidden = NO;
     
     [UIView animateWithDuration:0.3 animations:^{
-        _estrenosViewController.view.center = CGPointMake((_estrenosContentView.center.x - _estrenosContentView.frame.origin.x), (_estrenosContentView.center.y - _estrenosContentView.frame.origin.y));
+        _estrenosContentView.center = CGPointMake(_estrenosContentView.center.x, _estrenosContentView.center.y - 63);
     }];
-        
+    
 }
 
 
@@ -373,5 +375,30 @@
     
 }
 
+#pragma mark - Tap Action Method
+
+- (IBAction)tapEstrenosContentView:(UITapGestureRecognizer *)sender {
+    
+    [self showEstrenosView];
+}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

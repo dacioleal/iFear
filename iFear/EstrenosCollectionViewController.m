@@ -18,8 +18,6 @@
 }
 
 
-- (IBAction)titleTap:(UITapGestureRecognizer *)sender;
-
 @end
 
 @implementation EstrenosCollectionViewController
@@ -39,8 +37,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   //self.collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20);
     
     
     
@@ -68,17 +64,6 @@
 }
 
 
-
-
-
-- (IBAction)titleTap:(UITapGestureRecognizer *)sender {
-    
-    
-    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter postNotificationName:@"showEstrenosView" object:self];
-    
-    
-}
 
 
 #pragma mark - UICollectionViewDataSource methods
