@@ -397,9 +397,40 @@
     
     if (sender.state == UIGestureRecognizerStateEnded) {
         
-        [UIView animateWithDuration:0.3 animations:^{
-            _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 437);
-        }];
+        if ( translation.y > 0 ) {
+            
+            if (_estrenosContentView.center.y < 600) {
+                
+                [UIView animateWithDuration:0.3 animations:^{
+                    _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 437);
+                }];
+                
+            } else {
+                
+                [UIView animateWithDuration:0.3 animations:^{
+                    _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 1036);
+                }];
+                
+            }
+            
+            
+        } else if ( translation.y < 0 ) {
+            
+            if (_estrenosContentView.center.y > 800) {
+                
+                [UIView animateWithDuration:0.3 animations:^{
+                    _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 1036);
+                }];
+                
+            } else {
+                
+                [UIView animateWithDuration:0.3 animations:^{
+                    _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 437);
+                }];
+            }
+            
+        }
+        
     }
     
 
