@@ -18,6 +18,7 @@
 }
 
 
+
 @end
 
 @implementation EstrenosCollectionViewController
@@ -37,7 +38,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     
     
 }
@@ -104,6 +104,7 @@
 {
     movieForSegue = (Pelicula *) [_moviesList objectAtIndex:indexPath.item];
     [self performSegueWithIdentifier:@"goToMovieDetailTwo" sender:self];
+    
 }
 
 

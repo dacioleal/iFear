@@ -28,6 +28,8 @@
     
     MoviesSearch *estrenosSearch;
     
+    CGPoint lastLocationForEstrenosView;
+    
 }
 
 @end
@@ -375,11 +377,38 @@
     
 }
 
-#pragma mark - Tap Action Method
+#pragma mark - GestureRecognizers Action Methods
 
 - (IBAction)tapEstrenosContentView:(UITapGestureRecognizer *)sender {
     
     [self showEstrenosView];
+}
+
+- (IBAction)panEstrenosContentView:(UIPanGestureRecognizer *)sender {
+    
+    CGPoint translation = [sender translationInView:_estrenosContentView];
+    CGPoint location = [sender locationInView:self.view];
+    
+    if (sender.state == UIGestureRecognizerStateChanged && (_estrenosContentView.center.y >= 437) && (_estrenosContentView.center.y <= 1036)) {
+        
+        _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, lastLocationForEstrenosView.y + translation.y);
+    }
+    
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            _estrenosContentView.center = CGPointMake(lastLocationForEstrenosView.x, 437);
+        }];
+    }
+    
+
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    lastLocationForEstrenosView = _estrenosContentView.center;
 }
 
 @end

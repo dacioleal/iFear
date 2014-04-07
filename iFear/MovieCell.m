@@ -8,6 +8,7 @@
 
 #import "MovieCell.h"
 
+
 @implementation MovieCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -18,6 +19,8 @@
     }
     return self;
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

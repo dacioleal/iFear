@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 - (IBAction)tapEstrenosContentView:(UITapGestureRecognizer *)sender;
+- (IBAction)panEstrenosContentView:(UIPanGestureRecognizer *)sender;
 
 @end

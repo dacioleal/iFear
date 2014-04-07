@@ -68,6 +68,7 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Lgi-7D-rhP" appends="YES" id="ndg-Oi-ezV"/>
+                                            <outletCollection property="gestureRecognizers" destination="M58-t3-SWa" appends="YES" id="iVR-0o-5ax"/>
                                         </connections>
                                     </view>
                                 </subviews>
@@ -96,6 +97,11 @@
                         <action selector="tapEstrenosContentView:" destination="uAS-7p-n1F" id="HCR-n6-dGd"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="M58-t3-SWa">
+                    <connections>
+                        <action selector="panEstrenosContentView:" destination="uAS-7p-n1F" id="y3C-av-TmU"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3607" y="-937"/>
         </scene>
