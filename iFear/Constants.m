@@ -10,7 +10,7 @@
 
 @implementation Constants
 
-NSString * const ANIMACION = @"Animación";
+NSString * const ANIMACION = @"Animacion";
 NSString * const CATASTROFE = @"Catástrofes";
 NSString * const CORTOMETRAJE = @"Cortometraje";
 NSString * const EXORCISMO = @"Exorcismos";
@@ -23,8 +23,8 @@ NSString * const FAKE = @"Falso documental";
 NSString * const LICANTROPOS = @"Licántropos";
 NSString * const SECTAS = @"Sectas";
 NSString * const VAMPIROS = @"Vampiros";
-NSString * const HECHOSREALES = @"asada en hechos reales";
-NSString * const COMEDIA = @"Comedia//Parodia";
+NSString * const HECHOSREALES = @"Basada en hechos reales";
+NSString * const COMEDIA = @"Comedia de terror//Parodia";
 NSString * const ENFERMEDADES = @"Enfermedades";
 NSString * const FANTASMAS = @"Fantasmas";
 NSString * const MANICOMIOS = @"Manicomios";

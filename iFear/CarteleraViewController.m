@@ -234,7 +234,7 @@
 - (void) retrieveData {
     
     NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                @"getTodasPeliculas", @"f",nil];
+                                @"getTrailersForID", @"function",@"1234",@"idPelicula",nil];
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:direccion];
     

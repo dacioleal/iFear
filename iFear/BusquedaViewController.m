@@ -50,7 +50,8 @@
 # pragma mark - IBAction
 
 - (IBAction)pushBuscarButton:(id)sender {
-    
+    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    [self setConnectionWithParameters: url];
 }
 - (IBAction)pushCategoriesButton:(id)sender {
     
@@ -379,16 +380,9 @@ didCompleteWithError:(NSError *)error
 // Método para establecer la conexión con el servidor
 - (void) setConnectionWithParameters: (NSString *) serverUrl
 {
-    
     NSURLSessionConfiguration * configuracionConexion = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSData *body = [self getParamsArray];
     
-    NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"Hola",@"adios",nil];
-    NSMutableString *bodyStr = [NSMutableString string];
-    for (NSString *restID in array) {
-        [bodyStr appendFormat:@"restIDs[]=%@&",[restID stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    }
-    
-    NSData *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
     configuracionConexion.timeoutIntervalForRequest = 10.0;
     configuracionConexion.timeoutIntervalForResource = 10.0;
     
@@ -407,6 +401,17 @@ didCompleteWithError:(NSError *)error
     
 }
 
+- (NSData *) getParamsArray
+{
+    NSMutableString *bodyStr = [NSMutableString string];
+    for (NSString *subgenre in sub_Genre_List) {
+        [bodyStr appendFormat:@"function=buscaPorSubgenero&subgenres[]=%@&",[subgenre stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
+    
+    NSData *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
+    return body;
+}
+
 - (void) setStateCategoriesButton:(id)sender
 {
     
@@ -416,6 +421,9 @@ didCompleteWithError:(NSError *)error
     
     btnAux.selected = !btnAux.selected;
 }
+
+
+# pragma mark - Popover Delegate -
 
 - (void)setSearchSelector:(NSString *)selector
 {
