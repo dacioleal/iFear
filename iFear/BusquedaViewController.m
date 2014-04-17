@@ -229,7 +229,7 @@
     }
 }
 
-
+#pragma mark - NSURLSessionDownloadDelegate -
 // Donde primero entra al realizar la petición
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler
 {
