@@ -7,11 +7,19 @@
 //
 
 #import "BusquedaViewController.h"
+#import "SubGenreSearch.h"
 
 @interface BusquedaViewController ()
 {
     // Array para los subgeneros
     NSMutableArray * sub_Genre_List;
+    
+    // Array para los resultados de búsqueda
+    NSArray * resultMovies;
+    
+    // Clase que permite la búsqueda por subgenero
+    SubGenreSearch * subGenreSearch;
+    
 }
 
 @end
@@ -34,6 +42,8 @@
     // Se inicializa el Array de los subgeneros
     sub_Genre_List = [[NSMutableArray alloc] init];
     
+    subGenreSearch = [[SubGenreSearch alloc] init];
+    
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
     
@@ -50,8 +60,9 @@
 # pragma mark - IBAction
 
 - (IBAction)pushBuscarButton:(id)sender {
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    [self setConnectionWithParameters: url];
+    
+    [self searchBySubGenere];
+    
 }
 - (IBAction)pushCategoriesButton:(id)sender {
     
@@ -229,49 +240,6 @@
     }
 }
 
-#pragma mark - NSURLSessionDownloadDelegate -
-// Donde primero entra al realizar la petición
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler
-{
-    
-    // Para que la tarea continue normalmente.
-    completionHandler(NSURLSessionResponseAllow);
-}
-
-
-
-// Al recibir los datos
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
-{
-    
-    NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    
-    NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
-    
-    
-}
-
-
-
-
-// Al finalizar
-
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
-didCompleteWithError:(NSError *)error
-{
-    if(error == nil)
-    {
-        NSLog(@"Éxito al bajar");
-        
-        
-        
-    } else {
-        
-    }
-}
-
-
 #pragma mark - Métodos propios -
 
 
@@ -377,30 +345,6 @@ didCompleteWithError:(NSError *)error
     }
 }
 
-// Método para establecer la conexión con el servidor
-- (void) setConnectionWithParameters: (NSString *) serverUrl
-{
-    NSURLSessionConfiguration * configuracionConexion = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSData *body = [self getParamsArray];
-    
-    configuracionConexion.timeoutIntervalForRequest = 10.0;
-    configuracionConexion.timeoutIntervalForResource = 10.0;
-    
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: configuracionConexion delegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSURL * url = [NSURL URLWithString:serverUrl];
-    
-    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
-    
-    [urlRequest setHTTPMethod:@"POST"];
-    [urlRequest setHTTPBody:body];
-    
-    NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithRequest:urlRequest];
-    
-    [dataTask resume];
-    
-}
-
 - (NSData *) getParamsArray
 {
     NSMutableString *bodyStr = [NSMutableString string];
@@ -420,6 +364,11 @@ didCompleteWithError:(NSError *)error
     NSLog(@"%@", [btnAux restorationIdentifier]);
     
     btnAux.selected = !btnAux.selected;
+}
+
+- (void) searchBySubGenere
+{
+    resultMovies = [subGenreSearch searchBySubGenre:[self getParamsArray]];
 }
 
 

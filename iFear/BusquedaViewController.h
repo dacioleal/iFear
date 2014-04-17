@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PopoverSelectorBusquedaViewController.h"
 
-@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, NSURLConnectionDataDelegate, NSURLSessionDownloadDelegate>
+@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate>
 
 // Botón SWITCH de búsqueda
 @property (weak, nonatomic) IBOutlet UIButton *buscarSensacionesButton;
@@ -58,12 +58,8 @@
 // Contenido del Popover
 @property (nonatomic, strong) PopoverSelectorBusquedaViewController * popoverContent;
 
-// Array que contiene todos los botones de busqueda
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *listCagegoriesSearchButton;
-
 - (IBAction)pushCategoriesButton:(id)sender;
 
-- (IBAction)setStateSensacionesButton:(id)sender;
 - (IBAction)showPopover:(id)sender;
 
 -(void) setImageForAllButtons;
