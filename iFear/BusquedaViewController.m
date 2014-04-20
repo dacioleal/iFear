@@ -11,14 +11,21 @@
 
 @interface BusquedaViewController ()
 {
-    // Array para los subgeneros
-    NSMutableArray * sub_Genre_List;
-    
     // Array para los resultados de búsqueda
     NSArray * resultMovies;
     
+    // Array en donde estarán que subgeneros se han seleccionado
+    NSMutableArray *sub_genre_list;
+    
     // Clase que permite la búsqueda por subgenero
     SubGenreSearch * subGenreSearch;
+    
+    // ViewController que está mostrándose en estos momentos
+    UIViewController * onScreenViewController;
+    
+    // Viewcontrollers de tipo de búsqueda
+    BusquedaSubGeneroViewController * busquedaSubGenereVC;
+    BusquedaSensacionesViewController * busquedaSensacionesVC;
     
 }
 
@@ -30,7 +37,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -39,13 +45,22 @@
 {
     [super viewDidLoad];
     
-    // Se inicializa el Array de los subgeneros
-    sub_Genre_List = [[NSMutableArray alloc] init];
+    busquedaSubGenereVC = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaSubGeneroViewController"];
+    
+    busquedaSubGenereVC.delegate = self;
+    
+    busquedaSensacionesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaSensacionesViewController"];
     
     subGenreSearch = [[SubGenreSearch alloc] init];
     
+    sub_genre_list = [[NSMutableArray alloc] init];
+    
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
+    
+    // Se establece seleccionado la opción de búsqueda por subgenero
+    self.buscarSubGenButton.selected = YES;
+    [self displayContentViewController:busquedaSubGenereVC];
     
     
 }
@@ -62,155 +77,22 @@
 - (IBAction)pushBuscarButton:(id)sender {
     
     [self searchBySubGenere];
-    
-}
-- (IBAction)pushCategoriesButton:(id)sender {
-    
-    // Aquí se cambia el estado del botón presionado
-    [self setStateCategoriesButton:sender];
-    
-    // SWITCH QUE MANEJA QUE BOTÓN SE HA PULSADO
-    switch ([sender tag]) {
-        
-        // Animación
-        case 1:
-        [self searchInArray:ANIMACION];
-        break;
-        
-        // Catástrofes
-        case 2:
-        [self searchInArray:CATASTROFE];
-        break;
-        
-        // Cortometraje
-        case 3:
-        [self searchInArray:CORTOMETRAJE];
-        break;
-        
-        // Exorcismos
-        case 4:
-        [self searchInArray:EXORCISMO];
-        break;
-        
-        // J-Horror
-        case 5:
-        [self searchInArray:JHORROR];
-        break;
-        
-        // Monstruos
-        case 6:
-        [self searchInArray:MONSTRUOS];
-        break;
-        
-        // Asesinos en serie
-        case 7:
-        [self searchInArray:ASESINOSSERIE];
-        break;
-        
-        // Ciencia-ficción
-        case 8:
-        [self searchInArray:SCIFI];
-        break;
-        
-        // Documental
-        case 9:
-        [self searchInArray:DOCUMENTAL];
-        break;
-        
-        // Falso documental
-        case 10:
-        [self searchInArray:FAKE];
-        break;
-        
-        // Licántropos
-        case 11:
-        [self searchInArray:LICANTROPOS];
-        break;
-        
-        // Sectas
-        case 12:
-        [self searchInArray:SECTAS];
-        break;
-        
-        // Vampiros
-        case 13:
-        [self searchInArray:VAMPIROS];
-        break;
-        
-        // Basada en hechos reales
-        case 14:
-        [self searchInArray:HECHOSREALES];
-        break;
-        
-        // Comedia//Parodia
-        case 15:
-        [self searchInArray:COMEDIA];
-        break;
-        
-        // Enfermedades
-        case 16:
-        [self searchInArray:ENFERMEDADES];
-        break;
-        
-        // Fantasmas
-        case 17:
-        [self searchInArray:FANTASMAS];
-        break;
-        
-        // Manicomios
-        case 18:
-        [self searchInArray:MANICOMIOS];
-        break;
-        
-        // Secuela//Precuela
-        case 19:
-        [self searchInArray:SECUELA];
-        break;
-        
-        // Zombies
-        case 20:
-        [self searchInArray:ZOMBIES];
-        break;
-        
-        // Brujería
-        case 21:
-        [self searchInArray:BRUJERIA];
-        break;
-        
-        // Casas encantadas
-        case 22:
-        [self searchInArray:CASASENCANTADAS];
-        break;
-        
-        // Extraterrestres
-        case 23:
-        [self searchInArray:EXTRATERRESTRES];
-        break;
-        
-        // Giallo
-        case 24:
-        [self searchInArray:GIALLO];
-        break;
-        
-        // Metraje encontrado
-        case 25:
-        [self searchInArray:METRAJE];
-        break;
-        
-        // Serie TV
-        case 26:
-        [self searchInArray:SERIETV];
-        break;
-    }
 }
 
 - (IBAction)setStateSwitchs:(id)sender
 {
     if ([sender tag] == 0) {
         self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
+        self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
+        // Se cambia el tipo de búsqueda en el container.
+        [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
     }else{
         self.buscarSensacionesButton.selected = !self.buscarSensacionesButton.selected;
+        self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
+        // Se cambia el tipo de búsqueda en el container.
+        [self cycleFromViewController:onScreenViewController toViewController:busquedaSensacionesVC];
     }
+    
     
     
 }
@@ -254,116 +136,24 @@
     [self.buscarSubGenButton setImage:[UIImage imageNamed:@"switch_SI_132x72.png"] forState:UIControlStateSelected];
     [self.buscarSubGenButton setImage:[UIImage imageNamed:@"switch_NO_132x72.png"] forState:UIControlStateNormal];
     
-    // Botones de subgeneros
-    [self.animacionButton setImage:[UIImage imageNamed:@"boton_animacion_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.animacionButton setImage:[UIImage imageNamed:@"boton_animacion_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.catastrofeButton setImage:[UIImage imageNamed:@"boton_catastrofe_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.catastrofeButton setImage:[UIImage imageNamed:@"boton_catastrofe_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.cortometrajeButton setImage:[UIImage imageNamed:@"boton_cortomet_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.cortometrajeButton setImage:[UIImage imageNamed:@"boton_cortomet_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.exorcismosButton setImage:[UIImage imageNamed:@"boton_exorcismos_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.exorcismosButton setImage:[UIImage imageNamed:@"boton_exorcismos_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.jHorrorButton setImage:[UIImage imageNamed:@"boton_jhorror_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.jHorrorButton setImage:[UIImage imageNamed:@"boton_jhorror_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.monstruosButton setImage:[UIImage imageNamed:@"boton_monstruos_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.monstruosButton setImage:[UIImage imageNamed:@"boton_monstruos_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinos_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinos_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.sciFyButton setImage:[UIImage imageNamed:@"boton_Ci_Fi_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.sciFyButton setImage:[UIImage imageNamed:@"boton_Ci_Fi_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.documentalButton setImage:[UIImage imageNamed:@"boton_documental_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.documentalButton setImage:[UIImage imageNamed:@"boton_documental_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.fakeButton setImage:[UIImage imageNamed:@"boton_fake_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.fakeButton setImage:[UIImage imageNamed:@"boton_fake_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.licantropos setImage:[UIImage imageNamed:@"boton_licantropo_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.licantropos setImage:[UIImage imageNamed:@"boton_licantropo_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.sectasButton setImage:[UIImage imageNamed:@"boton_sectas_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.sectasButton setImage:[UIImage imageNamed:@"boton_sectas_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.vampirosButton setImage:[UIImage imageNamed:@"boton_vampiros_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.vampirosButton setImage:[UIImage imageNamed:@"boton_vampiros_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.hechosRealesButton setImage:[UIImage imageNamed:@"boton_realidad_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.hechosRealesButton setImage:[UIImage imageNamed:@"boton_realidad_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.comediaButton setImage:[UIImage imageNamed:@"boton_comedia_ON_465x127.png.png"] forState:UIControlStateSelected];
-    [self.comediaButton setImage:[UIImage imageNamed:@"boton_comedia_465x127.png.png"] forState:UIControlStateNormal];
-    
-    [self.enfermedadesButton setImage:[UIImage imageNamed:@"boton_enfermedad_ON_465x127.png.png"] forState:UIControlStateSelected];
-    [self.enfermedadesButton setImage:[UIImage imageNamed:@"boton_enfermedad_465x127.png.png"] forState:UIControlStateNormal];
-    
-    [self.fantasmasButton setImage:[UIImage imageNamed:@"boton_fantasmas_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.fantasmasButton setImage:[UIImage imageNamed:@"boton_fantasmas_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.manicomiosButton setImage:[UIImage imageNamed:@"boton_manicomio_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.manicomiosButton setImage:[UIImage imageNamed:@"boton_manicomio_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.secuelaButton setImage:[UIImage imageNamed:@"boton_secuela_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.secuelaButton setImage:[UIImage imageNamed:@"boton_secuela_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.zombiesButton setImage:[UIImage imageNamed:@"boton_zombies_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.zombiesButton setImage:[UIImage imageNamed:@"boton_zombies_465x127.png"] forState:UIControlStateNormal];
-    
-    
-    [self.brujeriaButton setImage:[UIImage imageNamed:@"boton_brujeria_ON_465x127.png.png"] forState:UIControlStateSelected];
-    [self.brujeriaButton setImage:[UIImage imageNamed:@"boton_brujeria_465x127.png.png"] forState:UIControlStateNormal];
-    
-    [self.casasEncanButton setImage:[UIImage imageNamed:@"boton_casas_enc_ON_465x127.png.png"] forState:UIControlStateSelected];
-    [self.casasEncanButton setImage:[UIImage imageNamed:@"boton_casas_enc_465x127.png.png"] forState:UIControlStateNormal];
-    
-    [self.extraterrestresButton setImage:[UIImage imageNamed:@"boton_extraterre_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.extraterrestresButton setImage:[UIImage imageNamed:@"boton_extraterre_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.gialloButton setImage:[UIImage imageNamed:@"boton_giallo_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.gialloButton setImage:[UIImage imageNamed:@"boton_giallo_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.metrajeEncontradoButton setImage:[UIImage imageNamed:@"boton_metraje_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.metrajeEncontradoButton setImage:[UIImage imageNamed:@"boton_metraje_465x127.png"] forState:UIControlStateNormal];
-    
-    [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_465x127.png"] forState:UIControlStateNormal];
 }
 
-// Método que busca un subgenero en el array y según esté lo añade o lo elimina
-- (void) searchInArray: (NSString *) subgenre
+
+- (void) getSelectedSubGenre: (NSMutableArray *) subgenres
 {
-    if (![sub_Genre_List containsObject:subgenre]) {
-        [sub_Genre_List addObject:subgenre];
-    }else{
-        [sub_Genre_List removeObject:subgenre];
-    }
+    sub_genre_list = subgenres;
+    NSLog(@"NETRAAaa");
 }
 
 - (NSData *) getParamsArray
 {
     NSMutableString *bodyStr = [NSMutableString string];
-    for (NSString *subgenre in sub_Genre_List) {
+    for (NSString *subgenre in sub_genre_list) {
         [bodyStr appendFormat:@"function=buscaPorSubgenero&subgenres[]=%@&",[subgenre stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     }
     
     NSData *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
     return body;
-}
-
-- (void) setStateCategoriesButton:(id)sender
-{
-    
-    UIButton * btnAux = (UIButton *) sender;
-    
-    NSLog(@"%@", [btnAux restorationIdentifier]);
-    
-    btnAux.selected = !btnAux.selected;
 }
 
 - (void) searchBySubGenere
@@ -383,6 +173,80 @@
     
     NSLog(@"%@",selector);
 }
+
+#pragma  mark - Container display methods
+
+- (void) displayContentViewController: (UIViewController *) contentViewController
+{
+    [self addChildViewController:contentViewController];
+    contentViewController.view.frame = CGRectMake(0, 0, _container.frame.size.width, self.view.frame.size.height);
+    [_container addSubview:contentViewController.view];
+    [contentViewController didMoveToParentViewController:self];
+    
+    onScreenViewController = contentViewController;
+}
+
+- (void) hideContentViewController: (UIViewController *) contentViewController
+{
+    [contentViewController willMoveToParentViewController:nil];
+    [contentViewController.view removeFromSuperview];
+    [contentViewController removeFromParentViewController];
+}
+
+- (void) cycleFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController
+{
+    
+    [oldViewController willMoveToParentViewController:nil];
+    [self addChildViewController:newViewController];
+    
+    newViewController.view.frame = CGRectMake(0, 0, _container.frame.size.width, self.view.frame.size.height);
+    
+    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 0.25 options:0
+                            animations:^{
+                                
+                            }
+                            completion:^(BOOL finished) {
+                                [oldViewController removeFromParentViewController];
+                                [newViewController didMoveToParentViewController:self];
+                            }];
+    onScreenViewController = newViewController;
+    
+}
+
+- (void) specialTransitionFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController
+{
+    
+    [oldViewController willMoveToParentViewController:nil];
+    [self addChildViewController:newViewController];
+    
+    newViewController.view.frame = _container.frame;
+    newViewController.view.alpha = 0;
+    
+    [self transitionFromViewController: oldViewController toViewController: newViewController duration: 1.0 options:0
+                            animations:^{
+                                
+                                newViewController.view.alpha = 1.0;
+                                oldViewController.view.alpha = 0.5;
+                                
+                                CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+                                
+                                scaleAnimation.fromValue = [NSNumber numberWithFloat:0];
+                                scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+                                scaleAnimation.duration = 0.7;
+                                
+                                [newViewController.view.layer addAnimation:scaleAnimation forKey:@"scale"];
+                                
+                                
+                                
+                            }
+                            completion:^(BOOL finished) {
+                                [oldViewController removeFromParentViewController];
+                                [newViewController didMoveToParentViewController:self];
+                            }];
+    onScreenViewController = newViewController;
+    
+}
+
 
 
 @end
