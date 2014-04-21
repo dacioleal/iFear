@@ -440,6 +440,19 @@
 {
     
     lastLocationForEstrenosView = _estrenosContentView.center;
+    
+    
+}
+
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    NSEnumerator *enumerator = [touches objectEnumerator];
+    id value;
+    
+    while (value = [enumerator nextObject]) {
+        NSLog(@"X:%f Y:%f", [value locationInView:self.view].x, [value locationInView:self.view].y);
+    }
 }
 
 @end

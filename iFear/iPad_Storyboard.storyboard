@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -61,7 +61,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </containerView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-32-wyc">
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZn-32-wyc">
                                         <rect key="frame" x="20" y="6" width="955" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -315,7 +315,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-7S-f8p">
-                                <rect key="frame" x="31" y="58" width="180" height="258"/>
+                                <rect key="frame" x="31" y="92" width="180" height="267"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -323,7 +323,7 @@
                                     <outletCollection property="gestureRecognizers" destination="AXv-dg-f1u" appends="YES" id="xI9-Ju-69w"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-6a-lcc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-6a-lcc" userLabel="Button - backPushButton">
                                 <rect key="frame" x="967" y="30" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="icono_volver.png">
@@ -333,13 +333,160 @@
                                     <action selector="backPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="YeB-f7-nJm"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itZ-Fb-IpU" userLabel="View - sectionButtonsView">
+                                <rect key="frame" x="21" y="446" width="200" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_izq_rojo_400x560.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2B-kF-1Wa">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-uw-oQx">
+                                        <rect key="frame" x="18" y="20" width="165" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Ficha">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Impact"/>
+                                                        <font key="NSOriginalFont" size="18" name="Impact"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Ficha">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="toolTip"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="descriptionPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="Gu2-Re-uA0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-x7-MQU">
+                                        <rect key="frame" x="18" y="79" width="165" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Trailers">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="HoeflerText-Black"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="trailersPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="sBj-YR-I8C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1q-0e-LJi">
+                                        <rect key="frame" x="15" y="138" width="165" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="boton_panel_izq_330x102.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Ficha">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Impact"/>
+                                                        <font key="NSOriginalFont" size="18" name="Impact"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pa3-TL-9kh" userLabel="View - contentView">
+                                <rect key="frame" x="236" y="92" width="553" height="634"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marco_central_1106x1268.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fay-yz-zo2">
+                                        <rect key="frame" x="0.0" y="0.0" width="553" height="634"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jg-09-47p" userLabel="Label - contentTitleLabel">
+                                        <rect key="frame" x="30" y="8" width="148" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Ficha Técnica">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_central_1090x1144.png" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-cR-7xP">
+                                        <rect key="frame" x="0.0" y="43" width="545" height="572"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-Mt-0Hy" userLabel="Scroll View - trailersScrollView">
+                                        <rect key="frame" x="4" y="54" width="541" height="562"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </scrollView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.79999999999999982" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiT-gU-JvO" userLabel="Text View - descriptionTextView">
+                                        <rect key="frame" x="4" y="54" width="541" height="562"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-G4-JEo" userLabel="View - scoresView">
+                                <rect key="frame" x="797" y="92" width="202" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_barras_404x1010.png" translatesAutoresizingMaskIntoConstraints="NO" id="mla-LQ-BLe">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="505"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-Jb-WQu" userLabel="View - voteView">
+                                <rect key="frame" x="797" y="584" width="200" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_votar_400x284.png" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-xU-isa">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="142"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="movieImageView" destination="jW3-7S-f8p" id="5Gp-bc-bWE"/>
+                        <outlet property="contentView" destination="pa3-TL-9kh" id="1sT-yV-MBc"/>
+                        <outlet property="descriptionTextView" destination="XiT-gU-JvO" id="ZOY-7h-ESW"/>
+                        <outlet property="movieImageView" destination="jW3-7S-f8p" id="EcZ-Bd-UJS"/>
+                        <outlet property="sectionButtonsView" destination="itZ-Fb-IpU" id="r8t-Uh-zb1"/>
+                        <outlet property="trailersScrollView" destination="dFj-Mt-0Hy" id="kqj-j7-neH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3r-nf-2Ij" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -836,11 +983,14 @@
         <image name="boton_entrar.png" width="843" height="284"/>
         <image name="boton_mentes_oscuras.png" width="688" height="187"/>
         <image name="boton_opciones.png" width="265" height="84"/>
+        <image name="boton_panel_izq_330x102.png" width="330" height="102"/>
+        <image name="boton_panel_izq_ON_330x102.png" width="330" height="102"/>
         <image name="boton_que_es_iFear.png" width="672" height="228"/>
         <image name="cadena.png" width="4190" height="96"/>
         <image name="calavera.png" width="190" height="236"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
+        <image name="fondo_central_1090x1144.png" width="1090" height="1144"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
@@ -856,6 +1006,10 @@
         <image name="icono_menu.png" width="100" height="100"/>
         <image name="icono_menu_invertido.png" width="100" height="100"/>
         <image name="icono_volver.png" width="100" height="100"/>
+        <image name="marco_central_1106x1268.png" width="1106" height="1268"/>
+        <image name="panel_barras_404x1010.png" width="404" height="1010"/>
+        <image name="panel_izq_rojo_400x560.png" width="400" height="560"/>
+        <image name="panel_votar_400x284.png" width="400" height="284"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>
