@@ -7,8 +7,10 @@
 //
 
 #import "EstrenosCollectionViewController.h"
-#import "MovieCell.h"
 #import "CarteleraViewController.h"
+#import "DetalleViewController.h"
+#import "MovieCell.h"
+
 
 @interface EstrenosCollectionViewController () {
     

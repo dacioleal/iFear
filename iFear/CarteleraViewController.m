@@ -8,6 +8,7 @@
 
 #import "CarteleraViewController.h"
 #import "PageContentViewController.h"
+#import "DetalleViewController.h"
 #import "MoviesSearch.h"
 #import "Pelicula.h"
 
@@ -387,7 +388,7 @@
 - (IBAction)panEstrenosContentView:(UIPanGestureRecognizer *)sender {
     
     CGPoint translation = [sender translationInView:_estrenosContentView];
-    CGPoint location = [sender locationInView:self.view];
+    //CGPoint location = [sender locationInView:self.view];
     
     if (sender.state == UIGestureRecognizerStateChanged && (_estrenosContentView.center.y >= 437) && (_estrenosContentView.center.y <= 1036)) {
         
