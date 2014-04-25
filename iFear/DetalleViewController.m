@@ -43,6 +43,24 @@
     
     _movieImageView.image = _movie.imagen;
     
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.94 green:0.78 blue:0.19 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:46.0];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:_movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _titleLabel.attributedText = title;
+    _titleLabel.shadowColor = [UIColor blackColor];
+    _titleLabel.shadowOffset = CGSizeMake(0, 2);
+    
+    [_descriptionButton setSelected:YES];
+    
+    textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
+    font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Ficha Técnica" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _contentTitleLabel.attributedText = attributedString;
+    
+    
+    
+    
+    
     CGSize size = CGSizeMake(540, 912);
     _trailersScrollView.contentSize = size;
     
@@ -101,6 +119,11 @@
     [_contentView bringSubviewToFront:_descriptionTextView];
     [self deselectLeftPanelButtons];
     [_descriptionButton setSelected:YES];
+    
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Ficha Técnica" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _contentTitleLabel.attributedText = attributedString;
 }
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
@@ -109,6 +132,11 @@
     [self deselectLeftPanelButtons];
     [_trailersButton setSelected:YES];
     
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Trailers" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _contentTitleLabel.attributedText = attributedString;
+    
 }
 
 - (IBAction)reviewsPushButton:(UIButton *)sender {
@@ -116,6 +144,11 @@
     //[_contentView bringSubviewToFront:_trailersScrollView];
     [self deselectLeftPanelButtons];
     [_reviewsButton setSelected:YES];
+    
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Críticas" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _contentTitleLabel.attributedText = attributedString;
 
 }
 
@@ -124,6 +157,9 @@
     //[_contentView bringSubviewToFront:_trailersScrollView];
     [self deselectLeftPanelButtons];
     [_darkSideButton setSelected:YES];
+}
+
+- (IBAction)rateMoviePushButton:(UIButton *)sender {
 }
 
 
@@ -206,12 +242,12 @@
 - (void) configureLeftPanelButtons
 {
     
-    UIColor *textColor = [UIColor yellowColor];
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.94 green:0.68 blue:0.19 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:24.0];
     NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
 
-    textColor = [UIColor redColor];
+    textColor = [[UIColor alloc] initWithRed:0.6 green:0.15 blue:0.1 alpha:1.0];
     NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
     

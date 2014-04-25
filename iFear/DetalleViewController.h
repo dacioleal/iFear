@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *trailersScrollView;
 @property (weak, nonatomic) IBOutlet UIView *sectionButtonsView;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
 
 @property (strong, nonatomic) Pelicula * movie;
 
@@ -29,5 +31,6 @@
 - (IBAction)trailersPushButton:(UIButton *)sender;
 - (IBAction)reviewsPushButton:(UIButton *)sender;
 - (IBAction)darkSidePushButton:(UIButton *)sender;
+- (IBAction)rateMoviePushButton:(UIButton *)sender;
 
 @end
