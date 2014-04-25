@@ -11,6 +11,9 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
+{
+    NSArray *leftPanelButtons;
+}
 
 
 
@@ -35,6 +38,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
     
     _movieImageView.image = _movie.imagen;
     
@@ -94,15 +99,34 @@
 - (IBAction)descriptionPushButton:(UIButton *)sender {
     
     [_contentView bringSubviewToFront:_descriptionTextView];
+    [self deselectLeftPanelButtons];
     [_descriptionButton setSelected:YES];
 }
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
     
     [_contentView bringSubviewToFront:_trailersScrollView];
+    [self deselectLeftPanelButtons];
     [_trailersButton setSelected:YES];
     
 }
+
+- (IBAction)reviewsPushButton:(UIButton *)sender {
+    
+    //[_contentView bringSubviewToFront:_trailersScrollView];
+    [self deselectLeftPanelButtons];
+    [_reviewsButton setSelected:YES];
+
+}
+
+- (IBAction)darkSidePushButton:(UIButton *)sender {
+    
+    //[_contentView bringSubviewToFront:_trailersScrollView];
+    [self deselectLeftPanelButtons];
+    [_darkSideButton setSelected:YES];
+}
+
+
 - (IBAction)imageTap:(UITapGestureRecognizer *)sender {
     
         CGRect initialBounds = CGRectMake(0, 0, 180, 258);
@@ -187,10 +211,18 @@
     NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
 
-    textColor = [UIColor brownColor];
+    textColor = [UIColor redColor];
     NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
     
+}
+
+- (void) deselectLeftPanelButtons
+{
+    for (int i=0; i<leftPanelButtons.count; i++) {
+        UIButton *button = (UIButton *) [leftPanelButtons objectAtIndex:i];
+        [button setSelected:NO];
+    }
 }
 
 

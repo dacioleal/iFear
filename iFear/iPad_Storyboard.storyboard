@@ -346,7 +346,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="boton_panel_izq_330x102.png"/>
                                         <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
-                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="descriptionPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="Gu2-Re-uA0"/>
                                         </connections>
@@ -360,7 +359,7 @@
                                         <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png">
                                             <attributedString key="attributedTitle"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png">
+                                        <state key="highlighted">
                                             <attributedString key="attributedTitle"/>
                                         </state>
                                         <connections>
@@ -374,7 +373,9 @@
                                             <attributedString key="attributedTitle"/>
                                         </state>
                                         <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
-                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <connections>
+                                            <action selector="reviewsPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="bYM-9K-ySs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-H6-ARN">
                                         <rect key="frame" x="15" y="197" width="165" height="63"/>
@@ -382,6 +383,9 @@
                                         <state key="normal" image="boton_lado_oscuro_330x126.png">
                                             <attributedString key="attributedTitle"/>
                                         </state>
+                                        <connections>
+                                            <action selector="darkSidePushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="i0O-mw-r8g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -465,9 +469,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="contentView" destination="pa3-TL-9kh" id="1sT-yV-MBc"/>
+                        <outlet property="darkSideButton" destination="GIb-H6-ARN" id="FbE-gF-bpb"/>
                         <outlet property="descriptionButton" destination="Stt-uw-oQx" id="HHL-HV-Doc"/>
                         <outlet property="descriptionTextView" destination="XiT-gU-JvO" id="ZOY-7h-ESW"/>
                         <outlet property="movieImageView" destination="jW3-7S-f8p" id="EcZ-Bd-UJS"/>
+                        <outlet property="reviewsButton" destination="O1q-0e-LJi" id="A01-T2-Czi"/>
                         <outlet property="sectionButtonsView" destination="itZ-Fb-IpU" id="r8t-Uh-zb1"/>
                         <outlet property="trailersButton" destination="pvd-x7-MQU" id="KUn-fs-0Yo"/>
                         <outlet property="trailersScrollView" destination="dFj-Mt-0Hy" id="kqj-j7-neH"/>
