@@ -37,7 +37,6 @@
 	// Do any additional setup after loading the view.
     
     _movieImageView.image = _movie.imagen;
-    NSLog(@"%d", _movie.idPelicula);
     
     CGSize size = CGSizeMake(540, 912);
     _trailersScrollView.contentSize = size;
@@ -75,6 +74,7 @@
     [_trailersScrollView addSubview:youtubeWebView3];
     
     [self configureDescriptionTextView];
+    [self configureLeftPanelButtons];
    
 }
 
@@ -94,11 +94,13 @@
 - (IBAction)descriptionPushButton:(UIButton *)sender {
     
     [_contentView bringSubviewToFront:_descriptionTextView];
+    [_descriptionButton setSelected:YES];
 }
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
     
-     [_contentView bringSubviewToFront:_trailersScrollView];
+    [_contentView bringSubviewToFront:_trailersScrollView];
+    [_trailersButton setSelected:YES];
     
 }
 - (IBAction)imageTap:(UITapGestureRecognizer *)sender {
@@ -175,6 +177,20 @@
     }
     
     _descriptionTextView.attributedText = completedAttributedString;
+}
+
+- (void) configureLeftPanelButtons
+{
+    
+    UIColor *textColor = [UIColor yellowColor];
+    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:24.0];
+    NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_descriptionButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+
+    textColor = [UIColor brownColor];
+    NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
+    
 }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -344,27 +344,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-uw-oQx">
                                         <rect key="frame" x="18" y="20" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Ficha">
-                                                    <attributes>
-                                                        <font key="NSFont" size="18" name="Impact"/>
-                                                        <font key="NSOriginalFont" size="18" name="Impact"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Ficha">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="toolTip"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
+                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png"/>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="descriptionPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="Gu2-Re-uA0"/>
                                         </connections>
@@ -373,14 +355,13 @@
                                         <rect key="frame" x="18" y="79" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Trailers">
-                                                    <attributes>
-                                                        <font key="NSFont" size="20" name="HoeflerText-Black"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png">
+                                            <attributedString key="attributedTitle"/>
                                         </state>
                                         <connections>
                                             <action selector="trailersPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="sBj-YR-I8C"/>
@@ -389,16 +370,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1q-0e-LJi">
                                         <rect key="frame" x="15" y="138" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="boton_panel_izq_330x102.png">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Ficha">
-                                                    <attributes>
-                                                        <font key="NSFont" size="18" name="Impact"/>
-                                                        <font key="NSOriginalFont" size="18" name="Impact"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <state key="highlighted" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-H6-ARN">
+                                        <rect key="frame" x="15" y="197" width="165" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="boton_lado_oscuro_330x126.png">
+                                            <attributedString key="attributedTitle"/>
                                         </state>
                                     </button>
                                 </subviews>
@@ -408,11 +390,6 @@
                                 <rect key="frame" x="236" y="92" width="553" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marco_central_1106x1268.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fay-yz-zo2">
-                                        <rect key="frame" x="0.0" y="0.0" width="553" height="634"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jg-09-47p" userLabel="Label - contentTitleLabel">
                                         <rect key="frame" x="30" y="8" width="148" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -429,15 +406,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_central_1090x1144.png" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-cR-7xP">
-                                        <rect key="frame" x="0.0" y="43" width="545" height="572"/>
+                                        <rect key="frame" x="4" y="54" width="542" height="562"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-Mt-0Hy" userLabel="Scroll View - trailersScrollView">
-                                        <rect key="frame" x="4" y="54" width="541" height="562"/>
+                                        <rect key="frame" x="5" y="54" width="541" height="562"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </scrollView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.79999999999999982" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiT-gU-JvO" userLabel="Text View - descriptionTextView">
-                                        <rect key="frame" x="4" y="54" width="541" height="562"/>
+                                        <rect key="frame" x="5" y="54" width="541" height="562"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <attributedString key="attributedText">
@@ -451,6 +428,11 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marco_central_1106x1268.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fay-yz-zo2">
+                                        <rect key="frame" x="0.0" y="0.0" width="553" height="634"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -483,9 +465,11 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="contentView" destination="pa3-TL-9kh" id="1sT-yV-MBc"/>
+                        <outlet property="descriptionButton" destination="Stt-uw-oQx" id="HHL-HV-Doc"/>
                         <outlet property="descriptionTextView" destination="XiT-gU-JvO" id="ZOY-7h-ESW"/>
                         <outlet property="movieImageView" destination="jW3-7S-f8p" id="EcZ-Bd-UJS"/>
                         <outlet property="sectionButtonsView" destination="itZ-Fb-IpU" id="r8t-Uh-zb1"/>
+                        <outlet property="trailersButton" destination="pvd-x7-MQU" id="KUn-fs-0Yo"/>
                         <outlet property="trailersScrollView" destination="dFj-Mt-0Hy" id="kqj-j7-neH"/>
                     </connections>
                 </viewController>
@@ -981,6 +965,7 @@
         <image name="boton_buscar.png" width="595" height="231"/>
         <image name="boton_cartelera.png" width="482" height="144"/>
         <image name="boton_entrar.png" width="843" height="284"/>
+        <image name="boton_lado_oscuro_330x126.png" width="330" height="126"/>
         <image name="boton_mentes_oscuras.png" width="688" height="187"/>
         <image name="boton_opciones.png" width="265" height="84"/>
         <image name="boton_panel_izq_330x102.png" width="330" height="102"/>

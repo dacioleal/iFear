@@ -109,6 +109,8 @@
 		F3F927DF1897BC5200BE7964 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DC1897BC5200BE7964 /* spark.png */; };
 		F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */; };
 		F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */; };
+		F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */; };
+		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +243,8 @@
 		F3F927DC1897BC5200BE7964 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido_entrada.mp3; path = ../sonido_entrada.mp3; sourceTree = "<group>"; };
 		F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_antorcha.mp3; sourceTree = "<group>"; };
+		F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_oscuro_330x126.png; sourceTree = "<group>"; };
+		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +445,7 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
+				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
@@ -523,6 +528,8 @@
 				F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */,
 				F37CEB1918FC04050085701C /* boton_panel_izq_330x102.png */,
 				F37CEB1A18FC04050085701C /* boton_panel_izq_ON_330x102.png */,
+				F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */,
+				F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */,
 			);
 			name = detalle;
 			sourceTree = "<group>";
@@ -628,6 +635,13 @@
 			name = MainScene;
 			sourceTree = "<group>";
 		};
+		F3FD0515190A737200A1B516 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -727,6 +741,7 @@
 				F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */,
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
+				F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */,
 				F37CEB1C18FC04050085701C /* boton_panel_izq_ON_330x102.png in Resources */,
@@ -752,6 +767,7 @@
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
+				F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */,
 				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
 				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,

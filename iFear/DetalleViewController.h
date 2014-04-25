@@ -19,6 +19,9 @@
 
 @property (strong, nonatomic) Pelicula * movie;
 
+@property (weak, nonatomic) IBOutlet UIButton *descriptionButton;
+@property (weak, nonatomic) IBOutlet UIButton *trailersButton;
+
 - (IBAction)backPushButton:(UIButton *)sender;
 - (IBAction)descriptionPushButton:(UIButton *)sender;
 - (IBAction)trailersPushButton:(UIButton *)sender;
