@@ -70,11 +70,11 @@
     
     
     
-    for(NSString *familyName in [UIFont familyNames]) {
-        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-            NSLog(@"%@", fontName);
-        }
-    }
+//    for(NSString *familyName in [UIFont familyNames]) {
+//        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            NSLog(@"%@", fontName);
+//        }
+//    }
 
    
 }
