@@ -8,6 +8,7 @@
 
 #import "DetalleViewController.h"
 #import "Pelicula.h"
+#import "MoviesSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()

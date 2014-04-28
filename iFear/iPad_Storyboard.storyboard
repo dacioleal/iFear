@@ -310,12 +310,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_ppal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vkS-8D-O8y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_fichas_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vkS-8D-O8y">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-7S-f8p">
-                                <rect key="frame" x="31" y="92" width="180" height="267"/>
+                                <rect key="frame" x="40" y="119" width="180" height="267"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -334,7 +334,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itZ-Fb-IpU" userLabel="View - sectionButtonsView">
-                                <rect key="frame" x="21" y="446" width="200" height="280"/>
+                                <rect key="frame" x="30" y="462" width="200" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_izq_rojo_400x560.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2B-kF-1Wa">
@@ -391,7 +391,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pa3-TL-9kh" userLabel="View - contentView">
-                                <rect key="frame" x="236" y="92" width="553" height="634"/>
+                                <rect key="frame" x="236" y="108" width="553" height="634"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_central_1090x1144.png" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-cR-7xP">
@@ -426,22 +426,14 @@
                                         <rect key="frame" x="20" y="14" width="196" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Ficha Técnica">
-                                                <attributes>
-                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <attributedString key="attributedText"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-G4-JEo" userLabel="View - scoresView">
-                                <rect key="frame" x="797" y="92" width="202" height="505"/>
+                                <rect key="frame" x="797" y="108" width="202" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_barras_404x1010.png" translatesAutoresizingMaskIntoConstraints="NO" id="mla-LQ-BLe">
@@ -452,7 +444,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-Jb-WQu" userLabel="View - voteView">
-                                <rect key="frame" x="797" y="584" width="200" height="142"/>
+                                <rect key="frame" x="797" y="600" width="200" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_votar_400x284.png" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-xU-isa">
@@ -1010,9 +1002,9 @@
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_central_1090x1144.png" width="1090" height="1144"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
+        <image name="fondo_fichas_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
-        <image name="fondo_ppal.jpg" width="2048" height="1536"/>
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_blu_ray_246x188.png" width="246" height="188"/>
         <image name="icono_buscar.png" width="100" height="100"/>
