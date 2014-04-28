@@ -44,7 +44,7 @@
     
     _movieImageView.image = _movie.imagen;
     
-    UIColor *textColor = [[UIColor alloc] initWithRed:0.94 green:0.78 blue:0.19 alpha:1.0];
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:46.0];
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:_movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _titleLabel.attributedText = title;
@@ -243,12 +243,12 @@
 - (void) configureLeftPanelButtons
 {
     
-    UIColor *textColor = [[UIColor alloc] initWithRed:0.94 green:0.68 blue:0.19 alpha:1.0];
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:24.0];
     NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
 
-    textColor = [[UIColor alloc] initWithRed:0.6 green:0.15 blue:0.1 alpha:1.0];
+    textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
     NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
     

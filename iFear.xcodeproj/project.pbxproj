@@ -112,6 +112,7 @@
 		F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */; };
 		F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */; };
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
+		F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,7 @@
 		F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_antorcha.mp3; sourceTree = "<group>"; };
 		F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_oscuro_330x126.png; sourceTree = "<group>"; };
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
+		F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_centralB_1106x1268.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +528,7 @@
 				F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */,
 				F33D145A18F809E400604463 /* fondo_central_1090x1144.png */,
 				F33D145818F8030C00604463 /* marco_central_1106x1268.png */,
+				F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */,
 				F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */,
 				F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */,
 				F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */,
@@ -770,6 +773,7 @@
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
+				F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */,
 				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
