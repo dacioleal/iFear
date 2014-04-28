@@ -54,7 +54,7 @@
     [_descriptionButton setSelected:YES];
     
     textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
-    font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    font = [UIFont fontWithName:@"Impact" size:32.0];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Ficha Técnica" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contentTitleLabel.attributedText = attributedString;
     
@@ -67,6 +67,15 @@
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
     [self configureTrailersView];
+    
+    
+    
+    for(NSString *familyName in [UIFont familyNames]) {
+        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+            NSLog(@"%@", fontName);
+        }
+    }
+
    
 }
 
@@ -90,7 +99,7 @@
     [_descriptionButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:32.0];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Ficha Técnica" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contentTitleLabel.attributedText = attributedString;
 
@@ -103,7 +112,7 @@
     [_trailersButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:32.0];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Trailers" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contentTitleLabel.attributedText = attributedString;
     
@@ -116,7 +125,7 @@
     [_reviewsButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:32.0];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Críticas" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contentTitleLabel.attributedText = attributedString;
 
@@ -247,7 +256,7 @@
 {
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:24.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:24.0];
     NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
 
