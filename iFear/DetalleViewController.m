@@ -45,7 +45,7 @@
     _movieImageView.image = _movie.imagen;
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:46.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-Light" size:46.0];
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:_movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _titleLabel.attributedText = title;
     _titleLabel.shadowColor = [UIColor blackColor];
@@ -238,7 +238,7 @@
         descriptionString = [stringsArray objectAtIndex:i];
         
         textColor = [[UIColor alloc] initWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
-        font = [UIFont fontWithName:@"GillSans" size:18.0];
+        font = [UIFont fontWithName:@"Futura-Book" size:18.0];
          NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:descriptionString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
         
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];

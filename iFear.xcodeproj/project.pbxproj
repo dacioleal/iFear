@@ -114,6 +114,8 @@
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 		F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */; };
 		F3FEA6BF190EC35300A4F91C /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BE190EC0F800A4F91C /* Impact.ttf */; };
+		F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */; };
+		F3FEA6C9190ECB0B00A4F91C /* FuturaBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +253,8 @@
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 		F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_centralB_1106x1268.png; sourceTree = "<group>"; };
 		F3FEA6BE190EC0F800A4F91C /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
+		F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaLight.ttf; sourceTree = "<group>"; };
+		F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaBook.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -647,6 +651,8 @@
 			isa = PBXGroup;
 			children = (
 				F3FEA6BE190EC0F800A4F91C /* Impact.ttf */,
+				F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */,
+				F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -740,6 +746,7 @@
 				F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
 				F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */,
+				F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */,
 				F37CEB1B18FC04050085701C /* boton_panel_izq_330x102.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
@@ -772,6 +779,7 @@
 				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
 				F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */,
 				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
+				F3FEA6C9190ECB0B00A4F91C /* FuturaBook.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,

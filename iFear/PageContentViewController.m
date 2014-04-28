@@ -126,7 +126,7 @@
             
             titleLabel.attributedText = titleAttributedString;
             
-            font = [UIFont fontWithName:@"TeluguSangamMN" size:15.0];
+            font = [UIFont fontWithName:@"Futura-Book" size:16.0];
             textColor = [UIColor whiteColor];
             NSAttributedString *textAttributedString = [[NSAttributedString alloc] initWithString:movie.sinopsis attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
             
