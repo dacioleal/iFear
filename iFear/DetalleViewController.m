@@ -62,43 +62,11 @@
     
     
     
-    CGSize size = CGSizeMake(540, 912);
-    _trailersScrollView.contentSize = size;
-    
-    CGRect rect = CGRectMake(0, 0, 540, 304);
-    UIWebView *youtubeWebView = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView.backgroundColor = [UIColor clearColor];
-    youtubeWebView.scrollView.scrollEnabled = NO;;
-    youtubeWebView.allowsInlineMediaPlayback = YES;
-    [youtubeWebView loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/O0F2wOlJIRM\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-    
-    youtubeWebView.scalesPageToFit = YES;
-    [_trailersScrollView addSubview:youtubeWebView];
-    
-    rect = CGRectMake(0, 304, 540, 304);
-    UIWebView *youtubeWebView2 = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView2.backgroundColor = [UIColor clearColor];
-    youtubeWebView2.scrollView.scrollEnabled = NO;;
-    youtubeWebView2.allowsInlineMediaPlayback = YES;
-    youtubeWebView2.scalesPageToFit = YES;
-    [youtubeWebView2 loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/_ZiuxGNpCSA\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-    
-    [_trailersScrollView addSubview:youtubeWebView2];
-    
-    rect = CGRectMake(0, 608, 540, 304);
-    UIWebView *youtubeWebView3 = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView3.backgroundColor = [UIColor clearColor];
-    youtubeWebView3.scrollView.scrollEnabled = NO;
-    youtubeWebView3.allowsInlineMediaPlayback = YES;
-    youtubeWebView3.scalesPageToFit = YES;
-    NSString *HTMLString = [self createHTMLStringForVideoID:@"vldt9rhcr58"];
    
-    [youtubeWebView3 loadHTMLString:HTMLString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-    
-    [_trailersScrollView addSubview:youtubeWebView3];
     
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
+    [self configureTrailersView];
    
 }
 
@@ -125,6 +93,7 @@
     UIFont *font = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:32.0];
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"Ficha Técnica" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contentTitleLabel.attributedText = attributedString;
+
 }
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
@@ -201,6 +170,40 @@
 
 - (void) configureTrailersView
 {
+    CGSize size = CGSizeMake(540, 912);
+    _trailersScrollView.contentSize = size;
+    
+    CGRect rect = CGRectMake(0, 0, 540, 304);
+    UIWebView *youtubeWebView = [[UIWebView alloc] initWithFrame:rect];
+    youtubeWebView.backgroundColor = [UIColor clearColor];
+    youtubeWebView.scrollView.scrollEnabled = NO;;
+    youtubeWebView.allowsInlineMediaPlayback = YES;
+    [youtubeWebView loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/O0F2wOlJIRM\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+    
+    youtubeWebView.scalesPageToFit = YES;
+    [_trailersScrollView addSubview:youtubeWebView];
+    
+    rect = CGRectMake(0, 304, 540, 304);
+    UIWebView *youtubeWebView2 = [[UIWebView alloc] initWithFrame:rect];
+    youtubeWebView2.backgroundColor = [UIColor clearColor];
+    youtubeWebView2.scrollView.scrollEnabled = NO;;
+    youtubeWebView2.allowsInlineMediaPlayback = YES;
+    youtubeWebView2.scalesPageToFit = YES;
+    [youtubeWebView2 loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/_ZiuxGNpCSA\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+    
+    [_trailersScrollView addSubview:youtubeWebView2];
+    
+    rect = CGRectMake(0, 608, 540, 304);
+    UIWebView *youtubeWebView3 = [[UIWebView alloc] initWithFrame:rect];
+    youtubeWebView3.backgroundColor = [UIColor clearColor];
+    youtubeWebView3.scrollView.scrollEnabled = NO;
+    youtubeWebView3.allowsInlineMediaPlayback = YES;
+    youtubeWebView3.scalesPageToFit = YES;
+    NSString *HTMLString = [self createHTMLStringForVideoID:@"vldt9rhcr58"];
+    
+    [youtubeWebView3 loadHTMLString:HTMLString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+    
+    [_trailersScrollView addSubview:youtubeWebView3];
     
 }
 
@@ -251,7 +254,8 @@
     textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
     NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
-    
+    _descriptionButton.titleLabel.shadowColor = [UIColor blackColor];
+    _descriptionButton.titleLabel.shadowOffset = CGSizeMake(0, 2);
 }
 
 - (void) deselectLeftPanelButtons
