@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *trailersScrollView;
 @property (weak, nonatomic) IBOutlet UIView *sectionButtonsView;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UIView *reviewsContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
 

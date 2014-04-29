@@ -101,6 +101,7 @@
 		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
+		F3F7F8D1190FA40A00DA3D6B /* CriticasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */; };
 		F3F927CF1897B2E800BE7964 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F927CE1897B2E800BE7964 /* SpriteKit.framework */; };
 		F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D11897B35B00BE7964 /* EntradaViewController.m */; };
 		F3F927D61897B68E00BE7964 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F927D51897B68E00BE7964 /* MainScene.m */; };
@@ -238,6 +239,8 @@
 		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
+		F3F7F8CF190FA40A00DA3D6B /* CriticasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasTableViewController.h; sourceTree = "<group>"; };
+		F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasTableViewController.m; sourceTree = "<group>"; };
 		F3F927CE1897B2E800BE7964 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		F3F927D01897B35B00BE7964 /* EntradaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntradaViewController.h; sourceTree = "<group>"; };
 		F3F927D11897B35B00BE7964 /* EntradaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntradaViewController.m; sourceTree = "<group>"; };
@@ -386,6 +389,7 @@
 			children = (
 				F31CB03318D0774200E6DF2C /* DetalleViewController.h */,
 				F31CB03418D0774200E6DF2C /* DetalleViewController.m */,
+				F3F7F8D2190FA41000DA3D6B /* CriticasTableViewController */,
 			);
 			name = DetalleViewController;
 			sourceTree = "<group>";
@@ -629,6 +633,15 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		F3F7F8D2190FA41000DA3D6B /* CriticasTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3F7F8CF190FA40A00DA3D6B /* CriticasTableViewController.h */,
+				F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */,
+			);
+			name = CriticasTableViewController;
+			sourceTree = "<group>";
+		};
 		F3F927D31897B36100BE7964 /* EntradaViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -846,6 +859,7 @@
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
 				F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
+				F3F7F8D1190FA40A00DA3D6B /* CriticasTableViewController.m in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,

@@ -59,11 +59,6 @@
     _contentTitleLabel.attributedText = attributedString;
     
     
-    
-    
-    
-   
-    
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
     [self configureTrailersView];
@@ -120,7 +115,7 @@
 
 - (IBAction)reviewsPushButton:(UIButton *)sender {
     
-    //[_contentView bringSubviewToFront:_trailersScrollView];
+    [_contentView bringSubviewToFront:_reviewsContainerView];
     [self deselectLeftPanelButtons];
     [_reviewsButton setSelected:YES];
     
@@ -262,9 +257,30 @@
 
     textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
     NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FICHA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
-    [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected | UIControlStateHighlighted];
-    _descriptionButton.titleLabel.shadowColor = [UIColor blackColor];
-    _descriptionButton.titleLabel.shadowOffset = CGSizeMake(0, 2);
+    [_descriptionButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
+
+    
+    textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    font = [UIFont fontWithName:@"Impact" size:24.0];
+    normalAttributedString = [[NSAttributedString alloc] initWithString:@"TRAILERS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_trailersButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+    
+    textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
+    selectedAttributedString = [[NSAttributedString alloc] initWithString:@"TRAILERS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_trailersButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
+ 
+    
+    textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    font = [UIFont fontWithName:@"Impact" size:24.0];
+    normalAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_reviewsButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+    
+    textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
+    selectedAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_reviewsButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
+//    _reviewsButton.titleLabel.shadowColor = [UIColor blackColor];
+//    _reviewsButton.titleLabel.shadowOffset = CGSizeMake(0, 2);
+    
 }
 
 - (void) deselectLeftPanelButtons
