@@ -278,8 +278,7 @@
     textColor = [[UIColor alloc] initWithRed:0.28 green:0.016 blue:0.016 alpha:1.0];
     selectedAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_reviewsButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
-//    _reviewsButton.titleLabel.shadowColor = [UIColor blackColor];
-//    _reviewsButton.titleLabel.shadowOffset = CGSizeMake(0, 2);
+
     
 }
 
