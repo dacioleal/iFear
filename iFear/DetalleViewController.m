@@ -8,12 +8,13 @@
 
 #import "DetalleViewController.h"
 #import "Pelicula.h"
-#import "MoviesSearch.h"
+#import "TrailersSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
 {
     NSArray *leftPanelButtons;
+    NSArray *trailersArray;
 }
 
 
@@ -40,6 +41,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
     leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
     
     _movieImageView.image = _movie.imagen;
@@ -51,7 +53,7 @@
     _titleLabel.shadowColor = [UIColor blackColor];
     _titleLabel.shadowOffset = CGSizeMake(0, 2);
     
-    [_descriptionButton setSelected:YES];
+    [self descriptionPushButton:_descriptionButton];
     
     textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
     font = [UIFont fontWithName:@"Impact" size:32.0];
@@ -61,16 +63,17 @@
     
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
-    [self configureTrailersView];
+    //[self configureTrailersView];
     
-    
-    
-//    for(NSString *familyName in [UIFont familyNames]) {
-//        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-//            NSLog(@"%@", fontName);
-//        }
-//    }
 
+   
+    TrailersSearch *trailersSearch = [[TrailersSearch alloc] init];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", @"24", @"idMovie",nil];
+    trailersArray = [trailersSearch searchWithParameters:parameters];
+    
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"trailersFinished" object:trailersSearch];
    
 }
 
@@ -174,6 +177,8 @@
 
 - (void) configureTrailersView
 {
+    NSLog(@"%@", trailersArray);
+    
     CGSize size = CGSizeMake(540, 912);
     _trailersScrollView.contentSize = size;
     
