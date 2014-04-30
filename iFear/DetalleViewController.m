@@ -66,15 +66,15 @@
     //[self configureTrailersView];
     
 
-   
+    NSString *idPelicula = [[NSString alloc] initWithFormat:@"%d",_movie.idPelicula ] ;
     TrailersSearch *trailersSearch = [[TrailersSearch alloc] init];
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", @"24", @"idMovie",nil];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", idPelicula, @"idMovie",nil];
     trailersArray = [trailersSearch searchWithParameters:parameters];
     
     
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"trailersFinished" object:trailersSearch];
-   
+    [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"NoTrailers" object:trailersSearch];
 }
 
 - (void)didReceiveMemoryWarning

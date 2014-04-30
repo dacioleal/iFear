@@ -150,8 +150,11 @@ didCompleteWithError:(NSError *)error
             
         } else {
             
-            [self retrieveData];
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+                [defaultCenter postNotificationName:@"NoTrailers" object:self];
+            });
         }
         
     } else {
