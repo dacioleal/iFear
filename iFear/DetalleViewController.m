@@ -13,6 +13,7 @@
 
 @interface DetalleViewController ()
 {
+    NSString *movieID;
     NSArray *leftPanelButtons;
     NSArray *trailersArray;
 }
@@ -63,12 +64,12 @@
     
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
-    //[self configureTrailersView];
+    
     
 
-    NSString *idPelicula = [[NSString alloc] initWithFormat:@"%d",_movie.idPelicula ] ;
+    movieID = [[NSString alloc] initWithFormat:@"%d",_movie.idPelicula ] ;
     TrailersSearch *trailersSearch = [[TrailersSearch alloc] init];
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", idPelicula, @"idMovie",nil];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", movieID, @"idMovie",nil];
     trailersArray = [trailersSearch searchWithParameters:parameters];
     
     
@@ -171,48 +172,34 @@
 - (NSString *) createHTMLStringForVideoID: (NSString *) videoIDString
 {
     NSString *string = [NSString stringWithFormat:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/%@\" frameborder=\"0\" allowfullscreen></iframe></body></html>", videoIDString];
-    
     return string;
 }
 
 - (void) configureTrailersView
 {
-    NSLog(@"%@", trailersArray);
     
-    CGSize size = CGSizeMake(540, 912);
+    float videoHeight = 304;  // Tamaño en altura del video para insertar el trailer
+    float videoWidth = 540;   // Tamaño en anchura del video para insertar el trailer
+    
+    CGSize size = CGSizeMake(videoWidth, videoHeight * trailersArray.count);  // Tamaño de la VIEW para los trailers
     _trailersScrollView.contentSize = size;
     
-    CGRect rect = CGRectMake(0, 0, 540, 304);
-    UIWebView *youtubeWebView = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView.backgroundColor = [UIColor clearColor];
-    youtubeWebView.scrollView.scrollEnabled = NO;;
-    youtubeWebView.allowsInlineMediaPlayback = YES;
-    [youtubeWebView loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/O0F2wOlJIRM\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+    // Bucle para insertar los trailers en la VIEW
     
-    youtubeWebView.scalesPageToFit = YES;
-    [_trailersScrollView addSubview:youtubeWebView];
+    for (int i=0 ; i<trailersArray.count ; i++ ) {
+        
+        CGRect rect = CGRectMake(0, videoHeight * i, videoWidth, videoHeight);
+        UIWebView *youtubeWebView = [[UIWebView alloc] initWithFrame:rect];
+        youtubeWebView.backgroundColor = [UIColor clearColor];
+        youtubeWebView.scrollView.scrollEnabled = NO;;
+        youtubeWebView.allowsInlineMediaPlayback = YES;
+        NSString *trailerLink = (NSString *)[trailersArray objectAtIndex:i];
+        [youtubeWebView loadHTMLString:[self createHTMLStringForVideoID:trailerLink] baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
+        
+        youtubeWebView.scalesPageToFit = YES;
+        [_trailersScrollView addSubview:youtubeWebView];
+    }
     
-    rect = CGRectMake(0, 304, 540, 304);
-    UIWebView *youtubeWebView2 = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView2.backgroundColor = [UIColor clearColor];
-    youtubeWebView2.scrollView.scrollEnabled = NO;;
-    youtubeWebView2.allowsInlineMediaPlayback = YES;
-    youtubeWebView2.scalesPageToFit = YES;
-    [youtubeWebView2 loadHTMLString:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/_ZiuxGNpCSA\" frameborder=\"0\" allowfullscreen></iframe></body></html>" baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-    
-    [_trailersScrollView addSubview:youtubeWebView2];
-    
-    rect = CGRectMake(0, 608, 540, 304);
-    UIWebView *youtubeWebView3 = [[UIWebView alloc] initWithFrame:rect];
-    youtubeWebView3.backgroundColor = [UIColor clearColor];
-    youtubeWebView3.scrollView.scrollEnabled = NO;
-    youtubeWebView3.allowsInlineMediaPlayback = YES;
-    youtubeWebView3.scalesPageToFit = YES;
-    NSString *HTMLString = [self createHTMLStringForVideoID:@"vldt9rhcr58"];
-    
-    [youtubeWebView3 loadHTMLString:HTMLString baseURL:[NSURL URLWithString:@"http://www.youtube.com"]];
-    
-    [_trailersScrollView addSubview:youtubeWebView3];
     
 }
 
