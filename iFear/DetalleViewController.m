@@ -16,6 +16,7 @@
     NSString *movieID;
     NSArray *leftPanelButtons;
     NSArray *trailersArray;
+    NSArray *contentViews;
 }
 
 
@@ -41,6 +42,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    contentViews = @[_descriptionTextView, _trailersScrollView, _reviewsContainerView];
     
     
     leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
@@ -93,8 +96,10 @@
 
 - (IBAction)descriptionPushButton:(UIButton *)sender {
     
-    [_contentView bringSubviewToFront:_descriptionTextView];
     [self deselectLeftPanelButtons];
+    [self hideContentViews];
+    _descriptionTextView.hidden = NO;
+    [_contentView bringSubviewToFront:_descriptionTextView];    
     [_descriptionButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
@@ -106,8 +111,10 @@
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
     
-    [_contentView bringSubviewToFront:_trailersScrollView];
     [self deselectLeftPanelButtons];
+    [self hideContentViews];
+    _trailersScrollView.hidden = NO;
+    [_contentView bringSubviewToFront:_trailersScrollView];
     [_trailersButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
@@ -119,8 +126,11 @@
 
 - (IBAction)reviewsPushButton:(UIButton *)sender {
     
-    [_contentView bringSubviewToFront:_reviewsContainerView];
     [self deselectLeftPanelButtons];
+    [self hideContentViews];
+    _reviewsContainerView.hidden = NO;
+    [_contentView bringSubviewToFront:_reviewsContainerView];
+    
     [_reviewsButton setSelected:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.25 green:0.06 blue:0.04 alpha:1.0];
@@ -279,6 +289,13 @@
     for (int i=0; i<leftPanelButtons.count; i++) {
         UIButton *button = (UIButton *) [leftPanelButtons objectAtIndex:i];
         [button setSelected:NO];
+    }
+}
+
+- (void) hideContentViews
+{
+    for ( UIView *view in contentViews) {
+        view.hidden = YES;
     }
 }
 
