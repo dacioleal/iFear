@@ -98,8 +98,9 @@
 		481CEBF118E36E1400A854EE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 481CEBF018E36E1400A854EE /* Constants.m */; };
 		482CD7C119041A6F00C7033D /* BusquedaSubGeneroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482CD7C019041A6F00C7033D /* BusquedaSubGeneroViewController.m */; };
 		482CD7C419041A7900C7033D /* BusquedaSensacionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482CD7C319041A7900C7033D /* BusquedaSensacionesViewController.m */; };
-		4831EA9619045D100014935D /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4831EA9519045D100014935D /* CustomSlider.m */; };
 		4848E49E18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4848E49D18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m */; };
+		48527BCD1912C54D0087B949 /* CustomIfearSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48527BCC1912C54D0087B949 /* CustomIfearSlider.m */; };
+		48527BD61912CB760087B949 /* ProgresSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48527BD51912CB760087B949 /* ProgresSlider.m */; };
 		486D40A918FFECFC0092BF4D /* SubGenreSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 486D40A818FFECFC0092BF4D /* SubGenreSearch.m */; };
 		F304101E18B752CC006273F0 /* ahorcado.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101018B752CC006273F0 /* ahorcado.png */; };
 		F304101F18B752CC006273F0 /* barrotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101118B752CC006273F0 /* barrotes.png */; };
@@ -283,10 +284,12 @@
 		482CD7C019041A6F00C7033D /* BusquedaSubGeneroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaSubGeneroViewController.m; sourceTree = "<group>"; };
 		482CD7C219041A7900C7033D /* BusquedaSensacionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaSensacionesViewController.h; sourceTree = "<group>"; };
 		482CD7C319041A7900C7033D /* BusquedaSensacionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaSensacionesViewController.m; sourceTree = "<group>"; };
-		4831EA9419045D100014935D /* CustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
-		4831EA9519045D100014935D /* CustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		4848E49C18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectorBusquedaViewController.h; sourceTree = "<group>"; };
 		4848E49D18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectorBusquedaViewController.m; sourceTree = "<group>"; };
+		48527BCB1912C54D0087B949 /* CustomIfearSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIfearSlider.h; sourceTree = "<group>"; };
+		48527BCC1912C54D0087B949 /* CustomIfearSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIfearSlider.m; sourceTree = "<group>"; };
+		48527BD41912CB760087B949 /* ProgresSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgresSlider.h; sourceTree = "<group>"; };
+		48527BD51912CB760087B949 /* ProgresSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgresSlider.m; sourceTree = "<group>"; };
 		486D40A718FFECFC0092BF4D /* SubGenreSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGenreSearch.h; sourceTree = "<group>"; };
 		486D40A818FFECFC0092BF4D /* SubGenreSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGenreSearch.m; sourceTree = "<group>"; };
 		F304101018B752CC006273F0 /* ahorcado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ahorcado.png; sourceTree = "<group>"; };
@@ -596,6 +599,10 @@
 		F3144993189A501D0007B9B6 /* BusquedaViewController */ = {
 			isa = PBXGroup;
 			children = (
+				48527BD41912CB760087B949 /* ProgresSlider.h */,
+				48527BD51912CB760087B949 /* ProgresSlider.m */,
+				48527BCB1912C54D0087B949 /* CustomIfearSlider.h */,
+				48527BCC1912C54D0087B949 /* CustomIfearSlider.m */,
 				F3144990189A50180007B9B6 /* BusquedaViewController.h */,
 				F3144991189A50180007B9B6 /* BusquedaViewController.m */,
 				4848E49C18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.h */,
@@ -604,8 +611,6 @@
 				482CD7C019041A6F00C7033D /* BusquedaSubGeneroViewController.m */,
 				482CD7C219041A7900C7033D /* BusquedaSensacionesViewController.h */,
 				482CD7C319041A7900C7033D /* BusquedaSensacionesViewController.m */,
-				4831EA9419045D100014935D /* CustomSlider.h */,
-				4831EA9519045D100014935D /* CustomSlider.m */,
 			);
 			name = BusquedaViewController;
 			sourceTree = "<group>";
@@ -1057,12 +1062,14 @@
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				481CEBF118E36E1400A854EE /* Constants.m in Sources */,
+				48527BCD1912C54D0087B949 /* CustomIfearSlider.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				486D40A918FFECFC0092BF4D /* SubGenreSearch.m in Sources */,
 				F3144992189A50180007B9B6 /* BusquedaViewController.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				482CD7C419041A7900C7033D /* BusquedaSensacionesViewController.m in Sources */,
 				4848E49E18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m in Sources */,
+				48527BD61912CB760087B949 /* ProgresSlider.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
@@ -1071,7 +1078,6 @@
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
-				4831EA9619045D100014935D /* CustomSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

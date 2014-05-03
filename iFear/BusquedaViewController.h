@@ -11,7 +11,7 @@
 #import "BusquedaSubGeneroViewController.h"
 #import "BusquedaSensacionesViewController.h"
 
-@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, BusquedaSubGeneroDelegate>
+@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, BusquedaSubGeneroDelegate, BusquedaSensacionesDelegate>
 
 // Botón SWITCH de búsqueda
 @property (weak, nonatomic) IBOutlet UIButton *buscarSensacionesButton;

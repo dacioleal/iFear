@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="27q-LG-i9d">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -954,20 +954,150 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_sensaciones_1942x235.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSn-Gg-gvK">
                                 <rect key="frame" x="27" y="0.0" width="971" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Wy-XA-SkM" customClass="CustomSlider">
-                                <rect key="frame" x="235" y="126" width="554" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_sensaciones_1942x235.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4d-El-ceS">
+                                <rect key="frame" x="27" y="122" width="971" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_sensaciones_1942x235.png" translatesAutoresizingMaskIntoConstraints="NO" id="MRj-Le-eM0">
+                                <rect key="frame" x="27" y="246" width="971" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_sensaciones_1942x235.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVU-X9-VNY">
+                                <rect key="frame" x="23" y="372" width="971" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="DIf-Lq-5kg" customClass="ProgresSlider">
+                                <rect key="frame" x="257" y="20" width="502" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_terror_136x160.png" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-Ti-XtC">
+                                <rect key="frame" x="102" y="19" width="68" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rotulo_terror_116x35.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SS-0d-O4W">
+                                <rect key="frame" x="854" y="19" width="58" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_gore_128x164.png" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-BD-JJl">
+                                <rect key="frame" x="104" y="140" width="64" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_humor_129x136.png" translatesAutoresizingMaskIntoConstraints="NO" id="rpi-dm-cFy">
+                                <rect key="frame" x="104" y="271" width="65" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono_calidad_147x142.png" translatesAutoresizingMaskIntoConstraints="NO" id="gk8-W1-SfE">
+                                <rect key="frame" x="94" y="385" width="74" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rotulo_gore_79x35.png" translatesAutoresizingMaskIntoConstraints="NO" id="4j2-8v-ZMH">
+                                <rect key="frame" x="863" y="135" width="40" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rotulo_humor_109x35.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vk5-Rg-cYx">
+                                <rect key="frame" x="856" y="263" width="55" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rotulo_calidad_124x35.png" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-xM-etr">
+                                <rect key="frame" x="849" y="392" width="62" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_mas_verde_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="PQK-Rv-g7y">
+                                <rect key="frame" x="765" y="20" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_menos_verde_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="tz7-Vz-vzN">
+                                <rect key="frame" x="216" y="19" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_mas_rojo_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="yUB-IU-f0p">
+                                <rect key="frame" x="765" y="142" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_menos_rojo_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="MD2-Ua-fsc">
+                                <rect key="frame" x="216" y="141" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_mas_amarillo_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="cy0-ly-azv">
+                                <rect key="frame" x="765" y="264" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_menos_amarillo_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-gG-cED">
+                                <rect key="frame" x="216" y="263" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_mas_azul_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="RYu-HM-deg">
+                                <rect key="frame" x="765" y="392" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signo_menos_azul_69x69.png" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-nU-ihv">
+                                <rect key="frame" x="216" y="392" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CB-ag-rce">
+                                <rect key="frame" x="859" y="45" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0La-jq-Qqm">
+                                <rect key="frame" x="859" y="161" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-o2-Y2Y">
+                                <rect key="frame" x="859" y="289" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPR-MD-t2I">
+                                <rect key="frame" x="859" y="420" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YLz-py-SIG" customClass="ProgresSlider">
+                                <rect key="frame" x="257" y="142" width="502" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jtG-NZ-MIu" customClass="ProgresSlider">
+                                <rect key="frame" x="257" y="269" width="502" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-G8-lgy" customClass="ProgresSlider">
+                                <rect key="frame" x="257" y="395" width="502" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="1" green="0.0" blue="0.047118742970000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="511"/>
                     <connections>
-                        <outlet property="slidertTerror" destination="9Wy-XA-SkM" id="inH-8H-eAF"/>
+                        <outlet property="calidadPercent" destination="UPR-MD-t2I" id="qAb-eu-9EJ"/>
+                        <outlet property="gorePercent" destination="0La-jq-Qqm" id="QyA-RQ-U9p"/>
+                        <outlet property="humorPercent" destination="dBT-o2-Y2Y" id="Hwo-yo-1xe"/>
+                        <outlet property="progressCalidadSlider" destination="ep1-G8-lgy" id="M26-Qe-EpX"/>
+                        <outlet property="progressGoreSlider" destination="YLz-py-SIG" id="2qC-7k-9b9"/>
+                        <outlet property="progressHumorSlider" destination="jtG-NZ-MIu" id="Ixp-04-kYg"/>
+                        <outlet property="progressTerrorSlider" destination="DIf-Lq-5kg" id="FB7-99-1kh"/>
+                        <outlet property="terrorPercent" destination="4CB-ag-rce" id="OC2-CK-bZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tg7-DC-BlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1024,13 +1154,29 @@
         <image name="fondo_ppal.jpg" width="2048" height="1536"/>
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_buscar.png" width="100" height="100"/>
+        <image name="icono_calidad_147x142.png" width="147" height="142"/>
         <image name="icono_cartelera.png" width="100" height="100"/>
+        <image name="icono_gore_128x164.png" width="128" height="164"/>
         <image name="icono_home.png" width="100" height="100"/>
+        <image name="icono_humor_129x136.png" width="129" height="136"/>
         <image name="icono_mentes_oscuras.png" width="100" height="100"/>
         <image name="icono_menu.png" width="100" height="100"/>
         <image name="icono_menu_invertido.png" width="100" height="100"/>
+        <image name="icono_terror_136x160.png" width="136" height="160"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
+        <image name="rotulo_calidad_124x35.png" width="124" height="35"/>
+        <image name="rotulo_gore_79x35.png" width="79" height="35"/>
+        <image name="rotulo_humor_109x35.png" width="109" height="35"/>
+        <image name="rotulo_terror_116x35.png" width="116" height="35"/>
         <image name="selector_titulo_318x54.png" width="318" height="54"/>
+        <image name="signo_mas_amarillo_69x69.png" width="69" height="69"/>
+        <image name="signo_mas_azul_69x69.png" width="69" height="69"/>
+        <image name="signo_mas_rojo_69x69.png" width="69" height="70"/>
+        <image name="signo_mas_verde_69x69.png" width="69" height="69"/>
+        <image name="signo_menos_amarillo_69x69.png" width="69" height="69"/>
+        <image name="signo_menos_azul_69x69.png" width="69" height="69"/>
+        <image name="signo_menos_rojo_69x69.png" width="69" height="69"/>
+        <image name="signo_menos_verde_69x69.png" width="69" height="69"/>
         <image name="switch_NO_132x72.png" width="132" height="73"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>

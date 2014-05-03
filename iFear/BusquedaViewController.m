@@ -17,6 +17,8 @@
     // Array en donde estarán que subgeneros se han seleccionado
     NSMutableArray *sub_genre_list;
     
+    NSMutableDictionary *sensationsValues;
+    
     // Clase que permite la búsqueda por subgenero
     SubGenreSearch * subGenreSearch;
     
@@ -49,11 +51,15 @@
     
     busquedaSubGenereVC.delegate = self;
     
+    
     busquedaSensacionesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaSensacionesViewController"];
+    busquedaSensacionesVC.delegate = self;
     
     subGenreSearch = [[SubGenreSearch alloc] init];
     
     sub_genre_list = [[NSMutableArray alloc] init];
+    
+    sensationsValues = [[NSMutableDictionary alloc] init];
     
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
@@ -75,22 +81,31 @@
 # pragma mark - IBAction
 
 - (IBAction)pushBuscarButton:(id)sender {
+    if ([self.buscarSubGenButton isSelected]) {
+        [self searchBySubGenere];
+    }else{
+
+    }
     
-    [self searchBySubGenere];
 }
 
 - (IBAction)setStateSwitchs:(id)sender
 {
     if ([sender tag] == 0) {
-        self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
-        self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
-        // Se cambia el tipo de búsqueda en el container.
-        [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
+        if (! [self.buscarSubGenButton isSelected]) {
+            self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
+            self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
+            // Se cambia el tipo de búsqueda en el container.
+            [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
+        }
+        
     }else{
-        self.buscarSensacionesButton.selected = !self.buscarSensacionesButton.selected;
-        self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
-        // Se cambia el tipo de búsqueda en el container.
-        [self cycleFromViewController:onScreenViewController toViewController:busquedaSensacionesVC];
+        if (! [self.buscarSensacionesButton isSelected]) {
+            self.buscarSensacionesButton.selected = !self.buscarSensacionesButton.selected;
+            self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
+            // Se cambia el tipo de búsqueda en el container.
+            [self cycleFromViewController:onScreenViewController toViewController:busquedaSensacionesVC];
+        }
     }
     
     
@@ -141,8 +156,14 @@
 
 - (void) getSelectedSubGenre: (NSMutableArray *) subgenres
 {
+    NSLog(@"Subgere");
     sub_genre_list = subgenres;
-    NSLog(@"NETRAAaa");
+}
+
+- (void) getSensationsValues:(NSMutableDictionary *)categoriesValues
+{
+    NSLog(@"Sensations");
+    sensationsValues = categoriesValues;
 }
 
 - (NSData *) getParamsArray

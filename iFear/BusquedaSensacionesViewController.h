@@ -7,9 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomSlider.h"
+#import "CustomIfearSlider.h"
+#import "ProgresSlider.h"
+
+
+// Protoco para devolver los datos hasta el ViewController Padre.
+@protocol BusquedaSensacionesDelegate <NSObject>
+- (void) getSensationsValues: (NSMutableDictionary *) categoriesValues;
+@end
+
 
 @interface BusquedaSensacionesViewController : UIViewController
-@property (weak, nonatomic) IBOutlet CustomSlider *slidertTerror;
+
+// Delegado
+@property (nonatomic, weak) id<BusquedaSensacionesDelegate> delegate;
+
+
+@property (weak, nonatomic) IBOutlet ProgresSlider *progressTerrorSlider;
+@property (weak, nonatomic) IBOutlet ProgresSlider *progressGoreSlider;
+@property (weak, nonatomic) IBOutlet ProgresSlider *progressHumorSlider;
+@property (weak, nonatomic) IBOutlet ProgresSlider *progressCalidadSlider;
+@property (weak, nonatomic) IBOutlet UILabel *terrorPercent;
+@property (weak, nonatomic) IBOutlet UILabel *gorePercent;
+@property (weak, nonatomic) IBOutlet UILabel *humorPercent;
+@property (weak, nonatomic) IBOutlet UILabel *calidadPercent;
+
+- (void)sliderValueChanged:(id)sender;
 
 @end
