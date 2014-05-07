@@ -50,6 +50,7 @@
     
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     //NSString * direccion = @"http://haroben.byethost31.com/EjemploConexionBD/peticion.php";
+    //NSString * direccion = @"http://localhost/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:direccion];
     
 }
@@ -163,6 +164,7 @@
         
         NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
         //NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://haroben.byethost31.com/ifearphp/"];
+        //NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://localhost/ifearphp/"];
         [strUrlImagen appendString:portada];
         pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
         

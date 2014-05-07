@@ -403,7 +403,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="iFD-iP-upb" kind="embed" id="rkW-nz-CYs"/>
+                                            <segue destination="0ud-Fz-YUK" kind="embed" id="rkW-nz-CYs"/>
                                         </connections>
                                     </containerView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-Mt-0Hy" userLabel="Scroll View - trailersScrollView">
@@ -522,11 +522,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kAf-qf-wZ8">
                         <rect key="frame" x="0.0" y="0.0" width="540" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="TIl-1c-qvw">
-                                <rect key="frame" x="0.0" y="22" width="540" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="540" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIl-1c-qvw" id="xCG-Dn-pER">
                                     <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
@@ -539,12 +539,13 @@
                             <outlet property="delegate" destination="iFD-iP-upb" id="5wZ-Kw-uwy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="oM8-IX-S0V"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="540" height="524"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di3-Pw-0eY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7945" y="-1334"/>
+            <point key="canvasLocation" x="8691" y="-1334"/>
         </scene>
         <!--Entrada View Controller-->
         <scene sceneID="YtC-9c-Ijf">
@@ -1019,6 +1020,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfx-RU-Dtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6525" y="-46"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2kJ-Nu-tSX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ud-Fz-YUK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mX6-Xq-ar4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eEa-oj-6gJ">
+                        <rect key="frame" x="0.0" y="480" width="540" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="iFD-iP-upb" kind="relationship" relationship="rootViewController" id="Qjl-1e-Sf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kw1-v9-kda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7945" y="-1334"/>
         </scene>
     </scenes>
     <resources>
