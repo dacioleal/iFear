@@ -215,6 +215,8 @@
 
 - (void) configureDescriptionTextView
 {
+    _descriptionTextView.textContainerInset = UIEdgeInsetsMake(5.0, 10.0, 0, 10.0);
+    
     NSArray *titlesArray = [_movie titlesArrayToMakeDescriptionSheet];
     NSArray *stringsArray = [_movie stringsArrayToMakeDescriptionSheet];
     
@@ -229,7 +231,7 @@
         titleString = [titleString uppercaseString];
         
         UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
-        UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:20.0];
+        UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
         NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:titleString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
         
         descriptionString = [stringsArray objectAtIndex:i];

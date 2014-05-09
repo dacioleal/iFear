@@ -127,7 +127,6 @@
     NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
     int idPelicula,anio,duracion;
     
-    NSLog(@"%@",responseDictionary);
     for (NSDictionary * fila in retorno) {
         
         titulo = [fila objectForKey:@"titulo"];
