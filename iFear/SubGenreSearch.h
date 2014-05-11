@@ -10,6 +10,6 @@
 
 @interface SubGenreSearch : NSObject <NSURLConnectionDataDelegate, NSURLSessionDelegate, UIAlertViewDelegate>
 
-- (NSArray *) searchBySubGenre: (NSData *) paramters;
+- (NSArray *) searchBySubGenre: (NSData *) parameters;
 
 @end
