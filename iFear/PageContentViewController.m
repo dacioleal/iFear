@@ -10,11 +10,80 @@
 #import "Pelicula.h"
 
 
-@interface PageContentViewController ()
+@interface PageContentViewController () {
+    
+    NSArray *titleLabelsArray;
+    NSArray *textViewsArray;
+    NSArray *imageViewsArray;
+    NSArray *soporteImageViewsArray;
+}
+@property (nonatomic, strong) NSMutableAttributedString *attributedString;
+
+- (IBAction)topImageTap:(UITapGestureRecognizer *)sender;
+- (IBAction)midImageTap:(UITapGestureRecognizer *)sender;
+- (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender;
+
+- (IBAction)topTitleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)midTitleTap:(UITapGestureRecognizer *)sender;
+- (IBAction)bottomTitleTap:(UITapGestureRecognizer *)sender;
 
 @end
 
+
+
 @implementation PageContentViewController
+
+- (NSMutableAttributedString *) attributedString
+{
+    if (!_attributedString) {
+        _attributedString = [[NSMutableAttributedString alloc] initWithString:@""];
+    }
+    return _attributedString;
+}
+
+- (IBAction)topImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:0];
+    [self goToMovieDetail:movie];
+}
+
+- (IBAction)midImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:1];
+    [self goToMovieDetail:movie];
+    
+}
+
+- (IBAction)bottomImageTap:(UITapGestureRecognizer *)sender
+{
+    Pelicula * movie = (Pelicula *)[_moviesArray objectAtIndex:2];
+    [self goToMovieDetail:movie];
+}
+
+- (IBAction)topTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self topImageTap:sender];
+}
+
+- (IBAction)midTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self midImageTap:sender];
+}
+
+- (IBAction)bottomTitleTap:(UITapGestureRecognizer *)sender {
+    
+    [self bottomImageTap:sender];
+}
+
+- (void) goToMovieDetail: (Pelicula *) movie {
+    
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:movie, @"movie", nil];
+    [defaultCenter postNotificationName:@"goToMovieDetail" object:self userInfo:userInfo];
+    
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,55 +100,56 @@
 {
     [super viewDidLoad];
     
-    
-    _topMovieTableView.dataSource = self;
-    _topMovieTableView.delegate = self;
-    
-    _midMovieTableView.dataSource = self;
-    _midMovieTableView.delegate = self;
-    
-    _bottomMovieTableView.dataSource = self;
-    _bottomMovieTableView.delegate = self;
-    
-    _topMovieTableView.layer.cornerRadius = 10;
-    _midMovieTableView.layer.cornerRadius = 10;
-    _bottomMovieTableView.layer.cornerRadius = 10;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addImages) name:@"imagesSetFinished" object:nil];
     
     
-    NSArray *tableViewsArray = @[_topMovieTableView, _midMovieTableView, _bottomMovieTableView];
-    NSArray *imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
+    titleLabelsArray = @[_topMovieTitleLabel, _midMovieTitleLabel, _bottomMovieTitleLabel];
+    textViewsArray = @[_topMovieTextView, _midMovieTextView, _bottomMovieTextView];
+    imageViewsArray = @[_topImageView, _midImageView, _bottomImageView];
+    soporteImageViewsArray = @[_topMovieSoporteImageView, _midMovieSoporteImageView, _bottomMovieSoporteImageView];
+    
     
     
     if (_moviesArray)
     {
         for (int i = 0; i < _moviesArray.count ; i++) {
             
-            MovieTableView *movieTableView = [tableViewsArray objectAtIndex:i];
-            
-            movieTableView.movie = (Pelicula *) [_moviesArray objectAtIndex:i];  //Asignamos a cada TableView una película del array
-            
+            Pelicula *movie = (Pelicula *) [_moviesArray objectAtIndex:i];
+            UILabel *titleLabel = (UILabel *) [titleLabelsArray objectAtIndex:i];
+            UITextView *textView = (UITextView *) [textViewsArray objectAtIndex:i];
             UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:i];
             
-            imageView.image = movieTableView.movie.imagen;
-           
+            textView.layer.opacity = 0.9;
+            UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:28.0];
+            UIColor *textColor = [UIColor colorWithRed:0.57 green:0.18 blue:0.19 alpha:1.0];
+            NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:movie.titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+            
+            titleLabel.attributedText = titleAttributedString;
+            
+            font = [UIFont fontWithName:@"Futura-Book" size:16.0];
+            textColor = [UIColor whiteColor];
+            NSAttributedString *textAttributedString = [[NSAttributedString alloc] initWithString:movie.sinopsis attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+            
+            textView.attributedText = textAttributedString;
+            imageView.image = movie.imagen;
+            
+        }
+        
+        switch (_moviesArray.count) {
+            case 1:
+                _midImageView.hidden = _midMovieTitleLabel.hidden = _midMovieTitleLabel.hidden = _midMovieBackgroundImageView.hidden = _midMovieSoporteImageView.hidden = _midMovieTextView.hidden = YES;
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieBackgroundImageView.hidden = _bottomMovieSoporteImageView.hidden = _bottomMovieTextView.hidden = YES;
+                break;
+            case 2:
+                _bottomImageView.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieTitleLabel.hidden = _bottomMovieBackgroundImageView.hidden = _bottomMovieSoporteImageView.hidden = _bottomMovieTextView.hidden = YES;
+                break;
+            default:
+                break;
         }
         
     }
     
-    for (MovieTableView *movieTableView in tableViewsArray) {
-        if (!movieTableView.movie) {                            // Si el TableView no tiene asignada una película no se muestra 
-            
-            movieTableView.hidden = YES;
-            int index = [tableViewsArray indexOfObject:movieTableView];
-            UIImageView *imageView = [imageViewsArray objectAtIndex:index];
-            imageView.hidden = YES;                                // Y tampoco se muestra la imagen de la película
-            
-            
-        }
-    }
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -87,100 +157,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
-#pragma mark - TableViewDataSource methods
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void) addImages
 {
-    NSInteger numberOfRows = 11;
-    return numberOfRows;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    cell.textLabel.backgroundColor = [UIColor lightGrayColor];
-    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    
-   
-    Pelicula *movie;
-    
-    if ([tableView isKindOfClass:[MovieTableView class]])
-    {
-        if (((MovieTableView *) tableView).movie)
-        {
-            movie = ((MovieTableView *) tableView).movie;
-            
-            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
-            NSArray *titlesArray = [movie titlesArrayToMakeTableView];
-            
-            NSMutableString *string = [[NSMutableString alloc] init];
-            NSMutableAttributedString *attributedString;
-            
-            
-            [string appendString:[titlesArray objectAtIndex:indexPath.row]];
-            [string appendString:[stringsArray objectAtIndex:indexPath.row]];
-            
-            if ( indexPath.row == 0 ) {
-                UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0];
-                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
-                
-            } else {
-                UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-                attributedString = [[NSMutableAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: font}];
-                
-            }
-            
-            cell.textLabel.attributedText = attributedString;
-            
-            
-
-        }
+    for (Pelicula *movie in _moviesArray) {
+        NSInteger index = [self.moviesArray indexOfObject:movie];
+        UIImageView *imageView = (UIImageView *) [imageViewsArray objectAtIndex:index];
+        imageView.image = movie.imagen;
     }
-    
-    return cell;
-    
 }
-
-#pragma mark - UITableViewDelegate methods
-
-// Método para calcular el alto de la celda en función del contenido
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    CGFloat height = 0;
-    
-    Pelicula *movie;
-    
-    if ([tableView isKindOfClass:[MovieTableView class]])
-    {
-        if (((MovieTableView *) tableView).movie)
-        {
-            movie = ((MovieTableView *) tableView).movie;
-            
-            NSArray *stringsArray = [movie stringsArrayToMakeTableView];
-            NSString *string = (NSString *)[stringsArray objectAtIndex:indexPath.row];
-            
-            UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-            NSAttributedString *attributes = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName:font}];
-            CGRect rect = [attributes boundingRectWithSize:(CGSize){tableView.frame.size.width, CGFLOAT_MAX} options:NSStringDrawingUsesLineFragmentOrigin context:nil];
-            
-            height = rect.size.height + 6;
-            
-            
-        }
-    }
-
-    return height;
-}
-
 
 
 @end

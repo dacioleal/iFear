@@ -29,6 +29,7 @@
 @property (strong, nonatomic) NSString * sinopsis;
 @property (strong, nonatomic) NSString * portada;
 @property (strong, nonatomic) UIImage * imagen;
+@property (strong, nonatomic) NSURL * urlImagen;
 
 #pragma  mark - Inicializador con parámetros
 

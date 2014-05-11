@@ -98,6 +98,7 @@
 		481CEBF118E36E1400A854EE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 481CEBF018E36E1400A854EE /* Constants.m */; };
 		482CD7C119041A6F00C7033D /* BusquedaSubGeneroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482CD7C019041A6F00C7033D /* BusquedaSubGeneroViewController.m */; };
 		482CD7C419041A7900C7033D /* BusquedaSensacionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482CD7C319041A7900C7033D /* BusquedaSensacionesViewController.m */; };
+		4843FD4B191FDB2400CFE0C9 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4843FD4A191FDB2400CFE0C9 /* ResultadosBusquedaViewController.m */; };
 		4848E49E18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4848E49D18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m */; };
 		48527BCD1912C54D0087B949 /* CustomIfearSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48527BCC1912C54D0087B949 /* CustomIfearSlider.m */; };
 		48527BD61912CB760087B949 /* ProgresSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 48527BD51912CB760087B949 /* ProgresSlider.m */; };
@@ -285,6 +286,8 @@
 		482CD7C019041A6F00C7033D /* BusquedaSubGeneroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaSubGeneroViewController.m; sourceTree = "<group>"; };
 		482CD7C219041A7900C7033D /* BusquedaSensacionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaSensacionesViewController.h; sourceTree = "<group>"; };
 		482CD7C319041A7900C7033D /* BusquedaSensacionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaSensacionesViewController.m; sourceTree = "<group>"; };
+		4843FD49191FDB2400CFE0C9 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
+		4843FD4A191FDB2400CFE0C9 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		4848E49C18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectorBusquedaViewController.h; sourceTree = "<group>"; };
 		4848E49D18C39D030099CBF5 /* PopoverSelectorBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectorBusquedaViewController.m; sourceTree = "<group>"; };
 		48527BCB1912C54D0087B949 /* CustomIfearSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIfearSlider.h; sourceTree = "<group>"; };
@@ -533,6 +536,15 @@
 			path = "Sección subgéneros";
 			sourceTree = "<group>";
 		};
+		4843FD48191FDAA900CFE0C9 /* ResultadosBusquedaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4843FD49191FDB2400CFE0C9 /* ResultadosBusquedaViewController.h */,
+				4843FD4A191FDB2400CFE0C9 /* ResultadosBusquedaViewController.m */,
+			);
+			name = ResultadosBusquedaViewController;
+			sourceTree = "<group>";
+		};
 		486D40A618FFECAE0092BF4D /* ServerSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +734,7 @@
 				F314499C189A53890007B9B6 /* MentesViewController */,
 				481CEBEF18E36E1400A854EE /* Constants.h */,
 				481CEBF018E36E1400A854EE /* Constants.m */,
+				4843FD48191FDAA900CFE0C9 /* ResultadosBusquedaViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -1081,6 +1094,7 @@
 				F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */,
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				486285B8191551CA006027A9 /* SensationsSearch.m in Sources */,
+				4843FD4B191FDB2400CFE0C9 /* ResultadosBusquedaViewController.m in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,

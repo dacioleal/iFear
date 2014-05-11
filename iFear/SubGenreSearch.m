@@ -7,6 +7,7 @@
 //
 
 #import "SubgenreSearch.h"
+#import "Pelicula.h"
 
 @interface SubGenreSearch ()
 {
@@ -40,7 +41,12 @@
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
-
+- (void) displayAlertView
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Downloading Error" message:@"Push button to retry" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [alertView show];
+}
 
 // Método para establecer la conexión con el servidor
 - (void) setConnectionWithParameters: (NSData *) params toUrl: (NSString *) serverUrl
@@ -81,9 +87,52 @@
     
     
     NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
+
+    Pelicula * pelicula;
+    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
+    int idPelicula,anio,duracion;
     
-    NSLog(@"%@",respuestaDictionario);
-    
+    for (NSDictionary * fila in retorno) {
+        
+        titulo = [fila objectForKey:@"titulo"];
+        titulo_original = [fila objectForKey:@"titulo_original"];
+        pais = [fila objectForKey:@"pais"];
+        director = [fila objectForKey:@"director"];
+        guion = [fila objectForKey:@"guion"];
+        musica = [fila objectForKey:@"musica"];
+        fotografia = [fila objectForKey:@"fotografia"];
+        reparto = [fila objectForKey:@"reparto"];
+        productora = [fila objectForKey:@"productora"];
+        web = [fila objectForKey:@"web"];
+        sinopsis = [fila objectForKey:@"sinopsis"];
+        portada = [fila objectForKey:@"portada"];
+        anio = [[fila objectForKey:@"anio"] intValue];
+        duracion = [[fila objectForKey:@"duracion"] intValue];
+        idPelicula = [[fila objectForKey:@"id"] intValue];
+        
+        
+        pelicula = [[Pelicula alloc] initConParametros:idPelicula
+                                      tituloDePelicula:titulo
+                              tituloOriginalDePelicula:titulo_original
+                                      anioDeLaPelicula:anio
+                                    duracionDePelicula:duracion
+                                        paisDePelicula:pais
+                                    directorDePelicula:director
+                                       guionDePelicula:guion
+                                      musicaDePelicula:musica
+                                fotografiaDeLaPelicula:fotografia
+                                   repartoDeLaPelicula:reparto
+                                productoraDeLaPelicula:productora
+                                       webDeLaPelicula:web
+                                  sinopsisDeLaPelicula:sinopsis
+                                   portadaDeLaPelicula:portada];
+        
+        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+        [strUrlImagen appendString:portada];
+        pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
+        [movies addObject:pelicula];
+        
+    }
     
 }
 
@@ -95,12 +144,36 @@ didCompleteWithError:(NSError *)error
 {
     if(error == nil)
     {
-        NSLog(@"Éxito al bajar");
+        //NSLog(@"Éxito al bajar");
         
-        
+        if (movies.count != 0) {
+            
+            // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
+            for (Pelicula *movie in movies) {
+                movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+                [defaultCenter postNotificationName:@"dataFinished" object:self];
+            });
+            
+            
+        } else {
+            
+            [self retrieveData];
+            
+        }
         
     } else {
         
+        NSLog(@"Error %@",[error userInfo]);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self displayAlertView];
+        });
     }
 }
 

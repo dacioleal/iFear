@@ -9,6 +9,8 @@
 #import "BusquedaViewController.h"
 #import "SubGenreSearch.h"
 #import "SensationsSearch.h"
+#import "ResultadosBusquedaViewController.h"
+#import "Pelicula.h"
 
 @interface BusquedaViewController ()
 {
@@ -68,6 +70,12 @@
     
     sensationsValues = [[NSMutableDictionary alloc] init];
     
+    // Añadimos este ViewController (self) como observador para recibir las notificaciones de que se han terminado de descargar los datos
+    // y de que se pulsa sobre la portada de una película para ir a la pantalla de detalle.
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(prueba) name:@"dataFinished" object:subGenreSearch];
+    [defaultCenter addObserver:self selector:@selector(prueba) name:@"dataFinished" object:sensationSearch];
+        
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
     
@@ -84,6 +92,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) prueba
+{
+//    NSLog(@"PROBANDO");
+//    for (Pelicula * peli in resultMovies) {
+//        NSLog(@"%@",peli.titulo);
+//        NSLog(@"%@",peli.urlImagen);
+//    }
+    
+    [self performSegueWithIdentifier:@"Associate" sender:self];
+}
 
 # pragma mark - IBAction
 
@@ -91,10 +109,17 @@
 - (IBAction)pushBuscarButton:(id)sender {
     // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
     if ([self.buscarSubGenButton isSelected]) {
-        [self searchBySubGenere];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self searchBySubGenere];
+        });
+        
     }else{
-        [self searchBySensations];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self searchBySensations];
+        });
     }
+    
+    //[self performSegueWithIdentifier:@"Associate" sender:sender];
     
 }
 
@@ -290,6 +315,16 @@
 - (void) getSensationsValues:(NSMutableDictionary *)categoriesValues
 {
     sensationsValues = categoriesValues;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Associate"])
+    {
+        ResultadosBusquedaViewController * resultadoBusquedaVC = [segue destinationViewController];
+        resultadoBusquedaVC.resultMovies = resultMovies;
+        
+    }
 }
 
 
