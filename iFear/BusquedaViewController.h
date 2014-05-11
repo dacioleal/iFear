@@ -21,6 +21,7 @@
 - (IBAction)pushBuscarButton:(id)sender;
 
 // Popover
+@property (weak, nonatomic) IBOutlet UIButton *popoverSelectedOption;
 @property(strong, nonatomic) UIPopoverController * selectorPopover;
 // Contenido del Popover
 @property (nonatomic, strong) PopoverSelectorBusquedaViewController * popoverContent;

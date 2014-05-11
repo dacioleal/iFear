@@ -30,10 +30,11 @@
     [super viewDidLoad];
     
     sensationValues = [[NSMutableDictionary alloc] init];
-    [sensationValues setValue:[NSNumber numberWithInt:0]  forKey:@"Terror"];
-    [sensationValues setValue:[NSNumber numberWithInt:0] forKey:@"Gore"];
-    [sensationValues setValue:[NSNumber numberWithInt:0] forKey:@"Humor"];
-    [sensationValues setValue:[NSNumber numberWithInt:0] forKey:@"Calidad"];
+    [sensationValues setObject:[NSNumber numberWithInt:0]  forKey:@"Terror"];
+    [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Gore"];
+    [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Humor"];
+    [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Calidad"];
+    
     
     // Se inicializan los Slider con función de barra de progreso
     [self initProgressSlider:self.progressTerrorSlider withImageName:@"trozo_barra_terror_50x70.png"];
@@ -156,27 +157,28 @@
 - (void)sliderValueChanged:(id)sender
 {
     CustomIfearSlider *auxSlider =  (CustomIfearSlider *) sender;
-    NSUInteger currentValue = auxSlider.currentLeftSegment;
+    NSUInteger currentValue =  ((int)((auxSlider.currentLeftSegment + 2.5) / 5) * 5);;
+   
     switch (auxSlider.tag) {
         case 1:
             if (currentValue == 0){
                 self.progressTerrorSlider.value = currentValue;
                 [self.terrorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
             }else{
-                self.progressTerrorSlider.value = currentValue + 1;
-                [self.terrorPercent setText:[NSNumber numberWithInteger:(currentValue + 1)].stringValue];
+                self.progressTerrorSlider.value = currentValue;
+                [self.terrorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
             }
-            [sensationValues setValue:[NSNumber numberWithFloat:self.progressTerrorSlider.value] forKey:@"Terror"];
+            [sensationValues setValue:[NSNumber numberWithInt:self.progressTerrorSlider.value] forKey:@"Terror"];
             break;
         case 2:
             if (currentValue == 0){
                 self.progressGoreSlider.value = currentValue;
                 [self.gorePercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
             }else{
-                self.progressGoreSlider.value = currentValue + 1;
-                [self.gorePercent setText:[NSNumber numberWithInteger:(currentValue + 1)].stringValue];
+                self.progressGoreSlider.value = currentValue;
+                [self.gorePercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
             }
-            [sensationValues setValue:[NSNumber numberWithFloat:self.progressGoreSlider.value] forKey:@"Gore"];
+            [sensationValues setValue:[NSNumber numberWithInt:self.progressGoreSlider.value] forKey:@"Gore"];
             break;
             
         case 3:
@@ -184,10 +186,10 @@
                 self.progressHumorSlider.value = currentValue;
                 [self.humorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
             }else{
-                self.progressHumorSlider.value = currentValue + 1;
-                [self.humorPercent setText:[NSNumber numberWithInteger:(currentValue + 1)].stringValue];
+                self.progressHumorSlider.value = currentValue;
+                [self.humorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
             }
-            [sensationValues setValue:[NSNumber numberWithFloat:self.progressHumorSlider.value] forKey:@"Humor"];
+            [sensationValues setValue:[NSNumber numberWithInt:self.progressHumorSlider.value] forKey:@"Humor"];
             break;
             
         case 4:
@@ -196,11 +198,11 @@
                 [self.calidadPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
                 
             }else{
-                self.progressCalidadSlider.value = currentValue + 1;
-                [self.calidadPercent setText:[NSNumber numberWithInteger:(currentValue + 1)].stringValue];
+                self.progressCalidadSlider.value = currentValue;
+                [self.calidadPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
                 
             }
-            [sensationValues setValue:[NSNumber numberWithFloat:self.progressCalidadSlider.value] forKey:@"Calidad"];
+            [sensationValues setValue:[NSNumber numberWithInt:self.progressCalidadSlider.value] forKey:@"Calidad"];
             
             break;
     }

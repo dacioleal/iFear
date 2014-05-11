@@ -2,25 +2,30 @@
 //  BusquedaViewController.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 30/01/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Created by José Alberto Martín Falcón on 30/01/14.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import "BusquedaViewController.h"
 #import "SubGenreSearch.h"
+#import "SensationsSearch.h"
 
 @interface BusquedaViewController ()
 {
-    // Array para los resultados de búsqueda
+    // Array para los resultados de búsqueda tanto por subgenero como por sensaciones
     NSArray * resultMovies;
     
     // Array en donde estarán que subgeneros se han seleccionado
     NSMutableArray *sub_genre_list;
     
+    // Diccionario donde se almacenarán los valores elegidos para la búsqueda por sensaciones
     NSMutableDictionary *sensationsValues;
     
     // Clase que permite la búsqueda por subgenero
     SubGenreSearch * subGenreSearch;
+    
+    // Clase que permite la búsqueda por sensaciones
+    SensationsSearch * sensationSearch;
     
     // ViewController que está mostrándose en estos momentos
     UIViewController * onScreenViewController;
@@ -42,7 +47,7 @@
     }
     return self;
 }
-
+#pragma mark - ViewController -
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,6 +61,8 @@
     busquedaSensacionesVC.delegate = self;
     
     subGenreSearch = [[SubGenreSearch alloc] init];
+    
+    sensationSearch = [[SensationsSearch alloc] init];
     
     sub_genre_list = [[NSMutableArray alloc] init];
     
@@ -80,18 +87,26 @@
 
 # pragma mark - IBAction
 
+// Método que se usa cuando se pulsa el botón buscar
 - (IBAction)pushBuscarButton:(id)sender {
+    // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
     if ([self.buscarSubGenButton isSelected]) {
         [self searchBySubGenere];
     }else{
-
+        [self searchBySensations];
     }
     
 }
 
+// Cambia el estado de los botones de elección del tipo de búsqueda SI/NO
 - (IBAction)setStateSwitchs:(id)sender
 {
     if ([sender tag] == 0) {
+        /*
+         * Esto se hace para saber si está en la misma pantalla y ha pulsado sobre el mismo botón.
+         * Es decir, Imaginemos que está seleccionado buscar por subgenero y el botón está en SI, en el
+         * caso de que vuelva a pulsar el mismo botón que no ocurra nada
+         */
         if (! [self.buscarSubGenButton isSelected]) {
             self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
             self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
@@ -112,6 +127,7 @@
     
 }
 
+// Método que muestra el popover
 - (IBAction)showPopover:(id)sender
 {
     if (self.popoverContent == nil) {
@@ -123,7 +139,7 @@
     if (self.selectorPopover == nil) {
         // Configura el popover
         self.selectorPopover = [[UIPopoverController alloc] initWithContentViewController:self.popoverContent];
-        self.selectorPopover.popoverContentSize = CGSizeMake(200., 150.);
+        self.selectorPopover.popoverContentSize = CGSizeMake(159., 81.);
         self.selectorPopover.delegate = self;
         
         // Set the sender to a UIButton.
@@ -137,9 +153,10 @@
     }
 }
 
+
+
+
 #pragma mark - Métodos propios -
-
-
 
 // Método para establecer las imagenes según el estado del Botón
 -(void)setImageForAllButtons
@@ -152,20 +169,7 @@
     [self.buscarSubGenButton setImage:[UIImage imageNamed:@"switch_NO_132x72.png"] forState:UIControlStateNormal];
     
 }
-
-
-- (void) getSelectedSubGenre: (NSMutableArray *) subgenres
-{
-    NSLog(@"Subgere");
-    sub_genre_list = subgenres;
-}
-
-- (void) getSensationsValues:(NSMutableDictionary *)categoriesValues
-{
-    NSLog(@"Sensations");
-    sensationsValues = categoriesValues;
-}
-
+// Método que convierte un array en un objeto NSData
 - (NSData *) getParamsArray
 {
     NSMutableString *bodyStr = [NSMutableString string];
@@ -177,21 +181,28 @@
     return body;
 }
 
+// Método para obtener los resultados
 - (void) searchBySubGenere
 {
     resultMovies = [subGenreSearch searchBySubGenre:[self getParamsArray]];
 }
 
+- (void) searchBySensations
+{
+    resultMovies = [sensationSearch searchBySensations:sensationsValues];
+}
+
 
 # pragma mark - Popover Delegate -
 
-- (void)setSearchSelector:(NSString *)selector
+- (void) setSearchSelector: (NSString *) selector imgButtonSelected:(UIImage*) imgButton;
 {
     if([self selectorPopover]){
         [[self selectorPopover] dismissPopoverAnimated:YES];
         self.selectorPopover = nil;
     }
     
+    [[self popoverSelectedOption] setImage:imgButton forState:UIControlStateNormal];
     NSLog(@"%@",selector);
 }
 
@@ -266,6 +277,19 @@
                             }];
     onScreenViewController = newViewController;
     
+}
+
+
+#pragma mark - BusquedaSubGeneroDelegate -
+- (void) getSelectedSubGenre: (NSMutableArray *) subgenres
+{
+    sub_genre_list = subgenres;
+}
+
+#pragma mark - BusquedaSensacionesDelegate -
+- (void) getSensationsValues:(NSMutableDictionary *)categoriesValues
+{
+    sensationsValues = categoriesValues;
 }
 
 

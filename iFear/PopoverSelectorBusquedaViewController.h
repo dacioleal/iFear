@@ -11,7 +11,7 @@
 @protocol PopoverSelectorBusquedaDelegate <NSObject>
 
 @required
-- (void) setSearchSelector: (NSString *) selector;
+- (void) setSearchSelector: (NSString *) selector imgButtonSelected:(UIImage*) imgButton;
 @end
 
 @interface PopoverSelectorBusquedaViewController : UITableViewController

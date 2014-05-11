@@ -12,6 +12,7 @@
 {
     // Listado con las opciones que tendrá el popover
     NSMutableArray  * optionSearchList;
+    NSMutableArray * imageList;
 }
 
 @end
@@ -38,6 +39,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     optionSearchList = [[NSMutableArray alloc] initWithObjects:@"Titulo",@"Director",@"Reparto", nil];
+    imageList = [[NSMutableArray alloc] init];
+    [imageList addObject:[UIImage imageNamed:@"selector_titulo_318x54.png"]];
+    [imageList addObject:[UIImage imageNamed:@"selector_director_318x54.png"]];
+    [imageList addObject:[UIImage imageNamed:@"selector_reparto_318x54.png"]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,8 +77,7 @@
     
 
 //    cell.backgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"opcion_activada.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]];
-    UIImage * imgAux =     [UIImage imageNamed:@"selector_buscar_director.png"];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:imgAux];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[imageList objectAtIndex:indexPath.row]];
 //    cell.selectedBackgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage i   mageNamed:@"cell_pressed.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]autorelease];
     
     return cell;
@@ -84,7 +90,7 @@
     
     //Notify the delegate if it exists.
     if (_delegate != nil) {
-        [_delegate setSearchSelector:selected];
+        [_delegate setSearchSelector:selected imgButtonSelected:[imageList objectAtIndex:indexPath.row]];
     }
 }
 

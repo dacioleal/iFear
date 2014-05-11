@@ -437,13 +437,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barra_busqueda_1810x78.png" translatesAutoresizingMaskIntoConstraints="NO" id="PIL-Q2-Ogz">
-                                <rect key="frame" x="59" y="97" width="905" height="39"/>
+                                <rect key="frame" x="60" y="97" width="905" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-dq-CX2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zee-dq-CX2">
                                 <rect key="frame" x="97" y="103" width="159" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="selector_titulo_318x54.png">
+                                <state key="normal" image="selector_titulo_318x54.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -469,7 +469,7 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="switch_NO_132x72.png">
+                                <state key="normal" image="switch_NO_132x72.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -494,7 +494,7 @@
                                 <rect key="frame" x="103" y="149" width="66" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" backgroundImage="switch_NO_132x72.png">
+                                <state key="normal" image="switch_NO_132x72.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -517,6 +517,7 @@
                         <outlet property="buscarSensacionesButton" destination="Su4-3x-EQb" id="Vhr-vn-kDr"/>
                         <outlet property="buscarSubGenButton" destination="x3j-Oq-4Ea" id="SKo-rQ-a5L"/>
                         <outlet property="container" destination="7Lq-hH-PdX" id="Ue7-AY-Puo"/>
+                        <outlet property="popoverSelectedOption" destination="zee-dq-CX2" id="TKv-wb-qOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkG-Wg-S75" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -527,16 +528,16 @@
         <scene sceneID="Bug-v0-AgS">
             <objects>
                 <tableViewController storyboardIdentifier="PopoverSelectorBusqueda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lDK-ut-J3y" customClass="PopoverSelectorBusquedaViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PopoverSelectorBusqueda" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" id="duf-gY-nQY">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PopoverSelectorBusqueda" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="27" sectionHeaderHeight="22" sectionFooterHeight="22" id="duf-gY-nQY">
+                        <rect key="frame" x="0.0" y="0.0" width="159" height="81"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="21" id="yqz-oh-X6I">
-                                <rect key="frame" x="0.0" y="22" width="250" height="21"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="27" id="yqz-oh-X6I">
+                                <rect key="frame" x="0.0" y="22" width="159" height="27"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yqz-oh-X6I" id="GTg-hj-KdN">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="159" height="26"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -549,11 +550,11 @@
                     </tableView>
                     <value key="contentSizeForViewInPopover" type="size" width="768" height="1024"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="250" height="150"/>
+                    <size key="freeformSize" width="159" height="81"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1H-kV-219" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3325" y="-1989"/>
+            <point key="canvasLocation" x="3403" y="-1897"/>
         </scene>
         <!--Actividad View Controller-->
         <scene sceneID="y3H-Zb-bfT">
