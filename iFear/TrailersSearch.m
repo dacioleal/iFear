@@ -1,38 +1,37 @@
 //
-//  MoviesSearch.m
+//  TrailersSearch.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 28/03/14.
+//  Created by Dacio Leal Rodriguez on 29/04/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "MoviesSearch.h"
-#import "Pelicula.h"
+#import "TrailersSearch.h"
 
-@interface MoviesSearch ()
+@interface TrailersSearch ()
 {
-    NSMutableArray *movies;
+    NSMutableArray *trailers;
     NSDictionary *parameters;
 }
 
 @end
 
-@implementation MoviesSearch
+@implementation TrailersSearch
 
-- (NSMutableArray *) movies
+- (NSMutableArray *) trailers
 {
-    if (!movies) {
-        movies = [[NSMutableArray alloc] init];
+    if (!trailers) {
+        trailers = [[NSMutableArray alloc] init];
     }
-    return movies;
+    return trailers;
 }
 
 - (NSArray *) searchWithParameters: (NSDictionary *) param
 {
-    movies = [[NSMutableArray alloc] init];
+    trailers = [[NSMutableArray alloc] init];
     parameters = param;
     [self retrieveData];
-    return movies;
+    return trailers;
     
 }
 
@@ -44,9 +43,6 @@
 }
 
 - (void) retrieveData {
-    
-    
-    //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"function",nil];
     
     NSString * direccion = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     //NSString * direccion = @"http://haroben.byethost31.com/EjemploConexionBD/peticion.php";
@@ -122,53 +118,12 @@
     
     NSArray * retorno = (NSArray *)[responseDictionary objectForKey:@"retorno"];
     
-    
-    Pelicula * pelicula;
-    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
-    int idPelicula,anio,duracion;
+    NSString *enlaceTrailer;
     
     for (NSDictionary * fila in retorno) {
         
-        titulo = [fila objectForKey:@"titulo"];
-        titulo_original = [fila objectForKey:@"titulo_original"];
-        pais = [fila objectForKey:@"pais"];
-        director = [fila objectForKey:@"director"];
-        guion = [fila objectForKey:@"guion"];
-        musica = [fila objectForKey:@"musica"];
-        fotografia = [fila objectForKey:@"fotografia"];
-        reparto = [fila objectForKey:@"reparto"];
-        productora = [fila objectForKey:@"productora"];
-        web = [fila objectForKey:@"web"];
-        sinopsis = [fila objectForKey:@"sinopsis"];
-        portada = [fila objectForKey:@"portada"];
-        anio = [[fila objectForKey:@"anio"] intValue];
-        duracion = [[fila objectForKey:@"duracion"] intValue];
-        idPelicula = [[fila objectForKey:@"id"] intValue];
-        
-        
-        pelicula = [[Pelicula alloc] initConParametros:idPelicula
-                                      tituloDePelicula:titulo
-                              tituloOriginalDePelicula:titulo_original
-                                      anioDeLaPelicula:anio
-                                    duracionDePelicula:duracion
-                                        paisDePelicula:pais
-                                    directorDePelicula:director
-                                       guionDePelicula:guion
-                                      musicaDePelicula:musica
-                                fotografiaDeLaPelicula:fotografia
-                                   repartoDeLaPelicula:reparto
-                                productoraDeLaPelicula:productora
-                                       webDeLaPelicula:web
-                                  sinopsisDeLaPelicula:sinopsis
-                                   portadaDeLaPelicula:portada];
-        
-        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
-        //NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://haroben.byethost31.com/ifearphp/"];
-        //NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://localhost/ifearphp/"];
-        [strUrlImagen appendString:portada];
-        pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
-        
-        [movies addObject:pelicula];
+        enlaceTrailer = (NSString *) [fila objectForKey:@"enlace_trailer"];
+        [trailers addObject:enlaceTrailer];
         
     }
     
@@ -186,33 +141,31 @@ didCompleteWithError:(NSError *)error
     {
         //NSLog(@"Éxito al bajar");
         
-        if (movies.count != 0) {
-            
-            // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
-            for (Pelicula *movie in movies) {
-                movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
-            }
+        if (trailers.count != 0) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"dataFinished" object:self];
+                [defaultCenter postNotificationName:@"trailersFinished" object:self];
             });
             
             
         } else {
             
-            [self retrieveData];
-            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+                [defaultCenter postNotificationName:@"NoTrailers" object:self];
+            });
         }
         
     } else {
         
         NSLog(@"Error %@",[error userInfo]);
-       
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             
-             [self displayAlertView];
+            [self displayAlertView];
         });
     }
 }
@@ -223,8 +176,6 @@ didCompleteWithError:(NSError *)error
     
     [self retrieveData];
 }
-
-
 
 
 @end
