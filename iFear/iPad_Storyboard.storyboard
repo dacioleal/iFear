@@ -1112,6 +1112,7 @@
         <image name="boton_panel_izq_330x102.png" width="330" height="102"/>
         <image name="boton_panel_izq_ON_330x102.png" width="330" height="102"/>
         <image name="boton_que_es_iFear.png" width="672" height="228"/>
+        <image name="boton_votar_346x156.png" width="346" height="156"/>
         <image name="buscar_sensacion_OFF_540x48.png" width="2048" height="1536"/>
         <image name="buscar_subgenero_OFF_540x48.png" width="2048" height="1536"/>
         <image name="cadena.png" width="4190" height="96"/>
