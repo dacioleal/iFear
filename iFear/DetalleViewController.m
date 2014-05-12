@@ -17,6 +17,8 @@
     NSArray *leftPanelButtons;
     NSArray *trailersArray;
     NSArray *contentViews;
+    
+    // //
 }
 
 
