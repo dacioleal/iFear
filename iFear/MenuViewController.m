@@ -66,6 +66,10 @@
 }
 
 - (IBAction)queEsPushButton:(UIButton *)sender {
+    
+    MainViewController *mainViewController = (MainViewController *)self.parentViewController;
+    [mainViewController performSelector:@selector(loadQueEsViewController)];
+    [mainViewController showMenuBar];
 }
 
 - (IBAction)opcionesPushButton:(UIButton *)sender {

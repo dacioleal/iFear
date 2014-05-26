@@ -29,6 +29,10 @@
 
 - (void) hideMenuBar;
 
+- (void) unSelectIcons;
+
+- (void) loadQueEsViewController;
+
 - (void) displayContentViewController: (UIViewController *) contentViewController;
 
 - (void) hideContentViewController: (UIViewController *) contentViewController;
@@ -36,5 +40,6 @@
 - (void) cycleFromViewController: (UIViewController *) oldViewController toViewController: (UIViewController *) newViewController;
 
 - (void) specialTransitionFromViewController: (UIViewController*) oldViewController toViewController: (UIViewController*) newViewController;
+
 
 @end

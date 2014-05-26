@@ -117,6 +117,12 @@
     
 }
 
+- (void) loadQueEsViewController
+{
+    UIViewController *queEsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"queEsViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:queEsViewController];
+}
+
 
 #pragma mark - ViewController animated menu methods
 
@@ -160,6 +166,16 @@
         buttonEnumerator.enabled = YES;
     }
     button.enabled = NO;
+}
+
+- (void) unSelectIcons
+{
+    
+    for (UIButton *buttonEnumerator in menuButtonsArray) {
+        
+        buttonEnumerator.enabled = YES;
+    }
+    
 }
 
 - (void) hideMenuBar

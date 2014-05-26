@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -297,6 +297,74 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5428" y="-712"/>
+        </scene>
+        <!--Que Es View Controller-->
+        <scene sceneID="j6c-fd-ZWb">
+            <objects>
+                <viewController storyboardIdentifier="queEsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VVW-1I-Chy" customClass="QueEsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pMj-fu-1wJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hWn-Nz-KyV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XCJ-oy-Pqr">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_whats_ifear_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bd3-hF-vub">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-fd-zFc">
+                                <rect key="frame" x="50" y="245" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT0-Qt-GRd">
+                                <rect key="frame" x="50" y="418" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buscar_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfa-mm-SS6">
+                                <rect key="frame" x="50" y="581" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="cartelera_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-Kf-VIB">
+                                <rect key="frame" x="839" y="245" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="actualidad_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx3-p1-nIo">
+                                <rect key="frame" x="839" y="418" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="mentes_osc_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-Ov-Keu">
+                                <rect key="frame" x="839" y="581" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="opciones_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LI6-Tn-f2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4853" y="-3047"/>
         </scene>
         <!--Detalle View Controller-->
         <scene sceneID="4s2-wb-gmk">
@@ -839,69 +907,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_buscar_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wbD-cY-J1f">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_ppal.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wbD-cY-J1f">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barra_busqueda_1810x78.png" translatesAutoresizingMaskIntoConstraints="NO" id="27F-tS-S41">
-                                <rect key="frame" x="60" y="97" width="905" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-fl-Tyc">
-                                <rect key="frame" x="97" y="103" width="159" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="selector_titulo_318x54.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VAE-VA-4ga">
-                                <rect key="frame" x="261" y="102" width="654" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="" label=""/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buscar_sensacion_OFF_540x48.png" translatesAutoresizingMaskIntoConstraints="NO" id="wOK-B0-frs">
-                                <rect key="frame" x="591" y="150" width="270" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleAspectFill" fixedFrame="YES" restorationIdentifier="holitas" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG2-pV-ONB">
-                                <rect key="frame" x="849" y="149" width="66" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="" label="">
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="switch_NO_132x72.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1r-r6-mhT">
-                                <rect key="frame" x="367" y="182" width="280" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="boton_buscar_580x100.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buscar_subgenero_OFF_540x48.png" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-iQ-C1L">
-                                <rect key="frame" x="163" y="150" width="270" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-en-dJc">
-                                <rect key="frame" x="103" y="149" width="66" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="switch_NO_132x72.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dc6-82-HF6">
-                                <rect key="frame" x="0.0" y="257" width="1024" height="511"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1097,13 +1106,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="actualidad_big_270x270.png" width="270" height="270"/>
         <image name="ahorcado.png" width="278" height="1194"/>
-        <image name="barra_busqueda_1810x78.png" width="2048" height="1536"/>
         <image name="barrotes.png" width="2048" height="1536"/>
         <image name="base_cuchillo_2020x348.png" width="2020" height="348"/>
         <image name="base_estreno_421x1177.png" width="425" height="1177"/>
         <image name="boton_buscar.png" width="595" height="231"/>
-        <image name="boton_buscar_580x100.png" width="2048" height="1536"/>
         <image name="boton_cartelera.png" width="482" height="144"/>
         <image name="boton_entrar.png" width="843" height="284"/>
         <image name="boton_lado_oscuro_330x126.png" width="330" height="126"/>
@@ -1113,18 +1121,19 @@
         <image name="boton_panel_izq_ON_330x102.png" width="330" height="102"/>
         <image name="boton_que_es_iFear.png" width="672" height="228"/>
         <image name="boton_votar_346x156.png" width="346" height="156"/>
-        <image name="buscar_sensacion_OFF_540x48.png" width="2048" height="1536"/>
-        <image name="buscar_subgenero_OFF_540x48.png" width="2048" height="1536"/>
+        <image name="buscar_big_270x270.png" width="270" height="270"/>
         <image name="cadena.png" width="4190" height="96"/>
         <image name="calavera.png" width="190" height="236"/>
+        <image name="cartelera_big_270x270.png" width="270" height="270"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
-        <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_central_1090x1144.png" width="1090" height="1144"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
         <image name="fondo_fichas_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
+        <image name="fondo_ppal.jpg" width="2048" height="1536"/>
+        <image name="fondo_whats_ifear_2048x1536.jpg" width="2048" height="1536"/>
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_blu_ray_246x188.png" width="246" height="188"/>
         <image name="icono_buscar.png" width="100" height="100"/>
@@ -1137,12 +1146,13 @@
         <image name="icono_menu_invertido.png" width="100" height="100"/>
         <image name="icono_volver.png" width="100" height="100"/>
         <image name="marco_centralB_1106x1268.png" width="1106" height="1268"/>
+        <image name="mentes_osc_big_270x270.png" width="270" height="270"/>
+        <image name="menu_big_270x270.png" width="270" height="270"/>
+        <image name="opciones_big_270x270.png" width="270" height="270"/>
         <image name="panel_barras_404x1010.png" width="404" height="1010"/>
         <image name="panel_izq_rojo_400x560.png" width="400" height="560"/>
         <image name="panel_votar_400x284.png" width="400" height="284"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
-        <image name="selector_titulo_318x54.png" width="2048" height="1536"/>
-        <image name="switch_NO_132x72.png" width="2048" height="1536"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

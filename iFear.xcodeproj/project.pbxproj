@@ -112,6 +112,23 @@
 		F3F927DF1897BC5200BE7964 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DC1897BC5200BE7964 /* spark.png */; };
 		F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */; };
 		F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */; };
+		F3FACD9A19338BB800A4830F /* QueEsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FACD9919338BB800A4830F /* QueEsViewController.m */; };
+		F3FACDAD19338C6E00A4830F /* actualidad_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACD9D19338C6E00A4830F /* actualidad_big_270x270.png */; };
+		F3FACDAE19338C6E00A4830F /* actualidad_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACD9E19338C6E00A4830F /* actualidad_big_ON_270x270.png */; };
+		F3FACDAF19338C6E00A4830F /* buscar_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACD9F19338C6E00A4830F /* buscar_big_270x270.png */; };
+		F3FACDB019338C6E00A4830F /* buscar_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA019338C6E00A4830F /* buscar_big_ON_270x270.png */; };
+		F3FACDB119338C6E00A4830F /* cartelera_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */; };
+		F3FACDB219338C6E00A4830F /* cartelera_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */; };
+		F3FACDB319338C6E00A4830F /* ejemplo_menu_966x564.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */; };
+		F3FACDB419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */; };
+		F3FACDB519338C6E00A4830F /* icono_cine_304x224.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */; };
+		F3FACDB619338C6E00A4830F /* icono_dvd_366x260.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */; };
+		F3FACDB719338C6E00A4830F /* mentes_osc_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */; };
+		F3FACDB819338C6E00A4830F /* mentes_osc_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA819338C6E00A4830F /* mentes_osc_big_ON_270x270.png */; };
+		F3FACDB919338C6E00A4830F /* menu_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA919338C6E00A4830F /* menu_big_270x270.png */; };
+		F3FACDBA19338C6E00A4830F /* menu_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDAA19338C6E00A4830F /* menu_big_ON_270x270.png */; };
+		F3FACDBB19338C6E00A4830F /* opciones_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDAB19338C6E00A4830F /* opciones_big_270x270.png */; };
+		F3FACDBC19338C6E00A4830F /* opciones_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDAC19338C6E00A4830F /* opciones_big_ON_270x270.png */; };
 		F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */; };
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 		F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */; };
@@ -255,6 +272,24 @@
 		F3F927DC1897BC5200BE7964 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido_entrada.mp3; path = ../sonido_entrada.mp3; sourceTree = "<group>"; };
 		F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_antorcha.mp3; sourceTree = "<group>"; };
+		F3FACD9819338BB800A4830F /* QueEsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueEsViewController.h; sourceTree = "<group>"; };
+		F3FACD9919338BB800A4830F /* QueEsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueEsViewController.m; sourceTree = "<group>"; };
+		F3FACD9D19338C6E00A4830F /* actualidad_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actualidad_big_270x270.png; sourceTree = "<group>"; };
+		F3FACD9E19338C6E00A4830F /* actualidad_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actualidad_big_ON_270x270.png; sourceTree = "<group>"; };
+		F3FACD9F19338C6E00A4830F /* buscar_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buscar_big_270x270.png; sourceTree = "<group>"; };
+		F3FACDA019338C6E00A4830F /* buscar_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buscar_big_ON_270x270.png; sourceTree = "<group>"; };
+		F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartelera_big_270x270.png; sourceTree = "<group>"; };
+		F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartelera_big_ON_270x270.png; sourceTree = "<group>"; };
+		F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ejemplo_menu_966x564.png; sourceTree = "<group>"; };
+		F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_whats_ifear_2048x1536.jpg; sourceTree = "<group>"; };
+		F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cine_304x224.png; sourceTree = "<group>"; };
+		F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_dvd_366x260.png; sourceTree = "<group>"; };
+		F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentes_osc_big_270x270.png; sourceTree = "<group>"; };
+		F3FACDA819338C6E00A4830F /* mentes_osc_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentes_osc_big_ON_270x270.png; sourceTree = "<group>"; };
+		F3FACDA919338C6E00A4830F /* menu_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_big_270x270.png; sourceTree = "<group>"; };
+		F3FACDAA19338C6E00A4830F /* menu_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_big_ON_270x270.png; sourceTree = "<group>"; };
+		F3FACDAB19338C6E00A4830F /* opciones_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opciones_big_270x270.png; sourceTree = "<group>"; };
+		F3FACDAC19338C6E00A4830F /* opciones_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opciones_big_ON_270x270.png; sourceTree = "<group>"; };
 		F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_oscuro_330x126.png; sourceTree = "<group>"; };
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 		F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_centralB_1106x1268.png; sourceTree = "<group>"; };
@@ -400,6 +435,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3FACD9C19338C4400A4830F /* queEs */,
 				F358E29218E0BDBE00F6C934 /* app icons */,
 				F307D08518CDC94800F7A50C /* cartelera */,
 				F33D145718F802C100604463 /* detalle */,
@@ -478,6 +514,7 @@
 				F3F927D71897B69700BE7964 /* MainScene */,
 				F314498F189A48010007B9B6 /* MainViewController */,
 				F321C43C1880128700B02097 /* MenuViewController */,
+				F3FACD9B19338BBD00A4830F /* QueEsViewController */,
 				F3144993189A501D0007B9B6 /* BusquedaViewController */,
 				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
 				F332F85418AA99D800A12CEE /* PageContentViewController */,
@@ -674,6 +711,39 @@
 			name = MainScene;
 			sourceTree = "<group>";
 		};
+		F3FACD9B19338BBD00A4830F /* QueEsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3FACD9819338BB800A4830F /* QueEsViewController.h */,
+				F3FACD9919338BB800A4830F /* QueEsViewController.m */,
+			);
+			name = QueEsViewController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F3FACD9C19338C4400A4830F /* queEs */ = {
+			isa = PBXGroup;
+			children = (
+				F3FACD9D19338C6E00A4830F /* actualidad_big_270x270.png */,
+				F3FACD9E19338C6E00A4830F /* actualidad_big_ON_270x270.png */,
+				F3FACD9F19338C6E00A4830F /* buscar_big_270x270.png */,
+				F3FACDA019338C6E00A4830F /* buscar_big_ON_270x270.png */,
+				F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */,
+				F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */,
+				F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */,
+				F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */,
+				F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */,
+				F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */,
+				F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */,
+				F3FACDA819338C6E00A4830F /* mentes_osc_big_ON_270x270.png */,
+				F3FACDA919338C6E00A4830F /* menu_big_270x270.png */,
+				F3FACDAA19338C6E00A4830F /* menu_big_ON_270x270.png */,
+				F3FACDAB19338C6E00A4830F /* opciones_big_270x270.png */,
+				F3FACDAC19338C6E00A4830F /* opciones_big_ON_270x270.png */,
+			);
+			name = queEs;
+			sourceTree = "<group>";
+		};
 		F3FD0515190A737200A1B516 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +848,7 @@
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
+				F3FACDB219338C6E00A4830F /* cartelera_big_ON_270x270.png in Resources */,
 				F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */,
 				F3144A00189ABC890007B9B6 /* cadena.png in Resources */,
 				F358E29118E09CC200F6C934 /* triangulo_arriba_96x42.png in Resources */,
@@ -786,23 +857,29 @@
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
 				F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */,
+				F3FACDB919338C6E00A4830F /* menu_big_270x270.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */,
 				F37CEB1C18FC04050085701C /* boton_panel_izq_ON_330x102.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
+				F3FACDB719338C6E00A4830F /* mentes_osc_big_270x270.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
 				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
+				F3FACDBC19338C6E00A4830F /* opciones_big_ON_270x270.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
+				F3FACDAF19338C6E00A4830F /* buscar_big_270x270.png in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
+				F3FACDB519338C6E00A4830F /* icono_cine_304x224.png in Resources */,
 				F33D145918F8030C00604463 /* marco_central_1106x1268.png in Resources */,
 				F397F25818EC2493000D6309 /* icono_blu_ray_246x188.png in Resources */,
 				F304101F18B752CC006273F0 /* barrotes.png in Resources */,
 				F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */,
 				F3F927DD1897BC5200BE7964 /* SmokeParticle.sks in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
+				F3FACDBB19338C6E00A4830F /* opciones_big_270x270.png in Resources */,
 				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
 				F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */,
 				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
@@ -810,9 +887,13 @@
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
+				F3FACDBA19338C6E00A4830F /* menu_big_ON_270x270.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */,
+				F3FACDB819338C6E00A4830F /* mentes_osc_big_ON_270x270.png in Resources */,
+				F3FACDB419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg in Resources */,
 				F3FEA6BF190EC35300A4F91C /* Impact.ttf in Resources */,
+				F3FACDB319338C6E00A4830F /* ejemplo_menu_966x564.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */,
 				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
@@ -827,14 +908,19 @@
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
+				F3FACDB019338C6E00A4830F /* buscar_big_ON_270x270.png in Resources */,
+				F3FACDB619338C6E00A4830F /* icono_dvd_366x260.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
+				F3FACDAD19338C6E00A4830F /* actualidad_big_270x270.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
 				F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */,
 				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
+				F3FACDB119338C6E00A4830F /* cartelera_big_270x270.png in Resources */,
 				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
+				F3FACDAE19338C6E00A4830F /* actualidad_big_ON_270x270.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
 				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
@@ -862,6 +948,7 @@
 			files = (
 				F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
+				F3FACD9A19338BB800A4830F /* QueEsViewController.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,

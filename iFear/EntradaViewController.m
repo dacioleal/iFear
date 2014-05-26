@@ -138,6 +138,7 @@
     UIViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"menuViewController"];
     [mainViewController specialTransitionFromViewController:self toViewController:menuViewController];
     
+    
 }
 
 
@@ -153,6 +154,8 @@
     [self performSelector:@selector(loadMainScreen) withObject:sender afterDelay:6.0]; //Ponemos un retardo para permitir las animaciones y luego pasar al menu
     
 }
+
+
 
 
 
