@@ -44,6 +44,7 @@
 		F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31CB03418D0774200E6DF2C /* DetalleViewController.m */; };
 		F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F321C4371880074F00B02097 /* fondo_ppal.jpg */; };
 		F321C43B1880128100B02097 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F321C43A1880128100B02097 /* MenuViewController.m */; };
+		F323A36F1934F16400F91382 /* sombra_central.png in Resources */ = {isa = PBXBuildFile; fileRef = F323A36E1934F16400F91382 /* sombra_central.png */; };
 		F32D9921187D536F0004D618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9920187D536F0004D618 /* Foundation.framework */; };
 		F32D9923187D536F0004D618 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9922187D536F0004D618 /* CoreGraphics.framework */; };
 		F32D9925187D536F0004D618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9924187D536F0004D618 /* UIKit.framework */; };
@@ -194,6 +195,7 @@
 		F321C4371880074F00B02097 /* fondo_ppal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_ppal.jpg; sourceTree = "<group>"; };
 		F321C4391880128100B02097 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F321C43A1880128100B02097 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F323A36E1934F16400F91382 /* sombra_central.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_central.png; sourceTree = "<group>"; };
 		F32D991D187D536F0004D618 /* iFear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32D9920187D536F0004D618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F32D9922187D536F0004D618 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -754,6 +756,7 @@
 				F3FACDAA19338C6E00A4830F /* menu_big_ON_270x270.png */,
 				F3FACDAB19338C6E00A4830F /* opciones_big_270x270.png */,
 				F3FACDAC19338C6E00A4830F /* opciones_big_ON_270x270.png */,
+				F323A36E1934F16400F91382 /* sombra_central.png */,
 			);
 			name = queEs;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */,
+				F323A36F1934F16400F91382 /* sombra_central.png in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,

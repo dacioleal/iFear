@@ -324,6 +324,11 @@
                                 <state key="normal" image="menu_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="menu_big_ON_270x270.png"/>
+                                <state key="highlighted" image="menu_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="menuPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="Wpa-4J-fYL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT0-Qt-GRd">
                                 <rect key="frame" x="50" y="418" width="135" height="135"/>
@@ -331,36 +336,61 @@
                                 <state key="normal" image="buscar_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="buscar_big_ON_270x270.png"/>
+                                <state key="highlighted" image="buscar_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="busquedaPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="hEU-h0-Ejc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfa-mm-SS6">
                                 <rect key="frame" x="50" y="581" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="cartelera_big_270x270.png">
+                                <state key="normal" image="cartelera_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="cartelera_big_ON_270x270.png"/>
+                                <state key="highlighted" image="cartelera_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="carteleraPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="YYj-BJ-92f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx3-p1-nIo">
                                 <rect key="frame" x="839" y="245" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="mentes_osc_big_270x270.png">
+                                <state key="normal" image="mentes_osc_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="mentes_osc_big_ON_270x270.png"/>
+                                <state key="highlighted" image="mentes_osc_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="mentesPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="Eqv-M1-Nk9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-Kf-VIB">
                                 <rect key="frame" x="839" y="418" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="actualidad_big_270x270.png">
+                                <state key="normal" image="actualidad_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="actualidad_big_ON_270x270.png"/>
+                                <state key="highlighted" image="actualidad_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="actividadPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="ZmR-SY-OTB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-Ov-Keu">
                                 <rect key="frame" x="839" y="581" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="opciones_big_270x270.png">
+                                <state key="normal" image="opciones_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="opciones_big_ON_270x270.png"/>
+                                <state key="highlighted" image="opciones_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="optionsPushButton:" destination="VVW-1I-Chy" eventType="touchUpInside" id="hZ5-PP-P5P"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-c4-h4o">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-c4-h4o">
                                 <rect key="frame" x="133" y="110" width="759" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -377,13 +407,47 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBv-4x-AeI">
+                                <rect key="frame" x="252" y="226" width="520" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_central.png" translatesAutoresizingMaskIntoConstraints="NO" id="hgq-67-teb">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="520"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPJ-jx-iuD">
+                                        <rect key="frame" x="35" y="60" width="450" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="actividadButton" destination="GFS-Kf-VIB" id="977-H3-20i"/>
+                        <outlet property="busquedaButton" destination="BT0-Qt-GRd" id="371-YZ-VBJ"/>
+                        <outlet property="carteleraButton" destination="rfa-mm-SS6" id="B4t-in-hPH"/>
+                        <outlet property="contentView" destination="XBv-4x-AeI" id="Rme-FC-Eu6"/>
+                        <outlet property="descriptionTextView" destination="gPJ-jx-iuD" id="fOz-1R-eHw"/>
                         <outlet property="headerTextView" destination="nSC-c4-h4o" id="ihp-7z-weB"/>
+                        <outlet property="mentesButton" destination="sx3-p1-nIo" id="6ZL-tl-wcW"/>
+                        <outlet property="menuButton" destination="wDa-fd-zFc" id="Y0a-XG-vTU"/>
+                        <outlet property="optionsButton" destination="KMW-Ov-Keu" id="F8W-Gv-ft8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI6-Tn-f2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1143,6 +1207,7 @@
     </scenes>
     <resources>
         <image name="actualidad_big_270x270.png" width="270" height="270"/>
+        <image name="actualidad_big_ON_270x270.png" width="270" height="270"/>
         <image name="ahorcado.png" width="278" height="1194"/>
         <image name="back.png" width="33" height="33"/>
         <image name="barrotes.png" width="2048" height="1536"/>
@@ -1159,9 +1224,11 @@
         <image name="boton_que_es_iFear.png" width="672" height="228"/>
         <image name="boton_votar_346x156.png" width="346" height="156"/>
         <image name="buscar_big_270x270.png" width="270" height="270"/>
+        <image name="buscar_big_ON_270x270.png" width="270" height="270"/>
         <image name="cadena.png" width="4190" height="96"/>
         <image name="calavera.png" width="190" height="236"/>
         <image name="cartelera_big_270x270.png" width="270" height="270"/>
+        <image name="cartelera_big_ON_270x270.png" width="270" height="270"/>
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_central_1090x1144.png" width="1090" height="1144"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
@@ -1184,12 +1251,16 @@
         <image name="marco_centralB_1106x1268.png" width="1106" height="1268"/>
         <image name="mascara_central_1040x1040.png" width="1040" height="1040"/>
         <image name="mentes_osc_big_270x270.png" width="270" height="270"/>
+        <image name="mentes_osc_big_ON_270x270.png" width="270" height="270"/>
         <image name="menu_big_270x270.png" width="270" height="270"/>
+        <image name="menu_big_ON_270x270.png" width="270" height="270"/>
         <image name="opciones_big_270x270.png" width="270" height="270"/>
+        <image name="opciones_big_ON_270x270.png" width="270" height="270"/>
         <image name="panel_barras_404x1010.png" width="404" height="1010"/>
         <image name="panel_izq_rojo_400x560.png" width="400" height="560"/>
         <image name="panel_votar_400x284.png" width="400" height="284"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
+        <image name="sombra_central.png" width="1024" height="1024"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
