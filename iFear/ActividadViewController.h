@@ -10,4 +10,6 @@
 
 @interface ActividadViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *actividadWebView;
+- (IBAction)backPushButton:(UIButton *)sender;
 @end

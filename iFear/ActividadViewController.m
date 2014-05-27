@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSURL *url = [NSURL URLWithString:@"http://ifearblog.wordpress.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_actividadWebView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +38,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backPushButton:(UIButton *)sender {
+    
+    _actividadWebView.goBack;
+}
 @end

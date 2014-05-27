@@ -63,6 +63,9 @@
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
 		F33594F01934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33594EE1934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg */; };
 		F33594F11934801000BE2027 /* mascara_central_1040x1040.png in Resources */ = {isa = PBXBuildFile; fileRef = F33594EF1934801000BE2027 /* mascara_central_1040x1040.png */; };
+		F33594F41934B35800BE2027 /* arrow-back-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = F33594F31934B35800BE2027 /* arrow-back-outline.png */; };
+		F33594F61934B55200BE2027 /* circle_back_arrow_.png in Resources */ = {isa = PBXBuildFile; fileRef = F33594F51934B55200BE2027 /* circle_back_arrow_.png */; };
+		F33594F81934B66700BE2027 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F33594F71934B66700BE2027 /* back.png */; };
 		F33D145918F8030C00604463 /* marco_central_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145818F8030C00604463 /* marco_central_1106x1268.png */; };
 		F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145A18F809E400604463 /* fondo_central_1090x1144.png */; };
 		F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */; };
@@ -216,6 +219,9 @@
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		F33594EE1934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_que_es_ifear_2048x1536.jpg; sourceTree = "<group>"; };
 		F33594EF1934801000BE2027 /* mascara_central_1040x1040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mascara_central_1040x1040.png; sourceTree = "<group>"; };
+		F33594F31934B35800BE2027 /* arrow-back-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-back-outline.png"; sourceTree = "<group>"; };
+		F33594F51934B55200BE2027 /* circle_back_arrow_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_back_arrow_.png; sourceTree = "<group>"; };
+		F33594F71934B66700BE2027 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		F33D145818F8030C00604463 /* marco_central_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_central_1106x1268.png; sourceTree = "<group>"; };
 		F33D145A18F809E400604463 /* fondo_central_1090x1144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo_central_1090x1144.png; sourceTree = "<group>"; };
 		F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_fichas_2048x1536.jpg; sourceTree = "<group>"; };
@@ -437,6 +443,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F33594F21934B33000BE2027 /* actividad */,
 				F3FACD9C19338C4400A4830F /* queEs */,
 				F358E29218E0BDBE00F6C934 /* app icons */,
 				F307D08518CDC94800F7A50C /* cartelera */,
@@ -565,6 +572,16 @@
 				F332F85218AA99D200A12CEE /* PageContentViewController.m */,
 			);
 			name = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		F33594F21934B33000BE2027 /* actividad */ = {
+			isa = PBXGroup;
+			children = (
+				F33594F31934B35800BE2027 /* arrow-back-outline.png */,
+				F33594F51934B55200BE2027 /* circle_back_arrow_.png */,
+				F33594F71934B66700BE2027 /* back.png */,
+			);
+			name = actividad;
 			sourceTree = "<group>";
 		};
 		F336503018EAAE8A00947CD9 /* MoviesSearch */ = {
@@ -871,6 +888,7 @@
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
 				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
+				F33594F81934B66700BE2027 /* back.png in Resources */,
 				F3FACDBC19338C6E00A4830F /* opciones_big_ON_270x270.png in Resources */,
 				F33594F11934801000BE2027 /* mascara_central_1040x1040.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
@@ -892,6 +910,7 @@
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F3FACDBA19338C6E00A4830F /* menu_big_ON_270x270.png in Resources */,
+				F33594F41934B35800BE2027 /* arrow-back-outline.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */,
 				F3FACDB819338C6E00A4830F /* mentes_osc_big_ON_270x270.png in Resources */,
@@ -907,6 +926,7 @@
 				F358E28418E0271100F6C934 /* fondo_cartelera_2048x1536.jpg in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
+				F33594F61934B55200BE2027 /* circle_back_arrow_.png in Resources */,
 				F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,

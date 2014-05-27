@@ -314,6 +314,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascara_central_1040x1040.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sf1-gn-oQd">
+                                <rect key="frame" x="252" y="226" width="520" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-fd-zFc">
                                 <rect key="frame" x="50" y="245" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -335,17 +339,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-Kf-VIB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx3-p1-nIo">
                                 <rect key="frame" x="839" y="245" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="actualidad_big_270x270.png">
+                                <state key="normal" title="Button" image="mentes_osc_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx3-p1-nIo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-Kf-VIB">
                                 <rect key="frame" x="839" y="418" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="mentes_osc_big_270x270.png">
+                                <state key="normal" title="Button" image="actualidad_big_270x270.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -356,11 +360,31 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSC-c4-h4o">
+                                <rect key="frame" x="133" y="106" width="759" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Bienvenido a iFear, la morada de los aficionados al cine de terror. Pulsa en los iconos de abajo para obtener información sobre las funciones de la aplicación. La navegación principal se realiza mediante el botón de menú        en la esquina superior derecha.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.85297675370000003" blue="0.25236638119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Futura-Light"/>
+                                            <font key="NSOriginalFont" size="14" name="Futura-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="headerTextView" destination="nSC-c4-h4o" id="ihp-7z-weB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI6-Tn-f2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -934,27 +958,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_actividad_zombie.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Df-wgv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_fichas_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-Df-wgv">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actividad Zombie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avd-E3-6rX">
-                                <rect key="frame" x="20" y="20" width="301" height="41"/>
+                            <webView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mV-oZ-XQr">
+                                <rect key="frame" x="0.0" y="106" width="1024" height="662"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZM-vK-476">
+                                <rect key="frame" x="5" y="106" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPushButton:" destination="7Pg-mo-DoX" eventType="touchUpInside" id="vY8-Sy-eDx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="actividadWebView" destination="9mV-oZ-XQr" id="5JW-wB-tl9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmd-2G-pIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3607" y="113"/>
+            <point key="canvasLocation" x="3607" y="116"/>
         </scene>
         <!--Mentes View Controller-->
         <scene sceneID="yaq-3p-8i1">
@@ -1108,6 +1144,7 @@
     <resources>
         <image name="actualidad_big_270x270.png" width="270" height="270"/>
         <image name="ahorcado.png" width="278" height="1194"/>
+        <image name="back.png" width="33" height="33"/>
         <image name="barrotes.png" width="2048" height="1536"/>
         <image name="base_cuchillo_2020x348.png" width="2020" height="348"/>
         <image name="base_estreno_421x1177.png" width="425" height="1177"/>
@@ -1125,7 +1162,6 @@
         <image name="cadena.png" width="4190" height="96"/>
         <image name="calavera.png" width="190" height="236"/>
         <image name="cartelera_big_270x270.png" width="270" height="270"/>
-        <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_central_1090x1144.png" width="1090" height="1144"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
@@ -1146,6 +1182,7 @@
         <image name="icono_menu_invertido.png" width="100" height="100"/>
         <image name="icono_volver.png" width="100" height="100"/>
         <image name="marco_centralB_1106x1268.png" width="1106" height="1268"/>
+        <image name="mascara_central_1040x1040.png" width="1040" height="1040"/>
         <image name="mentes_osc_big_270x270.png" width="270" height="270"/>
         <image name="menu_big_270x270.png" width="270" height="270"/>
         <image name="opciones_big_270x270.png" width="270" height="270"/>

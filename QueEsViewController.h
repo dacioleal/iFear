@@ -10,5 +10,6 @@
 
 @interface QueEsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView *headerTextView;
 
 @end
