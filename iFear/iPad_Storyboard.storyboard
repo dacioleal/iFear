@@ -310,7 +310,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_whats_ifear_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bd3-hF-vub">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_que_es_ifear_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Bd3-hF-vub">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -1133,7 +1133,7 @@
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
         <image name="fondo_ppal.jpg" width="2048" height="1536"/>
-        <image name="fondo_whats_ifear_2048x1536.jpg" width="2048" height="1536"/>
+        <image name="fondo_que_es_ifear_2048x1536.jpg" width="2048" height="1536"/>
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_blu_ray_246x188.png" width="246" height="188"/>
         <image name="icono_buscar.png" width="100" height="100"/>

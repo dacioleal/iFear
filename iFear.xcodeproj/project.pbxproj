@@ -61,6 +61,8 @@
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
+		F33594F01934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33594EE1934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg */; };
+		F33594F11934801000BE2027 /* mascara_central_1040x1040.png in Resources */ = {isa = PBXBuildFile; fileRef = F33594EF1934801000BE2027 /* mascara_central_1040x1040.png */; };
 		F33D145918F8030C00604463 /* marco_central_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145818F8030C00604463 /* marco_central_1106x1268.png */; };
 		F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145A18F809E400604463 /* fondo_central_1090x1144.png */; };
 		F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */; };
@@ -120,7 +122,6 @@
 		F3FACDB119338C6E00A4830F /* cartelera_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */; };
 		F3FACDB219338C6E00A4830F /* cartelera_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */; };
 		F3FACDB319338C6E00A4830F /* ejemplo_menu_966x564.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */; };
-		F3FACDB419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */; };
 		F3FACDB519338C6E00A4830F /* icono_cine_304x224.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */; };
 		F3FACDB619338C6E00A4830F /* icono_dvd_366x260.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */; };
 		F3FACDB719338C6E00A4830F /* mentes_osc_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */; };
@@ -213,6 +214,8 @@
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F33594EE1934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_que_es_ifear_2048x1536.jpg; sourceTree = "<group>"; };
+		F33594EF1934801000BE2027 /* mascara_central_1040x1040.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mascara_central_1040x1040.png; sourceTree = "<group>"; };
 		F33D145818F8030C00604463 /* marco_central_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_central_1106x1268.png; sourceTree = "<group>"; };
 		F33D145A18F809E400604463 /* fondo_central_1090x1144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo_central_1090x1144.png; sourceTree = "<group>"; };
 		F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_fichas_2048x1536.jpg; sourceTree = "<group>"; };
@@ -281,7 +284,6 @@
 		F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartelera_big_270x270.png; sourceTree = "<group>"; };
 		F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartelera_big_ON_270x270.png; sourceTree = "<group>"; };
 		F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ejemplo_menu_966x564.png; sourceTree = "<group>"; };
-		F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_whats_ifear_2048x1536.jpg; sourceTree = "<group>"; };
 		F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cine_304x224.png; sourceTree = "<group>"; };
 		F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_dvd_366x260.png; sourceTree = "<group>"; };
 		F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mentes_osc_big_270x270.png; sourceTree = "<group>"; };
@@ -731,8 +733,9 @@
 				F3FACDA119338C6E00A4830F /* cartelera_big_270x270.png */,
 				F3FACDA219338C6E00A4830F /* cartelera_big_ON_270x270.png */,
 				F3FACDA319338C6E00A4830F /* ejemplo_menu_966x564.png */,
-				F3FACDA419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg */,
 				F3FACDA519338C6E00A4830F /* icono_cine_304x224.png */,
+				F33594EE1934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg */,
+				F33594EF1934801000BE2027 /* mascara_central_1040x1040.png */,
 				F3FACDA619338C6E00A4830F /* icono_dvd_366x260.png */,
 				F3FACDA719338C6E00A4830F /* mentes_osc_big_270x270.png */,
 				F3FACDA819338C6E00A4830F /* mentes_osc_big_ON_270x270.png */,
@@ -869,6 +872,7 @@
 				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F3FACDBC19338C6E00A4830F /* opciones_big_ON_270x270.png in Resources */,
+				F33594F11934801000BE2027 /* mascara_central_1040x1040.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				F3FACDAF19338C6E00A4830F /* buscar_big_270x270.png in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
@@ -891,7 +895,6 @@
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */,
 				F3FACDB819338C6E00A4830F /* mentes_osc_big_ON_270x270.png in Resources */,
-				F3FACDB419338C6E00A4830F /* fondo_whats_ifear_2048x1536.jpg in Resources */,
 				F3FEA6BF190EC35300A4F91C /* Impact.ttf in Resources */,
 				F3FACDB319338C6E00A4830F /* ejemplo_menu_966x564.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
@@ -923,6 +926,7 @@
 				F3FACDAE19338C6E00A4830F /* actualidad_big_ON_270x270.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
+				F33594F01934801000BE2027 /* fondo_que_es_ifear_2048x1536.jpg in Resources */,
 				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
 				F31449A1189A55920007B9B6 /* fondo_mentes_oscuras.jpg in Resources */,
 				F3F927DF1897BC5200BE7964 /* spark.png in Resources */,
