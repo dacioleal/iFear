@@ -2,12 +2,36 @@
 //  BusquedaViewController.h
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 30/01/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Created by José Alberto Martín Falcón on 01/05/14.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "PopoverSelectorBusquedaViewController.h"
+#import "BusquedaSubGeneroViewController.h"
+#import "BusquedaSensacionesViewController.h"
 
-@interface BusquedaViewController : UIViewController
+@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, BusquedaSubGeneroDelegate, BusquedaSensacionesDelegate>
+
+// Botón SWITCH de búsqueda
+@property (weak, nonatomic) IBOutlet UIButton *buscarSensacionesButton;
+@property (weak, nonatomic) IBOutlet UIButton *buscarSubGenButton;
+
+- (IBAction)setStateSwitchs:(id)sender;
+
+// Método cuando se pulsa el botón de buscar
+- (IBAction)pushBuscarButton:(id)sender;
+
+// Popover
+@property (weak, nonatomic) IBOutlet UIButton *popoverSelectedOption;
+@property(strong, nonatomic) UIPopoverController * selectorPopover;
+// Contenido del Popover
+@property (nonatomic, strong) PopoverSelectorBusquedaViewController * popoverContent;
+
+// Método para mostrar el Popover
+- (IBAction)showPopover:(id)sender;
+
+// Container donde se mostrarán los tipo de Búsqueda: Subgeneros o Sensaciones
+@property (weak, nonatomic) IBOutlet UIView *container;
 
 @end
