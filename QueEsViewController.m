@@ -193,7 +193,7 @@
         UIFont *font = [UIFont fontWithName:@"Futura-Book" size:18.0];
         NSMutableAttributedString *descriptionAttributedString = [[NSMutableAttributedString alloc] initWithString:descriptionString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
         
-        // Cambio del atributo de color para las partes del texto en amarillo
+        //Cambio del atributo de color para las partes del texto en amarillo
         textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
         NSRange range;
         range.location = 103;
@@ -235,8 +235,6 @@
 
 - (IBAction)mentesPushButton:(UIButton *)sender {
     
-    
-    
     if (!_mentesButton.selected) {
         
         [self headerTextView:@"MENTES OSCURAS"];
@@ -261,7 +259,6 @@
 
 - (IBAction)actividadPushButton:(UIButton *)sender {
     
-    
     if (!_actividadButton.selected) {
         
         [self headerTextView:@"ACTIVIDAD ZOMBIE"];
@@ -276,7 +273,6 @@
         
         _descriptionTextView.attributedText = descriptionAttributedString;
         _contentView.hidden = NO;
-        
         
     } else {
         [self buttonsUnselected];
@@ -320,7 +316,7 @@
 }
 - (void) buttonsUnselected
 {
-    // Quitamos la selección de todos los botones, se utiliza cuando desactivamos pulsando un botón que ya estaba activado
+    // Quitamos la selección de todos los botones, se utiliza cuando pulsamos de nuevo un botón que ya estaba activado para desactivarlo
     _menuButton.selected = NO;
     _busquedaButton.selected = NO;
     _carteleraButton.selected = NO;
