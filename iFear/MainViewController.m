@@ -117,6 +117,13 @@
     
 }
 
+- (void) loadQueEsViewController
+{
+    UIViewController *queEsViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"queEsViewController"];
+    [self cycleFromViewController:onScreenViewController toViewController:queEsViewController];
+}
+
+
 
 #pragma mark - ViewController animated menu methods
 
@@ -182,6 +189,15 @@
         menuBarView.alpha = 1.0;
     }];
 }
+
+- (void) unselectIcons
+{
+    for (UIButton *buttonEnumerator in menuButtonsArray) {
+        
+        buttonEnumerator.enabled = YES;
+    }
+}
+
 
 #pragma  mark - ViewController display methods
 
