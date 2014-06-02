@@ -18,7 +18,6 @@
     NSArray *trailersArray;
     NSArray *contentViews;
     
-    // //
 }
 
 
