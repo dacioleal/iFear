@@ -17,18 +17,6 @@
 		48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B881927D4F80018DC55 /* BusquedaSensacionesViewController.m */; };
 		48254B8F1927D51B0018DC55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B8E1927D51B0018DC55 /* Constants.m */; };
 		48254B921927D52A0018DC55 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B911927D52A0018DC55 /* ResultadosBusquedaViewController.m */; };
-		48254C491927D8B90018DC55 /* ._barra_busqueda_1810x78.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B961927D8B80018DC55 /* ._barra_busqueda_1810x78.png */; };
-		48254C4A1927D8B90018DC55 /* ._boton_buscar_580x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B971927D8B80018DC55 /* ._boton_buscar_580x100.png */; };
-		48254C4B1927D8B90018DC55 /* ._buscar_sensacion_OFF_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B981927D8B80018DC55 /* ._buscar_sensacion_OFF_540x48.png */; };
-		48254C4C1927D8B90018DC55 /* ._buscar_sensacion_ON_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B991927D8B80018DC55 /* ._buscar_sensacion_ON_540x48.png */; };
-		48254C4D1927D8B90018DC55 /* ._buscar_subgenero_OFF_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9A1927D8B80018DC55 /* ._buscar_subgenero_OFF_540x48.png */; };
-		48254C4E1927D8B90018DC55 /* ._buscar_subgenero_ON_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9B1927D8B80018DC55 /* ._buscar_subgenero_ON_540x48.png */; };
-		48254C4F1927D8B90018DC55 /* ._fondo_buscar_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9C1927D8B80018DC55 /* ._fondo_buscar_2048x1536.jpg */; };
-		48254C501927D8B90018DC55 /* ._selector_director_318x54.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9D1927D8B80018DC55 /* ._selector_director_318x54.png */; };
-		48254C511927D8B90018DC55 /* ._selector_reparto_318x54.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9E1927D8B80018DC55 /* ._selector_reparto_318x54.png */; };
-		48254C521927D8B90018DC55 /* ._selector_titulo_318x54.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254B9F1927D8B80018DC55 /* ._selector_titulo_318x54.png */; };
-		48254C531927D8B90018DC55 /* ._switch_NO_132x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA01927D8B80018DC55 /* ._switch_NO_132x72.png */; };
-		48254C541927D8B90018DC55 /* ._switch_SI_132x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA11927D8B80018DC55 /* ._switch_SI_132x72.png */; };
 		48254C551927D8B90018DC55 /* barra_busqueda_1810x78.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA21927D8B80018DC55 /* barra_busqueda_1810x78.png */; };
 		48254C561927D8B90018DC55 /* boton_buscar_580x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA31927D8B80018DC55 /* boton_buscar_580x100.png */; };
 		48254C571927D8B90018DC55 /* buscar_sensacion_OFF_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA41927D8B80018DC55 /* buscar_sensacion_OFF_540x48.png */; };
@@ -41,31 +29,6 @@
 		48254C5E1927D8B90018DC55 /* selector_titulo_318x54.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BAB1927D8B80018DC55 /* selector_titulo_318x54.png */; };
 		48254C5F1927D8B90018DC55 /* switch_NO_132x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BAC1927D8B80018DC55 /* switch_NO_132x72.png */; };
 		48254C601927D8B90018DC55 /* switch_SI_132x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BAD1927D8B80018DC55 /* switch_SI_132x72.png */; };
-		48254C611927D8B90018DC55 /* ._.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 48254BAF1927D8B80018DC55 /* ._.DS_Store */; };
-		48254C621927D8B90018DC55 /* ._base_sensaciones_1942x235.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB01927D8B80018DC55 /* ._base_sensaciones_1942x235.png */; };
-		48254C631927D8B90018DC55 /* ._guia_indicador_1011x19.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB11927D8B80018DC55 /* ._guia_indicador_1011x19.png */; };
-		48254C641927D8B90018DC55 /* ._icono_calidad_147x142.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB21927D8B80018DC55 /* ._icono_calidad_147x142.png */; };
-		48254C651927D8B90018DC55 /* ._icono_gore_128x164.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB31927D8B80018DC55 /* ._icono_gore_128x164.png */; };
-		48254C661927D8B90018DC55 /* ._icono_humor_129x136.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB41927D8B80018DC55 /* ._icono_humor_129x136.png */; };
-		48254C671927D8B90018DC55 /* ._icono_terror_136x160.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB51927D8B80018DC55 /* ._icono_terror_136x160.png */; };
-		48254C681927D8B90018DC55 /* ._indicador_107x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB61927D8B80018DC55 /* ._indicador_107x58.png */; };
-		48254C691927D8B90018DC55 /* ._rotulo_calidad_124x35.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB71927D8B80018DC55 /* ._rotulo_calidad_124x35.png */; };
-		48254C6A1927D8B90018DC55 /* ._rotulo_gore_79x35.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB81927D8B80018DC55 /* ._rotulo_gore_79x35.png */; };
-		48254C6B1927D8B90018DC55 /* ._rotulo_humor_109x35.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BB91927D8B80018DC55 /* ._rotulo_humor_109x35.png */; };
-		48254C6C1927D8B90018DC55 /* ._rotulo_terror_116x35.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBA1927D8B80018DC55 /* ._rotulo_terror_116x35.png */; };
-		48254C6D1927D8B90018DC55 /* ._signo_mas_amarillo_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBB1927D8B80018DC55 /* ._signo_mas_amarillo_69x69.png */; };
-		48254C6E1927D8B90018DC55 /* ._signo_mas_azul_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBC1927D8B80018DC55 /* ._signo_mas_azul_69x69.png */; };
-		48254C6F1927D8B90018DC55 /* ._signo_mas_rojo_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBD1927D8B80018DC55 /* ._signo_mas_rojo_69x69.png */; };
-		48254C701927D8B90018DC55 /* ._signo_mas_verde_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBE1927D8B80018DC55 /* ._signo_mas_verde_69x69.png */; };
-		48254C711927D8B90018DC55 /* ._signo_menos_amarillo_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BBF1927D8B80018DC55 /* ._signo_menos_amarillo_69x69.png */; };
-		48254C721927D8B90018DC55 /* ._signo_menos_azul_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC01927D8B80018DC55 /* ._signo_menos_azul_69x69.png */; };
-		48254C731927D8B90018DC55 /* ._signo_menos_rojo_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC11927D8B80018DC55 /* ._signo_menos_rojo_69x69.png */; };
-		48254C741927D8B90018DC55 /* ._signo_menos_verde_69x69.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC21927D8B80018DC55 /* ._signo_menos_verde_69x69.png */; };
-		48254C751927D8B90018DC55 /* ._signo_porcentaje_41x37.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC31927D8B80018DC55 /* ._signo_porcentaje_41x37.png */; };
-		48254C761927D8B90018DC55 /* ._trozo_barra_calidad_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC41927D8B80018DC55 /* ._trozo_barra_calidad_50x70.png */; };
-		48254C771927D8B90018DC55 /* ._trozo_barra_gore_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC51927D8B80018DC55 /* ._trozo_barra_gore_50x70.png */; };
-		48254C781927D8B90018DC55 /* ._trozo_barra_humor_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC61927D8B80018DC55 /* ._trozo_barra_humor_50x70.png */; };
-		48254C791927D8B90018DC55 /* ._trozo_barra_terror_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC71927D8B80018DC55 /* ._trozo_barra_terror_50x70.png */; };
 		48254C7A1927D8B90018DC55 /* icono_calidad_147x142.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC81927D8B80018DC55 /* icono_calidad_147x142.png */; };
 		48254C7B1927D8B90018DC55 /* icono_gore_128x164.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BC91927D8B80018DC55 /* icono_gore_128x164.png */; };
 		48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BCA1927D8B80018DC55 /* icono_humor_129x136.png */; };
@@ -89,59 +52,6 @@
 		48254C8E1927D8B90018DC55 /* trozo_barra_gore_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BDC1927D8B80018DC55 /* trozo_barra_gore_50x70.png */; };
 		48254C8F1927D8B90018DC55 /* trozo_barra_humor_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BDD1927D8B80018DC55 /* trozo_barra_humor_50x70.png */; };
 		48254C901927D8B90018DC55 /* trozo_barra_terror_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BDE1927D8B80018DC55 /* trozo_barra_terror_50x70.png */; };
-		48254C911927D8B90018DC55 /* ._.DS_Store in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE01927D8B80018DC55 /* ._.DS_Store */; };
-		48254C921927D8B90018DC55 /* ._boton_animacion_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE11927D8B80018DC55 /* ._boton_animacion_465x127.png */; };
-		48254C931927D8B90018DC55 /* ._boton_animacion_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE21927D8B80018DC55 /* ._boton_animacion_ON_465x127.png */; };
-		48254C941927D8B90018DC55 /* ._boton_asesinos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE31927D8B80018DC55 /* ._boton_asesinos_465x127.png */; };
-		48254C951927D8B90018DC55 /* ._boton_asesinos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE41927D8B80018DC55 /* ._boton_asesinos_ON_465x127.png */; };
-		48254C961927D8B90018DC55 /* ._boton_brujeria_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE51927D8B80018DC55 /* ._boton_brujeria_465x127.png */; };
-		48254C971927D8B90018DC55 /* ._boton_brujeria_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE61927D8B80018DC55 /* ._boton_brujeria_ON_465x127.png */; };
-		48254C981927D8B90018DC55 /* ._boton_casas_enc_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE71927D8B80018DC55 /* ._boton_casas_enc_465x127.png */; };
-		48254C991927D8B90018DC55 /* ._boton_casas_enc_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE81927D8B80018DC55 /* ._boton_casas_enc_ON_465x127.png */; };
-		48254C9A1927D8B90018DC55 /* ._boton_catastrofe_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BE91927D8B80018DC55 /* ._boton_catastrofe_465x127.png */; };
-		48254C9B1927D8B90018DC55 /* ._boton_catastrofe_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BEA1927D8B80018DC55 /* ._boton_catastrofe_ON_465x127.png */; };
-		48254C9C1927D8B90018DC55 /* ._boton_Ci_Fi_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BEB1927D8B80018DC55 /* ._boton_Ci_Fi_465x127.png */; };
-		48254C9D1927D8B90018DC55 /* ._boton_Ci_Fi_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BEC1927D8B80018DC55 /* ._boton_Ci_Fi_ON_465x127.png */; };
-		48254C9E1927D8B90018DC55 /* ._boton_comedia_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BED1927D8B80018DC55 /* ._boton_comedia_465x127.png */; };
-		48254C9F1927D8B90018DC55 /* ._boton_comedia_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BEE1927D8B80018DC55 /* ._boton_comedia_ON_465x127.png */; };
-		48254CA01927D8B90018DC55 /* ._boton_cortomet_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BEF1927D8B80018DC55 /* ._boton_cortomet_465x127.png */; };
-		48254CA11927D8B90018DC55 /* ._boton_cortomet_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF01927D8B80018DC55 /* ._boton_cortomet_ON_465x127.png */; };
-		48254CA21927D8B90018DC55 /* ._boton_documental_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF11927D8B80018DC55 /* ._boton_documental_465x127.png */; };
-		48254CA31927D8B90018DC55 /* ._boton_documental_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF21927D8B80018DC55 /* ._boton_documental_ON_465x127.png */; };
-		48254CA41927D8B90018DC55 /* ._boton_enfermedad_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF31927D8B80018DC55 /* ._boton_enfermedad_465x127.png */; };
-		48254CA51927D8B90018DC55 /* ._boton_enfermedad_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF41927D8B80018DC55 /* ._boton_enfermedad_ON_465x127.png */; };
-		48254CA61927D8B90018DC55 /* ._boton_exorcismos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF51927D8B80018DC55 /* ._boton_exorcismos_465x127.png */; };
-		48254CA71927D8B90018DC55 /* ._boton_exorcismos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF61927D8B80018DC55 /* ._boton_exorcismos_ON_465x127.png */; };
-		48254CA81927D8B90018DC55 /* ._boton_extraterre_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF71927D8B80018DC55 /* ._boton_extraterre_465x127.png */; };
-		48254CA91927D8B90018DC55 /* ._boton_extraterre_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF81927D8B80018DC55 /* ._boton_extraterre_ON_465x127.png */; };
-		48254CAA1927D8B90018DC55 /* ._boton_fake_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BF91927D8B80018DC55 /* ._boton_fake_465x127.png */; };
-		48254CAB1927D8B90018DC55 /* ._boton_fake_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFA1927D8B80018DC55 /* ._boton_fake_ON_465x127.png */; };
-		48254CAC1927D8B90018DC55 /* ._boton_fantasmas_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFB1927D8B80018DC55 /* ._boton_fantasmas_465x127.png */; };
-		48254CAD1927D8B90018DC55 /* ._boton_fantasmas_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFC1927D8B80018DC55 /* ._boton_fantasmas_ON_465x127.png */; };
-		48254CAE1927D8B90018DC55 /* ._boton_giallo_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFD1927D8B80018DC55 /* ._boton_giallo_465x127.png */; };
-		48254CAF1927D8B90018DC55 /* ._boton_giallo_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFE1927D8B80018DC55 /* ._boton_giallo_ON_465x127.png */; };
-		48254CB01927D8B90018DC55 /* ._boton_jhorror_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BFF1927D8B80018DC55 /* ._boton_jhorror_465x127.png */; };
-		48254CB11927D8B90018DC55 /* ._boton_jhorror_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C001927D8B80018DC55 /* ._boton_jhorror_ON_465x127.png */; };
-		48254CB21927D8B90018DC55 /* ._boton_licantropo_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C011927D8B80018DC55 /* ._boton_licantropo_465x127.png */; };
-		48254CB31927D8B90018DC55 /* ._boton_licantropo_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C021927D8B80018DC55 /* ._boton_licantropo_ON_465x127.png */; };
-		48254CB41927D8B90018DC55 /* ._boton_manicomio_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C031927D8B80018DC55 /* ._boton_manicomio_465x127.png */; };
-		48254CB51927D8B90018DC55 /* ._boton_manicomio_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C041927D8B80018DC55 /* ._boton_manicomio_ON_465x127.png */; };
-		48254CB61927D8B90018DC55 /* ._boton_metraje_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C051927D8B80018DC55 /* ._boton_metraje_465x127.png */; };
-		48254CB71927D8B90018DC55 /* ._boton_metraje_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C061927D8B80018DC55 /* ._boton_metraje_ON_465x127.png */; };
-		48254CB81927D8B90018DC55 /* ._boton_monstruos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C071927D8B80018DC55 /* ._boton_monstruos_465x127.png */; };
-		48254CB91927D8B90018DC55 /* ._boton_monstruos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C081927D8B80018DC55 /* ._boton_monstruos_ON_465x127.png */; };
-		48254CBA1927D8B90018DC55 /* ._boton_realidad_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C091927D8B80018DC55 /* ._boton_realidad_465x127.png */; };
-		48254CBB1927D8B90018DC55 /* ._boton_realidad_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0A1927D8B80018DC55 /* ._boton_realidad_ON_465x127.png */; };
-		48254CBC1927D8B90018DC55 /* ._boton_sectas_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0B1927D8B80018DC55 /* ._boton_sectas_465x127.png */; };
-		48254CBD1927D8B90018DC55 /* ._boton_sectas_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0C1927D8B80018DC55 /* ._boton_sectas_ON_465x127.png */; };
-		48254CBE1927D8B90018DC55 /* ._boton_secuela_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0D1927D8B80018DC55 /* ._boton_secuela_465x127.png */; };
-		48254CBF1927D8B90018DC55 /* ._boton_secuela_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0E1927D8B80018DC55 /* ._boton_secuela_ON_465x127.png */; };
-		48254CC01927D8B90018DC55 /* ._boton_serie_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C0F1927D8B80018DC55 /* ._boton_serie_465x127.png */; };
-		48254CC11927D8B90018DC55 /* ._boton_serie_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C101927D8B80018DC55 /* ._boton_serie_ON_465x127.png */; };
-		48254CC21927D8B90018DC55 /* ._boton_vampiros_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C111927D8B80018DC55 /* ._boton_vampiros_465x127.png */; };
-		48254CC31927D8B90018DC55 /* ._boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C121927D8B80018DC55 /* ._boton_vampiros_ON_465x127.png */; };
-		48254CC41927D8B90018DC55 /* ._boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C131927D8B80018DC55 /* ._boton_zombies_465x127.png */; };
-		48254CC51927D8B90018DC55 /* ._boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C141927D8B80018DC55 /* ._boton_zombies_ON_465x127.png */; };
 		48254CC61927D8B90018DC55 /* boton_animacion_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C151927D8B80018DC55 /* boton_animacion_465x127.png */; };
 		48254CC71927D8B90018DC55 /* boton_animacion_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */; };
 		48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */; };
@@ -337,18 +247,6 @@
 		48254B8E1927D51B0018DC55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		48254B901927D52A0018DC55 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
 		48254B911927D52A0018DC55 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
-		48254B961927D8B80018DC55 /* ._barra_busqueda_1810x78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._barra_busqueda_1810x78.png; sourceTree = "<group>"; };
-		48254B971927D8B80018DC55 /* ._boton_buscar_580x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_buscar_580x100.png; sourceTree = "<group>"; };
-		48254B981927D8B80018DC55 /* ._buscar_sensacion_OFF_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._buscar_sensacion_OFF_540x48.png; sourceTree = "<group>"; };
-		48254B991927D8B80018DC55 /* ._buscar_sensacion_ON_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._buscar_sensacion_ON_540x48.png; sourceTree = "<group>"; };
-		48254B9A1927D8B80018DC55 /* ._buscar_subgenero_OFF_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._buscar_subgenero_OFF_540x48.png; sourceTree = "<group>"; };
-		48254B9B1927D8B80018DC55 /* ._buscar_subgenero_ON_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._buscar_subgenero_ON_540x48.png; sourceTree = "<group>"; };
-		48254B9C1927D8B80018DC55 /* ._fondo_buscar_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ._fondo_buscar_2048x1536.jpg; sourceTree = "<group>"; };
-		48254B9D1927D8B80018DC55 /* ._selector_director_318x54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._selector_director_318x54.png; sourceTree = "<group>"; };
-		48254B9E1927D8B80018DC55 /* ._selector_reparto_318x54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._selector_reparto_318x54.png; sourceTree = "<group>"; };
-		48254B9F1927D8B80018DC55 /* ._selector_titulo_318x54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._selector_titulo_318x54.png; sourceTree = "<group>"; };
-		48254BA01927D8B80018DC55 /* ._switch_NO_132x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._switch_NO_132x72.png; sourceTree = "<group>"; };
-		48254BA11927D8B80018DC55 /* ._switch_SI_132x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._switch_SI_132x72.png; sourceTree = "<group>"; };
 		48254BA21927D8B80018DC55 /* barra_busqueda_1810x78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barra_busqueda_1810x78.png; sourceTree = "<group>"; };
 		48254BA31927D8B80018DC55 /* boton_buscar_580x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_buscar_580x100.png; sourceTree = "<group>"; };
 		48254BA41927D8B80018DC55 /* buscar_sensacion_OFF_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buscar_sensacion_OFF_540x48.png; sourceTree = "<group>"; };
@@ -361,31 +259,6 @@
 		48254BAB1927D8B80018DC55 /* selector_titulo_318x54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selector_titulo_318x54.png; sourceTree = "<group>"; };
 		48254BAC1927D8B80018DC55 /* switch_NO_132x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_NO_132x72.png; sourceTree = "<group>"; };
 		48254BAD1927D8B80018DC55 /* switch_SI_132x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = switch_SI_132x72.png; sourceTree = "<group>"; };
-		48254BAF1927D8B80018DC55 /* ._.DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = ._.DS_Store; sourceTree = "<group>"; };
-		48254BB01927D8B80018DC55 /* ._base_sensaciones_1942x235.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._base_sensaciones_1942x235.png; sourceTree = "<group>"; };
-		48254BB11927D8B80018DC55 /* ._guia_indicador_1011x19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._guia_indicador_1011x19.png; sourceTree = "<group>"; };
-		48254BB21927D8B80018DC55 /* ._icono_calidad_147x142.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._icono_calidad_147x142.png; sourceTree = "<group>"; };
-		48254BB31927D8B80018DC55 /* ._icono_gore_128x164.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._icono_gore_128x164.png; sourceTree = "<group>"; };
-		48254BB41927D8B80018DC55 /* ._icono_humor_129x136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._icono_humor_129x136.png; sourceTree = "<group>"; };
-		48254BB51927D8B80018DC55 /* ._icono_terror_136x160.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._icono_terror_136x160.png; sourceTree = "<group>"; };
-		48254BB61927D8B80018DC55 /* ._indicador_107x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._indicador_107x58.png; sourceTree = "<group>"; };
-		48254BB71927D8B80018DC55 /* ._rotulo_calidad_124x35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._rotulo_calidad_124x35.png; sourceTree = "<group>"; };
-		48254BB81927D8B80018DC55 /* ._rotulo_gore_79x35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._rotulo_gore_79x35.png; sourceTree = "<group>"; };
-		48254BB91927D8B80018DC55 /* ._rotulo_humor_109x35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._rotulo_humor_109x35.png; sourceTree = "<group>"; };
-		48254BBA1927D8B80018DC55 /* ._rotulo_terror_116x35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._rotulo_terror_116x35.png; sourceTree = "<group>"; };
-		48254BBB1927D8B80018DC55 /* ._signo_mas_amarillo_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_mas_amarillo_69x69.png; sourceTree = "<group>"; };
-		48254BBC1927D8B80018DC55 /* ._signo_mas_azul_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_mas_azul_69x69.png; sourceTree = "<group>"; };
-		48254BBD1927D8B80018DC55 /* ._signo_mas_rojo_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_mas_rojo_69x69.png; sourceTree = "<group>"; };
-		48254BBE1927D8B80018DC55 /* ._signo_mas_verde_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_mas_verde_69x69.png; sourceTree = "<group>"; };
-		48254BBF1927D8B80018DC55 /* ._signo_menos_amarillo_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_menos_amarillo_69x69.png; sourceTree = "<group>"; };
-		48254BC01927D8B80018DC55 /* ._signo_menos_azul_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_menos_azul_69x69.png; sourceTree = "<group>"; };
-		48254BC11927D8B80018DC55 /* ._signo_menos_rojo_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_menos_rojo_69x69.png; sourceTree = "<group>"; };
-		48254BC21927D8B80018DC55 /* ._signo_menos_verde_69x69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_menos_verde_69x69.png; sourceTree = "<group>"; };
-		48254BC31927D8B80018DC55 /* ._signo_porcentaje_41x37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._signo_porcentaje_41x37.png; sourceTree = "<group>"; };
-		48254BC41927D8B80018DC55 /* ._trozo_barra_calidad_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._trozo_barra_calidad_50x70.png; sourceTree = "<group>"; };
-		48254BC51927D8B80018DC55 /* ._trozo_barra_gore_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._trozo_barra_gore_50x70.png; sourceTree = "<group>"; };
-		48254BC61927D8B80018DC55 /* ._trozo_barra_humor_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._trozo_barra_humor_50x70.png; sourceTree = "<group>"; };
-		48254BC71927D8B80018DC55 /* ._trozo_barra_terror_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._trozo_barra_terror_50x70.png; sourceTree = "<group>"; };
 		48254BC81927D8B80018DC55 /* icono_calidad_147x142.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_calidad_147x142.png; sourceTree = "<group>"; };
 		48254BC91927D8B80018DC55 /* icono_gore_128x164.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_gore_128x164.png; sourceTree = "<group>"; };
 		48254BCA1927D8B80018DC55 /* icono_humor_129x136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_humor_129x136.png; sourceTree = "<group>"; };
@@ -409,59 +282,6 @@
 		48254BDC1927D8B80018DC55 /* trozo_barra_gore_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trozo_barra_gore_50x70.png; sourceTree = "<group>"; };
 		48254BDD1927D8B80018DC55 /* trozo_barra_humor_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trozo_barra_humor_50x70.png; sourceTree = "<group>"; };
 		48254BDE1927D8B80018DC55 /* trozo_barra_terror_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trozo_barra_terror_50x70.png; sourceTree = "<group>"; };
-		48254BE01927D8B80018DC55 /* ._.DS_Store */ = {isa = PBXFileReference; lastKnownFileType = file; path = ._.DS_Store; sourceTree = "<group>"; };
-		48254BE11927D8B80018DC55 /* ._boton_animacion_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_animacion_465x127.png; sourceTree = "<group>"; };
-		48254BE21927D8B80018DC55 /* ._boton_animacion_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_animacion_ON_465x127.png; sourceTree = "<group>"; };
-		48254BE31927D8B80018DC55 /* ._boton_asesinos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_asesinos_465x127.png; sourceTree = "<group>"; };
-		48254BE41927D8B80018DC55 /* ._boton_asesinos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_asesinos_ON_465x127.png; sourceTree = "<group>"; };
-		48254BE51927D8B80018DC55 /* ._boton_brujeria_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_brujeria_465x127.png; sourceTree = "<group>"; };
-		48254BE61927D8B80018DC55 /* ._boton_brujeria_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_brujeria_ON_465x127.png; sourceTree = "<group>"; };
-		48254BE71927D8B80018DC55 /* ._boton_casas_enc_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_casas_enc_465x127.png; sourceTree = "<group>"; };
-		48254BE81927D8B80018DC55 /* ._boton_casas_enc_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_casas_enc_ON_465x127.png; sourceTree = "<group>"; };
-		48254BE91927D8B80018DC55 /* ._boton_catastrofe_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_catastrofe_465x127.png; sourceTree = "<group>"; };
-		48254BEA1927D8B80018DC55 /* ._boton_catastrofe_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_catastrofe_ON_465x127.png; sourceTree = "<group>"; };
-		48254BEB1927D8B80018DC55 /* ._boton_Ci_Fi_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_Ci_Fi_465x127.png; sourceTree = "<group>"; };
-		48254BEC1927D8B80018DC55 /* ._boton_Ci_Fi_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_Ci_Fi_ON_465x127.png; sourceTree = "<group>"; };
-		48254BED1927D8B80018DC55 /* ._boton_comedia_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_comedia_465x127.png; sourceTree = "<group>"; };
-		48254BEE1927D8B80018DC55 /* ._boton_comedia_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_comedia_ON_465x127.png; sourceTree = "<group>"; };
-		48254BEF1927D8B80018DC55 /* ._boton_cortomet_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_cortomet_465x127.png; sourceTree = "<group>"; };
-		48254BF01927D8B80018DC55 /* ._boton_cortomet_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_cortomet_ON_465x127.png; sourceTree = "<group>"; };
-		48254BF11927D8B80018DC55 /* ._boton_documental_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_documental_465x127.png; sourceTree = "<group>"; };
-		48254BF21927D8B80018DC55 /* ._boton_documental_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_documental_ON_465x127.png; sourceTree = "<group>"; };
-		48254BF31927D8B80018DC55 /* ._boton_enfermedad_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_enfermedad_465x127.png; sourceTree = "<group>"; };
-		48254BF41927D8B80018DC55 /* ._boton_enfermedad_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_enfermedad_ON_465x127.png; sourceTree = "<group>"; };
-		48254BF51927D8B80018DC55 /* ._boton_exorcismos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_exorcismos_465x127.png; sourceTree = "<group>"; };
-		48254BF61927D8B80018DC55 /* ._boton_exorcismos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_exorcismos_ON_465x127.png; sourceTree = "<group>"; };
-		48254BF71927D8B80018DC55 /* ._boton_extraterre_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_extraterre_465x127.png; sourceTree = "<group>"; };
-		48254BF81927D8B80018DC55 /* ._boton_extraterre_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_extraterre_ON_465x127.png; sourceTree = "<group>"; };
-		48254BF91927D8B80018DC55 /* ._boton_fake_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_fake_465x127.png; sourceTree = "<group>"; };
-		48254BFA1927D8B80018DC55 /* ._boton_fake_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_fake_ON_465x127.png; sourceTree = "<group>"; };
-		48254BFB1927D8B80018DC55 /* ._boton_fantasmas_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_fantasmas_465x127.png; sourceTree = "<group>"; };
-		48254BFC1927D8B80018DC55 /* ._boton_fantasmas_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_fantasmas_ON_465x127.png; sourceTree = "<group>"; };
-		48254BFD1927D8B80018DC55 /* ._boton_giallo_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_giallo_465x127.png; sourceTree = "<group>"; };
-		48254BFE1927D8B80018DC55 /* ._boton_giallo_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_giallo_ON_465x127.png; sourceTree = "<group>"; };
-		48254BFF1927D8B80018DC55 /* ._boton_jhorror_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_jhorror_465x127.png; sourceTree = "<group>"; };
-		48254C001927D8B80018DC55 /* ._boton_jhorror_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_jhorror_ON_465x127.png; sourceTree = "<group>"; };
-		48254C011927D8B80018DC55 /* ._boton_licantropo_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_licantropo_465x127.png; sourceTree = "<group>"; };
-		48254C021927D8B80018DC55 /* ._boton_licantropo_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_licantropo_ON_465x127.png; sourceTree = "<group>"; };
-		48254C031927D8B80018DC55 /* ._boton_manicomio_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_manicomio_465x127.png; sourceTree = "<group>"; };
-		48254C041927D8B80018DC55 /* ._boton_manicomio_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_manicomio_ON_465x127.png; sourceTree = "<group>"; };
-		48254C051927D8B80018DC55 /* ._boton_metraje_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_metraje_465x127.png; sourceTree = "<group>"; };
-		48254C061927D8B80018DC55 /* ._boton_metraje_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_metraje_ON_465x127.png; sourceTree = "<group>"; };
-		48254C071927D8B80018DC55 /* ._boton_monstruos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_monstruos_465x127.png; sourceTree = "<group>"; };
-		48254C081927D8B80018DC55 /* ._boton_monstruos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_monstruos_ON_465x127.png; sourceTree = "<group>"; };
-		48254C091927D8B80018DC55 /* ._boton_realidad_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_realidad_465x127.png; sourceTree = "<group>"; };
-		48254C0A1927D8B80018DC55 /* ._boton_realidad_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_realidad_ON_465x127.png; sourceTree = "<group>"; };
-		48254C0B1927D8B80018DC55 /* ._boton_sectas_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_sectas_465x127.png; sourceTree = "<group>"; };
-		48254C0C1927D8B80018DC55 /* ._boton_sectas_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_sectas_ON_465x127.png; sourceTree = "<group>"; };
-		48254C0D1927D8B80018DC55 /* ._boton_secuela_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_secuela_465x127.png; sourceTree = "<group>"; };
-		48254C0E1927D8B80018DC55 /* ._boton_secuela_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_secuela_ON_465x127.png; sourceTree = "<group>"; };
-		48254C0F1927D8B80018DC55 /* ._boton_serie_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_serie_465x127.png; sourceTree = "<group>"; };
-		48254C101927D8B80018DC55 /* ._boton_serie_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_serie_ON_465x127.png; sourceTree = "<group>"; };
-		48254C111927D8B80018DC55 /* ._boton_vampiros_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_vampiros_465x127.png; sourceTree = "<group>"; };
-		48254C121927D8B80018DC55 /* ._boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
-		48254C131927D8B80018DC55 /* ._boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_zombies_465x127.png; sourceTree = "<group>"; };
-		48254C141927D8B80018DC55 /* ._boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
 		48254C151927D8B80018DC55 /* boton_animacion_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_animacion_465x127.png; sourceTree = "<group>"; };
 		48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_animacion_ON_465x127.png; sourceTree = "<group>"; };
 		48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinos_465x127.png; sourceTree = "<group>"; };
@@ -714,18 +534,6 @@
 		48254B951927D8B80018DC55 /* Archivos comunes */ = {
 			isa = PBXGroup;
 			children = (
-				48254B961927D8B80018DC55 /* ._barra_busqueda_1810x78.png */,
-				48254B971927D8B80018DC55 /* ._boton_buscar_580x100.png */,
-				48254B981927D8B80018DC55 /* ._buscar_sensacion_OFF_540x48.png */,
-				48254B991927D8B80018DC55 /* ._buscar_sensacion_ON_540x48.png */,
-				48254B9A1927D8B80018DC55 /* ._buscar_subgenero_OFF_540x48.png */,
-				48254B9B1927D8B80018DC55 /* ._buscar_subgenero_ON_540x48.png */,
-				48254B9C1927D8B80018DC55 /* ._fondo_buscar_2048x1536.jpg */,
-				48254B9D1927D8B80018DC55 /* ._selector_director_318x54.png */,
-				48254B9E1927D8B80018DC55 /* ._selector_reparto_318x54.png */,
-				48254B9F1927D8B80018DC55 /* ._selector_titulo_318x54.png */,
-				48254BA01927D8B80018DC55 /* ._switch_NO_132x72.png */,
-				48254BA11927D8B80018DC55 /* ._switch_SI_132x72.png */,
 				48254BA21927D8B80018DC55 /* barra_busqueda_1810x78.png */,
 				48254BA31927D8B80018DC55 /* boton_buscar_580x100.png */,
 				48254BA41927D8B80018DC55 /* buscar_sensacion_OFF_540x48.png */,
@@ -745,31 +553,6 @@
 		48254BAE1927D8B80018DC55 /* Sección sensaciones */ = {
 			isa = PBXGroup;
 			children = (
-				48254BAF1927D8B80018DC55 /* ._.DS_Store */,
-				48254BB01927D8B80018DC55 /* ._base_sensaciones_1942x235.png */,
-				48254BB11927D8B80018DC55 /* ._guia_indicador_1011x19.png */,
-				48254BB21927D8B80018DC55 /* ._icono_calidad_147x142.png */,
-				48254BB31927D8B80018DC55 /* ._icono_gore_128x164.png */,
-				48254BB41927D8B80018DC55 /* ._icono_humor_129x136.png */,
-				48254BB51927D8B80018DC55 /* ._icono_terror_136x160.png */,
-				48254BB61927D8B80018DC55 /* ._indicador_107x58.png */,
-				48254BB71927D8B80018DC55 /* ._rotulo_calidad_124x35.png */,
-				48254BB81927D8B80018DC55 /* ._rotulo_gore_79x35.png */,
-				48254BB91927D8B80018DC55 /* ._rotulo_humor_109x35.png */,
-				48254BBA1927D8B80018DC55 /* ._rotulo_terror_116x35.png */,
-				48254BBB1927D8B80018DC55 /* ._signo_mas_amarillo_69x69.png */,
-				48254BBC1927D8B80018DC55 /* ._signo_mas_azul_69x69.png */,
-				48254BBD1927D8B80018DC55 /* ._signo_mas_rojo_69x69.png */,
-				48254BBE1927D8B80018DC55 /* ._signo_mas_verde_69x69.png */,
-				48254BBF1927D8B80018DC55 /* ._signo_menos_amarillo_69x69.png */,
-				48254BC01927D8B80018DC55 /* ._signo_menos_azul_69x69.png */,
-				48254BC11927D8B80018DC55 /* ._signo_menos_rojo_69x69.png */,
-				48254BC21927D8B80018DC55 /* ._signo_menos_verde_69x69.png */,
-				48254BC31927D8B80018DC55 /* ._signo_porcentaje_41x37.png */,
-				48254BC41927D8B80018DC55 /* ._trozo_barra_calidad_50x70.png */,
-				48254BC51927D8B80018DC55 /* ._trozo_barra_gore_50x70.png */,
-				48254BC61927D8B80018DC55 /* ._trozo_barra_humor_50x70.png */,
-				48254BC71927D8B80018DC55 /* ._trozo_barra_terror_50x70.png */,
 				48254BC81927D8B80018DC55 /* icono_calidad_147x142.png */,
 				48254BC91927D8B80018DC55 /* icono_gore_128x164.png */,
 				48254BCA1927D8B80018DC55 /* icono_humor_129x136.png */,
@@ -800,59 +583,6 @@
 		48254BDF1927D8B80018DC55 /* Sección subgéneros */ = {
 			isa = PBXGroup;
 			children = (
-				48254BE01927D8B80018DC55 /* ._.DS_Store */,
-				48254BE11927D8B80018DC55 /* ._boton_animacion_465x127.png */,
-				48254BE21927D8B80018DC55 /* ._boton_animacion_ON_465x127.png */,
-				48254BE31927D8B80018DC55 /* ._boton_asesinos_465x127.png */,
-				48254BE41927D8B80018DC55 /* ._boton_asesinos_ON_465x127.png */,
-				48254BE51927D8B80018DC55 /* ._boton_brujeria_465x127.png */,
-				48254BE61927D8B80018DC55 /* ._boton_brujeria_ON_465x127.png */,
-				48254BE71927D8B80018DC55 /* ._boton_casas_enc_465x127.png */,
-				48254BE81927D8B80018DC55 /* ._boton_casas_enc_ON_465x127.png */,
-				48254BE91927D8B80018DC55 /* ._boton_catastrofe_465x127.png */,
-				48254BEA1927D8B80018DC55 /* ._boton_catastrofe_ON_465x127.png */,
-				48254BEB1927D8B80018DC55 /* ._boton_Ci_Fi_465x127.png */,
-				48254BEC1927D8B80018DC55 /* ._boton_Ci_Fi_ON_465x127.png */,
-				48254BED1927D8B80018DC55 /* ._boton_comedia_465x127.png */,
-				48254BEE1927D8B80018DC55 /* ._boton_comedia_ON_465x127.png */,
-				48254BEF1927D8B80018DC55 /* ._boton_cortomet_465x127.png */,
-				48254BF01927D8B80018DC55 /* ._boton_cortomet_ON_465x127.png */,
-				48254BF11927D8B80018DC55 /* ._boton_documental_465x127.png */,
-				48254BF21927D8B80018DC55 /* ._boton_documental_ON_465x127.png */,
-				48254BF31927D8B80018DC55 /* ._boton_enfermedad_465x127.png */,
-				48254BF41927D8B80018DC55 /* ._boton_enfermedad_ON_465x127.png */,
-				48254BF51927D8B80018DC55 /* ._boton_exorcismos_465x127.png */,
-				48254BF61927D8B80018DC55 /* ._boton_exorcismos_ON_465x127.png */,
-				48254BF71927D8B80018DC55 /* ._boton_extraterre_465x127.png */,
-				48254BF81927D8B80018DC55 /* ._boton_extraterre_ON_465x127.png */,
-				48254BF91927D8B80018DC55 /* ._boton_fake_465x127.png */,
-				48254BFA1927D8B80018DC55 /* ._boton_fake_ON_465x127.png */,
-				48254BFB1927D8B80018DC55 /* ._boton_fantasmas_465x127.png */,
-				48254BFC1927D8B80018DC55 /* ._boton_fantasmas_ON_465x127.png */,
-				48254BFD1927D8B80018DC55 /* ._boton_giallo_465x127.png */,
-				48254BFE1927D8B80018DC55 /* ._boton_giallo_ON_465x127.png */,
-				48254BFF1927D8B80018DC55 /* ._boton_jhorror_465x127.png */,
-				48254C001927D8B80018DC55 /* ._boton_jhorror_ON_465x127.png */,
-				48254C011927D8B80018DC55 /* ._boton_licantropo_465x127.png */,
-				48254C021927D8B80018DC55 /* ._boton_licantropo_ON_465x127.png */,
-				48254C031927D8B80018DC55 /* ._boton_manicomio_465x127.png */,
-				48254C041927D8B80018DC55 /* ._boton_manicomio_ON_465x127.png */,
-				48254C051927D8B80018DC55 /* ._boton_metraje_465x127.png */,
-				48254C061927D8B80018DC55 /* ._boton_metraje_ON_465x127.png */,
-				48254C071927D8B80018DC55 /* ._boton_monstruos_465x127.png */,
-				48254C081927D8B80018DC55 /* ._boton_monstruos_ON_465x127.png */,
-				48254C091927D8B80018DC55 /* ._boton_realidad_465x127.png */,
-				48254C0A1927D8B80018DC55 /* ._boton_realidad_ON_465x127.png */,
-				48254C0B1927D8B80018DC55 /* ._boton_sectas_465x127.png */,
-				48254C0C1927D8B80018DC55 /* ._boton_sectas_ON_465x127.png */,
-				48254C0D1927D8B80018DC55 /* ._boton_secuela_465x127.png */,
-				48254C0E1927D8B80018DC55 /* ._boton_secuela_ON_465x127.png */,
-				48254C0F1927D8B80018DC55 /* ._boton_serie_465x127.png */,
-				48254C101927D8B80018DC55 /* ._boton_serie_ON_465x127.png */,
-				48254C111927D8B80018DC55 /* ._boton_vampiros_465x127.png */,
-				48254C121927D8B80018DC55 /* ._boton_vampiros_ON_465x127.png */,
-				48254C131927D8B80018DC55 /* ._boton_zombies_465x127.png */,
-				48254C141927D8B80018DC55 /* ._boton_zombies_ON_465x127.png */,
 				48254C151927D8B80018DC55 /* boton_animacion_465x127.png */,
 				48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */,
 				48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */,
@@ -1396,119 +1126,75 @@
 			files = (
 				F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */,
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
-				48254C941927D8B90018DC55 /* ._boton_asesinos_465x127.png in Resources */,
-				48254C6F1927D8B90018DC55 /* ._signo_mas_rojo_69x69.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
 				48254C871927D8B90018DC55 /* signo_menos_amarillo_69x69.png in Resources */,
-				48254CB71927D8B90018DC55 /* ._boton_metraje_ON_465x127.png in Resources */,
 				F30EE4BD18A23AF60040CCDD /* logo_ifear.png in Resources */,
-				48254CC11927D8B90018DC55 /* ._boton_serie_ON_465x127.png in Resources */,
 				48254C5C1927D8B90018DC55 /* selector_director_318x54.png in Resources */,
-				48254C6E1927D8B90018DC55 /* ._signo_mas_azul_69x69.png in Resources */,
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */,
 				48254CD51927D8B90018DC55 /* boton_cortomet_ON_465x127.png in Resources */,
 				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
 				48254C851927D8B90018DC55 /* signo_mas_rojo_69x69.png in Resources */,
 				48254C8B1927D8B90018DC55 /* signo_porcentaje_41x37.png in Resources */,
-				48254C921927D8B90018DC55 /* ._boton_animacion_465x127.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
 				F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */,
 				48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */,
 				F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */,
-				48254CA71927D8B90018DC55 /* ._boton_exorcismos_ON_465x127.png in Resources */,
-				48254C9D1927D8B90018DC55 /* ._boton_Ci_Fi_ON_465x127.png in Resources */,
-				48254CA31927D8B90018DC55 /* ._boton_documental_ON_465x127.png in Resources */,
 				48254CE91927D8B90018DC55 /* boton_manicomio_ON_465x127.png in Resources */,
-				48254C641927D8B90018DC55 /* ._icono_calidad_147x142.png in Resources */,
 				F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */,
-				48254C9C1927D8B90018DC55 /* ._boton_Ci_Fi_465x127.png in Resources */,
 				F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */,
 				F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */,
 				F37CEB1B18FC04050085701C /* boton_panel_izq_330x102.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
-				48254C731927D8B90018DC55 /* ._signo_menos_rojo_69x69.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
-				48254C911927D8B90018DC55 /* ._.DS_Store in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
 				48254C831927D8B90018DC55 /* signo_mas_amarillo_69x69.png in Resources */,
 				F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */,
 				48254CD11927D8B90018DC55 /* boton_Ci_Fi_ON_465x127.png in Resources */,
-				48254CB91927D8B90018DC55 /* ._boton_monstruos_ON_465x127.png in Resources */,
 				48254C841927D8B90018DC55 /* signo_mas_azul_69x69.png in Resources */,
-				48254CBF1927D8B90018DC55 /* ._boton_secuela_ON_465x127.png in Resources */,
 				F3144A00189ABC890007B9B6 /* cadena.png in Resources */,
 				48254CDA1927D8B90018DC55 /* boton_exorcismos_465x127.png in Resources */,
 				F358E29118E09CC200F6C934 /* triangulo_arriba_96x42.png in Resources */,
-				48254CA81927D8B90018DC55 /* ._boton_extraterre_465x127.png in Resources */,
 				F31449FE189ABC890007B9B6 /* boton_entrar.png in Resources */,
-				48254CBA1927D8B90018DC55 /* ._boton_realidad_465x127.png in Resources */,
-				48254CB81927D8B90018DC55 /* ._boton_monstruos_465x127.png in Resources */,
 				48254CCB1927D8B90018DC55 /* boton_brujeria_ON_465x127.png in Resources */,
 				F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */,
 				F31449F4189AB93D0007B9B6 /* sonido_reja.mp3 in Resources */,
 				48254CED1927D8B90018DC55 /* boton_monstruos_ON_465x127.png in Resources */,
 				48254CD31927D8B90018DC55 /* boton_comedia_ON_465x127.png in Resources */,
-				48254C501927D8B90018DC55 /* ._selector_director_318x54.png in Resources */,
 				48254C7E1927D8B90018DC55 /* indicador_107x58.png in Resources */,
-				48254C4A1927D8B90018DC55 /* ._boton_buscar_580x100.png in Resources */,
-				48254CAC1927D8B90018DC55 /* ._boton_fantasmas_465x127.png in Resources */,
 				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
 				48254CE81927D8B90018DC55 /* boton_manicomio_465x127.png in Resources */,
 				F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				48254CE01927D8B90018DC55 /* boton_fantasmas_465x127.png in Resources */,
-				48254C721927D8B90018DC55 /* ._signo_menos_azul_69x69.png in Resources */,
 				48254CE41927D8B90018DC55 /* boton_jhorror_465x127.png in Resources */,
-				48254CAF1927D8B90018DC55 /* ._boton_giallo_ON_465x127.png in Resources */,
-				48254CBB1927D8B90018DC55 /* ._boton_realidad_ON_465x127.png in Resources */,
-				48254CB41927D8B90018DC55 /* ._boton_manicomio_465x127.png in Resources */,
 				48254CEA1927D8B90018DC55 /* boton_metraje_465x127.png in Resources */,
-				48254CAA1927D8B90018DC55 /* ._boton_fake_465x127.png in Resources */,
-				48254CB61927D8B90018DC55 /* ._boton_metraje_465x127.png in Resources */,
 				48254CD41927D8B90018DC55 /* boton_cortomet_465x127.png in Resources */,
 				F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */,
 				F37CEB1C18FC04050085701C /* boton_panel_izq_ON_330x102.png in Resources */,
-				48254CA21927D8B90018DC55 /* ._boton_documental_465x127.png in Resources */,
-				48254CB51927D8B90018DC55 /* ._boton_manicomio_ON_465x127.png in Resources */,
 				48254C8F1927D8B90018DC55 /* trozo_barra_humor_50x70.png in Resources */,
-				48254CBD1927D8B90018DC55 /* ._boton_sectas_ON_465x127.png in Resources */,
 				48254CCC1927D8B90018DC55 /* boton_casas_enc_465x127.png in Resources */,
 				48254CE71927D8B90018DC55 /* boton_licantropo_ON_465x127.png in Resources */,
-				48254C981927D8B90018DC55 /* ._boton_casas_enc_465x127.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
-				48254CA01927D8B90018DC55 /* ._boton_cortomet_465x127.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */,
-				48254CAB1927D8B90018DC55 /* ._boton_fake_ON_465x127.png in Resources */,
 				48254CE21927D8B90018DC55 /* boton_giallo_465x127.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
-				48254CC41927D8B90018DC55 /* ._boton_zombies_465x127.png in Resources */,
 				48254CF21927D8B90018DC55 /* boton_secuela_465x127.png in Resources */,
 				48254C801927D8B90018DC55 /* rotulo_gore_79x35.png in Resources */,
 				48254CEB1927D8B90018DC55 /* boton_metraje_ON_465x127.png in Resources */,
-				48254CA91927D8B90018DC55 /* ._boton_extraterre_ON_465x127.png in Resources */,
-				48254C4D1927D8B90018DC55 /* ._buscar_subgenero_OFF_540x48.png in Resources */,
-				48254C6C1927D8B90018DC55 /* ._rotulo_terror_116x35.png in Resources */,
 				48254C601927D8B90018DC55 /* switch_SI_132x72.png in Resources */,
-				48254C521927D8B90018DC55 /* ._selector_titulo_318x54.png in Resources */,
 				F3144A02189ABC890007B9B6 /* reja.png in Resources */,
 				F304102718B752CC006273F0 /* zombie_01.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
-				48254CA11927D8B90018DC55 /* ._boton_cortomet_ON_465x127.png in Resources */,
 				48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */,
-				48254C771927D8B90018DC55 /* ._trozo_barra_gore_50x70.png in Resources */,
-				48254C511927D8B90018DC55 /* ._selector_reparto_318x54.png in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
-				48254CA61927D8B90018DC55 /* ._boton_exorcismos_465x127.png in Resources */,
 				F33D145918F8030C00604463 /* marco_central_1106x1268.png in Resources */,
-				48254C671927D8B90018DC55 /* ._icono_terror_136x160.png in Resources */,
 				48254C811927D8B90018DC55 /* rotulo_humor_109x35.png in Resources */,
-				48254C9B1927D8B90018DC55 /* ._boton_catastrofe_ON_465x127.png in Resources */,
 				48254C5E1927D8B90018DC55 /* selector_titulo_318x54.png in Resources */,
 				48254CE11927D8B90018DC55 /* boton_fantasmas_ON_465x127.png in Resources */,
 				F397F25818EC2493000D6309 /* icono_blu_ray_246x188.png in Resources */,
@@ -1520,29 +1206,21 @@
 				48254CDF1927D8B90018DC55 /* boton_fake_ON_465x127.png in Resources */,
 				48254CD61927D8B90018DC55 /* boton_documental_465x127.png in Resources */,
 				F3BF77E3188450CC00818986 /* icono_actividad_zombie.png in Resources */,
-				48254C621927D8B90018DC55 /* ._base_sensaciones_1942x235.png in Resources */,
 				48254C5F1927D8B90018DC55 /* switch_NO_132x72.png in Resources */,
-				48254CAE1927D8B90018DC55 /* ._boton_giallo_465x127.png in Resources */,
 				48254CF31927D8B90018DC55 /* boton_secuela_ON_465x127.png in Resources */,
 				48254CF51927D8B90018DC55 /* boton_serie_ON_465x127.png in Resources */,
-				48254C9A1927D8B90018DC55 /* ._boton_catastrofe_465x127.png in Resources */,
 				48254C551927D8B90018DC55 /* barra_busqueda_1810x78.png in Resources */,
-				48254CAD1927D8B90018DC55 /* ._boton_fantasmas_ON_465x127.png in Resources */,
 				48254CD01927D8B90018DC55 /* boton_Ci_Fi_465x127.png in Resources */,
-				48254C711927D8B90018DC55 /* ._signo_menos_amarillo_69x69.png in Resources */,
 				48254CD71927D8B90018DC55 /* boton_documental_ON_465x127.png in Resources */,
 				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
-				48254CC01927D8B90018DC55 /* ._boton_serie_465x127.png in Resources */,
 				F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */,
 				48254CD91927D8B90018DC55 /* boton_enfermedad_ON_465x127.png in Resources */,
 				48254C5B1927D8B90018DC55 /* fondo_buscar_2048x1536.jpg in Resources */,
 				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
 				48254C5A1927D8B90018DC55 /* buscar_subgenero_ON_540x48.png in Resources */,
 				48254C5D1927D8B90018DC55 /* selector_reparto_318x54.png in Resources */,
-				48254C541927D8B90018DC55 /* ._switch_SI_132x72.png in Resources */,
 				F3FEA6C9190ECB0B00A4F91C /* FuturaBook.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
-				48254C4F1927D8B90018DC55 /* ._fondo_buscar_2048x1536.jpg in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
@@ -1554,26 +1232,16 @@
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				48254C8A1927D8B90018DC55 /* signo_menos_verde_69x69.png in Resources */,
 				F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */,
-				48254CB01927D8B90018DC55 /* ._boton_jhorror_465x127.png in Resources */,
 				48254CD81927D8B90018DC55 /* boton_enfermedad_465x127.png in Resources */,
 				48254C561927D8B90018DC55 /* boton_buscar_580x100.png in Resources */,
-				48254C931927D8B90018DC55 /* ._boton_animacion_ON_465x127.png in Resources */,
-				48254C991927D8B90018DC55 /* ._boton_casas_enc_ON_465x127.png in Resources */,
-				48254C631927D8B90018DC55 /* ._guia_indicador_1011x19.png in Resources */,
-				48254C791927D8B90018DC55 /* ._trozo_barra_terror_50x70.png in Resources */,
 				48254C861927D8B90018DC55 /* signo_mas_verde_69x69.png in Resources */,
 				48254CC61927D8B90018DC55 /* boton_animacion_465x127.png in Resources */,
 				48254C7A1927D8B90018DC55 /* icono_calidad_147x142.png in Resources */,
-				48254C531927D8B90018DC55 /* ._switch_NO_132x72.png in Resources */,
-				48254CB11927D8B90018DC55 /* ._boton_jhorror_ON_465x127.png in Resources */,
 				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
-				48254C6D1927D8B90018DC55 /* ._signo_mas_amarillo_69x69.png in Resources */,
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
 				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,
 				48254CEF1927D8B90018DC55 /* boton_realidad_ON_465x127.png in Resources */,
-				48254C751927D8B90018DC55 /* ._signo_porcentaje_41x37.png in Resources */,
 				48254CE61927D8B90018DC55 /* boton_licantropo_465x127.png in Resources */,
-				48254C6A1927D8B90018DC55 /* ._rotulo_gore_79x35.png in Resources */,
 				48254CC91927D8B90018DC55 /* boton_asesinos_ON_465x127.png in Resources */,
 				48254C8E1927D8B90018DC55 /* trozo_barra_gore_50x70.png in Resources */,
 				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
@@ -1584,70 +1252,42 @@
 				48254CDC1927D8B90018DC55 /* boton_extraterre_465x127.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
-				48254C951927D8B90018DC55 /* ._boton_asesinos_ON_465x127.png in Resources */,
 				48254CE51927D8B90018DC55 /* boton_jhorror_ON_465x127.png in Resources */,
-				48254CBC1927D8B90018DC55 /* ._boton_sectas_465x127.png in Resources */,
-				48254CC31927D8B90018DC55 /* ._boton_vampiros_ON_465x127.png in Resources */,
-				48254C611927D8B90018DC55 /* ._.DS_Store in Resources */,
 				48254CF41927D8B90018DC55 /* boton_serie_465x127.png in Resources */,
 				F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */,
-				48254C741927D8B90018DC55 /* ._signo_menos_verde_69x69.png in Resources */,
 				48254C8D1927D8B90018DC55 /* trozo_barra_calidad_50x70.png in Resources */,
-				48254CA41927D8B90018DC55 /* ._boton_enfermedad_465x127.png in Resources */,
-				48254C761927D8B90018DC55 /* ._trozo_barra_calidad_50x70.png in Resources */,
 				48254C891927D8B90018DC55 /* signo_menos_rojo_69x69.png in Resources */,
 				48254CEE1927D8B90018DC55 /* boton_realidad_465x127.png in Resources */,
 				48254CD21927D8B90018DC55 /* boton_comedia_465x127.png in Resources */,
-				48254CC21927D8B90018DC55 /* ._boton_vampiros_465x127.png in Resources */,
 				48254CCF1927D8B90018DC55 /* boton_catastrofe_ON_465x127.png in Resources */,
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				48254CEC1927D8B90018DC55 /* boton_monstruos_465x127.png in Resources */,
 				48254C881927D8B90018DC55 /* signo_menos_azul_69x69.png in Resources */,
-				48254C661927D8B90018DC55 /* ._icono_humor_129x136.png in Resources */,
 				48254C7F1927D8B90018DC55 /* rotulo_calidad_124x35.png in Resources */,
-				48254CC51927D8B90018DC55 /* ._boton_zombies_ON_465x127.png in Resources */,
 				48254CDD1927D8B90018DC55 /* boton_extraterre_ON_465x127.png in Resources */,
 				F34C0E2E18E4369E0032C1C4 /* icono_app@2x.png in Resources */,
 				48254C821927D8B90018DC55 /* rotulo_terror_116x35.png in Resources */,
-				48254C651927D8B90018DC55 /* ._icono_gore_128x164.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */,
 				48254C581927D8B90018DC55 /* buscar_sensacion_ON_540x48.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
-				48254C4B1927D8B90018DC55 /* ._buscar_sensacion_OFF_540x48.png in Resources */,
-				48254C971927D8B90018DC55 /* ._boton_brujeria_ON_465x127.png in Resources */,
-				48254CB21927D8B90018DC55 /* ._boton_licantropo_465x127.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
-				48254C961927D8B90018DC55 /* ._boton_brujeria_465x127.png in Resources */,
 				48254C571927D8B90018DC55 /* buscar_sensacion_OFF_540x48.png in Resources */,
-				48254C6B1927D8B90018DC55 /* ._rotulo_humor_109x35.png in Resources */,
-				48254C681927D8B90018DC55 /* ._indicador_107x58.png in Resources */,
 				48254CCE1927D8B90018DC55 /* boton_catastrofe_465x127.png in Resources */,
-				48254CBE1927D8B90018DC55 /* ._boton_secuela_465x127.png in Resources */,
 				F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */,
-				48254CA51927D8B90018DC55 /* ._boton_enfermedad_ON_465x127.png in Resources */,
 				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				48254CC71927D8B90018DC55 /* boton_animacion_ON_465x127.png in Resources */,
-				48254C781927D8B90018DC55 /* ._trozo_barra_humor_50x70.png in Resources */,
-				48254C4C1927D8B90018DC55 /* ._buscar_sensacion_ON_540x48.png in Resources */,
 				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
-				48254C691927D8B90018DC55 /* ._rotulo_calidad_124x35.png in Resources */,
 				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
-				48254C701927D8B90018DC55 /* ._signo_mas_verde_69x69.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
-				48254CB31927D8B90018DC55 /* ._boton_licantropo_ON_465x127.png in Resources */,
-				48254C9E1927D8B90018DC55 /* ._boton_comedia_465x127.png in Resources */,
 				48254C591927D8B90018DC55 /* buscar_subgenero_OFF_540x48.png in Resources */,
-				48254C4E1927D8B90018DC55 /* ._buscar_subgenero_ON_540x48.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
 				48254CF11927D8B90018DC55 /* boton_sectas_ON_465x127.png in Resources */,
-				48254C9F1927D8B90018DC55 /* ._boton_comedia_ON_465x127.png in Resources */,
 				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
 				F31449A1189A55920007B9B6 /* fondo_mentes_oscuras.jpg in Resources */,
 				F3F927DF1897BC5200BE7964 /* spark.png in Resources */,
-				48254C491927D8B90018DC55 /* ._barra_busqueda_1810x78.png in Resources */,
 				F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */,
 				F37CEB1618FBED0D0085701C /* panel_barras_404x1010.png in Resources */,
 				48254CF01927D8B90018DC55 /* boton_sectas_465x127.png in Resources */,

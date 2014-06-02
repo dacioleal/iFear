@@ -63,6 +63,7 @@
     busquedaSensacionesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaSensacionesViewController"];
     busquedaSensacionesVC.delegate = self;
     
+    
     // Se inicializan las clases encargadas de la conexión y búsqueda con el servidor
     subGenreSearch = [[SubGenreSearch alloc] init];
     sensationSearch = [[SensationsSearch alloc] init];
@@ -82,8 +83,7 @@
     // Se establece seleccionado la opción de búsqueda por subgenero
     self.buscarSubGenButton.selected = YES;
     [self displayContentViewController:busquedaSubGenereVC];
-    
-    
+        
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,7 +123,7 @@
             self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
             // Se cambia el tipo de búsqueda en el container.
             [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
-        }
+                    }
         
     }else{
         if (! [self.buscarSensacionesButton isSelected]) {
@@ -131,7 +131,7 @@
             self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
             // Se cambia el tipo de búsqueda en el container.
             [self cycleFromViewController:onScreenViewController toViewController:busquedaSensacionesVC];
-        }
+                   }
     }
     
     
@@ -226,7 +226,7 @@
 - (void) displayContentViewController: (UIViewController *) contentViewController
 {
     [self addChildViewController:contentViewController];
-    contentViewController.view.frame = CGRectMake(0, 0, _container.frame.size.width, self.view.frame.size.height);
+    contentViewController.view.frame = CGRectMake(0, 0, _container.frame.size.width, _container.frame.size.height);
     [_container addSubview:contentViewController.view];
     [contentViewController didMoveToParentViewController:self];
     

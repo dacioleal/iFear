@@ -122,7 +122,7 @@
 
 - (BOOL) menuBarIsHidden
 {
-    UIView *menuView = [self.view viewWithTag:10];
+    UIView *menuView = [self.view viewWithTag:50];
     CGPoint centerPointForMenuOut = CGPointMake(847, 55);
     
     if (menuView.center.x == centerPointForMenuOut.x) {
@@ -136,7 +136,7 @@
 {
     [self.menuButton setSelected:YES];
     
-    UIView *menuView = [self.view viewWithTag:10];
+    UIView *menuView = [self.view viewWithTag:50];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionShowHideTransitionViews animations:^(void) {
         menuView.center = CGPointMake(menuView.center.x - 290,menuView.center.y);
     }completion:nil];
@@ -146,7 +146,7 @@
 {
     [self.menuButton setSelected:NO];
     
-    UIView *menuView = [self.view viewWithTag:10];    
+    UIView *menuView = [self.view viewWithTag:50];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionShowHideTransitionViews animations:^(void) {
         menuView.center = CGPointMake(menuView.center.x + 290, menuView.center.y);
     }completion:nil];
@@ -164,7 +164,7 @@
 
 - (void) hideMenuBar
 {
-    UIView *menuBarView = [self.view viewWithTag:10];
+    UIView *menuBarView = [self.view viewWithTag:50];
     menuBarView.alpha = 1.0;
     menuBarView.hidden = YES;
     [UIView animateWithDuration:1.0 animations:^{
@@ -175,7 +175,7 @@
 
 - (void) showMenuBar
 {
-    UIView *menuBarView = [self.view viewWithTag:10];
+    UIView *menuBarView = [self.view viewWithTag:50];
     menuBarView.alpha = 0;
     menuBarView.hidden = NO;
     [UIView animateWithDuration:1.0 animations:^{
