@@ -624,7 +624,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </containerView>
-                            <view clipsSubviews="YES" tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZA-fK-JAx">
+                            <view clipsSubviews="YES" tag="50" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZA-fK-JAx">
                                 <rect key="frame" x="957" y="25" width="360" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -1626,8 +1626,166 @@
             </objects>
             <point key="canvasLocation" x="4726" y="-1624"/>
         </scene>
+        <!--Que Es View Controller-->
+        <scene sceneID="RbC-og-fxv">
+            <objects>
+                <viewController storyboardIdentifier="queEsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ivT-5E-X7X" customClass="QueEsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pq1-Fg-cG5"/>
+                        <viewControllerLayoutGuide type="bottom" id="zCU-S5-XSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dLS-Ej-pOa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_que_es_ifear_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xGm-iq-CfX">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mascara_central_1040x1040.png" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-1Y-bGf">
+                                <rect key="frame" x="252" y="226" width="520" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUz-u7-JNP">
+                                <rect key="frame" x="50" y="245" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="menu_big_ON_270x270.png"/>
+                                <state key="highlighted" image="menu_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="menuPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="kb0-vq-egC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wt5-ab-ora">
+                                <rect key="frame" x="50" y="418" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="buscar_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="buscar_big_ON_270x270.png"/>
+                                <state key="highlighted" image="buscar_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="busquedaPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="Hsg-7A-ZT4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-hh-JJy">
+                                <rect key="frame" x="50" y="581" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cartelera_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="cartelera_big_ON_270x270.png"/>
+                                <state key="highlighted" image="cartelera_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="carteleraPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="l8f-8M-fcQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH3-ue-oSx">
+                                <rect key="frame" x="839" y="245" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mentes_osc_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="mentes_osc_big_ON_270x270.png"/>
+                                <state key="highlighted" image="mentes_osc_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="mentesPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="j41-FV-uR1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJG-pc-G3V">
+                                <rect key="frame" x="839" y="418" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="actualidad_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="actualidad_big_ON_270x270.png"/>
+                                <state key="highlighted" image="actualidad_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="actividadPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="hMW-38-lzM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1y-RH-cgz">
+                                <rect key="frame" x="839" y="581" width="135" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="opciones_big_270x270.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="opciones_big_ON_270x270.png"/>
+                                <state key="highlighted" image="opciones_big_ON_270x270.png"/>
+                                <connections>
+                                    <action selector="optionsPushButton:" destination="ivT-5E-X7X" eventType="touchUpInside" id="B80-ZP-WiP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-xo-Dta">
+                                <rect key="frame" x="133" y="110" width="759" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Bienvenido a iFear, la morada de los aficionados al cine de terror. Pulsa en los iconos de abajo para obtener información sobre las funciones de la aplicación. La navegación principal se realiza mediante el botón de menú        en la esquina superior derecha.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.85297675370000003" blue="0.25236638119999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Futura-Light"/>
+                                            <font key="NSOriginalFont" size="14" name="Futura-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttO-SU-9D8">
+                                <rect key="frame" x="252" y="226" width="520" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sombra_central.png" translatesAutoresizingMaskIntoConstraints="NO" id="VdZ-MU-Eu2">
+                                        <rect key="frame" x="0.0" y="0.0" width="520" height="520"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPF-vp-oLy">
+                                        <rect key="frame" x="35" y="45" width="450" height="430"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="actividadButton" destination="yJG-pc-G3V" id="Gk0-TJ-i7i"/>
+                        <outlet property="busquedaButton" destination="wt5-ab-ora" id="ywc-Dd-xl3"/>
+                        <outlet property="carteleraButton" destination="PQd-hh-JJy" id="arL-oo-W6H"/>
+                        <outlet property="contentView" destination="ttO-SU-9D8" id="QBm-G1-yOo"/>
+                        <outlet property="descriptionTextView" destination="tPF-vp-oLy" id="Rhy-by-b4N"/>
+                        <outlet property="headerTextView" destination="uk9-xo-Dta" id="DCj-XU-BsA"/>
+                        <outlet property="mentesButton" destination="sH3-ue-oSx" id="fbd-1I-7ZD"/>
+                        <outlet property="menuButton" destination="yUz-u7-JNP" id="7zc-3T-gNU"/>
+                        <outlet property="optionsButton" destination="I1y-RH-cgz" id="QPL-NF-BWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGY-sO-BgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4673" y="-3343"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="actualidad_big_270x270.png" width="270" height="270"/>
+        <image name="actualidad_big_ON_270x270.png" width="270" height="270"/>
         <image name="ahorcado.png" width="278" height="1194"/>
         <image name="barra_busqueda_1810x78.png" width="1810" height="78"/>
         <image name="barrotes.png" width="2048" height="1536"/>
@@ -1670,10 +1828,14 @@
         <image name="boton_vampiros_465x127.png" width="465" height="127"/>
         <image name="boton_votar_346x156.png" width="346" height="156"/>
         <image name="boton_zombies_465x127.png" width="465" height="127"/>
+        <image name="buscar_big_270x270.png" width="270" height="270"/>
+        <image name="buscar_big_ON_270x270.png" width="270" height="270"/>
         <image name="buscar_sensacion_OFF_540x48.png" width="540" height="48"/>
         <image name="buscar_subgenero_OFF_540x48.png" width="540" height="48"/>
         <image name="cadena.png" width="4190" height="96"/>
         <image name="calavera.png" width="190" height="236"/>
+        <image name="cartelera_big_270x270.png" width="270" height="270"/>
+        <image name="cartelera_big_ON_270x270.png" width="270" height="270"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
@@ -1682,6 +1844,7 @@
         <image name="fondo_fichas_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
+        <image name="fondo_que_es_ifear_2048x1536.jpg" width="2048" height="1536"/>
         <image name="icono_actividad_zombie.png" width="100" height="100"/>
         <image name="icono_blu_ray_246x188.png" width="246" height="188"/>
         <image name="icono_buscar.png" width="100" height="100"/>
@@ -1698,6 +1861,13 @@
         <image name="icono_terror_136x160.png" width="136" height="160"/>
         <image name="icono_volver.png" width="100" height="100"/>
         <image name="marco_centralB_1106x1268.png" width="1106" height="1268"/>
+        <image name="mascara_central_1040x1040.png" width="1040" height="1040"/>
+        <image name="mentes_osc_big_270x270.png" width="270" height="270"/>
+        <image name="mentes_osc_big_ON_270x270.png" width="270" height="270"/>
+        <image name="menu_big_270x270.png" width="270" height="270"/>
+        <image name="menu_big_ON_270x270.png" width="270" height="270"/>
+        <image name="opciones_big_270x270.png" width="270" height="270"/>
+        <image name="opciones_big_ON_270x270.png" width="270" height="270"/>
         <image name="panel_barras_404x1010.png" width="404" height="1010"/>
         <image name="panel_izq_rojo_400x560.png" width="400" height="560"/>
         <image name="panel_votar_400x284.png" width="400" height="284"/>
@@ -1716,6 +1886,7 @@
         <image name="signo_menos_rojo_69x69.png" width="69" height="69"/>
         <image name="signo_menos_verde_69x69.png" width="69" height="69"/>
         <image name="slider_1940x236.png" width="1940" height="236"/>
+        <image name="sombra_central.png" width="1024" height="1024"/>
         <image name="switch_NO_132x72.png" width="132" height="73"/>
         <image name="zombie_01.png" width="400" height="682"/>
     </resources>

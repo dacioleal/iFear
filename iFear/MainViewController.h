@@ -29,6 +29,10 @@
 
 - (void) hideMenuBar;
 
+- (void) unselectIcons;
+
+- (void) loadQueEsViewController;
+
 - (void) displayContentViewController: (UIViewController *) contentViewController;
 
 - (void) hideContentViewController: (UIViewController *) contentViewController;
