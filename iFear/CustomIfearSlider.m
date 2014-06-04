@@ -76,7 +76,7 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 - (void)drawRect:(CGRect)rect {
     [self drawBackgroundColor];
-    [self drawLineYAxisCentered];
+    //[self drawLineYAxisCentered];
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {

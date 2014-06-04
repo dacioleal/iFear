@@ -38,6 +38,7 @@
 
 - (void) retrieveData {
     NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -54,7 +55,6 @@
 {
     NSURLSessionConfiguration * configuracionConexion = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSData *body = params;
-    NSLog(@"%@",params);
     
     configuracionConexion.timeoutIntervalForRequest = 10.0;
     configuracionConexion.timeoutIntervalForResource = 10.0;
