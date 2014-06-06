@@ -35,6 +35,10 @@
     [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Humor"];
     [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Calidad"];
     
+    [self setFontAndColor:self.terrorPercent withText: @"0"];
+    [self setFontAndColor:self.gorePercent withText: @"0"];
+    [self setFontAndColor:self.calidadPercent withText: @"0"];
+    [self setFontAndColor:self.humorPercent withText: @"0"];
     
     // Se inicializan los Slider con función de barra de progreso
     [self initProgressSlider:self.progressTerrorSlider withImageName:@"trozo_barra_terror_50x70.png"];
@@ -163,20 +167,27 @@
         case 1:
             if (currentValue == 0){
                 self.progressTerrorSlider.value = currentValue;
-                [self.terrorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                
+                //[self.terrorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                [self setFontAndColor:self.terrorPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
+                
             }else{
                 self.progressTerrorSlider.value = currentValue;
-                [self.terrorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                [self setFontAndColor:self.terrorPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
+                //[self.terrorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
             }
+           
             [sensationValues setValue:[NSNumber numberWithInt:self.progressTerrorSlider.value] forKey:@"Terror"];
             break;
         case 2:
             if (currentValue == 0){
                 self.progressGoreSlider.value = currentValue;
-                [self.gorePercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                //[self.gorePercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                [self setFontAndColor:self.gorePercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
             }else{
                 self.progressGoreSlider.value = currentValue;
-                [self.gorePercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                //[self.gorePercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                [self setFontAndColor:self.gorePercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
             }
             [sensationValues setValue:[NSNumber numberWithInt:self.progressGoreSlider.value] forKey:@"Gore"];
             break;
@@ -184,10 +195,12 @@
         case 3:
             if (currentValue == 0){
                 self.progressHumorSlider.value = currentValue;
-                [self.humorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                //[self.humorPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                [self setFontAndColor:self.humorPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
             }else{
                 self.progressHumorSlider.value = currentValue;
-                [self.humorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                //[self.humorPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                [self setFontAndColor:self.humorPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
             }
             [sensationValues setValue:[NSNumber numberWithInt:self.progressHumorSlider.value] forKey:@"Humor"];
             break;
@@ -195,11 +208,13 @@
         case 4:
             if (currentValue == 0){
                 self.progressCalidadSlider.value = currentValue;
-                [self.calidadPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                //[self.calidadPercent setText:[NSNumber numberWithInteger:currentValue].stringValue];
+                [self setFontAndColor:self.calidadPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
                 
             }else{
                 self.progressCalidadSlider.value = currentValue;
-                [self.calidadPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                //[self.calidadPercent setText:[NSNumber numberWithInteger:(currentValue)].stringValue];
+                [self setFontAndColor:self.calidadPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
                 
             }
             [sensationValues setValue:[NSNumber numberWithInt:self.progressCalidadSlider.value] forKey:@"Calidad"];
@@ -220,6 +235,16 @@
     float sliderValueToPixels = (((aSlider.value-aSlider.minimumValue)/(aSlider.maximumValue-aSlider.minimumValue)) * sliderRange) + sliderOrigin;
     
     return sliderValueToPixels;
+}
+
+- (void) setFontAndColor:(id)sender withText: (NSString *) text {
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:36.0];
+    NSAttributedString *atrStr = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    UILabel *auxLabel =  (UILabel *) sender;
+    auxLabel.attributedText = atrStr;
+    auxLabel.shadowColor = [UIColor blackColor];
+    auxLabel.shadowOffset = CGSizeMake(0, 2);
 }
 
 @end

@@ -76,8 +76,8 @@
     // Añadimos este ViewController (self) como observador para recibir las notificaciones de que se han terminado de descargar los datos
     // y de que se pulsa sobre la portada de una película para ir a la pantalla de detalle.
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:subGenreSearch];
-    [defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:sensationSearch];
+    //[defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:subGenreSearch];
+    //[defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:sensationSearch];
         
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
@@ -190,6 +190,7 @@
     }
     
     NSData *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@",bodyStr);
     return body;
 }
 
