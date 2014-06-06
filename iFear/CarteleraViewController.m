@@ -55,14 +55,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
-    
     _moviesList = [[NSArray alloc] init];
     _estrenosMoviesList = [[NSArray alloc] init];
     moviesSearch = [[MoviesSearch alloc] init];
     estrenosSearch = [[MoviesSearch alloc] init];
-   
-    
+
     _loadingView.layer.cornerRadius = 10.0;
     
     
@@ -97,7 +94,6 @@
     
     
     // Llamamos al método para la petición de los datos de las películas.
-    
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self retrieveData];

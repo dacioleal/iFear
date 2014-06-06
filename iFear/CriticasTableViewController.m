@@ -7,8 +7,14 @@
 //
 
 #import "CriticasTableViewController.h"
+#import "CriticasMediosSearch.h"
+#import "CriticaMedio.h"
+#import "DetalleViewController.h"
 
 @interface CriticasTableViewController ()
+{
+    
+}
 
 @end
 
@@ -32,6 +38,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSLog(@"%@",_movieID);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +53,44 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+
+    return _criticasMediosArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    UIColor *cellColor = [UIColor clearColor];
+    cell.backgroundColor = cellColor;
+    
+    NSString *autor = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] autor];
+    NSString *medio = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] medio];
+    NSString *contenido = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] contenido];
+    NSString *title = [NSString stringWithFormat:@"%@  %@", autor, medio ];
+        
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
+    NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:title attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.textLabel.attributedText = titleAttributedString;
+    
+    textColor = [[UIColor alloc] initWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
+    font = [UIFont fontWithName:@"Futura-Book" size:18.0];
+    NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:contenido attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.detailTextLabel.attributedText = descriptionAttributedString;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

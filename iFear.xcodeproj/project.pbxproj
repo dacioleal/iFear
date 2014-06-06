@@ -156,6 +156,7 @@
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
+		F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */ = {isa = PBXBuildFile; fileRef = F331BE63193F5ED700AF9902 /* CriticaMedio.m */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
 		F33D145918F8030C00604463 /* marco_central_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145818F8030C00604463 /* marco_central_1106x1268.png */; };
 		F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145A18F809E400604463 /* fondo_central_1090x1144.png */; };
@@ -227,6 +228,7 @@
 		F3F927DF1897BC5200BE7964 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F3F927DC1897BC5200BE7964 /* spark.png */; };
 		F3F927E31897BFDF00BE7964 /* sonido_entrada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */; };
 		F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */; };
+		F3F9E1C3193CDB7400FD0ED3 /* CriticasMediosSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9E1C2193CDB7400FD0ED3 /* CriticasMediosSearch.m */; };
 		F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */; };
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 		F3FEA6BD190EAE3000A4F91C /* marco_centralB_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */; };
@@ -414,6 +416,8 @@
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
 		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F331BE62193F5ED700AF9902 /* CriticaMedio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticaMedio.h; sourceTree = "<group>"; };
+		F331BE63193F5ED700AF9902 /* CriticaMedio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaMedio.m; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		F33D145818F8030C00604463 /* marco_central_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_central_1106x1268.png; sourceTree = "<group>"; };
@@ -495,6 +499,8 @@
 		F3F927DC1897BC5200BE7964 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F3F927E21897BFDE00BE7964 /* sonido_entrada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sonido_entrada.mp3; path = ../sonido_entrada.mp3; sourceTree = "<group>"; };
 		F3F927E41897DF1400BE7964 /* sonido_antorcha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sonido_antorcha.mp3; sourceTree = "<group>"; };
+		F3F9E1C1193CDB7400FD0ED3 /* CriticasMediosSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasMediosSearch.h; sourceTree = "<group>"; };
+		F3F9E1C2193CDB7400FD0ED3 /* CriticasMediosSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasMediosSearch.m; sourceTree = "<group>"; };
 		F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_oscuro_330x126.png; sourceTree = "<group>"; };
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 		F3FEA6BC190EAE3000A4F91C /* marco_centralB_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_centralB_1106x1268.png; sourceTree = "<group>"; };
@@ -540,6 +546,7 @@
 				48254B741927D46D0018DC55 /* SubGenreSearch.m */,
 				48254B751927D46D0018DC55 /* SensationsSearch.h */,
 				48254B761927D46D0018DC55 /* SensationsSearch.m */,
+				F3F9E1C4193CDB7B00FD0ED3 /* CriticasMediosSearch */,
 			);
 			name = ConnectionServer;
 			sourceTree = "<group>";
@@ -875,6 +882,7 @@
 				48254B8C1927D5100018DC55 /* Constants */,
 				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F30F42E118A4E9C5005841A6 /* Pelicula */,
+				F331BE65193F5EDD00AF9902 /* CriticaMedio */,
 				F3F927D31897B36100BE7964 /* EntradaViewController */,
 				F3F927D71897B69700BE7964 /* MainScene */,
 				F314498F189A48010007B9B6 /* MainViewController */,
@@ -920,6 +928,15 @@
 				F32D9948187D53700004D618 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F331BE65193F5EDD00AF9902 /* CriticaMedio */ = {
+			isa = PBXGroup;
+			children = (
+				F331BE62193F5ED700AF9902 /* CriticaMedio.h */,
+				F331BE63193F5ED700AF9902 /* CriticaMedio.m */,
+			);
+			name = CriticaMedio;
 			sourceTree = "<group>";
 		};
 		F332F85418AA99D800A12CEE /* PageContentViewController */ = {
@@ -1109,6 +1126,15 @@
 				F3F927D51897B68E00BE7964 /* MainScene.m */,
 			);
 			name = MainScene;
+			sourceTree = "<group>";
+		};
+		F3F9E1C4193CDB7B00FD0ED3 /* CriticasMediosSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F3F9E1C1193CDB7400FD0ED3 /* CriticasMediosSearch.h */,
+				F3F9E1C2193CDB7400FD0ED3 /* CriticasMediosSearch.m */,
+			);
+			name = CriticasMediosSearch;
 			sourceTree = "<group>";
 		};
 		F3FD0515190A737200A1B516 /* fonts */ = {
@@ -1408,6 +1434,7 @@
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
+				F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				48254B781927D46D0018DC55 /* SensationsSearch.m in Sources */,
 				F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */,
@@ -1426,6 +1453,7 @@
 				F32D9936187D536F0004D618 /* iFear.xcdatamodeld in Sources */,
 				F3F7F8D1190FA40A00DA3D6B /* CriticasTableViewController.m in Sources */,
 				48254B7C1927D4DE0018DC55 /* ProgresSlider.m in Sources */,
+				F3F9E1C3193CDB7400FD0ED3 /* CriticasMediosSearch.m in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,

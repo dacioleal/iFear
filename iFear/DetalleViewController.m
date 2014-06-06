@@ -7,8 +7,10 @@
 //
 
 #import "DetalleViewController.h"
+#import "CriticasTableViewController.h"
 #import "Pelicula.h"
 #import "TrailersSearch.h"
+#import "CriticasMediosSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
@@ -16,6 +18,9 @@
     NSString *movieID;
     NSArray *leftPanelButtons;
     NSArray *trailersArray;
+    NSArray *criticasMediosArray;
+    NSArray *criticasFlashArray;
+    NSArray *criticasLargasArray;
     NSArray *contentViews;
 }
 
@@ -69,16 +74,29 @@
     [self configureLeftPanelButtons];
     
     
-
+    //Creamos un objeto de la clase TrailersSearch para obtener los datos de los trailers de la película desde el servidor
     movieID = [[NSString alloc] initWithFormat:@"%d",_movie.idPelicula ] ;
     TrailersSearch *trailersSearch = [[TrailersSearch alloc] init];
     NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTrailersForID", @"function", movieID, @"idMovie",nil];
     trailersArray = [trailersSearch searchWithParameters:parameters];
     
+    //Creamos un objeto de la clase CriticasMediosSearch para obtener los datos de las críticas de medios de la película desde el servidor
+    CriticasMediosSearch *criticasMediosSearch = [[CriticasMediosSearch alloc] init];
+    NSDictionary *parametersCriticasMedios = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasMediosPelicula", @"function", movieID, @"idMovie",nil];
+    criticasMediosArray = [criticasMediosSearch searchWithParameters:parametersCriticasMedios];
     
+//    CriticasFlashSearch *criticasFlashSearch = [[CriticasFlashSearch alloc] init];
+//    NSDictionary *parametersCriticasFlash = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasFlashPelicula", @"function", movieID, @"idMovie",nil];
+//    criticasFlashArray = [criticasFlashSearch searchWithParameters:parametersCriticasFlash];
+    
+    
+    //Añadimos al propio viewcontroller como observador de las notificaciones producidas por las distintos objetos de las clases Search que obtienen los datos del servidor y que cuando terminan de obtener estos datos lo comunican mediante la notificación correspondiente
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"trailersFinished" object:trailersSearch];
     [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"NoTrailers" object:trailersSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasMediosView) name:@"CriticasMediosFinished" object:criticasMediosSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasMediosView) name:@"CriticasMediosEmpty" object:criticasMediosSearch];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -181,6 +199,7 @@
 
 - (NSString *) createHTMLStringForVideoID: (NSString *) videoIDString
 {
+    //Crea la cadena HTML necesaria para la url de cada video
     NSString *string = [NSString stringWithFormat:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/%@\" frameborder=\"0\" allowfullscreen></iframe></body></html>", videoIDString];
     return string;
 }
@@ -191,11 +210,11 @@
     float videoHeight = 304;  // Tamaño en altura del video para insertar el trailer
     float videoWidth = 540;   // Tamaño en anchura del video para insertar el trailer
     
-    CGSize size = CGSizeMake(videoWidth, videoHeight * trailersArray.count);  // Tamaño de la VIEW para los trailers
+    //Le damos tamaño a la VIEW para los trailers
+    CGSize size = CGSizeMake(videoWidth, videoHeight * trailersArray.count);
     _trailersScrollView.contentSize = size;
     
     // Bucle para insertar los trailers en la VIEW
-    
     for (int i=0 ; i<trailersArray.count ; i++ ) {
         
         CGRect rect = CGRectMake(0, videoHeight * i, videoWidth, videoHeight);
@@ -283,6 +302,24 @@
     selectedAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_reviewsButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
 
+    
+}
+
+- (void) configureCriticasMediosView
+{
+    NSLog(@"Array de Críticas Medios: %@", criticasMediosArray);
+    
+    UINavigationController *criticasNC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasMediosNavigationController"];
+    
+    CriticasTableViewController *criticasTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasTableViewController"];
+    criticasTVC.movieID = movieID;
+    criticasTVC.criticasMediosArray = criticasMediosArray;
+    [criticasNC addChildViewController:criticasTVC];
+    
+    [self addChildViewController:criticasNC];
+    [_reviewsContainerView addSubview:criticasNC.view];
+    criticasNC.view.frame = CGRectMake(0, 0, criticasNC.view.superview.frame.size.width, criticasNC.view.superview.frame.size.height);
+    
     
 }
 
