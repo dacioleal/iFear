@@ -87,6 +87,8 @@
     font = [UIFont fontWithName:@"Futura-Book" size:18.0];
     NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:contenido attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.detailTextLabel.attributedText = descriptionAttributedString;
+    cell.detailTextLabel.shadowColor = [UIColor blackColor];
+    cell.detailTextLabel.shadowOffset = CGSizeMake(1, 1);
     
     if ((indexPath.row % 2) == 0) {
         cell.backgroundColor = [UIColor blackColor];

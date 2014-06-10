@@ -78,7 +78,9 @@
     
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
+    [self configureReviewsPanelButtons];
     [self hideReviewsPanelButton];
+    [self mediaPushButton:_mediaButton];
     
     
     //Creamos un objeto de la clase TrailersSearch para obtener los datos de los trailers de la película desde el servidor
@@ -114,7 +116,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark - Push action methods
 
 - (IBAction)backPushButton:(UIButton *)sender
 {
@@ -187,6 +189,9 @@
     mediaView.hidden = NO;
     flashView.hidden = YES;
     usersView.hidden = YES;
+    [_mediaButton setSelected:YES];
+    [_flashButton setSelected:NO];
+    [_usersButton setSelected:NO];
 }
 
 - (IBAction)flashPushButton:(UIButton *)sender {
@@ -195,6 +200,9 @@
     flashView.hidden = NO;
     mediaView.hidden = YES;
     usersView.hidden = YES;
+    [_mediaButton setSelected:NO];
+    [_flashButton setSelected:YES];
+    [_usersButton setSelected:NO];
 }
 
 - (IBAction)usersPushButton:(UIButton *)sender {
@@ -203,6 +211,9 @@
     usersView.hidden = NO;
     mediaView.hidden = YES;
     flashView.hidden = YES;
+    [_mediaButton setSelected:NO];
+    [_flashButton setSelected:NO];
+    [_usersButton setSelected:YES];
 }
 
 
@@ -240,6 +251,8 @@
     NSString *string = [NSString stringWithFormat:@"<html><head><title>.</title><style>body,html,iframe{margin:0;padding:0;}</style></head><body><iframe width=\"1280\" height=\"720\" src=\"//www.youtube.com/embed/%@\" frameborder=\"0\" allowfullscreen></iframe></body></html>", videoIDString];
     return string;
 }
+
+# pragma mark - configure views methods
 
 - (void) configureTrailersView
 {
@@ -321,7 +334,6 @@
 
     
     textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
-    font = [UIFont fontWithName:@"Impact" size:24.0];
     normalAttributedString = [[NSAttributedString alloc] initWithString:@"TRAILERS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_trailersButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
     
@@ -331,7 +343,6 @@
  
     
     textColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
-    font = [UIFont fontWithName:@"Impact" size:24.0];
     normalAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_reviewsButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
     
@@ -339,6 +350,35 @@
     selectedAttributedString = [[NSAttributedString alloc] initWithString:@"CRÍTICA" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     [_reviewsButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
 
+    
+}
+
+- (void) configureReviewsPanelButtons
+{
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.65 green:0.39 blue:0.39 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:24.0];
+    NSAttributedString *normalAttributedString = [[NSAttributedString alloc] initWithString:@"MEDIOS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_mediaButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+    
+    textColor = [[UIColor alloc] initWithRed:0.92 green:0.73 blue:0.05 alpha:1.0];
+    NSAttributedString *selectedAttributedString = [[NSAttributedString alloc] initWithString:@"MEDIOS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_mediaButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
+    
+    textColor = [[UIColor alloc] initWithRed:0.65 green:0.39 blue:0.39 alpha:1.0];
+    normalAttributedString = [[NSAttributedString alloc] initWithString:@"FLASH" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_flashButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+    
+    textColor = [[UIColor alloc] initWithRed:0.92 green:0.73 blue:0.05 alpha:1.0];
+    selectedAttributedString = [[NSAttributedString alloc] initWithString:@"FLASH" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_flashButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
+    
+    textColor = [[UIColor alloc] initWithRed:0.65 green:0.39 blue:0.39 alpha:1.0];
+    normalAttributedString = [[NSAttributedString alloc] initWithString:@"USUARIOS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_usersButton setAttributedTitle:normalAttributedString forState:UIControlStateNormal];
+    
+    textColor = [[UIColor alloc] initWithRed:0.92 green:0.73 blue:0.05 alpha:1.0];
+    selectedAttributedString = [[NSAttributedString alloc] initWithString:@"USUARIOS" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [_usersButton setAttributedTitle:selectedAttributedString forState:UIControlStateSelected];
     
 }
 

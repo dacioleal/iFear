@@ -437,9 +437,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-ee-xji">
                                         <rect key="frame" x="187" y="8" width="110" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Medios" image="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Medios" backgroundImage="boton_panel_izq_330x102.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="mediaPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="nES-Ep-QTF"/>
                                         </connections>
@@ -447,9 +448,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-Ct-fR6">
                                         <rect key="frame" x="305" y="8" width="110" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Flash" image="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Flash" backgroundImage="boton_panel_izq_330x102.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="flashPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="1P8-q6-bsF"/>
                                         </connections>
@@ -457,9 +459,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-TQ-Qpe">
                                         <rect key="frame" x="423" y="8" width="110" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Usuarios" image="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Usuarios" backgroundImage="boton_panel_izq_330x102.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="usersPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="mxQ-SD-rk0"/>
                                         </connections>

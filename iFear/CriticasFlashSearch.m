@@ -124,7 +124,7 @@
     
     for (NSDictionary * fila in retorno) {
         
-        usuario = (NSString *) [fila objectForKey:@"id_usuario"];
+        usuario = (NSString *) [fila objectForKey:@"nombre_usuario"];
         contenido = (NSString *) [fila objectForKey:@"contenido"];
         fecha = (NSString *) [fila objectForKey:@"fecha"];
         CriticaFlash *critica = [[CriticaFlash alloc] initWithParameters:usuario andContenido:contenido andFecha:fecha];
