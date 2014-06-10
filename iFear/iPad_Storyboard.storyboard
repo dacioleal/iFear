@@ -341,37 +341,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-uw-oQx">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-uw-oQx">
                                         <rect key="frame" x="18" y="20" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png"/>
+                                        <state key="normal" title="Ficha" backgroundImage="boton_panel_izq_330x102.png"/>
                                         <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="descriptionPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="Gu2-Re-uA0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-x7-MQU">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-x7-MQU">
                                         <rect key="frame" x="18" y="79" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
-                                            <attributedString key="attributedTitle"/>
-                                        </state>
-                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png">
-                                            <attributedString key="attributedTitle"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <attributedString key="attributedTitle"/>
-                                        </state>
+                                        <state key="normal" title="Trailers" backgroundImage="boton_panel_izq_330x102.png"/>
+                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="trailersPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="sBj-YR-I8C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1q-0e-LJi">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1q-0e-LJi">
                                         <rect key="frame" x="15" y="138" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="boton_panel_izq_330x102.png">
-                                            <attributedString key="attributedTitle"/>
-                                        </state>
+                                        <state key="normal" title="Crítica" backgroundImage="boton_panel_izq_330x102.png"/>
                                         <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
                                         <connections>
                                             <action selector="reviewsPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="bYM-9K-ySs"/>
@@ -597,7 +588,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di3-Pw-0eY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8691" y="-1334"/>
+            <point key="canvasLocation" x="8678" y="-1780"/>
         </scene>
         <!--Critica Medio View Controller - Title-->
         <scene sceneID="d1l-Rv-ezH">
@@ -648,7 +639,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkR-eK-2mo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9473" y="-1334"/>
+            <point key="canvasLocation" x="9460" y="-1780"/>
         </scene>
         <!--Entrada View Controller-->
         <scene sceneID="YtC-9c-Ijf">
@@ -1217,7 +1208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kw1-v9-kda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7945" y="-1334"/>
+            <point key="canvasLocation" x="7932" y="-1780"/>
         </scene>
         <!--Criticas Flash Table View Controller-->
         <scene sceneID="SzX-ox-vfJ">
@@ -1264,7 +1255,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxi-uF-y4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8696" y="-712"/>
+            <point key="canvasLocation" x="8678" y="-1086"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wGL-cG-4Mk">
@@ -1283,7 +1274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46L-uf-OUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7945" y="-712"/>
+            <point key="canvasLocation" x="7932" y="-1086"/>
         </scene>
         <!--Popover Selector Busqueda View Controller-->
         <scene sceneID="soG-tp-Rv1">
