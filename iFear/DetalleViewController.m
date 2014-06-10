@@ -8,20 +8,26 @@
 
 #import "DetalleViewController.h"
 #import "CriticasTableViewController.h"
+#import "CriticasFlashTableViewController.h"
 #import "Pelicula.h"
 #import "TrailersSearch.h"
 #import "CriticasMediosSearch.h"
+#import "CriticasFlashSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
 {
     NSString *movieID;
     NSArray *leftPanelButtons;
+    NSArray *reviewsPanelButtons;
     NSArray *trailersArray;
     NSArray *criticasMediosArray;
     NSArray *criticasFlashArray;
     NSArray *criticasLargasArray;
     NSArray *contentViews;
+    UIView *mediaView;
+    UIView *flashView;
+    UIView *usersView;
 }
 
 
@@ -49,9 +55,9 @@
 	// Do any additional setup after loading the view.
     
     contentViews = @[_descriptionTextView, _trailersScrollView, _reviewsContainerView];
-    
-    
     leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
+    reviewsPanelButtons = @[_mediaButton, _flashButton, _usersButton];
+    
     
     _movieImageView.image = _movie.imagen;
     
@@ -72,6 +78,7 @@
     
     [self configureDescriptionTextView];
     [self configureLeftPanelButtons];
+    [self hideReviewsPanelButton];
     
     
     //Creamos un objeto de la clase TrailersSearch para obtener los datos de los trailers de la película desde el servidor
@@ -85,9 +92,9 @@
     NSDictionary *parametersCriticasMedios = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasMediosPelicula", @"function", movieID, @"idMovie",nil];
     criticasMediosArray = [criticasMediosSearch searchWithParameters:parametersCriticasMedios];
     
-//    CriticasFlashSearch *criticasFlashSearch = [[CriticasFlashSearch alloc] init];
-//    NSDictionary *parametersCriticasFlash = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasFlashPelicula", @"function", movieID, @"idMovie",nil];
-//    criticasFlashArray = [criticasFlashSearch searchWithParameters:parametersCriticasFlash];
+    CriticasFlashSearch *criticasFlashSearch = [[CriticasFlashSearch alloc] init];
+    NSDictionary *parametersCriticasFlash = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasFlashPelicula", @"function", movieID, @"idMovie",nil];
+    criticasFlashArray = [criticasFlashSearch searchWithParameters:parametersCriticasFlash];
     
     
     //Añadimos al propio viewcontroller como observador de las notificaciones producidas por las distintos objetos de las clases Search que obtienen los datos del servidor y que cuando terminan de obtener estos datos lo comunican mediante la notificación correspondiente
@@ -96,6 +103,8 @@
     [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"NoTrailers" object:trailersSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasMediosView) name:@"CriticasMediosFinished" object:criticasMediosSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasMediosView) name:@"CriticasMediosEmpty" object:criticasMediosSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasFlashView) name:@"CriticasFlashFinished" object:criticasFlashSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasFlashView) name:@"CriticasFlashEmpty" object:criticasFlashSearch];
     
 }
 
@@ -114,8 +123,9 @@
 
 - (IBAction)descriptionPushButton:(UIButton *)sender {
     
-    [self deselectLeftPanelButtons];
+    [self unselectLeftPanelButtons];
     [self hideContentViews];
+    [self hideReviewsPanelButton];
     _descriptionTextView.hidden = NO;
     [_contentView bringSubviewToFront:_descriptionTextView];    
     [_descriptionButton setSelected:YES];
@@ -129,8 +139,9 @@
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
     
-    [self deselectLeftPanelButtons];
+    [self unselectLeftPanelButtons];
     [self hideContentViews];
+    [self hideReviewsPanelButton];
     _trailersScrollView.hidden = NO;
     [_contentView bringSubviewToFront:_trailersScrollView];
     [_trailersButton setSelected:YES];
@@ -144,8 +155,9 @@
 
 - (IBAction)reviewsPushButton:(UIButton *)sender {
     
-    [self deselectLeftPanelButtons];
+    [self unselectLeftPanelButtons];
     [self hideContentViews];
+    [self showReviewsPanelButton];
     _reviewsContainerView.hidden = NO;
     [_contentView bringSubviewToFront:_reviewsContainerView];
     
@@ -161,11 +173,36 @@
 - (IBAction)darkSidePushButton:(UIButton *)sender {
     
     //[_contentView bringSubviewToFront:_trailersScrollView];
-    [self deselectLeftPanelButtons];
+    [self unselectLeftPanelButtons];
+    [self hideReviewsPanelButton];
     [_darkSideButton setSelected:YES];
 }
 
 - (IBAction)rateMoviePushButton:(UIButton *)sender {
+}
+
+- (IBAction)mediaPushButton:(UIButton *)sender {
+    
+    [_reviewsContainerView bringSubviewToFront:mediaView];
+    mediaView.hidden = NO;
+    flashView.hidden = YES;
+    usersView.hidden = YES;
+}
+
+- (IBAction)flashPushButton:(UIButton *)sender {
+    
+    [_reviewsContainerView bringSubviewToFront:flashView];
+    flashView.hidden = NO;
+    mediaView.hidden = YES;
+    usersView.hidden = YES;
+}
+
+- (IBAction)usersPushButton:(UIButton *)sender {
+    
+    [_reviewsContainerView bringSubviewToFront:usersView];
+    usersView.hidden = NO;
+    mediaView.hidden = YES;
+    flashView.hidden = YES;
 }
 
 
@@ -307,7 +344,7 @@
 
 - (void) configureCriticasMediosView
 {
-    NSLog(@"Array de Críticas Medios: %@", criticasMediosArray);
+    //NSLog(@"Array de Críticas Medios: %@", criticasMediosArray);
     
     UINavigationController *criticasNC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasMediosNavigationController"];
     
@@ -317,13 +354,32 @@
     [criticasNC addChildViewController:criticasTVC];
     
     [self addChildViewController:criticasNC];
-    [_reviewsContainerView addSubview:criticasNC.view];
-    criticasNC.view.frame = CGRectMake(0, 0, criticasNC.view.superview.frame.size.width, criticasNC.view.superview.frame.size.height);
+    mediaView = criticasNC.view;
+    [_reviewsContainerView addSubview:mediaView];
+    mediaView.frame = CGRectMake(0, 0, mediaView.superview.frame.size.width, mediaView.superview.frame.size.height);
     
+
+}
+
+- (void) configureCriticasFlashView
+{
+    //NSLog(@"Array de Críticas Flash: %@", criticasFlashArray);
+    
+    UINavigationController *criticasFlashNC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasFlashNavigationController"];
+    CriticasFlashTableViewController *criticasFlashTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasFlashTableViewController"];
+    criticasFlashTVC.movieID = movieID;
+    criticasFlashTVC.criticasFlashArray = criticasFlashArray;
+    [criticasFlashNC addChildViewController:criticasFlashTVC];
+    
+    [self addChildViewController:criticasFlashNC];
+    flashView = criticasFlashNC.view;
+    [_reviewsContainerView addSubview:flashView];
+    flashView.frame = CGRectMake(0, 0, flashView.superview.frame.size.width, flashView.superview.frame.size.height);
+    flashView.hidden = YES;
     
 }
 
-- (void) deselectLeftPanelButtons
+- (void) unselectLeftPanelButtons
 {
     for (int i=0; i<leftPanelButtons.count; i++) {
         UIButton *button = (UIButton *) [leftPanelButtons objectAtIndex:i];
@@ -335,6 +391,22 @@
 {
     for ( UIView *view in contentViews) {
         view.hidden = YES;
+    }
+}
+
+- (void) hideReviewsPanelButton
+{
+    for (UIButton *button in reviewsPanelButtons)
+    {
+        button.hidden = YES;
+    }
+}
+
+- (void) showReviewsPanelButton
+{
+    for (UIButton *button in reviewsPanelButtons)
+    {
+        button.hidden = NO;
     }
 }
 

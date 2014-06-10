@@ -204,6 +204,7 @@
 		F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25318EC2470000D6309 /* icono_cine_estrenos_194x143.png */; };
 		F397F25818EC2493000D6309 /* icono_blu_ray_246x188.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25618EC2493000D6309 /* icono_blu_ray_246x188.png */; };
 		F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */ = {isa = PBXBuildFile; fileRef = F397F25718EC2493000D6309 /* icono_DVD_estrenos_245x174.png */; };
+		F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F398C6F41941E062007D56A8 /* CriticaMedioViewController.m */; };
 		F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CD718E57ED7008929FA /* MovieCell.m */; };
 		F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CDE18E59415008929FA /* MoviesSearch.m */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
@@ -216,6 +217,9 @@
 		F3BF77E7188450CC00818986 /* icono_info.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E0188450CC00818986 /* icono_info.png */; };
 		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
+		F3E76A9A1946F4F800AFEFA8 /* CriticasFlashTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */; };
+		F3E76A9E1946FC3800AFEFA8 /* CriticasFlashSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A9D1946FC3800AFEFA8 /* CriticasFlashSearch.m */; };
+		F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76AA11946FE2900AFEFA8 /* CriticaFlash.m */; };
 		F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E85D5E1880539800EA17E2 /* icono_volver.png */; };
 		F3F7F8D1190FA40A00DA3D6B /* CriticasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */; };
 		F3F7F8D5191005C400DA3D6B /* TrailersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F7F8D4191005C400DA3D6B /* TrailersSearch.m */; };
@@ -468,6 +472,8 @@
 		F397F25318EC2470000D6309 /* icono_cine_estrenos_194x143.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_cine_estrenos_194x143.png; sourceTree = "<group>"; };
 		F397F25618EC2493000D6309 /* icono_blu_ray_246x188.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_blu_ray_246x188.png; sourceTree = "<group>"; };
 		F397F25718EC2493000D6309 /* icono_DVD_estrenos_245x174.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_DVD_estrenos_245x174.png; sourceTree = "<group>"; };
+		F398C6F31941E062007D56A8 /* CriticaMedioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticaMedioViewController.h; sourceTree = "<group>"; };
+		F398C6F41941E062007D56A8 /* CriticaMedioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaMedioViewController.m; sourceTree = "<group>"; };
 		F3A68CD618E57ED7008929FA /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		F3A68CD718E57ED7008929FA /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		F3A68CDD18E59415008929FA /* MoviesSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesSearch.h; sourceTree = "<group>"; };
@@ -483,6 +489,12 @@
 		F3BF77E0188450CC00818986 /* icono_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_info.png; sourceTree = "<group>"; };
 		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
+		F3E76A981946F4F800AFEFA8 /* CriticasFlashTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashTableViewController.h; sourceTree = "<group>"; };
+		F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasFlashTableViewController.m; sourceTree = "<group>"; };
+		F3E76A9C1946FC3800AFEFA8 /* CriticasFlashSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashSearch.h; sourceTree = "<group>"; };
+		F3E76A9D1946FC3800AFEFA8 /* CriticasFlashSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasFlashSearch.m; sourceTree = "<group>"; };
+		F3E76AA01946FE2900AFEFA8 /* CriticaFlash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticaFlash.h; sourceTree = "<group>"; };
+		F3E76AA11946FE2900AFEFA8 /* CriticaFlash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaFlash.m; sourceTree = "<group>"; };
 		F3E85D5E1880539800EA17E2 /* icono_volver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_volver.png; sourceTree = "<group>"; };
 		F3F7F8CF190FA40A00DA3D6B /* CriticasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasTableViewController.h; sourceTree = "<group>"; };
 		F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasTableViewController.m; sourceTree = "<group>"; };
@@ -547,6 +559,7 @@
 				48254B751927D46D0018DC55 /* SensationsSearch.h */,
 				48254B761927D46D0018DC55 /* SensationsSearch.m */,
 				F3F9E1C4193CDB7B00FD0ED3 /* CriticasMediosSearch */,
+				F3E76A9F1946FC3E00AFEFA8 /* CriticasFlashSearch */,
 			);
 			name = ConnectionServer;
 			sourceTree = "<group>";
@@ -799,6 +812,7 @@
 				F31CB03318D0774200E6DF2C /* DetalleViewController.h */,
 				F31CB03418D0774200E6DF2C /* DetalleViewController.m */,
 				F3F7F8D2190FA41000DA3D6B /* CriticasTableViewController */,
+				F3E76A9B1946F4FE00AFEFA8 /* CriticasFlashTableViewController */,
 			);
 			name = DetalleViewController;
 			sourceTree = "<group>";
@@ -883,6 +897,7 @@
 				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F30F42E118A4E9C5005841A6 /* Pelicula */,
 				F331BE65193F5EDD00AF9902 /* CriticaMedio */,
+				F3E76AA31946FE2F00AFEFA8 /* CriticaFlash */,
 				F3F927D31897B36100BE7964 /* EntradaViewController */,
 				F3F927D71897B69700BE7964 /* MainScene */,
 				F314498F189A48010007B9B6 /* MainViewController */,
@@ -1057,6 +1072,15 @@
 			name = sounds;
 			sourceTree = "<group>";
 		};
+		F398C6F61941E066007D56A8 /* CriticaMedioViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F398C6F31941E062007D56A8 /* CriticaMedioViewController.h */,
+				F398C6F41941E062007D56A8 /* CriticaMedioViewController.m */,
+			);
+			name = CriticaMedioViewController;
+			sourceTree = "<group>";
+		};
 		F3A68CD918E581B7008929FA /* MovieCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1073,6 +1097,33 @@
 				F3BF77D918844D9600818986 /* CarteleraViewController.m */,
 			);
 			name = CarteleraViewController;
+			sourceTree = "<group>";
+		};
+		F3E76A9B1946F4FE00AFEFA8 /* CriticasFlashTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3E76A981946F4F800AFEFA8 /* CriticasFlashTableViewController.h */,
+				F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */,
+			);
+			name = CriticasFlashTableViewController;
+			sourceTree = "<group>";
+		};
+		F3E76A9F1946FC3E00AFEFA8 /* CriticasFlashSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F3E76A9C1946FC3800AFEFA8 /* CriticasFlashSearch.h */,
+				F3E76A9D1946FC3800AFEFA8 /* CriticasFlashSearch.m */,
+			);
+			name = CriticasFlashSearch;
+			sourceTree = "<group>";
+		};
+		F3E76AA31946FE2F00AFEFA8 /* CriticaFlash */ = {
+			isa = PBXGroup;
+			children = (
+				F3E76AA01946FE2900AFEFA8 /* CriticaFlash.h */,
+				F3E76AA11946FE2900AFEFA8 /* CriticaFlash.m */,
+			);
+			name = CriticaFlash;
 			sourceTree = "<group>";
 		};
 		F3E85D601880559D00EA17E2 /* icons */ = {
@@ -1097,6 +1148,7 @@
 			children = (
 				F3F7F8CF190FA40A00DA3D6B /* CriticasTableViewController.h */,
 				F3F7F8D0190FA40A00DA3D6B /* CriticasTableViewController.m */,
+				F398C6F61941E066007D56A8 /* CriticaMedioViewController */,
 			);
 			name = CriticasTableViewController;
 			sourceTree = "<group>";
@@ -1431,9 +1483,11 @@
 				F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
+				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
+				F3E76A9A1946F4F800AFEFA8 /* CriticasFlashTableViewController.m in Sources */,
 				F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				48254B781927D46D0018DC55 /* SensationsSearch.m in Sources */,
@@ -1444,6 +1498,7 @@
 				48254B921927D52A0018DC55 /* ResultadosBusquedaViewController.m in Sources */,
 				48254B8A1927D4F80018DC55 /* BusquedaSubGeneroViewController.m in Sources */,
 				F342D9BC193CD369000598FD /* QueEsViewController.m in Sources */,
+				F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
 				48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
@@ -1456,6 +1511,7 @@
 				F3F9E1C3193CDB7400FD0ED3 /* CriticasMediosSearch.m in Sources */,
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */,
+				F3E76A9E1946FC3800AFEFA8 /* CriticasFlashSearch.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 				48254B8F1927D51B0018DC55 /* Constants.m in Sources */,

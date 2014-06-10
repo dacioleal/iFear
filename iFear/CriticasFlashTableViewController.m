@@ -1,25 +1,19 @@
 //
-//  CriticasTableViewController.m
+//  CriticasFlashTableViewController.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 29/04/14.
+//  Created by Dacio Leal Rodriguez on 10/06/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "CriticasTableViewController.h"
-#import "CriticasMediosSearch.h"
-#import "CriticaMedio.h"
-#import "DetalleViewController.h"
-#import "CriticaMedioViewController.h"
+#import "CriticasFlashTableViewController.h"
+#import "CriticaFlash.h"
 
-@interface CriticasTableViewController ()
-{
-    
-}
+@interface CriticasFlashTableViewController ()
 
 @end
 
-@implementation CriticasTableViewController
+@implementation CriticasFlashTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,14 +34,13 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.navigationController.navigationBar.tintColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
+    self.navigationController.navigationBar.tintColor = [[UIColor alloc] initWithRed:0.91 green:0.73 blue:0.05 alpha:1.0];
     
-    UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.91 green:0.73 blue:0.05 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
     NSDictionary *titleAttributes = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     self.navigationController.navigationBar.titleTextAttributes = titleAttributes;
-    self.navigationController.navigationBar.topItem.title = @"Críticas Medios";
-    
+    self.navigationController.navigationBar.topItem.title = @"Críticas Flash";
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,34 +60,30 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-
-    return _criticasMediosArray.count;
+    return _criticasFlashArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"flashCell" forIndexPath:indexPath];
     
     // Configure the cell...
     UIColor *cellColor = [UIColor clearColor];
     cell.backgroundColor = cellColor;
     
-    UIView *customCellSelectedBackgroundView = [[UIView alloc] init];
-    customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
-    cell.selectedBackgroundView = customCellSelectedBackgroundView;
+    CriticaFlash *critica = (CriticaFlash *) [_criticasFlashArray objectAtIndex:indexPath.row];
+    NSString *usuario = critica.usuario;
+    NSString *contenido = critica.contenido;
+    //NSString *fecha = critica.fecha;
     
-    NSString *autor = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] autor];
-    NSString *medio = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] medio];
-    NSString *contenido = [(CriticaMedio *)[_criticasMediosArray objectAtIndex:indexPath.row] contenido];
-    NSString *title = [NSString stringWithFormat:@"%@     %@", autor, medio ];
-        
-    UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
+    
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.93 green:0.93 blue:0.93 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
-    NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:title attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:usuario attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.textLabel.attributedText = titleAttributedString;
     
-    textColor = [[UIColor alloc] initWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
+    textColor = [[UIColor alloc] initWithRed:0.91 green:0.73 blue:0.05 alpha:1.0];
     font = [UIFont fontWithName:@"Futura-Book" size:18.0];
     NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:contenido attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.detailTextLabel.attributedText = descriptionAttributedString;
@@ -102,14 +91,11 @@
     if ((indexPath.row % 2) == 0) {
         cell.backgroundColor = [UIColor blackColor];
     }
+
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"goToComment" sender:self];
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,7 +134,7 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -156,18 +142,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    if ([segue.identifier isEqualToString:@"goToComment"])
-    {
-        if ([segue.destinationViewController respondsToSelector:@selector(setCriticaMedio:)]) {
-            
-            NSIndexPath *index = [self.tableView indexPathForSelectedRow];
-            CriticaMedio *cm = (CriticaMedio *) [_criticasMediosArray objectAtIndex:index.row];
-            [segue.destinationViewController performSelector:@selector(setCriticaMedio:) withObject:cm];
-        }
-    }
-    
 }
-
+*/
 
 @end
