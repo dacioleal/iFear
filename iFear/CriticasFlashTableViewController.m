@@ -41,6 +41,9 @@
     NSDictionary *titleAttributes = @{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor};
     self.navigationController.navigationBar.titleTextAttributes = titleAttributes;
     self.navigationController.navigationBar.topItem.title = @"Críticas Flash";
+    
+    [self.navigationItem setHidesBackButton:YES];
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning

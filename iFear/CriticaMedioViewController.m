@@ -29,7 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self.navigationController.navigationBar setHidden:NO];
+    self.navigationItem.title = nil;
     
     NSString *autor = _criticaMedio.autor;
     NSString *medio = _criticaMedio.medio;

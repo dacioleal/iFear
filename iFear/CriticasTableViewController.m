@@ -48,7 +48,18 @@
     self.navigationController.navigationBar.titleTextAttributes = titleAttributes;
     self.navigationController.navigationBar.topItem.title = @"Críticas Medios";
     
+    [self.navigationItem setHidesBackButton:YES];
+    
+    
 }
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
