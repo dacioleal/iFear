@@ -41,6 +41,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.navigationController.navigationBar.tintColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
+    [self.navigationController.navigationBar setHidden:YES];
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];

@@ -426,34 +426,34 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmc-ee-xji">
-                                        <rect key="frame" x="187" y="8" width="110" height="40"/>
+                                        <rect key="frame" x="163" y="6" width="118" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Medios" backgroundImage="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Medios" backgroundImage="selector_critica_OFF_236x84.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <state key="selected" backgroundImage="selector_critica_ON_236x84.png"/>
                                         <connections>
                                             <action selector="mediaPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="nES-Ep-QTF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-Ct-fR6">
-                                        <rect key="frame" x="305" y="8" width="110" height="40"/>
+                                        <rect key="frame" x="289" y="6" width="118" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Flash" backgroundImage="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Flash" backgroundImage="selector_critica_OFF_236x84.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <state key="selected" backgroundImage="selector_critica_ON_236x84.png"/>
                                         <connections>
                                             <action selector="flashPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="1P8-q6-bsF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-TQ-Qpe">
-                                        <rect key="frame" x="423" y="8" width="110" height="40"/>
+                                        <rect key="frame" x="415" y="6" width="118" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Usuarios" backgroundImage="boton_panel_izq_330x102.png">
+                                        <state key="normal" title="Usuarios" backgroundImage="selector_critica_OFF_236x84.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="boton_panel_izq_ON_330x102.png"/>
+                                        <state key="selected" backgroundImage="selector_critica_ON_236x84.png"/>
                                         <connections>
                                             <action selector="usersPushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="mxQ-SD-rk0"/>
                                         </connections>
@@ -2039,6 +2039,8 @@
         <image name="rotulo_gore_79x35.png" width="79" height="35"/>
         <image name="rotulo_humor_109x35.png" width="109" height="35"/>
         <image name="rotulo_terror_116x35.png" width="116" height="35"/>
+        <image name="selector_critica_OFF_236x84.png" width="236" height="84"/>
+        <image name="selector_critica_ON_236x84.png" width="236" height="84"/>
         <image name="selector_titulo_318x54.png" width="318" height="54"/>
         <image name="signo_mas_amarillo_69x69.png" width="69" height="69"/>
         <image name="signo_mas_azul_69x69.png" width="69" height="69"/>
