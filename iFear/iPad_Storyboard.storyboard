@@ -16,8 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_cartelera_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-N8-5Y5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_cart_busq_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-N8-5Y5">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banda_secciones_2048x134.png" translatesAutoresizingMaskIntoConstraints="NO" id="ssI-Kn-Poy">
+                                <rect key="frame" x="0.0" y="25" width="1024" height="67"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rotulo_cartelera_476x134.png" translatesAutoresizingMaskIntoConstraints="NO" id="7iK-xx-lWb">
+                                <rect key="frame" x="393" y="30" width="238" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yv-g3-StG" userLabel="View - Content View">
@@ -2067,6 +2075,7 @@
         <image name="actualidad_big_270x270.png" width="270" height="270"/>
         <image name="actualidad_big_ON_270x270.png" width="270" height="270"/>
         <image name="ahorcado.png" width="278" height="1194"/>
+        <image name="banda_secciones_2048x134.png" width="2048" height="134"/>
         <image name="barra_busqueda_1810x78.png" width="1810" height="78"/>
         <image name="barrotes.png" width="2048" height="1536"/>
         <image name="base_cuchillo_2020x348.png" width="2020" height="348"/>
@@ -2118,7 +2127,7 @@
         <image name="cartelera_big_ON_270x270.png" width="270" height="270"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
-        <image name="fondo_cartelera_2048x1536.jpg" width="2048" height="1536"/>
+        <image name="fondo_cart_busq_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
         <image name="fondo_fichas_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
@@ -2152,6 +2161,7 @@
         <image name="panel_votar_400x284.png" width="400" height="284"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
         <image name="rotulo_calidad_124x35.png" width="124" height="35"/>
+        <image name="rotulo_cartelera_476x134.png" width="476" height="134"/>
         <image name="rotulo_gore_79x35.png" width="79" height="35"/>
         <image name="rotulo_humor_109x35.png" width="109" height="35"/>
         <image name="rotulo_terror_116x35.png" width="116" height="35"/>
