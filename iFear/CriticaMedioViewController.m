@@ -47,7 +47,7 @@
     
     
     textColor = [[UIColor alloc] initWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
-    font = [UIFont fontWithName:@"Futura-Book" size:18.0];
+    font = [UIFont fontWithName:@"Futura-Book" size:16.0];
     NSAttributedString *contenidoAttributedString = [[NSAttributedString alloc] initWithString:contenido attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _contenidoTextView.attributedText = contenidoAttributedString;
     

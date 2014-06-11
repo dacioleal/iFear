@@ -9,10 +9,12 @@
 #import "DetalleViewController.h"
 #import "CriticasTableViewController.h"
 #import "CriticasFlashTableViewController.h"
+#import "CriticasUsuariosTableViewController.h"
 #import "Pelicula.h"
 #import "TrailersSearch.h"
 #import "CriticasMediosSearch.h"
 #import "CriticasFlashSearch.h"
+#import "CriticasUsuariosSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
@@ -23,7 +25,7 @@
     NSArray *trailersArray;
     NSArray *criticasMediosArray;
     NSArray *criticasFlashArray;
-    NSArray *criticasLargasArray;
+    NSArray *criticasUsuariosArray;
     NSArray *contentViews;
     UIView *mediaView;
     UIView *flashView;
@@ -98,6 +100,10 @@
     NSDictionary *parametersCriticasFlash = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasFlashPelicula", @"function", movieID, @"idMovie",nil];
     criticasFlashArray = [criticasFlashSearch searchWithParameters:parametersCriticasFlash];
     
+    CriticasUsuariosSearch *criticasUsuariosSearch = [[CriticasUsuariosSearch alloc] init];
+    NSDictionary *parametersCriticasUsuarios = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasLargasPelicula", @"function", movieID, @"idMovie",nil];
+    criticasUsuariosArray = [criticasUsuariosSearch searchWithParameters:parametersCriticasUsuarios];
+    
     
     //Añadimos al propio viewcontroller como observador de las notificaciones producidas por las distintos objetos de las clases Search que obtienen los datos del servidor y que cuando terminan de obtener estos datos lo comunican mediante la notificación correspondiente
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
@@ -107,6 +113,8 @@
     [defaultCenter addObserver:self selector:@selector(configureCriticasMediosView) name:@"CriticasMediosEmpty" object:criticasMediosSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasFlashView) name:@"CriticasFlashFinished" object:criticasFlashSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasFlashView) name:@"CriticasFlashEmpty" object:criticasFlashSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosFinished" object:criticasUsuariosSearch];
+    [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosEmpty" object:criticasUsuariosSearch];
     
 }
 
@@ -416,6 +424,24 @@
     [_reviewsContainerView addSubview:flashView];
     flashView.frame = CGRectMake(0, 0, flashView.superview.frame.size.width, flashView.superview.frame.size.height);
     flashView.hidden = YES;
+    
+}
+
+- (void) configureCriticasUsuariosView
+{
+    //NSLog(@"Array de Críticas Usuarios: %@", criticasUsuariosArray);
+    
+    UINavigationController *criticasUsuariosNC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasUsuariosNavigationController"];
+    CriticasUsuariosTableViewController *criticasUsuariosTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"criticasUsuariosTableViewController"];
+    criticasUsuariosTVC.movieID = movieID;
+    criticasUsuariosTVC.criticasUsuariosArray = criticasUsuariosArray;
+    [criticasUsuariosNC addChildViewController:criticasUsuariosTVC];
+    
+    [self addChildViewController:criticasUsuariosNC];
+    usersView = criticasUsuariosNC.view;
+    [_reviewsContainerView addSubview:usersView];
+    usersView.frame = CGRectMake(0, 0, usersView.superview.frame.size.width, usersView.superview.frame.size.height);
+    usersView.hidden = YES;
     
 }
 

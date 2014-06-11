@@ -89,8 +89,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    UIColor *cellColor = [UIColor clearColor];
-    cell.backgroundColor = cellColor;
+    
     
     UIView *customCellSelectedBackgroundView = [[UIView alloc] init];
     customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
@@ -102,19 +101,23 @@
     NSString *title = [NSString stringWithFormat:@"%@     %@", autor, medio ];
         
     UIColor *textColor = [[UIColor alloc] initWithRed:0.76 green:0 blue:0.122 alpha:1.0];
-    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
+    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:16.0];
     NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:title attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.textLabel.attributedText = titleAttributedString;
+    cell.textLabel.shadowColor = [UIColor blackColor];
+    cell.textLabel.shadowOffset = CGSizeMake(1, 1);
     
     textColor = [[UIColor alloc] initWithRed:0.84 green:0.84 blue:0.84 alpha:1.0];
-    font = [UIFont fontWithName:@"Futura-Book" size:18.0];
+    font = [UIFont fontWithName:@"Futura-Book" size:16.0];
     NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:contenido attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.detailTextLabel.attributedText = descriptionAttributedString;
     cell.detailTextLabel.shadowColor = [UIColor blackColor];
     cell.detailTextLabel.shadowOffset = CGSizeMake(1, 1);
     
     if ((indexPath.row % 2) == 0) {
-        cell.backgroundColor = [UIColor blackColor];
+        cell.backgroundColor = [UIColor clearColor];
+    } else {
+        cell.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.16];;
     }
     
     return cell;
