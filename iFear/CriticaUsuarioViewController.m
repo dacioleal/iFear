@@ -28,11 +28,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     [self.navigationController.navigationBar setHidden:NO];
     self.navigationItem.title = nil;
     
-    self.view.backgroundColor = [[UIColor alloc] initWithRed:0.94 green:0.82 blue:0.84 alpha:1.0];
-    _descriptionTextView.backgroundColor = [[UIColor alloc] initWithRed:0.94 green:0.82 blue:0.84 alpha:1.0];
+    self.view.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    _descriptionTextView.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
     
     NSString *usuario = _criticaUsuario.usuario;
     NSString *titulo = _criticaUsuario.titulo;
@@ -47,7 +48,6 @@
     font = [UIFont fontWithName:@"Futura-Medium" size:18.0];
     NSAttributedString *titleAttributedString = [[NSAttributedString alloc] initWithString:titulo attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     _titleLabel.attributedText = titleAttributedString;
-    
     
     textColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     font = [UIFont fontWithName:@"Futura-Light" size:18.0];

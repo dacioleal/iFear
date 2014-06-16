@@ -26,6 +26,9 @@
 @synthesize web = _web;
 @synthesize sinopsis = _sinopsis;
 @synthesize portada = _portada;
+@synthesize cartelera = _cartelera;
+@synthesize estreno = _estreno;
+@synthesize fechaEstreno = _fechaEstreno;
 
 
 #pragma mark - Inicializador con parámetros
@@ -44,6 +47,9 @@ tituloOriginalDePelicula:(NSString *)titulo_original
         webDeLaPelicula:(NSString *)web
    sinopsisDeLaPelicula:(NSString *)sinopsis
     portadaDeLaPelicula:(NSString *)portada
+  carteleraDeLaPelicula:(NSString *) cartelera
+    estrenoDeLaPelicula:(NSString *) estreno
+fechaEstrenoDeLaPelicula:(NSString *) fechaEstreno
 {
     //Se llama al init de la superclase
     self = [super init];
@@ -65,8 +71,9 @@ tituloOriginalDePelicula:(NSString *)titulo_original
         [self setWeb:web];
         [self setSinopsis:sinopsis];
         [self setPortada:portada];
-        
-        
+        [self setCartelera:cartelera];
+        [self setEstreno:estreno];
+        [self setFechaEstreno:fechaEstreno];
     }
     return self;
 }

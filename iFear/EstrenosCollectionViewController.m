@@ -85,7 +85,7 @@
     cell.movieCellTitleLabel.shadowOffset = CGSizeMake(0, 2);
     
     UIColor *textColor = [UIColor colorWithRed:0.98 green:0.89 blue:0.51 alpha:1.0];
-    attributedString = [[NSAttributedString alloc] initWithString:@"21 marzo 2014" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    attributedString = [[NSAttributedString alloc] initWithString:movie.fechaEstreno attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.movieCellDateLabel.attributedText = attributedString;
     cell.movieCellDateLabel.shadowColor = [UIColor blackColor];
     cell.movieCellDateLabel.shadowOffset = CGSizeMake(0, 2);

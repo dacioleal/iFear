@@ -54,7 +54,11 @@
  productoraDeLaPelicula:(NSString *) productora
         webDeLaPelicula:(NSString *) web
    sinopsisDeLaPelicula:(NSString *) sinopsis
-    portadaDeLaPelicula:(NSString *) portada;
+    portadaDeLaPelicula:(NSString *) portada
+  carteleraDeLaPelicula:(NSString *) cartelera
+    estrenoDeLaPelicula:(NSString *) estreno
+fechaEstrenoDeLaPelicula:(NSString *) fechaEstreno;
+
 
 - (NSArray *) titlesArrayToMakeDescriptionSheet;
 
