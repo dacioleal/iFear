@@ -28,7 +28,9 @@
 @property (strong, nonatomic) NSString * web;
 @property (strong, nonatomic) NSString * sinopsis;
 @property (strong, nonatomic) NSString * portada;
-
+@property (strong, nonatomic) NSString * cartelera;
+@property (strong, nonatomic) NSString * estreno;
+@property (strong, nonatomic) NSString * fechaEstreno;
 @property (strong, nonatomic) UIImage * imagen;
 @property (strong, nonatomic) NSURL * urlImagen;
 
