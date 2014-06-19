@@ -37,8 +37,8 @@
 
 
 - (void) retrieveData {
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
