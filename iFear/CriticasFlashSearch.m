@@ -1,37 +1,38 @@
 //
-//  TrailersSearch.m
+//  CriticasFlashSearch.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 29/04/14.
+//  Created by Dacio Leal Rodriguez on 10/06/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "TrailersSearch.h"
+#import "CriticasFlashSearch.h"
+#import "CriticaFlash.h"
 
-@interface TrailersSearch ()
+@interface CriticasFlashSearch ()
 {
-    NSMutableArray *trailers;
+    NSMutableArray *criticasFlash;
     NSDictionary *parameters;
 }
 
 @end
 
-@implementation TrailersSearch
+@implementation CriticasFlashSearch
 
-- (NSMutableArray *) trailers
+- (NSMutableArray *) criticasFlash
 {
-    if (!trailers) {
-        trailers = [[NSMutableArray alloc] init];
+    if (!criticasFlash) {
+        criticasFlash = [[NSMutableArray alloc] init];
     }
-    return trailers;
+    return criticasFlash;
 }
 
 - (NSArray *) searchWithParameters: (NSDictionary *) param
 {
-    trailers = [[NSMutableArray alloc] init];
+    criticasFlash = [[NSMutableArray alloc] init];
     parameters = param;
     [self retrieveData];
-    return trailers;
+    return criticasFlash;
     
 }
 
@@ -115,15 +116,19 @@
 {
     
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
     NSArray * retorno = (NSArray *)[responseDictionary objectForKey:@"retorno"];
     
-    NSString *enlaceTrailer;
+    NSString *usuario;
+    NSString *contenido;
+    NSString *fecha;
     
     for (NSDictionary * fila in retorno) {
         
-        enlaceTrailer = (NSString *) [fila objectForKey:@"enlace_trailer"];
-        [trailers addObject:enlaceTrailer];
+        usuario = (NSString *) [fila objectForKey:@"nombre_usuario"];
+        contenido = (NSString *) [fila objectForKey:@"contenido"];
+        fecha = (NSString *) [fila objectForKey:@"fecha"];
+        CriticaFlash *critica = [[CriticaFlash alloc] initWithParameters:usuario andContenido:contenido andFecha:fecha];
+        [criticasFlash addObject:critica];
         
     }
     
@@ -139,30 +144,27 @@ didCompleteWithError:(NSError *)error
 {
     if(error == nil)
     {
-        //NSLog(@"Éxito al bajar");
+        //NSLog(@"Criticas Flash: %@", criticasFlash);
         
-        if (trailers.count != 0) {
+        if (criticasFlash.count != 0) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"trailersFinished" object:self];
+                [defaultCenter postNotificationName:@"CriticasFlashFinished" object:self];
             });
             
             
         } else {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"NoTrailers" object:self];
+                [defaultCenter postNotificationName:@"CriticasFlashEmpty" object:self];
             });
         }
         
     } else {
         
         NSLog(@"Error %@",[error userInfo]);
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [self displayAlertView];
@@ -176,6 +178,5 @@ didCompleteWithError:(NSError *)error
     
     [self retrieveData];
 }
-
 
 @end

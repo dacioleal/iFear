@@ -1,37 +1,38 @@
 //
-//  TrailersSearch.m
+//  CriticasMediosSearch.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 29/04/14.
+//  Created by Dacio Leal Rodriguez on 02/06/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "TrailersSearch.h"
+#import "CriticasMediosSearch.h"
+#import "CriticaMedio.h"
 
-@interface TrailersSearch ()
+@interface CriticasMediosSearch ()
 {
-    NSMutableArray *trailers;
+    NSMutableArray *criticasMedios;
     NSDictionary *parameters;
 }
 
 @end
 
-@implementation TrailersSearch
+@implementation CriticasMediosSearch
 
-- (NSMutableArray *) trailers
+- (NSMutableArray *) criticasMedios
 {
-    if (!trailers) {
-        trailers = [[NSMutableArray alloc] init];
+    if (!criticasMedios) {
+        criticasMedios = [[NSMutableArray alloc] init];
     }
-    return trailers;
+    return criticasMedios;
 }
 
 - (NSArray *) searchWithParameters: (NSDictionary *) param
 {
-    trailers = [[NSMutableArray alloc] init];
+    criticasMedios = [[NSMutableArray alloc] init];
     parameters = param;
     [self retrieveData];
-    return trailers;
+    return criticasMedios;
     
 }
 
@@ -115,15 +116,19 @@
 {
     
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
     NSArray * retorno = (NSArray *)[responseDictionary objectForKey:@"retorno"];
     
-    NSString *enlaceTrailer;
+    NSString *autor;
+    NSString *medio;
+    NSString *contenido;
     
     for (NSDictionary * fila in retorno) {
         
-        enlaceTrailer = (NSString *) [fila objectForKey:@"enlace_trailer"];
-        [trailers addObject:enlaceTrailer];
+        autor = (NSString *) [fila objectForKey:@"autor"];
+        medio = (NSString *) [fila objectForKey:@"medio"];
+        contenido = (NSString *) [fila objectForKey:@"contenido"];
+        CriticaMedio *critica = [[CriticaMedio alloc] initWithParameters:autor andMedio:medio andContenido:contenido];
+        [criticasMedios addObject:critica];
         
     }
     
@@ -139,14 +144,14 @@ didCompleteWithError:(NSError *)error
 {
     if(error == nil)
     {
-        //NSLog(@"Éxito al bajar");
+        //NSLog(@"Criticas Medios: %@", criticasMedios);
         
-        if (trailers.count != 0) {
+        if (criticasMedios.count != 0) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"trailersFinished" object:self];
+                [defaultCenter postNotificationName:@"CriticasMediosFinished" object:self];
             });
             
             
@@ -155,7 +160,7 @@ didCompleteWithError:(NSError *)error
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"NoTrailers" object:self];
+                [defaultCenter postNotificationName:@"CriticasMediosEmpty" object:self];
             });
         }
         
@@ -176,6 +181,5 @@ didCompleteWithError:(NSError *)error
     
     [self retrieveData];
 }
-
 
 @end

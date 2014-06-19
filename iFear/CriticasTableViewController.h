@@ -10,4 +10,7 @@
 
 @interface CriticasTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *criticasMediosArray;
+@property (nonatomic, strong) NSString *movieID;
+
 @end

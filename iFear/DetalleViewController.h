@@ -27,11 +27,19 @@
 @property (weak, nonatomic) IBOutlet UIButton *reviewsButton;
 @property (weak, nonatomic) IBOutlet UIButton *darkSideButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *mediaButton;
+@property (weak, nonatomic) IBOutlet UIButton *flashButton;
+@property (weak, nonatomic) IBOutlet UIButton *usersButton;
+
+
 - (IBAction)backPushButton:(UIButton *)sender;
 - (IBAction)descriptionPushButton:(UIButton *)sender;
 - (IBAction)trailersPushButton:(UIButton *)sender;
 - (IBAction)reviewsPushButton:(UIButton *)sender;
 - (IBAction)darkSidePushButton:(UIButton *)sender;
 - (IBAction)rateMoviePushButton:(UIButton *)sender;
+- (IBAction)mediaPushButton:(UIButton *)sender;
+- (IBAction)flashPushButton:(UIButton *)sender;
+- (IBAction)usersPushButton:(UIButton *)sender;
 
 @end

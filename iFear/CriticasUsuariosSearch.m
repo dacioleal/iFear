@@ -1,37 +1,38 @@
 //
-//  TrailersSearch.m
+//  CriticasUsuariosSearch.m
 //  iFear
 //
-//  Created by Dacio Leal Rodriguez on 29/04/14.
+//  Created by Dacio Leal Rodriguez on 11/06/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
-#import "TrailersSearch.h"
+#import "CriticasUsuariosSearch.h"
+#import "CriticaUsuario.h"
 
-@interface TrailersSearch ()
+@interface CriticasUsuariosSearch ()
 {
-    NSMutableArray *trailers;
+    NSMutableArray *criticasUsuarios;
     NSDictionary *parameters;
 }
 
 @end
 
-@implementation TrailersSearch
+@implementation CriticasUsuariosSearch
 
-- (NSMutableArray *) trailers
+- (NSMutableArray *) criticasUsuarios
 {
-    if (!trailers) {
-        trailers = [[NSMutableArray alloc] init];
+    if (!criticasUsuarios) {
+        criticasUsuarios = [[NSMutableArray alloc] init];
     }
-    return trailers;
+    return criticasUsuarios;
 }
 
 - (NSArray *) searchWithParameters: (NSDictionary *) param
 {
-    trailers = [[NSMutableArray alloc] init];
+    criticasUsuarios = [[NSMutableArray alloc] init];
     parameters = param;
     [self retrieveData];
-    return trailers;
+    return criticasUsuarios;
     
 }
 
@@ -115,15 +116,21 @@
 {
     
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
     NSArray * retorno = (NSArray *)[responseDictionary objectForKey:@"retorno"];
     
-    NSString *enlaceTrailer;
+    NSString *usuario;
+    NSString *titulo;
+    NSString *contenido;
+    NSString *fecha;
     
     for (NSDictionary * fila in retorno) {
         
-        enlaceTrailer = (NSString *) [fila objectForKey:@"enlace_trailer"];
-        [trailers addObject:enlaceTrailer];
+        usuario = (NSString *) [fila objectForKey:@"nombre_usuario"];
+        titulo = (NSString *) [fila objectForKey:@"titulo"];
+        contenido = (NSString *) [fila objectForKey:@"contenido"];
+        fecha = (NSString *) [fila objectForKey:@"fecha"];
+        CriticaUsuario *critica = [[CriticaUsuario alloc] initWithParameters:usuario andTitulo:titulo andContenido:contenido andFecha:fecha];
+        [criticasUsuarios addObject:critica];
         
     }
     
@@ -139,30 +146,27 @@ didCompleteWithError:(NSError *)error
 {
     if(error == nil)
     {
-        //NSLog(@"Éxito al bajar");
+        //NSLog(@"Criticas Flash: %@", criticasFlash);
         
-        if (trailers.count != 0) {
+        if (criticasUsuarios.count != 0) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"trailersFinished" object:self];
+                [defaultCenter postNotificationName:@"CriticasUsuariosFinished" object:self];
             });
             
             
         } else {
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-                [defaultCenter postNotificationName:@"NoTrailers" object:self];
+                [defaultCenter postNotificationName:@"CriticasUsuariosEmpty" object:self];
             });
         }
         
     } else {
         
         NSLog(@"Error %@",[error userInfo]);
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             
             [self displayAlertView];

@@ -66,6 +66,8 @@
 {
     [super viewDidLoad];
     
+    _container.layer.opacity = 0.9;
+    
     // Se obtiene el container de la búsqueda por subgenero
     busquedaSubGenereVC = [self.storyboard instantiateViewControllerWithIdentifier:@"busquedaSubGeneroViewController"];
     busquedaSubGenereVC.delegate = self;
