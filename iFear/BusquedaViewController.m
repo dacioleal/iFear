@@ -123,7 +123,7 @@
     // BÚSQUEDA POR CAJA DE TEXTO
     if (pushInTextSearchField) {
         // TODO Necesario conocer que subvista está cargada para activar el botón en cuestión
-        //[self.buscarSubGenButton setEnabled:true];
+        [self.buscarSubGenButton setEnabled:true];
         
         // Se obtiene que ha introducido el usuario
         NSString * busqueda = [self.textFieldSearch.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -219,23 +219,15 @@
         self.popoverContent.delegate = self;
     }
     
-    //    if (self.selectorPopover == nil) {
     // Configura el popover
     self.selectorPopover = [[UIPopoverController alloc] initWithContentViewController:self.popoverContent];
     self.selectorPopover.popoverContentSize = CGSizeMake(159., 81.);
-    //[[self.selectorPopover.contentViewController view] setBackgroundColor:[UIColor blueColor]];
     self.selectorPopover.backgroundColor = [UIColor colorWithRed:(43/255.0) green:(43/255.0) blue:(22/255.0) alpha:1] ;
     self.selectorPopover.delegate = self;
     
     // Set the sender to a UIButton.
     UIButton *tappedButton = (UIButton *)sender;
     [self.selectorPopover presentPopoverFromRect:tappedButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    //
-    //    } else {
-    //        //The color picker popover is showing. Hide it.
-    //        [self.selectorPopover dismissPopoverAnimated:YES];
-    //        self.selectorPopover = nil;
-    //    }
 }
 
 
@@ -291,7 +283,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         
         // TODO Necesario conocer que subvista está cargada para activar el botón en cuestión
-//        [self.buscarSubGenButton setSelected:true];
+     [self.buscarSubGenButton setSelected:true];
         // Desactiva todo lo relativo a la búsqueda por la caja de texto
         pushInTextSearchField = false;
         self.textFieldSearch.text = @"";
@@ -317,6 +309,15 @@
     [sub_genre_list removeAllObjects];
 }
 
+
+- (void) resetTextField
+{
+    
+    self.textFieldSearch.text = @"";
+    pushInTextSearchField = false;
+    // Quita el focus del textField
+    [self.textFieldSearch resignFirstResponder];
+}
 # pragma mark - Popover Delegate -
 
 - (void) setSearchSelector: (NSString *) selector imgButtonSelected:(UIImage*) imgButton;
@@ -326,7 +327,6 @@
         [[self selectorPopover] dismissPopoverAnimated:YES];
         self.selectorPopover = nil;
     }
-    NSLog(@"%@",selector);
     [movieParameterSearch setObject:selector forKey:@"parametro"];
     [[self popoverSelectedOption] setImage:imgButton forState:UIControlStateNormal];
 }
@@ -407,7 +407,6 @@
 #pragma mark - BusquedaSubGeneroDelegate -
 - (void) getSelectedSubGenre: (NSMutableArray *) subgenres
 {
-    NSLog(@"%@",subgenres);
     sub_genre_list = subgenres;
 }
 
@@ -417,6 +416,7 @@
     sensationsValues = categoriesValues;
 }
 
+#pragma mark - UITextField Delegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     
@@ -430,6 +430,7 @@
     return true;
 }
 
+#pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"goToResultSearchView"])
@@ -438,15 +439,6 @@
         resultadoBusquedaVC.resultSearchList = resultMovies;
         
     }
-}
-
-- (void) resetTextField
-{
-    
-    self.textFieldSearch.text = @"";
-    pushInTextSearchField = false;
-    // Quita el focus del textField
-    [self.textFieldSearch resignFirstResponder];
 }
 
 @end
