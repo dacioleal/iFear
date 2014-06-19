@@ -79,7 +79,7 @@
     subGenreSearch = [[SubGenreSearch alloc] init];
     sensationSearch = [[SensationsSearch alloc] init];
     parameterSearch = [[ParametersSearch alloc]init];
-    
+    // Variables auxiliares para los distintos parámetros de búsqueda
     sub_genre_list = [[NSMutableArray alloc] init];
     sensationsValues = [[NSMutableDictionary alloc] init];
     movieParameterSearch = [[NSMutableDictionary alloc] init];
@@ -98,9 +98,11 @@
     self.buscarSubGenButton.selected = YES;
     [self displayContentViewController:busquedaSubGenereVC];
     
+    // Se inicializa a falso el haber pulsado en el edit text para buscar algo
     pushInTextSearchField = false;
     self.textFieldSearch.delegate = self;
     
+    // Se inicializa el parámetro a título para el caso de que el usuario busque por título, al estar la opción por defecto de título puesto es la que se manda.
     [movieParameterSearch setObject:@"titulo" forKey:@"parametro"];
     
     
@@ -117,11 +119,30 @@
 // Método que se usa cuando se pulsa el botón buscar
 - (IBAction)pushBuscarButton:(id)sender {
     // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
+    
+    // BÚSQUEDA POR CAJA DE TEXTO
     if (pushInTextSearchField) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self searchByMovieParameter];
-        });
+        // TODO Necesario conocer que subvista está cargada para activar el botón en cuestión
+        //[self.buscarSubGenButton setEnabled:true];
+        
+        // Se obtiene que ha introducido el usuario
+        NSString * busqueda = [self.textFieldSearch.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        // Comprueba que no esté vacio para realizar la búsqueda
+        if (! [busqueda isEqualToString:@""]) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self searchByMovieParameter];
+            });
+        }else{
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
+                                                              message:@"No ha escrito ningún valor para la búsqueda"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+    // BÚSQUEDA POR SUBGENERO
     }else if ([self.buscarSubGenButton isSelected]) {
+        // Se comprueba que efectivamente el usuario ha seleccionaro por lo menos un subgenero
         if (sub_genre_list.count > 0) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [self searchBySubGenere];
@@ -134,6 +155,7 @@
                                                     otherButtonTitles:nil];
             [message show];
         }
+    // BÚSQUEDA POR SENSACIONES
     }else{
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self searchBySensations];
@@ -144,6 +166,7 @@
 // Cambia el estado de los botones de elección del tipo de búsqueda SI/NO
 - (IBAction)setStateSwitchs:(id)sender
 {
+    // SUBGENERO
     if ([sender tag] == 0) {
         /*
          * Esto se hace para saber si está en la misma pantalla y ha pulsado sobre el mismo botón.
@@ -152,7 +175,12 @@
          */
         if (! [self.buscarSubGenButton isSelected]) {
             if (![self.buscarSensacionesButton isSelected]) {
+                // Resetea la búsqueda por caja de texto
+                [self resetTextField];
+                // Activa los botones de subgeneros
                 [busquedaSubGenereVC enabledAllButtons:true];
+                // Activa el botón de búsqueda por subgenero a SI
+                [self.buscarSubGenButton setSelected:true];
             }else{
                 self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
                 self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
@@ -162,10 +190,14 @@
             }
             
         }
-        
+    // SENSACIONES
     }else{
         if (! [self.buscarSensacionesButton isSelected]) {
+            [self resetTextField];
+            [busquedaSubGenereVC enabledAllButtons:true];
+            // Desactiva los botones seleccionados
             [busquedaSubGenereVC selectAllButtons:false];
+            // Elimina todo objeto de subgenero para la búsqueda
             [sub_genre_list removeAllObjects];
             self.buscarSensacionesButton.selected = !self.buscarSensacionesButton.selected;
             self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
@@ -237,19 +269,44 @@
 // Método para obtener los resultados
 - (void) searchBySubGenere
 {
+    // Se obtiene el resultado de la búsqueda
     resultMovies = [subGenreSearch searchBySubGenre:[self getParamsArray]];
 }
 
 - (void) searchBySensations
 {
+    // Se obtiene el resultado de la búsqueda
     resultMovies = [sensationSearch searchBySensations:sensationsValues];
 }
 
 - (void) searchByMovieParameter
 {
+    // Se obtiene el texto
     NSString * busqueda = self.textFieldSearch.text;
+    // Se establece el parámetro
     [movieParameterSearch setObject:busqueda forKey:@"busqueda"];
+    // Resultado de la búsqueda
     resultMovies = [parameterSearch searchByParameters:movieParameterSearch];
+    // Necesario hacer esto en el hilo principal ya que son cambios en la interfaz gráfica
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        // TODO Necesario conocer que subvista está cargada para activar el botón en cuestión
+//        [self.buscarSubGenButton setSelected:true];
+        // Desactiva todo lo relativo a la búsqueda por la caja de texto
+        pushInTextSearchField = false;
+        self.textFieldSearch.text = @"";
+        // Activa todos los botones de la parte de subgeneros
+        [busquedaSubGenereVC enabledAllButtons:true];
+    });
+    // En el caso de que el resultado de la búsqueda sea vacio se le quita el focus a la caja de texto
+    if (resultMovies.count == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Quita el focus del textField
+            [self.textFieldSearch resignFirstResponder];
+        });
+       
+    }
+   
 }
 
 // Método utilizado para ir a la pantalla de Resultados de búsqueda
@@ -383,10 +440,13 @@
     }
 }
 
-
-
-
-- (IBAction)pushCloseDeactivateView:(id)sender {
-    self.deactivateView.hidden = true;
+- (void) resetTextField
+{
+    
+    self.textFieldSearch.text = @"";
+    pushInTextSearchField = false;
+    // Quita el focus del textField
+    [self.textFieldSearch resignFirstResponder];
 }
+
 @end

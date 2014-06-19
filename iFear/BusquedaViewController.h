@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buscarSensacionesButton;
 @property (weak, nonatomic) IBOutlet UIButton *buscarSubGenButton;
 
+// Método que cambiar el estado de los botones de buscar por subgenero o por sensaciones
 - (IBAction)setStateSwitchs:(id)sender;
 
 // Método cuando se pulsa el botón de buscar
@@ -25,6 +26,7 @@
 // Popover
 @property (weak, nonatomic) IBOutlet UIButton *popoverSelectedOption;
 @property(strong, nonatomic) UIPopoverController * selectorPopover;
+
 // Contenido del Popover
 @property (nonatomic, strong) PopoverSelectorBusquedaViewController * popoverContent;
 
@@ -34,7 +36,5 @@
 // Container donde se mostrarán los tipo de Búsqueda: Subgeneros o Sensaciones
 @property (weak, nonatomic) IBOutlet UIView *container;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldSearch;
-@property (weak, nonatomic) IBOutlet UIView *deactivateView;
-- (IBAction)pushCloseDeactivateView:(id)sender;
 
 @end

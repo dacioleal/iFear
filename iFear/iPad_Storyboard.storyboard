@@ -1027,30 +1027,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </containerView>
-                            <view hidden="YES" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-Jr-nGd">
-                                <rect key="frame" x="0.0" y="257" width="1024" height="511"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Al realizar una búsqueda por título, director o reparto se desactivan las demás búsquedas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6za-Rd-hv4">
-                                        <rect key="frame" x="195" y="245" width="688" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-a3-gdv">
-                                        <rect key="frame" x="958" y="8" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushCloseDeactivateView:" destination="27q-LG-i9d" eventType="touchUpInside" id="tM5-En-TkU"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1061,7 +1037,6 @@
                         <outlet property="buscarSensacionesButton" destination="BG2-pV-ONB" id="dHj-Pw-sS9"/>
                         <outlet property="buscarSubGenButton" destination="WbH-en-dJc" id="wAf-Gk-GqL"/>
                         <outlet property="container" destination="Dc6-82-HF6" id="UfL-rj-JzE"/>
-                        <outlet property="deactivateView" destination="Ygz-Jr-nGd" id="cAi-eV-PBh"/>
                         <outlet property="popoverSelectedOption" destination="t4G-fl-Tyc" id="Kb2-6U-bfp"/>
                         <outlet property="textFieldSearch" destination="VAE-VA-4ga" id="JHe-jQ-i8C"/>
                         <segue destination="GLI-JR-e7G" kind="modal" identifier="goToResultSearchView" id="rYM-Kx-bHF"/>

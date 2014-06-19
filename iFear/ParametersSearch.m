@@ -46,8 +46,8 @@
     
     //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
     
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    //    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+   NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -199,7 +199,6 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
-    NSLog(@"%lu",(unsigned long)movies.count);
     if(error == nil)
     {
         if (movies.count != 0) {
@@ -216,6 +215,13 @@ didCompleteWithError:(NSError *)error
             });
             
             
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self displayAlertView:@"Resultado de la búsqueda" andMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                
+            });
+            //            [self retrieveData];
+            
         }
         
     } else {
@@ -223,8 +229,7 @@ didCompleteWithError:(NSError *)error
         NSLog(@"Error %@",[error userInfo]);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [self displayAlertView:@"Resultado de la búsqueda" andMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+            [self displayAlertView:@"Downloading Error" andMessage:@"Push button to retry"];
         });
     }
 }
