@@ -117,7 +117,11 @@
 // Método que se usa cuando se pulsa el botón buscar
 - (IBAction)pushBuscarButton:(id)sender {
     // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
-    if ([self.buscarSubGenButton isSelected]) {
+    if (pushInTextSearchField) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self searchByMovieParameter];
+        });
+    }else if ([self.buscarSubGenButton isSelected]) {
         if (sub_genre_list.count > 0) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [self searchBySubGenere];
@@ -130,8 +134,6 @@
                                                     otherButtonTitles:nil];
             [message show];
         }
-       
-        
     }else{
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self searchBySensations];
@@ -163,6 +165,8 @@
         
     }else{
         if (! [self.buscarSensacionesButton isSelected]) {
+            [busquedaSubGenereVC selectAllButtons:false];
+            [sub_genre_list removeAllObjects];
             self.buscarSensacionesButton.selected = !self.buscarSensacionesButton.selected;
             self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
             // Se cambia el tipo de búsqueda en el container.

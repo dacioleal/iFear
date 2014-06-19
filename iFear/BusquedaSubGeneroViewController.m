@@ -12,6 +12,7 @@
 {
     // Array para los subgeneros
     NSMutableArray * sub_Genre_List;
+    int buttonsSelected;
 }
 
 @end
@@ -36,6 +37,7 @@
     
     // Se establecen las imagenes según el estado del botón
     [self setImageForAllButtons];
+    buttonsSelected = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,11 +49,29 @@
 
 # pragma mark - IBAction
 - (IBAction)pushCategoriesButton:(id)sender {
-    if (sub_Genre_List.count <= 2) {
     
     // Aquí se cambia el estado del botón presionado
     [self setStateCategoriesButton:sender];
     
+    
+    // Se utiliza la llamada al método delegado para ir sabiendo que elementos se están añadiendo
+    [[self delegate] getSelectedSubGenre:sub_Genre_List];
+}
+
+
+#pragma mark - Métodos propios -
+// Método que busca un subgenero en el array y según esté lo añade o lo elimina
+- (void) searchInArray: (NSString *) subgenre
+{
+    if (![sub_Genre_List containsObject:subgenre]) {
+        [sub_Genre_List addObject:subgenre];
+    }else{
+        [sub_Genre_List removeObject:subgenre];
+    }
+}
+
+- (void) manageSubGenreArray:(id) sender
+{
     // SWITCH QUE MANEJA QUE BOTÓN SE HA PULSADO
     switch ([sender tag]) {
             
@@ -186,33 +206,61 @@
             break;
     }
     
-    // Se utiliza la llamada al método delegado para ir sabiendo que elementos se están añadiendo
-    [[self delegate] getSelectedSubGenre:sub_Genre_List];
-    }else{
-        [self showMessage];
-    }
 }
-
-
-#pragma mark - Métodos propios -
-// Método que busca un subgenero en el array y según esté lo añade o lo elimina
-- (void) searchInArray: (NSString *) subgenre
-{
-    if (![sub_Genre_List containsObject:subgenre]) {
-        [sub_Genre_List addObject:subgenre];
-    }else{
-        [sub_Genre_List removeObject:subgenre];
-    }
-}
-
-
 
 // Método para establecer si está seleccionado o no un botón
+//- (void) setStateCategoriesButton:(id)sender
+//{
+//    NSLog(@" Cuando comprueba: %i",buttonsSelected);
+//
+//    UIButton * btnAux = (UIButton *) sender;
+//
+//    if (buttonsSelected <= 3) {
+//
+//        if (buttonsSelected == 3) {
+//            if (btnAux.selected) {
+//                btnAux.selected = false;
+//                buttonsSelected--;
+//                [self manageSubGenreArray:sender];
+//
+//            }else{
+//                [self showMessage];
+//            }
+//        }else{
+//            btnAux.selected = !btnAux.selected;
+//            if (btnAux.selected) {
+//                buttonsSelected++;
+//                [self manageSubGenreArray:sender];
+//            }else{
+//                buttonsSelected--;
+//                [self manageSubGenreArray:sender];
+//
+//            }
+//        }
+//    }
+
 - (void) setStateCategoriesButton:(id)sender
 {
     UIButton * btnAux = (UIButton *) sender;
     
-    btnAux.selected = !btnAux.selected;
+    if (sub_Genre_List.count <= 3) {
+        
+        if (sub_Genre_List.count == 3) {
+            if (btnAux.selected) {
+                btnAux.selected = false;
+                [self manageSubGenreArray:sender];
+            }else{
+                [self showMessage];
+            }
+        }else{
+            btnAux.selected = !btnAux.selected;
+            [self manageSubGenreArray:sender];
+            
+        }
+    }
+    
+    
+    
 }
 
 // Método para establecer las imagenes según el estado del Botón
