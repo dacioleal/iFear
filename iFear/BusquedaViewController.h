@@ -11,7 +11,7 @@
 #import "BusquedaSubGeneroViewController.h"
 #import "BusquedaSensacionesViewController.h"
 
-@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, BusquedaSubGeneroDelegate, BusquedaSensacionesDelegate>
+@interface BusquedaViewController : UIViewController <UIPopoverControllerDelegate, PopoverSelectorBusquedaDelegate, BusquedaSubGeneroDelegate, BusquedaSensacionesDelegate, UITextFieldDelegate>
 
 // Botón SWITCH de búsqueda
 @property (weak, nonatomic) IBOutlet UIButton *buscarSensacionesButton;
@@ -33,5 +33,8 @@
 
 // Container donde se mostrarán los tipo de Búsqueda: Subgeneros o Sensaciones
 @property (weak, nonatomic) IBOutlet UIView *container;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSearch;
+@property (weak, nonatomic) IBOutlet UIView *deactivateView;
+- (IBAction)pushCloseDeactivateView:(id)sender;
 
 @end

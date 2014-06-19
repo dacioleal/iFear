@@ -9,8 +9,10 @@
 #import "BusquedaViewController.h"
 #import "SubGenreSearch.h"
 #import "SensationsSearch.h"
+#import "ParametersSearch.h"
 #import "ResultadosBusquedaViewController.h"
 #import "Pelicula.h"
+#import "ResultadosBusquedaViewController.h"
 
 @interface BusquedaViewController ()
 {
@@ -23,11 +25,17 @@
     // Diccionario donde se almacenarán los valores elegidos para la búsqueda por sensaciones
     NSMutableDictionary *sensationsValues;
     
+    // Diccionario donde se almacenarán el parámetro de búsqueda por párametro
+    NSMutableDictionary *movieParameterSearch;
+    
     // Clase que permite la búsqueda por subgenero
     SubGenreSearch * subGenreSearch;
     
     // Clase que permite la búsqueda por sensaciones
     SensationsSearch * sensationSearch;
+    
+    // Clase que permite la búsqueda por parametro de pelicula (Título, Director, Reparto)
+    ParametersSearch * parameterSearch;
     
     // ViewController que está mostrándose en estos momentos
     UIViewController * onScreenViewController;
@@ -35,6 +43,9 @@
     // Viewcontrollers de tipo de búsqueda
     BusquedaSubGeneroViewController * busquedaSubGenereVC;
     BusquedaSensacionesViewController * busquedaSensacionesVC;
+    
+    // Booleano para controlar si ha pulsado sobre la caja de texto
+    Boolean pushInTextSearchField;
     
 }
 
@@ -67,23 +78,32 @@
     // Se inicializan las clases encargadas de la conexión y búsqueda con el servidor
     subGenreSearch = [[SubGenreSearch alloc] init];
     sensationSearch = [[SensationsSearch alloc] init];
+    parameterSearch = [[ParametersSearch alloc]init];
     
     sub_genre_list = [[NSMutableArray alloc] init];
     sensationsValues = [[NSMutableDictionary alloc] init];
+    movieParameterSearch = [[NSMutableDictionary alloc] init];
     
     // Añadimos este ViewController (self) como observador para recibir las notificaciones de que se han terminado de descargar los datos
     // y de que se pulsa sobre la portada de una película para ir a la pantalla de detalle.
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    //[defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:subGenreSearch];
+    [defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:subGenreSearch];
     //[defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:sensationSearch];
-        
+    [defaultCenter addObserver:self selector:@selector(goToResultViewController) name:@"dataFinished" object:parameterSearch];
+    
     // Se establecen las imagenes a los estados del botón
     [self setImageForAllButtons];
     
     // Se establece seleccionado la opción de búsqueda por subgenero
     self.buscarSubGenButton.selected = YES;
     [self displayContentViewController:busquedaSubGenereVC];
-        
+    
+    pushInTextSearchField = false;
+    self.textFieldSearch.delegate = self;
+    
+    [movieParameterSearch setObject:@"titulo" forKey:@"parametro"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,9 +118,19 @@
 - (IBAction)pushBuscarButton:(id)sender {
     // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
     if ([self.buscarSubGenButton isSelected]) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self searchBySubGenere];
-        });
+        if (sub_genre_list.count > 0) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self searchBySubGenere];
+            });
+        }else{
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
+                                                              message:@"No ha seleccionado ningún valor para la búsqueda"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+       
         
     }else{
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -119,11 +149,17 @@
          * caso de que vuelva a pulsar el mismo botón que no ocurra nada
          */
         if (! [self.buscarSubGenButton isSelected]) {
-            self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
-            self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
-            // Se cambia el tipo de búsqueda en el container.
-            [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
-                    }
+            if (![self.buscarSensacionesButton isSelected]) {
+                [busquedaSubGenereVC enabledAllButtons:true];
+            }else{
+                self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
+                self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
+                
+                // Se cambia el tipo de búsqueda en el container.
+                [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
+            }
+            
+        }
         
     }else{
         if (! [self.buscarSensacionesButton isSelected]) {
@@ -131,7 +167,7 @@
             self.buscarSubGenButton.selected = !self.buscarSensacionesButton.selected;
             // Se cambia el tipo de búsqueda en el container.
             [self cycleFromViewController:onScreenViewController toViewController:busquedaSensacionesVC];
-                   }
+        }
     }
     
     
@@ -142,25 +178,28 @@
 - (IBAction)showPopover:(id)sender
 {
     if (self.popoverContent == nil) {
+        
         self.popoverContent = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverSelectorBusqueda"];
         self.popoverContent.delegate = self;
     }
     
-    if (self.selectorPopover == nil) {
-        // Configura el popover
-        self.selectorPopover = [[UIPopoverController alloc] initWithContentViewController:self.popoverContent];
-        self.selectorPopover.popoverContentSize = CGSizeMake(159., 81.);
-        self.selectorPopover.delegate = self;
-        
-        // Set the sender to a UIButton.
-        UIButton *tappedButton = (UIButton *)sender;
-        [self.selectorPopover presentPopoverFromRect:tappedButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-        
-    } else {
-        //The color picker popover is showing. Hide it.
-        [self.selectorPopover dismissPopoverAnimated:YES];
-        self.selectorPopover = nil;
-    }
+    //    if (self.selectorPopover == nil) {
+    // Configura el popover
+    self.selectorPopover = [[UIPopoverController alloc] initWithContentViewController:self.popoverContent];
+    self.selectorPopover.popoverContentSize = CGSizeMake(159., 81.);
+    //[[self.selectorPopover.contentViewController view] setBackgroundColor:[UIColor blueColor]];
+    self.selectorPopover.backgroundColor = [UIColor colorWithRed:(43/255.0) green:(43/255.0) blue:(22/255.0) alpha:1] ;
+    self.selectorPopover.delegate = self;
+    
+    // Set the sender to a UIButton.
+    UIButton *tappedButton = (UIButton *)sender;
+    [self.selectorPopover presentPopoverFromRect:tappedButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    //
+    //    } else {
+    //        //The color picker popover is showing. Hide it.
+    //        [self.selectorPopover dismissPopoverAnimated:YES];
+    //        self.selectorPopover = nil;
+    //    }
 }
 
 
@@ -188,7 +227,6 @@
     }
     
     NSData *body = [bodyStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSLog(@"%@",bodyStr);
     return body;
 }
 
@@ -203,23 +241,33 @@
     resultMovies = [sensationSearch searchBySensations:sensationsValues];
 }
 
+- (void) searchByMovieParameter
+{
+    NSString * busqueda = self.textFieldSearch.text;
+    [movieParameterSearch setObject:busqueda forKey:@"busqueda"];
+    resultMovies = [parameterSearch searchByParameters:movieParameterSearch];
+}
+
 // Método utilizado para ir a la pantalla de Resultados de búsqueda
 -(void) goToResultViewController
 {
-    [self performSegueWithIdentifier:@"Associate" sender:self];
+    [self performSegueWithIdentifier:@"goToResultSearchView" sender:self];
+    [busquedaSubGenereVC selectAllButtons:false];
+    [sub_genre_list removeAllObjects];
 }
 
 # pragma mark - Popover Delegate -
 
 - (void) setSearchSelector: (NSString *) selector imgButtonSelected:(UIImage*) imgButton;
 {
+    
     if([self selectorPopover]){
         [[self selectorPopover] dismissPopoverAnimated:YES];
         self.selectorPopover = nil;
     }
-    
-    [[self popoverSelectedOption] setImage:imgButton forState:UIControlStateNormal];
     NSLog(@"%@",selector);
+    [movieParameterSearch setObject:selector forKey:@"parametro"];
+    [[self popoverSelectedOption] setImage:imgButton forState:UIControlStateNormal];
 }
 
 #pragma  mark - Container display methods
@@ -285,7 +333,6 @@
                                 [newViewController.view.layer addAnimation:scaleAnimation forKey:@"scale"];
                                 
                                 
-                                
                             }
                             completion:^(BOOL finished) {
                                 [oldViewController removeFromParentViewController];
@@ -299,6 +346,7 @@
 #pragma mark - BusquedaSubGeneroDelegate -
 - (void) getSelectedSubGenre: (NSMutableArray *) subgenres
 {
+    NSLog(@"%@",subgenres);
     sub_genre_list = subgenres;
 }
 
@@ -308,16 +356,33 @@
     sensationsValues = categoriesValues;
 }
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    
+    pushInTextSearchField = true;
+    // Se desactivan los botones de la parte de subgeneros
+    [busquedaSubGenereVC enabledAllButtons:false];
+    // Se establecen a NO los botones switch de búsqueda por subgénero o sensaciones
+    [self.buscarSubGenButton setSelected:false];
+    [self.buscarSensacionesButton setSelected:false];
+    
+    return true;
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"Associate"])
+    if ([[segue identifier] isEqualToString:@"goToResultSearchView"])
     {
         ResultadosBusquedaViewController * resultadoBusquedaVC = [segue destinationViewController];
-        resultadoBusquedaVC.resultMovies = resultMovies;
+        resultadoBusquedaVC.resultSearchList = resultMovies;
         
     }
 }
 
 
 
+
+- (IBAction)pushCloseDeactivateView:(id)sender {
+    self.deactivateView.hidden = true;
+}
 @end

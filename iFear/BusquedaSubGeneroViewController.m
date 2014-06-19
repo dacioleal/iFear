@@ -3,7 +3,7 @@
 //  iFear
 //
 //  Created by José Alberto Martín Falcón on 20/04/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import "BusquedaSubGeneroViewController.h"
@@ -44,19 +44,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 # pragma mark - IBAction
 - (IBAction)pushCategoriesButton:(id)sender {
+    if (sub_Genre_List.count <= 2) {
     
     // Aquí se cambia el estado del botón presionado
     [self setStateCategoriesButton:sender];
@@ -197,6 +188,9 @@
     
     // Se utiliza la llamada al método delegado para ir sabiendo que elementos se están añadiendo
     [[self delegate] getSelectedSubGenre:sub_Genre_List];
+    }else{
+        [self showMessage];
+    }
 }
 
 
@@ -303,6 +297,30 @@
     
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_ON_465x127.png"] forState:UIControlStateSelected];
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_465x127.png"] forState:UIControlStateNormal];
+}
+
+- (void)showMessage {
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
+                                                      message:@"No se puede seleccionar más de tres géneros"
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    
+    [message show];
+}
+
+- (void) enabledAllButtons: (Boolean) state
+{
+    for (UIButton * btn in self.listButons) {
+        [btn setEnabled:state];
+    }
+}
+
+- (void) selectAllButtons: (Boolean) state
+{
+    for (UIButton * btn in self.listButons) {
+        [btn setSelected:state];
+    }
 }
 
 

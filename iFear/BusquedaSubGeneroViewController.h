@@ -47,11 +47,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *vampirosButton;
 @property (weak, nonatomic) IBOutlet UIButton *hechosRealesButton;
 @property (weak, nonatomic) IBOutlet UIButton *comediaButton;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *listButons;
 
 // Método llamado cuando se pulsa algún botón de subgénero
 - (IBAction)pushCategoriesButton:(id)sender;
 
 - (void) searchInArray: (NSString *) subgenre;
 
+// Método para desactivar todos los botones
+- (void) enabledAllButtons: (Boolean) state;
+
+// Método para desactivar todos los botones
+- (void) selectAllButtons: (Boolean) state;
 
 @end
