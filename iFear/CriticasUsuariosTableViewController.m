@@ -44,7 +44,7 @@
     self.navigationController.navigationBar.tintColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     [self.navigationController.navigationBar setHidden:YES];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,7 +90,7 @@
     cell.accessoryView.tintColor= [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     
     UIView *customCellSelectedBackgroundView = [[UIView alloc] init];
-    customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     cell.selectedBackgroundView = customCellSelectedBackgroundView;
     
     CriticaUsuario *critica = (CriticaUsuario *) [_criticasUsuariosArray objectAtIndex:indexPath.row];
@@ -108,13 +108,15 @@
     cell.detailTextLabel.attributedText = descriptionAttributedString;
     
     
-    
     if ((indexPath.row % 2) == 0) {
         cell.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:0.8];
     } else {
         cell.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.2];
         
     }
+    
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
