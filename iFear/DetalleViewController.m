@@ -15,6 +15,7 @@
 #import "CriticasMediosSearch.h"
 #import "CriticasFlashSearch.h"
 #import "CriticasUsuariosSearch.h"
+#import "PuntuacionesMediasSearch.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface DetalleViewController ()
@@ -26,6 +27,7 @@
     NSArray *criticasMediosArray;
     NSArray *criticasFlashArray;
     NSArray *criticasUsuariosArray;
+    NSDictionary *puntuacionesMediasDictionary;
     NSArray *contentViews;
     UIView *mediaView;
     UIView *flashView;
@@ -96,13 +98,20 @@
     NSDictionary *parametersCriticasMedios = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasMediosPelicula", @"function", movieID, @"idMovie",nil];
     criticasMediosArray = [criticasMediosSearch searchWithParameters:parametersCriticasMedios];
     
+    //Creamos un objeto de la clase CriticasFlashSearch para obtener los datos de las críticas flash de la película desde el servidor
     CriticasFlashSearch *criticasFlashSearch = [[CriticasFlashSearch alloc] init];
     NSDictionary *parametersCriticasFlash = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasFlashPelicula", @"function", movieID, @"idMovie",nil];
     criticasFlashArray = [criticasFlashSearch searchWithParameters:parametersCriticasFlash];
     
+    //Creamos un objeto de la clase CriticasUsuariosSearch para obtener los datos de las críticas de usuarios de la película desde el servidor
     CriticasUsuariosSearch *criticasUsuariosSearch = [[CriticasUsuariosSearch alloc] init];
     NSDictionary *parametersCriticasUsuarios = [[NSDictionary alloc] initWithObjectsAndKeys:@"getCriticasLargasPelicula", @"function", movieID, @"idMovie",nil];
     criticasUsuariosArray = [criticasUsuariosSearch searchWithParameters:parametersCriticasUsuarios];
+    
+    //Creamos un objeto de la clase PuntuacionesMediasSearch para obtener las puntuaciones medias de la película desde el servidor
+    PuntuacionesMediasSearch *puntuacionesMediasSearch = [[PuntuacionesMediasSearch alloc] init];
+    NSDictionary *parametersPuntuacionesMedias = [[NSDictionary alloc] initWithObjectsAndKeys:@"getPuntuacionesMediasPelicula", @"function", movieID, @"idMovie",nil];
+    puntuacionesMediasDictionary = [puntuacionesMediasSearch searchWithParameters:parametersPuntuacionesMedias];
     
     
     //Añadimos al propio viewcontroller como observador de las notificaciones producidas por las distintos objetos de las clases Search que obtienen los datos del servidor y que cuando terminan de obtener estos datos lo comunican mediante la notificación correspondiente
@@ -115,6 +124,7 @@
     [defaultCenter addObserver:self selector:@selector(configureCriticasFlashView) name:@"CriticasFlashEmpty" object:criticasFlashSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosFinished" object:criticasUsuariosSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosEmpty" object:criticasUsuariosSearch];
+    [defaultCenter addObserver:self selector:@selector(configurePuntuacionesMediasView) name:@"PuntuacionesMediasFinished" object:puntuacionesMediasSearch];
     
 }
 
@@ -443,6 +453,11 @@
     usersView.frame = CGRectMake(0, 0, usersView.superview.frame.size.width, usersView.superview.frame.size.height);
     usersView.hidden = YES;
     
+}
+
+- (void) configurePuntuacionesMediasView
+{
+    NSLog(@"%@", puntuacionesMediasDictionary);
 }
 
 - (void) unselectLeftPanelButtons
