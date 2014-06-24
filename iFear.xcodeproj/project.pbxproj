@@ -103,7 +103,6 @@
 		48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */; };
 		48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C471927D8B90018DC55 /* boton_zombies_465x127.png */; };
 		48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */; };
-		4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */; };
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */; };
@@ -372,7 +371,6 @@
 		48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
 		48254C471927D8B90018DC55 /* boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_465x127.png; sourceTree = "<group>"; };
 		48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
-		4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cart_busq_2048x1536.jpg; sourceTree = "<group>"; };
 		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
 		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
 		4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banda_secciones_2048x134.png; sourceTree = "<group>"; };
@@ -731,7 +729,6 @@
 			isa = PBXGroup;
 			children = (
 				4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */,
-				4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */,
 				4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */,
 				4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */,
 			);
@@ -1484,7 +1481,6 @@
 				48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */,
 				48254CE21927D8B90018DC55 /* boton_giallo_465x127.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
-				4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */,
 				48254CF21927D8B90018DC55 /* boton_secuela_465x127.png in Resources */,
 				48254C801927D8B90018DC55 /* rotulo_gore_79x35.png in Resources */,
 				48254CEB1927D8B90018DC55 /* boton_metraje_ON_465x127.png in Resources */,

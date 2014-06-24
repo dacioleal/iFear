@@ -91,59 +91,62 @@
     BOOL exito = [[respuestaDictionario objectForKey:@"exito"] boolValue];
     
     NSLog(@"%@",respuestaDictionario);
-    NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
- 
-    Pelicula * pelicula;
-    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
-    int idPelicula,anio,duracion;
     
-    // Se recorre el array retorno que es donde estarán las peliculas
-    for (NSDictionary * fila in retorno) {
+    if (exito) {
+        // Se recupera la parte de JSON de la película
+        NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
+        Pelicula * pelicula;
+        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
+        int idPelicula,anio,duracion;
         
-        titulo = [fila objectForKey:@"titulo"];
-        titulo_original = [fila objectForKey:@"titulo_original"];
-        pais = [fila objectForKey:@"pais"];
-        director = [fila objectForKey:@"director"];
-        guion = [fila objectForKey:@"guion"];
-        musica = [fila objectForKey:@"musica"];
-        fotografia = [fila objectForKey:@"fotografia"];
-        reparto = [fila objectForKey:@"reparto"];
-        productora = [fila objectForKey:@"productora"];
-        web = [fila objectForKey:@"web"];
-        sinopsis = [fila objectForKey:@"sinopsis"];
-        portada = [fila objectForKey:@"portada"];
-        anio = [[fila objectForKey:@"anio"] intValue];
-        duracion = [[fila objectForKey:@"duracion"] intValue];
-        idPelicula = [[fila objectForKey:@"id"] intValue];
-        cartelera = [fila objectForKey:@"cartelera"];
-        estreno = [fila objectForKey:@"estrenos"];
-        fechaEstreno = [fila objectForKey:@"fecha_estreno"];
-        
-        
-        pelicula = [[Pelicula alloc] initConParametros:idPelicula
-                                      tituloDePelicula:titulo
-                              tituloOriginalDePelicula:titulo_original
-                                      anioDeLaPelicula:anio
-                                    duracionDePelicula:duracion
-                                        paisDePelicula:pais
-                                    directorDePelicula:director
-                                       guionDePelicula:guion
-                                      musicaDePelicula:musica
-                                fotografiaDeLaPelicula:fotografia
-                                   repartoDeLaPelicula:reparto
-                                productoraDeLaPelicula:productora
-                                       webDeLaPelicula:web
-                                  sinopsisDeLaPelicula:sinopsis
-                                   portadaDeLaPelicula:portada
-                                 carteleraDeLaPelicula:cartelera
-                                   estrenoDeLaPelicula:estreno
-                              fechaEstrenoDeLaPelicula:fechaEstreno];
-        
-        // Url de la imagen
-        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
-        [strUrlImagen appendString:portada];
-        pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
-        [movies addObject:pelicula];
+        // Se recorre el array retorno que es donde estarán las peliculas
+        for (NSDictionary * fila in retorno) {
+            
+            titulo = [fila objectForKey:@"titulo"];
+            titulo_original = [fila objectForKey:@"titulo_original"];
+            pais = [fila objectForKey:@"pais"];
+            director = [fila objectForKey:@"director"];
+            guion = [fila objectForKey:@"guion"];
+            musica = [fila objectForKey:@"musica"];
+            fotografia = [fila objectForKey:@"fotografia"];
+            reparto = [fila objectForKey:@"reparto"];
+            productora = [fila objectForKey:@"productora"];
+            web = [fila objectForKey:@"web"];
+            sinopsis = [fila objectForKey:@"sinopsis"];
+            portada = [fila objectForKey:@"portada"];
+            anio = [[fila objectForKey:@"anio"] intValue];
+            duracion = [[fila objectForKey:@"duracion"] intValue];
+            idPelicula = [[fila objectForKey:@"id"] intValue];
+            cartelera = [fila objectForKey:@"cartelera"];
+            estreno = [fila objectForKey:@"estrenos"];
+            fechaEstreno = [fila objectForKey:@"fecha_estreno"];
+            
+            
+            pelicula = [[Pelicula alloc] initConParametros:idPelicula
+                                          tituloDePelicula:titulo
+                                  tituloOriginalDePelicula:titulo_original
+                                          anioDeLaPelicula:anio
+                                        duracionDePelicula:duracion
+                                            paisDePelicula:pais
+                                        directorDePelicula:director
+                                           guionDePelicula:guion
+                                          musicaDePelicula:musica
+                                    fotografiaDeLaPelicula:fotografia
+                                       repartoDeLaPelicula:reparto
+                                    productoraDeLaPelicula:productora
+                                           webDeLaPelicula:web
+                                      sinopsisDeLaPelicula:sinopsis
+                                       portadaDeLaPelicula:portada
+                                     carteleraDeLaPelicula:cartelera
+                                       estrenoDeLaPelicula:estreno
+                                  fechaEstrenoDeLaPelicula:fechaEstreno];
+            
+            // Url de la imagen
+            NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+            [strUrlImagen appendString:portada];
+            pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
+            [movies addObject:pelicula];
+        }
         
     }
     
