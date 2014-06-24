@@ -205,11 +205,6 @@ didCompleteWithError:(NSError *)error
                 [defaultCenter postNotificationName:@"dataFinished" object:self];
             });
             
-            
-        } else {
-            
-            [self retrieveData];
-            
         }
         
     } else {
