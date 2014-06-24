@@ -38,7 +38,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    optionSearchList = [[NSMutableArray alloc] initWithObjects:@"Titulo",@"Director",@"Reparto", nil];
+    optionSearchList = [[NSMutableArray alloc] initWithObjects:@"titulo",@"director",@"reparto", nil];
     imageList = [[NSMutableArray alloc] init];
     [imageList addObject:[UIImage imageNamed:@"selector_titulo_318x54.png"]];
     [imageList addObject:[UIImage imageNamed:@"selector_director_318x54.png"]];

@@ -16,7 +16,6 @@
 		48254B8A1927D4F80018DC55 /* BusquedaSubGeneroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B861927D4F80018DC55 /* BusquedaSubGeneroViewController.m */; };
 		48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B881927D4F80018DC55 /* BusquedaSensacionesViewController.m */; };
 		48254B8F1927D51B0018DC55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B8E1927D51B0018DC55 /* Constants.m */; };
-		48254B921927D52A0018DC55 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48254B911927D52A0018DC55 /* ResultadosBusquedaViewController.m */; };
 		48254C551927D8B90018DC55 /* barra_busqueda_1810x78.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA21927D8B80018DC55 /* barra_busqueda_1810x78.png */; };
 		48254C561927D8B90018DC55 /* boton_buscar_580x100.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA31927D8B80018DC55 /* boton_buscar_580x100.png */; };
 		48254C571927D8B90018DC55 /* buscar_sensacion_OFF_540x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BA41927D8B80018DC55 /* buscar_sensacion_OFF_540x48.png */; };
@@ -104,6 +103,13 @@
 		48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */; };
 		48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C471927D8B90018DC55 /* boton_zombies_465x127.png */; };
 		48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */; };
+		4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */; };
+		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
+		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
+		4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */; };
+		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
+		48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */; };
+		48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */; };
 		F304101E18B752CC006273F0 /* ahorcado.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101018B752CC006273F0 /* ahorcado.png */; };
 		F304101F18B752CC006273F0 /* barrotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101118B752CC006273F0 /* barrotes.png */; };
 		F304102018B752CC006273F0 /* boton_buscar.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101218B752CC006273F0 /* boton_buscar.png */; };
@@ -247,7 +253,7 @@
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 		F3FEA6BF190EC35300A4F91C /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BE190EC0F800A4F91C /* Impact.ttf */; };
 		F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */; };
-		F3FEA6C9190ECB0B00A4F91C /* FuturaBook.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */; };
+		F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,8 +285,6 @@
 		48254B881927D4F80018DC55 /* BusquedaSensacionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaSensacionesViewController.m; sourceTree = "<group>"; };
 		48254B8D1927D51B0018DC55 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		48254B8E1927D51B0018DC55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		48254B901927D52A0018DC55 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
-		48254B911927D52A0018DC55 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		48254BA21927D8B80018DC55 /* barra_busqueda_1810x78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barra_busqueda_1810x78.png; sourceTree = "<group>"; };
 		48254BA31927D8B80018DC55 /* boton_buscar_580x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_buscar_580x100.png; sourceTree = "<group>"; };
 		48254BA41927D8B80018DC55 /* buscar_sensacion_OFF_540x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buscar_sensacion_OFF_540x48.png; sourceTree = "<group>"; };
@@ -368,6 +372,17 @@
 		48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
 		48254C471927D8B90018DC55 /* boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_465x127.png; sourceTree = "<group>"; };
 		48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
+		4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cart_busq_2048x1536.jpg; sourceTree = "<group>"; };
+		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
+		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
+		4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banda_secciones_2048x134.png; sourceTree = "<group>"; };
+		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
+		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
+		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
+		48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
+		48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
+		48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSearchTableViewCell.h; sourceTree = "<group>"; };
+		48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultSearchTableViewCell.m; sourceTree = "<group>"; };
 		F304101018B752CC006273F0 /* ahorcado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ahorcado.png; sourceTree = "<group>"; };
 		F304101118B752CC006273F0 /* barrotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrotes.png; sourceTree = "<group>"; };
 		F304101218B752CC006273F0 /* boton_buscar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_buscar.png; sourceTree = "<group>"; };
@@ -540,7 +555,7 @@
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 		F3FEA6BE190EC0F800A4F91C /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaLight.ttf; sourceTree = "<group>"; };
-		F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaBook.ttf; sourceTree = "<group>"; };
+		F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -576,10 +591,7 @@
 			children = (
 				F336503018EAAE8A00947CD9 /* MoviesSearch */,
 				F3F7F8D6191005CB00DA3D6B /* TrailersSearch */,
-				48254B731927D46D0018DC55 /* SubGenreSearch.h */,
-				48254B741927D46D0018DC55 /* SubGenreSearch.m */,
-				48254B751927D46D0018DC55 /* SensationsSearch.h */,
-				48254B761927D46D0018DC55 /* SensationsSearch.m */,
+				48348F02195356B9005B943E /* BusquedasSearch */,
 				F3F9E1C4193CDB7B00FD0ED3 /* CriticasMediosSearch */,
 				F3E76A9F1946FC3E00AFEFA8 /* CriticasFlashSearch */,
 				F346D98A1948663100829E1A /* CriticasUsuariosSearch */,
@@ -596,18 +608,10 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
-		48254B931927D52D0018DC55 /* ResultadosBusquedaViewController */ = {
-			isa = PBXGroup;
-			children = (
-				48254B901927D52A0018DC55 /* ResultadosBusquedaViewController.h */,
-				48254B911927D52A0018DC55 /* ResultadosBusquedaViewController.m */,
-			);
-			name = ResultadosBusquedaViewController;
-			sourceTree = "<group>";
-		};
 		48254B941927D8B80018DC55 /* Buscar película */ = {
 			isa = PBXGroup;
 			children = (
+				4832EE41194DE5E400373420 /* Resultados */,
 				48254B951927D8B80018DC55 /* Archivos comunes */,
 				48254BAE1927D8B80018DC55 /* Sección sensaciones */,
 				48254BDF1927D8B80018DC55 /* Sección subgéneros */,
@@ -723,6 +727,79 @@
 			path = "Sección subgéneros";
 			sourceTree = "<group>";
 		};
+		4832EE41194DE5E400373420 /* Resultados */ = {
+			isa = PBXGroup;
+			children = (
+				4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */,
+				4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */,
+				4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */,
+				4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */,
+			);
+			name = Resultados;
+			sourceTree = "<group>";
+		};
+		48348F02195356B9005B943E /* BusquedasSearch */ = {
+			isa = PBXGroup;
+			children = (
+				48348F0319535718005B943E /* ParametersSearch.m */,
+				48348F0419535718005B943E /* ParametersSearch.h */,
+				48254B731927D46D0018DC55 /* SubGenreSearch.h */,
+				48254B741927D46D0018DC55 /* SubGenreSearch.m */,
+				48254B751927D46D0018DC55 /* SensationsSearch.h */,
+				48254B761927D46D0018DC55 /* SensationsSearch.m */,
+			);
+			name = BusquedasSearch;
+			sourceTree = "<group>";
+		};
+		48DB70A21943369200371E10 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				48254B831927D4F80018DC55 /* PopoverSelectorBusquedaViewController.h */,
+				48254B841927D4F80018DC55 /* PopoverSelectorBusquedaViewController.m */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		48DB70A31943369B00371E10 /* BusquedaSubGenero */ = {
+			isa = PBXGroup;
+			children = (
+				48254B851927D4F80018DC55 /* BusquedaSubGeneroViewController.h */,
+				48254B861927D4F80018DC55 /* BusquedaSubGeneroViewController.m */,
+			);
+			name = BusquedaSubGenero;
+			sourceTree = "<group>";
+		};
+		48DB70A4194336A400371E10 /* BusquedaSensaciones */ = {
+			isa = PBXGroup;
+			children = (
+				48254B871927D4F80018DC55 /* BusquedaSensacionesViewController.h */,
+				48254B881927D4F80018DC55 /* BusquedaSensacionesViewController.m */,
+			);
+			name = BusquedaSensaciones;
+			sourceTree = "<group>";
+		};
+		48DB70A5194336AE00371E10 /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				48254B7A1927D4DE0018DC55 /* ProgresSlider.h */,
+				48254B7B1927D4DE0018DC55 /* ProgresSlider.m */,
+				48254B7D1927D4F20018DC55 /* CustomIfearSlider.h */,
+				48254B7E1927D4F20018DC55 /* CustomIfearSlider.m */,
+			);
+			name = CustomSlider;
+			sourceTree = "<group>";
+		};
+		48DB70A6194336C700371E10 /* ListadoResultadosBusquedas */ = {
+			isa = PBXGroup;
+			children = (
+				48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */,
+				48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */,
+				48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */,
+				48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */,
+			);
+			name = ListadoResultadosBusquedas;
+			sourceTree = "<group>";
+		};
 		F304100F18B752A5006273F0 /* menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -797,18 +874,13 @@
 		F3144993189A501D0007B9B6 /* BusquedaViewController */ = {
 			isa = PBXGroup;
 			children = (
-				48254B831927D4F80018DC55 /* PopoverSelectorBusquedaViewController.h */,
-				48254B841927D4F80018DC55 /* PopoverSelectorBusquedaViewController.m */,
-				48254B851927D4F80018DC55 /* BusquedaSubGeneroViewController.h */,
-				48254B861927D4F80018DC55 /* BusquedaSubGeneroViewController.m */,
-				48254B871927D4F80018DC55 /* BusquedaSensacionesViewController.h */,
-				48254B881927D4F80018DC55 /* BusquedaSensacionesViewController.m */,
-				48254B7D1927D4F20018DC55 /* CustomIfearSlider.h */,
-				48254B7E1927D4F20018DC55 /* CustomIfearSlider.m */,
+				48DB70A21943369200371E10 /* Popover */,
+				48DB70A31943369B00371E10 /* BusquedaSubGenero */,
+				48DB70A4194336A400371E10 /* BusquedaSensaciones */,
+				48DB70A5194336AE00371E10 /* CustomSlider */,
 				48254B7F1927D4F20018DC55 /* BusquedaViewController.h */,
 				48254B801927D4F20018DC55 /* BusquedaViewController.m */,
-				48254B7A1927D4DE0018DC55 /* ProgresSlider.h */,
-				48254B7B1927D4DE0018DC55 /* ProgresSlider.m */,
+				48DB70A6194336C700371E10 /* ListadoResultadosBusquedas */,
 			);
 			name = BusquedaViewController;
 			sourceTree = "<group>";
@@ -915,12 +987,12 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
+				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
 				48254B8C1927D5100018DC55 /* Constants */,
-				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F30F42E118A4E9C5005841A6 /* Pelicula */,
 				F331BE65193F5EDD00AF9902 /* CriticaMedio */,
 				F3E76AA31946FE2F00AFEFA8 /* CriticaFlash */,
@@ -930,7 +1002,6 @@
 				F314498F189A48010007B9B6 /* MainViewController */,
 				F321C43C1880128700B02097 /* MenuViewController */,
 				F3144993189A501D0007B9B6 /* BusquedaViewController */,
-				48254B931927D52D0018DC55 /* ResultadosBusquedaViewController */,
 				F3BF77DB18844D9B00818986 /* CarteleraViewController */,
 				F332F85418AA99D800A12CEE /* PageContentViewController */,
 				F3144997189A515E0007B9B6 /* ActividadViewController */,
@@ -1259,9 +1330,10 @@
 		F3FD0515190A737200A1B516 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4832EE44194E02A800373420 /* Futura-Medium.ttf */,
 				F3FEA6BE190EC0F800A4F91C /* Impact.ttf */,
 				F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */,
-				F3FEA6C8190ECB0B00A4F91C /* FuturaBook.ttf */,
+				F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -1358,6 +1430,7 @@
 				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
 				48254C851927D8B90018DC55 /* signo_mas_rojo_69x69.png in Resources */,
 				F346D9961948C1B600829E1A /* banda_secciones_2048x134.png in Resources */,
+				4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */,
 				48254C8B1927D8B90018DC55 /* signo_porcentaje_41x37.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
 				F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */,
@@ -1394,6 +1467,7 @@
 				F304102A18B752CC006273F0 /* zombie_04.png in Resources */,
 				48254CE81927D8B90018DC55 /* boton_manicomio_465x127.png in Resources */,
 				F3FD0512190A534300A1B516 /* boton_lado_oscuro_330x126.png in Resources */,
+				4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				48254CE01927D8B90018DC55 /* boton_fantasmas_465x127.png in Resources */,
 				48254CE41927D8B90018DC55 /* boton_jhorror_465x127.png in Resources */,
@@ -1410,6 +1484,7 @@
 				48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */,
 				48254CE21927D8B90018DC55 /* boton_giallo_465x127.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
+				4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */,
 				48254CF21927D8B90018DC55 /* boton_secuela_465x127.png in Resources */,
 				48254C801927D8B90018DC55 /* rotulo_gore_79x35.png in Resources */,
 				48254CEB1927D8B90018DC55 /* boton_metraje_ON_465x127.png in Resources */,
@@ -1452,7 +1527,7 @@
 				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
 				48254C5A1927D8B90018DC55 /* buscar_subgenero_ON_540x48.png in Resources */,
 				48254C5D1927D8B90018DC55 /* selector_reparto_318x54.png in Resources */,
-				F3FEA6C9190ECB0B00A4F91C /* FuturaBook.ttf in Resources */,
+				F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
@@ -1509,6 +1584,7 @@
 				48254C821927D8B90018DC55 /* rotulo_terror_116x35.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */,
+				4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */,
 				48254C581927D8B90018DC55 /* buscar_sensacion_ON_540x48.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
@@ -1552,6 +1628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */,
 				F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */,
 				F346D9911948A2F900829E1A /* CriticaUsuarioViewController.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
@@ -1569,10 +1646,10 @@
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				48254B771927D46D0018DC55 /* SubGenreSearch.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
-				48254B921927D52A0018DC55 /* ResultadosBusquedaViewController.m in Sources */,
 				48254B8A1927D4F80018DC55 /* BusquedaSubGeneroViewController.m in Sources */,
 				F342D9BC193CD369000598FD /* QueEsViewController.m in Sources */,
 				F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */,
+				48348F0519535718005B943E /* ParametersSearch.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
 				48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
@@ -1591,6 +1668,7 @@
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 				F346D98D1948667200829E1A /* CriticaUsuario.m in Sources */,
 				48254B8F1927D51B0018DC55 /* Constants.m in Sources */,
+				48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

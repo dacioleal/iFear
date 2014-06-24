@@ -3,7 +3,7 @@
 //  iFear
 //
 //  Created by José Alberto Martín Falcón on 20/04/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import "BusquedaSubGeneroViewController.h"
@@ -12,6 +12,7 @@
 {
     // Array para los subgeneros
     NSMutableArray * sub_Genre_List;
+    int buttonsSelected;
 }
 
 @end
@@ -36,6 +37,7 @@
     
     // Se establecen las imagenes según el estado del botón
     [self setImageForAllButtons];
+    buttonsSelected = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +46,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 # pragma mark - IBAction
 - (IBAction)pushCategoriesButton:(id)sender {
@@ -61,6 +53,25 @@
     // Aquí se cambia el estado del botón presionado
     [self setStateCategoriesButton:sender];
     
+    
+    // Se utiliza la llamada al método delegado para ir sabiendo que elementos se están añadiendo
+    [[self delegate] getSelectedSubGenre:sub_Genre_List];
+}
+
+
+#pragma mark - Métodos propios -
+// Método que busca un subgenero en el array y según esté lo añade o lo elimina
+- (void) searchInArray: (NSString *) subgenre
+{
+    if (![sub_Genre_List containsObject:subgenre]) {
+        [sub_Genre_List addObject:subgenre];
+    }else{
+        [sub_Genre_List removeObject:subgenre];
+    }
+}
+
+- (void) manageSubGenreArray:(id) sender
+{
     // SWITCH QUE MANEJA QUE BOTÓN SE HA PULSADO
     switch ([sender tag]) {
             
@@ -195,30 +206,61 @@
             break;
     }
     
-    // Se utiliza la llamada al método delegado para ir sabiendo que elementos se están añadiendo
-    [[self delegate] getSelectedSubGenre:sub_Genre_List];
 }
-
-
-#pragma mark - Métodos propios -
-// Método que busca un subgenero en el array y según esté lo añade o lo elimina
-- (void) searchInArray: (NSString *) subgenre
-{
-    if (![sub_Genre_List containsObject:subgenre]) {
-        [sub_Genre_List addObject:subgenre];
-    }else{
-        [sub_Genre_List removeObject:subgenre];
-    }
-}
-
-
 
 // Método para establecer si está seleccionado o no un botón
+//- (void) setStateCategoriesButton:(id)sender
+//{
+//    NSLog(@" Cuando comprueba: %i",buttonsSelected);
+//
+//    UIButton * btnAux = (UIButton *) sender;
+//
+//    if (buttonsSelected <= 3) {
+//
+//        if (buttonsSelected == 3) {
+//            if (btnAux.selected) {
+//                btnAux.selected = false;
+//                buttonsSelected--;
+//                [self manageSubGenreArray:sender];
+//
+//            }else{
+//                [self showMessage];
+//            }
+//        }else{
+//            btnAux.selected = !btnAux.selected;
+//            if (btnAux.selected) {
+//                buttonsSelected++;
+//                [self manageSubGenreArray:sender];
+//            }else{
+//                buttonsSelected--;
+//                [self manageSubGenreArray:sender];
+//
+//            }
+//        }
+//    }
+
 - (void) setStateCategoriesButton:(id)sender
 {
     UIButton * btnAux = (UIButton *) sender;
     
-    btnAux.selected = !btnAux.selected;
+    if (sub_Genre_List.count <= 3) {
+        
+        if (sub_Genre_List.count == 3) {
+            if (btnAux.selected) {
+                btnAux.selected = false;
+                [self manageSubGenreArray:sender];
+            }else{
+                [self showMessage];
+            }
+        }else{
+            btnAux.selected = !btnAux.selected;
+            [self manageSubGenreArray:sender];
+            
+        }
+    }
+    
+    
+    
 }
 
 // Método para establecer las imagenes según el estado del Botón
@@ -303,6 +345,30 @@
     
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_ON_465x127.png"] forState:UIControlStateSelected];
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_465x127.png"] forState:UIControlStateNormal];
+}
+
+- (void)showMessage {
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
+                                                      message:@"No se puede seleccionar más de tres géneros"
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    
+    [message show];
+}
+
+- (void) enabledAllButtons: (Boolean) state
+{
+    for (UIButton * btn in self.listButons) {
+        [btn setEnabled:state];
+    }
+}
+
+- (void) selectAllButtons: (Boolean) state
+{
+    for (UIButton * btn in self.listButons) {
+        [btn setSelected:state];
+    }
 }
 
 

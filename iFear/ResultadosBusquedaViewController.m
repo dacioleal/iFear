@@ -2,30 +2,25 @@
 //  ResultadosBusquedaViewController.m
 //  iFear
 //
-//  Created by José Alberto Martín Falcón on 11/05/14.
+//  Created by José Alberto Martín Falcón on 07/06/14.
 //  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
 #import "ResultadosBusquedaViewController.h"
-#import "PageContentViewController.h"
 #import "Pelicula.h"
+#import "ResultSearchTableViewCell.h"
+#import "DetalleViewController.h"
 
 @interface ResultadosBusquedaViewController ()
 {
-    int _numberOfPages;  // Número de páginas
-    
-    int _moviesPerPage;  // Número de películas por página
-    
-    NSMutableArray *pages;  // Array que almacena los pageData de todas las páginas
-    
-    NSMutableArray *pageData; // Almacena los datos de una página, las objetos Pelicula de esa página
+    Pelicula * movieSegue;
 }
+
 @end
 
 @implementation ResultadosBusquedaViewController
 
-@synthesize resultMovies;
-
+@synthesize resultSearchList;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,29 +33,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    // Creamos e inicializamos el pageViewController para las páginas de las películas, establecemos sus delegados y datasource y lo añadimos a como
-    // childviewcontroller
     
-    for (Pelicula * p  in resultMovies) {
-        NSLog(@" wee rere %@",p.titulo);
-    }
-    self.carteleraPageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    // Establece los delegados de la tabla
+    self.resultsTable.dataSource = self;
+    self.resultsTable.delegate = self;
     
-    self.carteleraPageViewController.delegate = self;
-    self.carteleraPageViewController.dataSource = self;
-    
-    [self addChildViewController: self.carteleraPageViewController];
-    
-    
-    // Establecemos la vista de carteleraPageViewController que va a manejar las páginas de las película
-    self.carteleraPageViewController.view.bounds = _contentView.bounds;
-    self.carteleraPageViewController.view.center = CGPointMake((_contentView.center.x - _contentView.frame.origin.x), (_contentView.center.y - _contentView.frame.origin.y) );
-    
-    // Añadimos la vista del pageViewController como subvista de la vista ContentView definida en el storyboard
-    [self.contentView addSubview:self.carteleraPageViewController.view];
-    [self configurePageContentViewController];
-    
+    // Para que la tabla sea transparente
+    self.resultsTable.backgroundColor = [UIColor clearColor];
+    self.resultsTable.opaque = NO;
+    self.resultsTable.backgroundView = nil;
+    self.resultsTable.separatorColor = [UIColor clearColor]; // Línea separadora
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,161 +52,148 @@
 }
 
 
-
-- (void) configurePageContentViewController
-{
-    
-    //[_activityIndicator stopAnimating];
-    //_loadingView.hidden = YES;
-    
-    if (resultMovies.count) {
-        
-        // Se establece el número de películas por página y se calcula el número de páginas
-        
-        _moviesPerPage = 3;
-        
-        _numberOfPages = ( resultMovies.count % _moviesPerPage == 0 ) ? (resultMovies.count / _moviesPerPage) : ( resultMovies.count / _moviesPerPage + 1);
-        
-        self.pageControl.numberOfPages = _numberOfPages;
-        
-        [self setMoviesForAllPages];
-        
-        
-        PageContentViewController *pageContentViewController = [self viewControllerAtIndex:0];
-        
-        NSLog(@"%@",pageContentViewController);
-        if ( pageContentViewController ) {
-            NSArray *viewControllers = @[pageContentViewController];
-            
-            NSLog(@"%@",viewControllers);
-            [self.carteleraPageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-        }
-//        } else {
-//            
-//            [self retrieveData];
-//            
-//        }
-    }
+#pragma mark - IBAction
+- (IBAction)pushBackButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-// Método que establece las películas para todas las páginas
+#pragma mark - Table view data source
 
--(void) setMoviesForAllPages
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    int moviesPerPageForLoop = _moviesPerPage;
+    // Return the number of sections.
+    return self.resultSearchList.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"resultCell";
+    // Obtiene la celda
+    ResultSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    pages = [[NSMutableArray alloc] init];
-    pageData = [[NSMutableArray alloc] init];
+    // Obtiene la película
+    Pelicula * movie = [resultSearchList objectAtIndex:indexPath.section];
     
-    for (int i = 0; i < _numberOfPages; i++)
+    // Se configura la fila con los estilos y los datos
+    [self conFigureRowWitMovie:movie andCell:cell];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView  willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Imagen de fondo
+    UIImage * cuchilloBg = [[UIImage imageNamed:@"base_cuchillo_2020x348.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0];
+    // Normal
+    UIImageView * cellBgView = [[UIImageView alloc] initWithImage:cuchilloBg];
+    // Selecconada
+    UIImageView * cellSelectedBgView = [[UIImageView alloc] initWithImage:cuchilloBg];
+    cell.backgroundView = cellBgView;
+    cell.selectedBackgroundView = cellSelectedBgView;
+    
+    // Se le pone el fondo transparente
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+ 
+    movieSegue = [resultSearchList objectAtIndex:indexPath.section];
+    [self performSegueWithIdentifier:@"goToDetailMovieFromSearch" sender:self];
+}
+
+// Separacíon entre celdas
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 15.; // you can have your own choice, of course
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
+
+
+#pragma mark - Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"goToDetailMovieFromSearch"])
     {
-        if (( resultMovies.count % _moviesPerPage != 0 ) && (i == _numberOfPages - 1)) {
-            
-            moviesPerPageForLoop = resultMovies.count % _moviesPerPage;     //Si es la última página el número de películas en la página es el resto de la división
-        }
+        DetalleViewController * detalleVC = [segue destinationViewController];
+        [detalleVC setMovie:movieSegue];
         
-        for (int j = 0; j <  moviesPerPageForLoop; j++) {
-            
-            Pelicula *movie = [ resultMovies objectAtIndex: i*_moviesPerPage+j];
-            
-            [pageData addObject:movie];
-            
-        }
-        
-        [pages addObject:pageData];
-        
-        pageData = [[NSMutableArray alloc] init];
     }
-    
 }
 
 
-// Método que crea el ViewController necesario para mostrar la página con sus datos. El ViewController se crea bajo demanda.
+#pragma mark - Métodos propios
+- (void) setFontAndColor:(id)sender withText: (NSString *) text andWithColor: (UIColor *) textColor andWithFont: (UIFont *) font{
+    NSMutableParagraphStyle *paragraphStyles = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyles.alignment                = NSTextAlignmentJustified;
+    paragraphStyles.firstLineHeadIndent      = 0.05;    // Very IMP
+    
+    NSAttributedString *atrStr = [[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    UILabel *auxLabel =  (UILabel *) sender;
+    auxLabel.attributedText = atrStr;
+    auxLabel.shadowColor = [UIColor blackColor];
+    auxLabel.shadowOffset = CGSizeMake(0, 2);
+    [auxLabel sizeToFit];
+}
 
-- (PageContentViewController *) viewControllerAtIndex: (NSUInteger) index
+-(CGFloat)heightForLabel:(UILabel *)label withText:(NSString *)text
 {
-    if ( ( _numberOfPages == 0 ) || (index >= _numberOfPages) ) {
-        
-        return nil;
-    }
+    CGSize maximumLabelSize     = CGSizeMake(290, FLT_MAX);
+    CGRect  textRect = [text boundingRectWithSize:maximumLabelSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: label.font} context:nil];
     
-    NSArray *movies = [self getMoviesForPage:index];
+    CGSize expectedLabelSize    = textRect.size;
     
-    PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"pageContentViewController"];
-    [pageContentViewController setIndex:index];
     
-    [pageContentViewController setNumberOfPages:_numberOfPages];
-    if ( movies )
-        [pageContentViewController setMoviesArray:movies];
-    
-    return pageContentViewController;
+    return expectedLabelSize.height;
 }
 
-
-// Método que devuelve un array con las películas para una página determinada
-
--(NSArray *) getMoviesForPage:(NSUInteger) index {
-    
-    NSArray *data = [pages objectAtIndex:index];
-    return data;
-}
-
-
-#pragma mark - UIPageViewControllerDataSource methods
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+-(void)resizeHeightToFitForLabel:(UILabel *)label
 {
-    PageContentViewController * pageContenViewController = (PageContentViewController *) viewController;
-    
-    NSUInteger index = pageContenViewController.index;
-    
-    if ((index == 0) || (index == NSNotFound)) {
-        return nil;
-    }
-    
-    index--;
-    
-    return [self viewControllerAtIndex:index];
-    
+    CGRect newFrame         = label.frame;
+    newFrame.size.height    = [self heightForLabel:label withText:label.text];
+    label.frame             = newFrame;
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+-(void)resizeHeightToFitForLabel:(UILabel *)label withText:(NSString *)text
 {
-    PageContentViewController * pageContenViewController = (PageContentViewController *) viewController;
-    
-    NSUInteger index = pageContenViewController.index;
-    
-    if (index == NSNotFound) {
-        return nil;
-    }
-    
-    index++;
-    if ( index == pages.count)
-    {
-        return nil;
-    }
-    
-    NSLog(@"ENTRA 1");
-    return [self viewControllerAtIndex:index];
-    
+    label.text              = text;
+    [self resizeHeightToFitForLabel:label];
 }
 
 
-
-#pragma mark - UIPageViewControllerDelegate methods
-
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+- (void) conFigureRowWitMovie: (Pelicula *) movie andCell: (ResultSearchTableViewCell * ) cell
 {
-    NSLog(@"ENTRA 2");
-    PageContentViewController * currentPageContentViewController = [pageViewController.viewControllers objectAtIndex:0];
+    UIColor *textColorTitle = [UIColor colorWithRed:145/255.0 green:43/255.0 blue:49/255.0 alpha:1];
+    UIFont *fontTitle = [UIFont fontWithName:@"Futura-Medium" size:26.0];
+    NSString * title = [NSString stringWithFormat:@"%@ (%i)", movie.titulo, movie.anio];
+    [self setFontAndColor:cell.lblTitle withText:title andWithColor:textColorTitle andWithFont:fontTitle];
     
-    if (completed) {
-        
-        self.pageControl.currentPage = currentPageContentViewController.index;    // Se actualiza el pageControl para marcar la página actual
-    }
+    // Nombre Director
+    UIColor *textColorDirector = [UIColor colorWithRed:189/255.0 green:188/255.0 blue:188/255.0 alpha:1];
+    UIFont *fontDirector = [UIFont fontWithName:@"Futura-Book" size:16.0];
+    [self setFontAndColor:cell.lblNombreDirector withText:movie.director andWithColor:textColorDirector andWithFont:fontDirector];
     
+    // Etiqueta director
+    UIColor *textColorLblDirector = [UIColor colorWithRed:145/255.0 green:43/255.0 blue:49/255.0 alpha:1];
+    [self setFontAndColor:cell.lblDirector withText:@"DIRECTOR:" andWithColor:textColorLblDirector andWithFont:fontDirector];
+    
+    // Sinopsis
+    [self setFontAndColor:cell.lblSinopsis withText:movie.sinopsis andWithColor:textColorDirector andWithFont:fontDirector];
+    
+    [cell.movieImage setImage:movie.imagen];
 }
-
 
 
 

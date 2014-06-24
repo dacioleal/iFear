@@ -37,16 +37,16 @@
 
 
 - (void) retrieveData {
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
 
-- (void) displayAlertView
+- (void) displayAlertView: (NSString *) title andMessage: (NSString *) message
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Downloading Error" message:@"Push button to retry" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
+    //UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Downloading Error" message:@"Push button to retry" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 
@@ -84,8 +84,11 @@
 // Al recibir los datos
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    
+    // Se parsea el JSON
     NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    // Se recupera si ha tenido
+    BOOL exito = [[respuestaDictionario objectForKey:@"exito"] boolValue];
     
     NSLog(@"%@",respuestaDictionario);
     NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
@@ -169,8 +172,11 @@ didCompleteWithError:(NSError *)error
             
             
         } else {
-            
-            [self retrieveData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self displayAlertView:@"Resultado de la búsqueda" andMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                
+            });
+//            [self retrieveData];
             
         }
         
@@ -179,8 +185,7 @@ didCompleteWithError:(NSError *)error
         NSLog(@"Error %@",[error userInfo]);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [self displayAlertView];
+            [self displayAlertView:@"Downloading Error" andMessage:@"Push button to retry"];
         });
     }
 }
