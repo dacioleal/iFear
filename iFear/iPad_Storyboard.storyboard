@@ -640,6 +640,7 @@
                         <outlet property="movieImageView" destination="jW3-7S-f8p" id="EcZ-Bd-UJS"/>
                         <outlet property="reviewsButton" destination="O1q-0e-LJi" id="A01-T2-Czi"/>
                         <outlet property="reviewsContainerView" destination="WaJ-VW-ygN" id="Zhs-nt-aj5"/>
+                        <outlet property="scoresView" destination="qGW-G4-JEo" id="ctO-w5-uTD"/>
                         <outlet property="sectionButtonsView" destination="itZ-Fb-IpU" id="r8t-Uh-zb1"/>
                         <outlet property="titleLabel" destination="JCK-QO-Ysb" id="jxs-s0-jSU"/>
                         <outlet property="trailersButton" destination="pvd-x7-MQU" id="KUn-fs-0Yo"/>

@@ -121,7 +121,7 @@
         [puntuacionesMedias setValue:(NSString *)[fila objectForKey:@"puntuacion_media_gore"] forKey:@"gore"];
         [puntuacionesMedias setValue:(NSString *)[fila objectForKey:@"puntuacion_media_humor"] forKey:@"humor"];
         [puntuacionesMedias setValue:(NSString *)[fila objectForKey:@"puntuacion_media_calidad"] forKey:@"calidad"];
-    
+        [puntuacionesMedias setValue:(NSString *)[fila objectForKey:@"numero_puntuaciones"] forKey:@"numero_puntuaciones"];
     }
     
 }

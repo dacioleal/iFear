@@ -16,7 +16,10 @@
 #import "CriticasFlashSearch.h"
 #import "CriticasUsuariosSearch.h"
 #import "PuntuacionesMediasSearch.h"
+#import "ScoreBar.h"
 #import <AVFoundation/AVFoundation.h>
+
+#define SCORE_BAR_LENGTH 300
 
 @interface DetalleViewController ()
 {
@@ -458,6 +461,45 @@
 - (void) configurePuntuacionesMediasView
 {
     NSLog(@"%@", puntuacionesMediasDictionary);
+    
+    //Se calcula la altura de las barras de puntuación en función del valor de puntuación
+    float terrorBarLength = [[puntuacionesMediasDictionary valueForKey:@"terror"] floatValue] * SCORE_BAR_LENGTH/100;
+    float goreBarLength = [[puntuacionesMediasDictionary valueForKey:@"gore"] floatValue] * SCORE_BAR_LENGTH/100;
+    float humorBarLength = [[puntuacionesMediasDictionary valueForKey:@"humor"] floatValue] * SCORE_BAR_LENGTH/100;
+    float calidadBarLength = [[puntuacionesMediasDictionary valueForKey:@"calidad"] floatValue] * SCORE_BAR_LENGTH/100;
+    
+    //Se crean los objetos barras de puntuación. Se les pasa los parámetros de tamaño y la imagen patrón de fondo de la barra
+    ScoreBar *terrorScoreBar = [[ScoreBar alloc] initWithFrame:CGRectMake(36.0, 393, 23.0, 0) andTiledImage:[[UIImage imageNamed:@"tramo_verde_girado180_47x6.png"] CGImage]];
+    ScoreBar *goreScoreBar = [[ScoreBar alloc] initWithFrame:CGRectMake(78.0, 393, 23.0, 0) andTiledImage:[[UIImage imageNamed:@"tramo_rojo_girado180_47x6.png"] CGImage]];
+    ScoreBar *humorScoreBar = [[ScoreBar alloc] initWithFrame:CGRectMake(121.0, 393, 23.0, 0) andTiledImage:[[UIImage imageNamed:@"tramo_amarillo_girado180_47x6.png"] CGImage]];
+    ScoreBar *calidadScoreBar = [[ScoreBar alloc] initWithFrame:CGRectMake(163.0, 393, 23.0, 0) andTiledImage:[[UIImage imageNamed:@"tramo_azul_girado180_47x6.png"] CGImage]];
+    
+    //Se establece el origen de coordenadas de la barras en la esquina superior izquierda (0,0)
+    terrorScoreBar.layer.anchorPoint = CGPointZero;
+    goreScoreBar.layer.anchorPoint = CGPointZero;
+    humorScoreBar.layer.anchorPoint = CGPointZero;
+    calidadScoreBar.layer.anchorPoint = CGPointZero;
+    
+    //Se aplica un giro de 180º a las barras para que la coordenada "y" crezca hacia arriba
+    terrorScoreBar.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformMakeRotation(M_PI));
+    goreScoreBar.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformMakeRotation(M_PI));
+    humorScoreBar.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformMakeRotation(M_PI));
+    calidadScoreBar.layer.transform = CATransform3DMakeAffineTransform(CGAffineTransformMakeRotation(M_PI));
+    
+    //Se añaden las barras a la vista _scoresView
+    [_scoresView addSubview:terrorScoreBar];
+    [_scoresView addSubview:goreScoreBar];
+    [_scoresView addSubview:humorScoreBar];
+    [_scoresView addSubview:calidadScoreBar];
+    
+    //Se realiza la animación de llenado de las barras de puntuación
+    [UIView animateWithDuration:0.5 animations:^{
+        terrorScoreBar.bounds = CGRectMake(terrorScoreBar.bounds.origin.x, terrorScoreBar.bounds.origin.y, terrorScoreBar.bounds.size.width, terrorBarLength);
+        goreScoreBar.bounds = CGRectMake(goreScoreBar.bounds.origin.x, goreScoreBar.bounds.origin.y, goreScoreBar.bounds.size.width, goreBarLength);
+        humorScoreBar.bounds = CGRectMake(humorScoreBar.bounds.origin.x, humorScoreBar.bounds.origin.y, humorScoreBar.bounds.size.width, humorBarLength);
+        calidadScoreBar.bounds = CGRectMake(calidadScoreBar.bounds.origin.x, calidadScoreBar.bounds.origin.y, calidadScoreBar.bounds.size.width, calidadBarLength);
+        
+    }];
 }
 
 - (void) unselectLeftPanelButtons
