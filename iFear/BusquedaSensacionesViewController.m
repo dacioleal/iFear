@@ -3,7 +3,7 @@
 //  iFear
 //
 //  Created by José Alberto Martín Falcón on 20/04/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import "BusquedaSensacionesViewController.h"
@@ -11,6 +11,7 @@
 @interface BusquedaSensacionesViewController ()
 {
     NSMutableDictionary * sensationValues;
+    NSMutableArray * listCustomSliders;
 }
 
 @end
@@ -21,6 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
     }
     return self;
 }
@@ -28,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    listCustomSliders = [[NSMutableArray alloc] init];
     sensationValues = [[NSMutableDictionary alloc] init];
     [sensationValues setObject:[NSNumber numberWithInt:0]  forKey:@"Terror"];
     [sensationValues setObject:[NSNumber numberWithInt:0] forKey:@"Gore"];
@@ -64,6 +66,7 @@
     // Se obtiene la referencia al ProgressSlider que sea
     ProgresSlider * auxSlider = (ProgresSlider *) sender;
     
+    auxSlider.userInteractionEnabled = NO;
     // Imagen que llevará el progreso
     UIImage *progressTrackImage = [UIImage imageNamed: imageName] ;
     progressTrackImage = [self imageWithImage:progressTrackImage scaledToSize:CGSizeMake(25, 35)];
@@ -126,6 +129,7 @@
     auxSlider.trackHeight = 5.0;
     UIImage * img = [UIImage imageNamed:@"indicador_107x58.png"];
     auxSlider.leftHandlerImage = [self imageWithImage:img scaledToSize:CGSizeMake(55, 27)];
+    [listCustomSliders addObject:auxSlider];
     [self.view addSubview:auxSlider];
 }
 
@@ -135,17 +139,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
     //UIGraphicsBeginImageContext(newSize);
@@ -162,7 +155,6 @@
 {
     CustomIfearSlider *auxSlider =  (CustomIfearSlider *) sender;
     NSUInteger currentValue =  ((int)((auxSlider.currentLeftSegment + 2.5) / 5) * 5);;
-   
     switch (auxSlider.tag) {
         case 1:
             if (currentValue == 0){
@@ -221,7 +213,6 @@
             
             break;
     }
-    //NSLog(@"%@",sensationValues);
     [self.delegate getSensationsValues:sensationValues];
 }
 
@@ -245,6 +236,30 @@
     auxLabel.attributedText = atrStr;
     auxLabel.shadowColor = [UIColor blackColor];
     auxLabel.shadowOffset = CGSizeMake(0, 2);
+}
+
+- (void) resetSliders
+{
+    self.progressTerrorSlider.value = 0;
+    self.progressGoreSlider.value = 0;
+    self.progressHumorSlider.value = 0;
+    self.progressCalidadSlider.value = 0;
+    
+    for (CustomIfearSlider * slider in listCustomSliders) {
+        [slider resetHandler];
+    }
+    
+    [self setFontAndColor:self.terrorPercent withText: @"0"];
+    [self setFontAndColor:self.gorePercent withText: @"0"];
+    [self setFontAndColor:self.calidadPercent withText: @"0"];
+    [self setFontAndColor:self.humorPercent withText: @"0"];
+}
+
+- (void) enableAllSliders: (BOOL) state
+{
+    for (CustomIfearSlider * slider in listCustomSliders) {
+        slider.enabled = state;
+    }
 }
 
 @end
