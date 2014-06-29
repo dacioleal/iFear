@@ -110,7 +110,7 @@
         // Se recupera la parte de JSON de la película
         NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
         Pelicula * pelicula;
-        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
+        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
         int idPelicula,anio,duracion;
         
         // Se recorre el array retorno que es donde estarán las peliculas
@@ -131,6 +131,9 @@
             anio = [[fila objectForKey:@"anio"] intValue];
             duracion = [[fila objectForKey:@"duracion"] intValue];
             idPelicula = [[fila objectForKey:@"id"] intValue];
+            cartelera = [fila objectForKey:@"cartelera"];
+            estreno = [fila objectForKey:@"estrenos"];
+            fechaEstreno = [fila objectForKey:@"fecha_estreno"];
             
             
             pelicula = [[Pelicula alloc] initConParametros:idPelicula
@@ -147,7 +150,10 @@
                                     productoraDeLaPelicula:productora
                                            webDeLaPelicula:web
                                       sinopsisDeLaPelicula:sinopsis
-                                       portadaDeLaPelicula:portada];
+                                       portadaDeLaPelicula:portada
+                                     carteleraDeLaPelicula:cartelera
+                                       estrenoDeLaPelicula:estreno
+                                  fechaEstrenoDeLaPelicula:fechaEstreno];
             
             // Url de la imagen
             NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];

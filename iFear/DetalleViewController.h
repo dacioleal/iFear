@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIView *reviewsContainerView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
+@property (weak, nonatomic) IBOutlet UIView *scoresView;
 
 @property (strong, nonatomic) Pelicula * movie;
 

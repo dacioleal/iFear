@@ -28,7 +28,9 @@
 @property (strong, nonatomic) NSString * web;
 @property (strong, nonatomic) NSString * sinopsis;
 @property (strong, nonatomic) NSString * portada;
-
+@property (strong, nonatomic) NSString * cartelera;
+@property (strong, nonatomic) NSString * estreno;
+@property (strong, nonatomic) NSString * fechaEstreno;
 @property (strong, nonatomic) UIImage * imagen;
 @property (strong, nonatomic) NSURL * urlImagen;
 
@@ -52,7 +54,11 @@
  productoraDeLaPelicula:(NSString *) productora
         webDeLaPelicula:(NSString *) web
    sinopsisDeLaPelicula:(NSString *) sinopsis
-    portadaDeLaPelicula:(NSString *) portada;
+    portadaDeLaPelicula:(NSString *) portada
+  carteleraDeLaPelicula:(NSString *) cartelera
+    estrenoDeLaPelicula:(NSString *) estreno
+fechaEstrenoDeLaPelicula:(NSString *) fechaEstreno;
+
 
 - (NSArray *) titlesArrayToMakeDescriptionSheet;
 

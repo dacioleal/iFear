@@ -43,7 +43,8 @@
     
     self.navigationController.navigationBar.tintColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     [self.navigationController.navigationBar setHidden:YES];
-    
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,18 +86,16 @@
     
     UIColor *cellColor = [UIColor clearColor];
     cell.backgroundColor = cellColor;
-    cell.tintColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
+    //cell.tintColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
+    cell.accessoryView.tintColor= [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     
     UIView *customCellSelectedBackgroundView = [[UIView alloc] init];
-    customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.76 green:0.34 blue:0.31 alpha:1.0];
+    customCellSelectedBackgroundView.backgroundColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     cell.selectedBackgroundView = customCellSelectedBackgroundView;
     
     CriticaUsuario *critica = (CriticaUsuario *) [_criticasUsuariosArray objectAtIndex:indexPath.row];
     NSString *usuario = critica.usuario;
     NSString *titulo = critica.titulo;
-    //NSString *contenido = critica.contenido;
-    //NSString *fecha = critica.fecha;
-    
     
     UIColor *textColor = [[UIColor alloc] initWithRed:0.28 green:0.02 blue:0.02 alpha:1.0];
     UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:16.0];
@@ -108,11 +107,16 @@
     NSAttributedString *descriptionAttributedString = [[NSAttributedString alloc] initWithString:usuario attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
     cell.detailTextLabel.attributedText = descriptionAttributedString;
     
+    
     if ((indexPath.row % 2) == 0) {
-        cell.backgroundColor = [[UIColor alloc] initWithRed:0.94 green:0.82 blue:0.84 alpha:1.0];
+        cell.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:0.8];
     } else {
-        cell.backgroundColor = [[UIColor alloc] initWithRed:0.93 green:0.87 blue:0.87 alpha:1.0];
+        cell.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.2];
+        
     }
+    
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

@@ -123,13 +123,13 @@
     
     _loadingLabel.text = @"Cargando";
     
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"function",nil];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getPeliculasCartelera", @"function",nil];
     _moviesList = [moviesSearch searchWithParameters:parameters];
 }
 
 - (void) retrieveEstrenosData {
     
-    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"function",nil];
+    NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getPeliculasEstreno", @"function",nil];
     _estrenosMoviesList = [estrenosSearch searchWithParameters:parameters];
     
 }

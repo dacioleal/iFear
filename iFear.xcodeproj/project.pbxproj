@@ -149,6 +149,8 @@
 		F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31CB03418D0774200E6DF2C /* DetalleViewController.m */; };
 		F321C4381880074F00B02097 /* fondo_ppal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F321C4371880074F00B02097 /* fondo_ppal.jpg */; };
 		F321C43B1880128100B02097 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F321C43A1880128100B02097 /* MenuViewController.m */; };
+		F321D7BF195B2C92008FBAE5 /* ScoreBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F321D7BE195B2C92008FBAE5 /* ScoreBar.m */; };
+		F3278B471959D41F00760B92 /* PuntuacionesMediasSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3278B461959D41F00760B92 /* PuntuacionesMediasSearch.m */; };
 		F32D9921187D536F0004D618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9920187D536F0004D618 /* Foundation.framework */; };
 		F32D9923187D536F0004D618 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9922187D536F0004D618 /* CoreGraphics.framework */; };
 		F32D9925187D536F0004D618 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9924187D536F0004D618 /* UIKit.framework */; };
@@ -226,6 +228,10 @@
 		F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F398C6F41941E062007D56A8 /* CriticaMedioViewController.m */; };
 		F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CD718E57ED7008929FA /* MovieCell.m */; };
 		F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A68CDE18E59415008929FA /* MoviesSearch.m */; };
+		F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B169AD195C3D220090F565 /* tramo_amarillo_girado180_47x6.png */; };
+		F3B169B2195C3D220090F565 /* tramo_azul_girado180_47x6.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B169AE195C3D220090F565 /* tramo_azul_girado180_47x6.png */; };
+		F3B169B3195C3D220090F565 /* tramo_rojo_girado180_47x6.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B169AF195C3D220090F565 /* tramo_rojo_girado180_47x6.png */; };
+		F3B169B4195C3D220090F565 /* tramo_verde_girado180_47x6.png in Resources */ = {isa = PBXBuildFile; fileRef = F3B169B0195C3D220090F565 /* tramo_verde_girado180_47x6.png */; };
 		F3BCF0BF189ECBCF0059974A /* icono_home.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0BE189ECBCF0059974A /* icono_home.png */; };
 		F3BCF0C1189ECBD70059974A /* icono_menu_invertido.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */; };
 		F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BF77D918844D9600818986 /* CarteleraViewController.m */; };
@@ -432,6 +438,10 @@
 		F321C4371880074F00B02097 /* fondo_ppal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_ppal.jpg; sourceTree = "<group>"; };
 		F321C4391880128100B02097 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F321C43A1880128100B02097 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		F321D7BD195B2C92008FBAE5 /* ScoreBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreBar.h; sourceTree = "<group>"; };
+		F321D7BE195B2C92008FBAE5 /* ScoreBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreBar.m; sourceTree = "<group>"; };
+		F3278B451959D41F00760B92 /* PuntuacionesMediasSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntuacionesMediasSearch.h; sourceTree = "<group>"; };
+		F3278B461959D41F00760B92 /* PuntuacionesMediasSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntuacionesMediasSearch.m; sourceTree = "<group>"; };
 		F32D991D187D536F0004D618 /* iFear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F32D9920187D536F0004D618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F32D9922187D536F0004D618 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -523,6 +533,10 @@
 		F3A68CD718E57ED7008929FA /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		F3A68CDD18E59415008929FA /* MoviesSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesSearch.h; sourceTree = "<group>"; };
 		F3A68CDE18E59415008929FA /* MoviesSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesSearch.m; sourceTree = "<group>"; };
+		F3B169AD195C3D220090F565 /* tramo_amarillo_girado180_47x6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramo_amarillo_girado180_47x6.png; sourceTree = "<group>"; };
+		F3B169AE195C3D220090F565 /* tramo_azul_girado180_47x6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramo_azul_girado180_47x6.png; sourceTree = "<group>"; };
+		F3B169AF195C3D220090F565 /* tramo_rojo_girado180_47x6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramo_rojo_girado180_47x6.png; sourceTree = "<group>"; };
+		F3B169B0195C3D220090F565 /* tramo_verde_girado180_47x6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramo_verde_girado180_47x6.png; sourceTree = "<group>"; };
 		F3BCF0BE189ECBCF0059974A /* icono_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_home.png; sourceTree = "<group>"; };
 		F3BCF0C0189ECBD70059974A /* icono_menu_invertido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu_invertido.png; sourceTree = "<group>"; };
 		F3BF77D818844D9600818986 /* CarteleraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarteleraViewController.h; sourceTree = "<group>"; };
@@ -602,6 +616,7 @@
 				F3F9E1C4193CDB7B00FD0ED3 /* CriticasMediosSearch */,
 				F3E76A9F1946FC3E00AFEFA8 /* CriticasFlashSearch */,
 				F346D98A1948663100829E1A /* CriticasUsuariosSearch */,
+				F3278B481959D42600760B92 /* PuntuacionesMediasSearch */,
 			);
 			name = ConnectionServer;
 			sourceTree = "<group>";
@@ -747,7 +762,6 @@
 			isa = PBXGroup;
 			children = (
 				4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */,
-				4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */,
 				4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */,
 				4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */,
 			);
@@ -927,6 +941,7 @@
 				F3F7F8D2190FA41000DA3D6B /* CriticasTableViewController */,
 				F3E76A9B1946F4FE00AFEFA8 /* CriticasFlashTableViewController */,
 				F346D986194864C900829E1A /* CriticasUsuariosTableViewController */,
+				F321D7C0195B2C97008FBAE5 /* ScoreBar */,
 			);
 			name = DetalleViewController;
 			sourceTree = "<group>";
@@ -958,6 +973,24 @@
 				F321C43A1880128100B02097 /* MenuViewController.m */,
 			);
 			name = MenuViewController;
+			sourceTree = "<group>";
+		};
+		F321D7C0195B2C97008FBAE5 /* ScoreBar */ = {
+			isa = PBXGroup;
+			children = (
+				F321D7BD195B2C92008FBAE5 /* ScoreBar.h */,
+				F321D7BE195B2C92008FBAE5 /* ScoreBar.m */,
+			);
+			name = ScoreBar;
+			sourceTree = "<group>";
+		};
+		F3278B481959D42600760B92 /* PuntuacionesMediasSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F3278B451959D41F00760B92 /* PuntuacionesMediasSearch.h */,
+				F3278B461959D41F00760B92 /* PuntuacionesMediasSearch.m */,
+			);
+			name = PuntuacionesMediasSearch;
 			sourceTree = "<group>";
 		};
 		F32D9914187D536F0004D618 = {
@@ -1004,7 +1037,6 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
-				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				4846601F1955B7E2004BEE1A /* IfearAlertView.xib */,
 				F3FD0515190A737200A1B516 /* fonts */,
@@ -1106,6 +1138,10 @@
 				F37CEB1A18FC04050085701C /* boton_panel_izq_ON_330x102.png */,
 				F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */,
 				F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */,
+				F3B169AD195C3D220090F565 /* tramo_amarillo_girado180_47x6.png */,
+				F3B169AE195C3D220090F565 /* tramo_azul_girado180_47x6.png */,
+				F3B169AF195C3D220090F565 /* tramo_rojo_girado180_47x6.png */,
+				F3B169B0195C3D220090F565 /* tramo_verde_girado180_47x6.png */,
 			);
 			name = detalle;
 			sourceTree = "<group>";
@@ -1499,12 +1535,12 @@
 				48254C8F1927D8B90018DC55 /* trozo_barra_humor_50x70.png in Resources */,
 				48254CCC1927D8B90018DC55 /* boton_casas_enc_465x127.png in Resources */,
 				48254CE71927D8B90018DC55 /* boton_licantropo_ON_465x127.png in Resources */,
+				F3B169B4195C3D220090F565 /* tramo_verde_girado180_47x6.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */,
 				48254CE21927D8B90018DC55 /* boton_giallo_465x127.png in Resources */,
 				F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */,
-				4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */,
 				48254CF21927D8B90018DC55 /* boton_secuela_465x127.png in Resources */,
 				48254C801927D8B90018DC55 /* rotulo_gore_79x35.png in Resources */,
 				48254CEB1927D8B90018DC55 /* boton_metraje_ON_465x127.png in Resources */,
@@ -1553,6 +1589,7 @@
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
+				F3B169B2195C3D220090F565 /* tramo_azul_girado180_47x6.png in Resources */,
 				48254C7D1927D8B90018DC55 /* icono_terror_136x160.png in Resources */,
 				48254CE31927D8B90018DC55 /* boton_giallo_ON_465x127.png in Resources */,
 				48254CCA1927D8B90018DC55 /* boton_brujeria_465x127.png in Resources */,
@@ -1570,6 +1607,7 @@
 				F304102818B752CC006273F0 /* zombie_02.png in Resources */,
 				F3BF77E4188450CC00818986 /* icono_ajustes.png in Resources */,
 				F342D9B6193CD334000598FD /* opciones_big_270x270.png in Resources */,
+				F3B169B3195C3D220090F565 /* tramo_rojo_girado180_47x6.png in Resources */,
 				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,
 				48254CEF1927D8B90018DC55 /* boton_realidad_ON_465x127.png in Resources */,
 				48254CE61927D8B90018DC55 /* boton_licantropo_465x127.png in Resources */,
@@ -1655,6 +1693,7 @@
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
+				F3278B471959D41F00760B92 /* PuntuacionesMediasSearch.m in Sources */,
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
@@ -1689,6 +1728,7 @@
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 				F346D98D1948667200829E1A /* CriticaUsuario.m in Sources */,
+				F321D7BF195B2C92008FBAE5 /* ScoreBar.m in Sources */,
 				48254B8F1927D51B0018DC55 /* Constants.m in Sources */,
 				48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */,
 			);

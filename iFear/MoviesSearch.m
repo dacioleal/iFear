@@ -124,7 +124,7 @@
     
     
     Pelicula * pelicula;
-    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
+    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
     int idPelicula,anio,duracion;
     
     for (NSDictionary * fila in retorno) {
@@ -144,6 +144,9 @@
         anio = [[fila objectForKey:@"anio"] intValue];
         duracion = [[fila objectForKey:@"duracion"] intValue];
         idPelicula = [[fila objectForKey:@"id"] intValue];
+        cartelera = [fila objectForKey:@"cartelera"];
+        estreno = [fila objectForKey:@"estrenos"];
+        fechaEstreno = [fila objectForKey:@"fecha_estreno"];
         
         
         pelicula = [[Pelicula alloc] initConParametros:idPelicula
@@ -160,7 +163,10 @@
                                 productoraDeLaPelicula:productora
                                        webDeLaPelicula:web
                                   sinopsisDeLaPelicula:sinopsis
-                                   portadaDeLaPelicula:portada];
+                                   portadaDeLaPelicula:portada
+                                    carteleraDeLaPelicula:cartelera
+                                   estrenoDeLaPelicula:estreno
+                              fechaEstrenoDeLaPelicula:fechaEstreno];
         
         NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
         //NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://haroben.byethost31.com/ifearphp/"];
@@ -198,11 +204,6 @@ didCompleteWithError:(NSError *)error
                 NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
                 [defaultCenter postNotificationName:@"dataFinished" object:self];
             });
-            
-            
-        } else {
-            
-            [self retrieveData];
             
         }
         

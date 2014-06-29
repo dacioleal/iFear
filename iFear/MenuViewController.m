@@ -33,6 +33,8 @@
      MainViewController *mainViewController = (MainViewController *)self.parentViewController;
     [mainViewController hideMenuBar];
     
+    
+    
 
 }
 
