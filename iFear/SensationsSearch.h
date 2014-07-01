@@ -10,6 +10,7 @@
 
 @interface SensationsSearch : NSObject <NSURLConnectionDataDelegate, NSURLSessionDelegate, UIAlertViewDelegate>
 
+@property (strong,nonatomic) UIViewController * associateVC;
 - (NSArray *) searchBySensations: (NSMutableDictionary *) param;
 
 @end

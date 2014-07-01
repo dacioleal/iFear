@@ -1589,10 +1589,10 @@
             </objects>
             <point key="canvasLocation" x="3366" y="-2260"/>
         </scene>
-        <!--Busqueda Sub Genero View Controller-->
+        <!--Busqueda Sub Genero View Controller - BusquedaSubgenero-->
         <scene sceneID="syT-Eq-07D">
             <objects>
-                <viewController storyboardIdentifier="busquedaSubGeneroViewController" automaticallyAdjustsScrollViewInsets="NO" id="iYg-nx-vnc" customClass="BusquedaSubGeneroViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="busquedaSubGeneroViewController" title="BusquedaSubgenero" automaticallyAdjustsScrollViewInsets="NO" id="iYg-nx-vnc" customClass="BusquedaSubGeneroViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9sg-EO-ncU"/>
                         <viewControllerLayoutGuide type="bottom" id="sOg-cC-cRc"/>
@@ -1931,10 +1931,10 @@
             </objects>
             <point key="canvasLocation" x="4738" y="-2377"/>
         </scene>
-        <!--Busqueda Sensaciones View Controller-->
+        <!--Busqueda Sensaciones View Controller - BusquedaSensaciones-->
         <scene sceneID="2Zf-cV-mkU">
             <objects>
-                <viewController storyboardIdentifier="busquedaSensacionesViewController" id="IV6-H8-lOS" customClass="BusquedaSensacionesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="busquedaSensacionesViewController" title="BusquedaSensaciones" id="IV6-H8-lOS" customClass="BusquedaSensacionesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i18-Gk-1Ir"/>
                         <viewControllerLayoutGuide type="bottom" id="73z-XU-kgq"/>
@@ -2370,6 +2370,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3KP-Kk-enN"/>
+        <segue reference="Myq-yO-dIP"/>
     </inferredMetricsTieBreakers>
 </document>

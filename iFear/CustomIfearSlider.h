@@ -25,6 +25,11 @@
 // TODO
 @property (strong, nonatomic) UIImage *trackImage;
 
+@property (strong, nonatomic) UIImageView *leftHandler;
+@property (strong, nonatomic) UIView *currentMovingHandler;
+
 - (id)initWithFrame:(CGRect)frame numberOfValues:(NSUInteger)values;
+- (void) resetHandler;
+- (void)initLeftHandler;
 
 @end
