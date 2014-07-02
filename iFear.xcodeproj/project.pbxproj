@@ -1038,6 +1038,8 @@
 			isa = PBXGroup;
 			children = (
 				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
+				48254B791927D47B0018DC55 /* ConnectionServer */,
+				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				4846601F1955B7E2004BEE1A /* IfearAlertView.xib */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
@@ -1474,6 +1476,7 @@
 				F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */,
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
+				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
 				4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,

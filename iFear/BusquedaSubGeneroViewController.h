@@ -49,9 +49,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *comediaButton;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *listButons;
 
+
 // Método llamado cuando se pulsa algún botón de subgénero
 - (IBAction)pushCategoriesButton:(id)sender;
 
+// Método que busca un subgénero en el array
 - (void) searchInArray: (NSString *) subgenre;
 
 // Método para desactivar todos los botones

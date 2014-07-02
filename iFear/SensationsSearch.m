@@ -43,6 +43,10 @@
     movies = [[NSMutableArray alloc] init];
     parameters = param;
     [parameters setObject:@"searchBySensations"  forKey:@"function"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:YES];
+        
+    });
     NSLog(@"%@",parameters);
     [self retrieveData];
     return movies;
@@ -60,8 +64,8 @@
     
     //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
     
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -156,10 +160,9 @@
         // Se recupera la parte de JSON de la película
         NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
         Pelicula * pelicula;
-        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
+        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
         int idPelicula,anio,duracion;
         
-        // Se recorre el array retorno que es donde estarán las peliculas
         for (NSDictionary * fila in retorno) {
             
             titulo = [fila objectForKey:@"titulo"];
@@ -177,6 +180,9 @@
             anio = [[fila objectForKey:@"anio"] intValue];
             duracion = [[fila objectForKey:@"duracion"] intValue];
             idPelicula = [[fila objectForKey:@"id"] intValue];
+            cartelera = [fila objectForKey:@"cartelera"];
+            estreno = [fila objectForKey:@"estrenos"];
+            fechaEstreno = [fila objectForKey:@"fecha_estreno"];
             
             
             pelicula = [[Pelicula alloc] initConParametros:idPelicula
@@ -193,7 +199,10 @@
                                     productoraDeLaPelicula:productora
                                            webDeLaPelicula:web
                                       sinopsisDeLaPelicula:sinopsis
-                                       portadaDeLaPelicula:portada];
+                                       portadaDeLaPelicula:portada
+                                     carteleraDeLaPelicula:cartelera
+                                       estrenoDeLaPelicula:estreno
+                                  fechaEstrenoDeLaPelicula:fechaEstreno];
             
             // Url de la imagen
             NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
@@ -245,6 +254,11 @@ didCompleteWithError:(NSError *)error
             [alert showAlert:associateVC withMessage:@"Push button to retry"];
         });
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:NO];
+        
+    });
 }
 
 

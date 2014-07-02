@@ -41,6 +41,11 @@
     movies = [[NSMutableArray alloc] init];
     parameters = param;
     [parameters setObject:@"searchByMovieParameter"  forKey:@"function"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:YES];
+        
+    });
+    
     NSLog(@"%@",parameters);
     [self retrieveData];
     return movies;
@@ -58,8 +63,8 @@
     
     //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
     
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-   //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+   NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -251,6 +256,11 @@ didCompleteWithError:(NSError *)error
             [alert showAlert:associateVC withMessage:@"Push button to retry"];
         });
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:NO];
+    });
+    
 }
 
 #pragma mark - AlertView Delegate method

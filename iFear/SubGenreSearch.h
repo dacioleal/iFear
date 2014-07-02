@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BusquedaViewController.h"
 
 @interface SubGenreSearch : NSObject <NSURLConnectionDataDelegate, NSURLSessionDelegate, UIAlertViewDelegate>
 
-@property (strong,nonatomic) UIViewController * associateVC;
+@property (strong,nonatomic) BusquedaViewController * associateVC;
 - (NSArray *) searchBySubGenre: (NSData *) parameters;
 
 @end

@@ -45,14 +45,18 @@
 {
     movies = [[NSMutableArray alloc] init];
     parameters = params;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:YES];
+        
+    });
     [self retrieveData];
     return movies;
 }
 
 
 - (void) retrieveData {
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-    //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -205,6 +209,11 @@ didCompleteWithError:(NSError *)error
             [alert showAlert:associateVC withMessage:@"Push button to retry"];
         });
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:NO];
+        
+    });
 }
 
 
