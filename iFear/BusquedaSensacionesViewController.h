@@ -34,8 +34,4 @@
 
 - (void)sliderValueChanged:(id)sender;
 
-- (void) resetSliders;
-
-- (void) enableAllSliders: (BOOL) state;
-
 @end

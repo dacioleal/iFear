@@ -103,14 +103,10 @@
 		48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */; };
 		48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C471927D8B90018DC55 /* boton_zombies_465x127.png */; };
 		48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */; };
-		48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48313A76195591EE00BA71D4 /* IfearAlertView.m */; };
-		4832EE3E194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */; };
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
-		4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */ = {isa = PBXBuildFile; fileRef = 4846601519559A28004BEE1A /* ventana_alerta_820x510.png */; };
-		484660201955B7E2004BEE1A /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4846601F1955B7E2004BEE1A /* IfearAlertView.xib */; };
 		48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */; };
 		48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */; };
 		F304101E18B752CC006273F0 /* ahorcado.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101018B752CC006273F0 /* ahorcado.png */; };
@@ -381,17 +377,12 @@
 		48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
 		48254C471927D8B90018DC55 /* boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_465x127.png; sourceTree = "<group>"; };
 		48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
-		48313A75195591EE00BA71D4 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
-		48313A76195591EE00BA71D4 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
-		4832EE3B194DE5DE00373420 /* fondo_cart_busq_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_cart_busq_2048x1536.jpg; sourceTree = "<group>"; };
 		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
 		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
 		4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banda_secciones_2048x134.png; sourceTree = "<group>"; };
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
 		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
 		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
-		4846601519559A28004BEE1A /* ventana_alerta_820x510.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ventana_alerta_820x510.png; sourceTree = "<group>"; };
-		4846601F1955B7E2004BEE1A /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IfearAlertView.xib; sourceTree = "<group>"; };
 		48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
 		48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSearchTableViewCell.h; sourceTree = "<group>"; };
@@ -749,15 +740,6 @@
 			path = "Sección subgéneros";
 			sourceTree = "<group>";
 		};
-		48313A78195591F200BA71D4 /* IfearAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				48313A75195591EE00BA71D4 /* IfearAlertView.h */,
-				48313A76195591EE00BA71D4 /* IfearAlertView.m */,
-			);
-			name = IfearAlertView;
-			sourceTree = "<group>";
-		};
 		4832EE41194DE5E400373420 /* Resultados */ = {
 			isa = PBXGroup;
 			children = (
@@ -949,7 +931,6 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				4846601519559A28004BEE1A /* ventana_alerta_820x510.png */,
 				F342D994193CD319000598FD /* queEs */,
 				48254B941927D8B80018DC55 /* Buscar película */,
 				F358E29218E0BDBE00F6C934 /* app icons */,
@@ -1000,8 +981,8 @@
 				F3F927DB1897BC5200BE7964 /* FireParticle.sks */,
 				F3F927DC1897BC5200BE7964 /* spark.png */,
 				F32D9928187D536F0004D618 /* iFear */,
-				F32D9932187D536F0004D618 /* AppDelegate.m */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
+				F32D9932187D536F0004D618 /* AppDelegate.m */,
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
@@ -1038,7 +1019,7 @@
 			isa = PBXGroup;
 			children = (
 				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
-				4846601F1955B7E2004BEE1A /* IfearAlertView.xib */,
+				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
@@ -1059,7 +1040,6 @@
 				F31CB03618D0774B00E6DF2C /* DetalleViewController */,
 				F3926F7718E2FD62004A7570 /* EstrenosCollectionViewController */,
 				F342D9B9193CD34A000598FD /* QueEsViewController */,
-				48313A78195591F200BA71D4 /* IfearAlertView */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -1474,7 +1454,7 @@
 				F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */,
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
-				4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */,
+				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
 				48254C871927D8B90018DC55 /* signo_menos_amarillo_69x69.png in Resources */,
@@ -1552,7 +1532,6 @@
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F342D9AC193CD334000598FD /* cartelera_big_ON_270x270.png in Resources */,
 				48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */,
-				484660201955B7E2004BEE1A /* IfearAlertView.xib in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */,
 				F342D9B8193CD334000598FD /* sombra_central.png in Resources */,
@@ -1711,7 +1690,6 @@
 				F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */,
 				48348F0519535718005B943E /* ParametersSearch.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
-				48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */,
 				48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
 				F3F7F8D5191005C400DA3D6B /* TrailersSearch.m in Sources */,

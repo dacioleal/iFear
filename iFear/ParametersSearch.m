@@ -8,25 +8,13 @@
 
 #import "ParametersSearch.h"
 #import "Pelicula.h"
-#import "IfearAlertView.h"
 
 @implementation ParametersSearch
 {
     NSMutableArray *movies;
     NSMutableDictionary *parameters;
-    IfearAlertView * alert;
 }
 
-@synthesize associateVC;
-
--(id)init{
-    self = [super init];
-    
-    if (self) {
-        alert = [IfearAlertView new];
-    }
-    return self;
-}
 
 - (NSMutableArray *) movies
 {
@@ -58,8 +46,8 @@
     
     //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
     
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
-   //NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+   NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -236,7 +224,7 @@ didCompleteWithError:(NSError *)error
             
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                [self displayAlertView:@"Resultado de la búsqueda" andMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
                 
             });
             //            [self retrieveData];
@@ -248,7 +236,7 @@ didCompleteWithError:(NSError *)error
         NSLog(@"Error %@",[error userInfo]);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [alert showAlert:associateVC withMessage:@"Push button to retry"];
+            [self displayAlertView:@"Downloading Error" andMessage:@"Push button to retry"];
         });
     }
 }

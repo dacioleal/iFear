@@ -10,7 +10,6 @@
 
 @interface ParametersSearch :  NSObject <NSURLConnectionDataDelegate, NSURLSessionDelegate, UIAlertViewDelegate>
 
-@property (strong,nonatomic) UIViewController * associateVC;
 - (NSArray *) searchByParameters: (NSMutableDictionary *) param;
 
 @end
