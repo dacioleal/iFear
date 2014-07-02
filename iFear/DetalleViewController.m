@@ -10,6 +10,7 @@
 #import "CriticasTableViewController.h"
 #import "CriticasFlashTableViewController.h"
 #import "CriticasUsuariosTableViewController.h"
+#import "LadoOscuroTableViewController.h"
 #import "Pelicula.h"
 #import "TrailersSearch.h"
 #import "CriticasMediosSearch.h"
@@ -30,11 +31,13 @@
     NSArray *criticasMediosArray;
     NSArray *criticasFlashArray;
     NSArray *criticasUsuariosArray;
+    NSArray *puntuacionesUsuariosArray;
     NSDictionary *puntuacionesMediasDictionary;
     NSArray *contentViews;
     UIView *mediaView;
     UIView *flashView;
     UIView *usersView;
+    UIView *darkSideView;
 }
 
 
@@ -64,6 +67,12 @@
     contentViews = @[_descriptionTextView, _trailersScrollView, _reviewsContainerView];
     leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
     reviewsPanelButtons = @[_mediaButton, _flashButton, _usersButton];
+    
+    _terrorLabel.text = nil;
+    _goreLabel.text = nil;
+    _humorLabel.text = nil;
+    _calidadLabel.text = nil;
+    _puntuacionMediaLabel.text = nil;
     
     
     _movieImageView.image = _movie.imagen;
@@ -507,6 +516,68 @@
         calidadScoreBar.bounds = CGRectMake(calidadScoreBar.bounds.origin.x, calidadScoreBar.bounds.origin.y, calidadScoreBar.bounds.size.width, calidadBarLength);
         
     }];
+    
+    NSString *terrorString = (NSString *) [puntuacionesMediasDictionary valueForKey:@"terror"];
+    NSString *goreString = (NSString *) [puntuacionesMediasDictionary valueForKey:@"gore"];
+    NSString *humorString = (NSString *) [puntuacionesMediasDictionary valueForKey:@"humor"];
+    NSString *calidadString = (NSString *) [puntuacionesMediasDictionary valueForKey:@"calidad"];
+    
+    UIColor *textColor = [[UIColor alloc] initWithRed:0.89 green:0.60 blue:0 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:22.0];
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:terrorString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _terrorLabel.textAlignment = NSTextAlignmentCenter;
+    _terrorLabel.attributedText = attrString;
+    
+    
+    attrString = [[NSAttributedString alloc] initWithString:goreString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _goreLabel.textAlignment = NSTextAlignmentCenter;
+    _goreLabel.attributedText = attrString;
+    
+    
+    attrString = [[NSAttributedString alloc] initWithString:humorString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _humorLabel.textAlignment = NSTextAlignmentCenter;
+    _humorLabel.attributedText = attrString;
+    
+    attrString = [[NSAttributedString alloc] initWithString:calidadString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    _calidadLabel.textAlignment = NSTextAlignmentCenter;
+    _calidadLabel.attributedText = attrString;
+    
+    textColor = [[UIColor alloc] initWithRed:0.67 green:0.64 blue:0.64 alpha:1.0];
+    font = [UIFont fontWithName:@"Futura-Medium" size:17.0];
+    NSMutableAttributedString *mutAttrString = [[NSMutableAttributedString alloc] initWithString:@"Puntuación media de " attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    
+    textColor = [[UIColor alloc] initWithRed:0.66 green:0.20 blue:0.20 alpha:1.0];
+    NSString *numeroPuntuacionesString = (NSString *) [puntuacionesMediasDictionary valueForKey:@"numero_puntuaciones"];
+    NSAttributedString *attrTwoString = [[NSAttributedString alloc] initWithString:numeroPuntuacionesString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    [mutAttrString appendAttributedString:attrTwoString];
+    
+    textColor = [[UIColor alloc] initWithRed:0.67 green:0.64 blue:0.64 alpha:1.0];
+    NSAttributedString *attrThreeString = [[NSAttributedString alloc] initWithString:@" usuarios" attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    
+    [mutAttrString appendAttributedString:attrThreeString];
+    _puntuacionMediaLabel.shadowColor = [UIColor blackColor];
+    _puntuacionMediaLabel.shadowOffset = CGSizeMake(1, 1);
+    _puntuacionMediaLabel.textAlignment = NSTextAlignmentCenter;
+    _puntuacionMediaLabel.attributedText = mutAttrString;
+   
+    
+    
+}
+
+- (void) configureDarkSideView
+{
+    UINavigationController *ladoOscuroNC = [self.storyboard instantiateViewControllerWithIdentifier:@"ladoOscuroNavigationController"];
+    LadoOscuroTableViewController *ladoOscuroTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ladoOscuroTableViewController"];
+    ladoOscuroTVC.movieID = movieID;
+    ladoOscuroTVC.puntuacionesUsuariosArray = puntuacionesUsuariosArray;
+    [ladoOscuroNC addChildViewController:ladoOscuroTVC];
+    
+    [self addChildViewController:ladoOscuroNC];
+    darkSideView = ladoOscuroNC.view;
+    [_reviewsContainerView addSubview:darkSideView];
+    darkSideView.frame = CGRectMake(0, 0, darkSideView.superview.frame.size.width, darkSideView.superview.frame.size.height);
+    darkSideView.hidden = YES;
+    
 }
 
 - (void) unselectLeftPanelButtons

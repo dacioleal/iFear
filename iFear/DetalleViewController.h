@@ -22,6 +22,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
 @property (weak, nonatomic) IBOutlet UIView *scoresView;
 
+@property (weak, nonatomic) IBOutlet UILabel *terrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *calidadLabel;
+@property (weak, nonatomic) IBOutlet UILabel *puntuacionMediaLabel;
+
 @property (strong, nonatomic) Pelicula * movie;
 
 @property (weak, nonatomic) IBOutlet UIButton *descriptionButton;
