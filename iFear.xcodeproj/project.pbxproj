@@ -237,6 +237,8 @@
 		F3BF77E7188450CC00818986 /* icono_info.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E0188450CC00818986 /* icono_info.png */; };
 		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
+		F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */; };
+		F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */; };
 		F3E76A9A1946F4F800AFEFA8 /* CriticasFlashTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */; };
 		F3E76A9E1946FC3800AFEFA8 /* CriticasFlashSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A9D1946FC3800AFEFA8 /* CriticasFlashSearch.m */; };
 		F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76AA11946FE2900AFEFA8 /* CriticaFlash.m */; };
@@ -537,6 +539,8 @@
 		F3BF77E0188450CC00818986 /* icono_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_info.png; sourceTree = "<group>"; };
 		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
+		F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_fichasC_2048x1536.jpg; sourceTree = "<group>"; };
+		F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_lado_oscuro_2048x1536.jpg; sourceTree = "<group>"; };
 		F3E76A981946F4F800AFEFA8 /* CriticasFlashTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashTableViewController.h; sourceTree = "<group>"; };
 		F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasFlashTableViewController.m; sourceTree = "<group>"; };
 		F3E76A9C1946FC3800AFEFA8 /* CriticasFlashSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashSearch.h; sourceTree = "<group>"; };
@@ -1106,6 +1110,8 @@
 				F346D97D19485B2D00829E1A /* selector_critica_OFF_236x84.png */,
 				F346D97E19485B2D00829E1A /* selector_critica_ON_236x84.png */,
 				F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */,
+				F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */,
+				F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */,
 				F33D145A18F809E400604463 /* fondo_central_1090x1144.png */,
 				F346D97919485B1400829E1A /* marco_centralC_1106x1268.png */,
 				F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */,
@@ -1563,6 +1569,7 @@
 				F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
+				F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F3B169B2195C3D220090F565 /* tramo_azul_girado180_47x6.png in Resources */,
@@ -1596,6 +1603,7 @@
 				48254C901927D8B90018DC55 /* trozo_barra_terror_50x70.png in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				48254CDC1927D8B90018DC55 /* boton_extraterre_465x127.png in Resources */,
+				F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
 				48254CE51927D8B90018DC55 /* boton_jhorror_ON_465x127.png in Resources */,

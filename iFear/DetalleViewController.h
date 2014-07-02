@@ -11,6 +11,7 @@
 
 @interface DetalleViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *trailersScrollView;

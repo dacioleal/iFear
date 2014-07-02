@@ -431,7 +431,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_fichas_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vkS-8D-O8y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_fichasC_2048x1536.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vkS-8D-O8y">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -458,10 +458,6 @@
                                 <rect key="frame" x="30" y="462" width="200" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_izq_rojo_400x560.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2B-kF-1Wa">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-uw-oQx">
                                         <rect key="frame" x="18" y="20" width="165" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -530,11 +526,6 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marco_centralC_1106x1268.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fay-yz-zo2">
-                                        <rect key="frame" x="0.0" y="0.0" width="553" height="634"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jg-09-47p" userLabel="Label - contentTitleLabel">
                                         <rect key="frame" x="20" y="14" width="196" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -581,24 +572,14 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-G4-JEo" userLabel="View - scoresView">
                                 <rect key="frame" x="794" y="108" width="202" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_barras_404x1010.png" translatesAutoresizingMaskIntoConstraints="NO" id="mla-LQ-BLe">
-                                        <rect key="frame" x="0.0" y="0.0" width="202" height="505"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-Jb-WQu" userLabel="View - voteView">
                                 <rect key="frame" x="794" y="600" width="200" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_votar_400x284.png" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-xU-isa">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="142"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fad-ET-bEJ">
-                                        <rect key="frame" x="12" y="44" width="173" height="78"/>
+                                        <rect key="frame" x="15" y="44" width="173" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="boton_votar_346x156.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -630,6 +611,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="vkS-8D-O8y" id="rzp-dj-UOF"/>
                         <outlet property="contentTitleLabel" destination="9jg-09-47p" id="upN-tV-urG"/>
                         <outlet property="contentView" destination="pa3-TL-9kh" id="1sT-yV-MBc"/>
                         <outlet property="darkSideButton" destination="GIb-H6-ARN" id="FbE-gF-bpb"/>
@@ -2276,7 +2258,7 @@
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cart_busq_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
-        <image name="fondo_fichas_2048x1536.jpg" width="2048" height="1536"/>
+        <image name="fondo_fichasC_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
         <image name="fondo_que_es_ifear_2048x1536.jpg" width="2048" height="1536"/>
@@ -2295,7 +2277,6 @@
         <image name="icono_menu_invertido.png" width="100" height="100"/>
         <image name="icono_terror_136x160.png" width="136" height="160"/>
         <image name="icono_volver.png" width="100" height="100"/>
-        <image name="marco_centralC_1106x1268.png" width="1106" height="1268"/>
         <image name="mascara_central_1040x1040.png" width="1040" height="1040"/>
         <image name="mentes_osc_big_270x270.png" width="270" height="270"/>
         <image name="mentes_osc_big_ON_270x270.png" width="270" height="270"/>
@@ -2303,9 +2284,6 @@
         <image name="menu_big_ON_270x270.png" width="270" height="270"/>
         <image name="opciones_big_270x270.png" width="270" height="270"/>
         <image name="opciones_big_ON_270x270.png" width="270" height="270"/>
-        <image name="panel_barras_404x1010.png" width="404" height="1010"/>
-        <image name="panel_izq_rojo_400x560.png" width="400" height="560"/>
-        <image name="panel_votar_400x284.png" width="400" height="284"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
         <image name="rotulo_calidad_124x35.png" width="124" height="35"/>
         <image name="rotulo_cartelera_476x134.png" width="476" height="134"/>

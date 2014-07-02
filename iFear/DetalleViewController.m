@@ -146,6 +146,7 @@
 
 - (IBAction)descriptionPushButton:(UIButton *)sender {
     
+    _backgroundImageView.image = [UIImage imageNamed:@"fondo_fichasC_2048x1536.jpg"];
     [self unselectLeftPanelButtons];
     [self hideContentViews];
     [self hideReviewsPanelButton];
@@ -162,6 +163,7 @@
 
 - (IBAction)trailersPushButton:(UIButton *)sender {
     
+    _backgroundImageView.image = [UIImage imageNamed:@"fondo_fichasC_2048x1536.jpg"];
     [self unselectLeftPanelButtons];
     [self hideContentViews];
     [self hideReviewsPanelButton];
@@ -178,6 +180,7 @@
 
 - (IBAction)reviewsPushButton:(UIButton *)sender {
     
+    _backgroundImageView.image = [UIImage imageNamed:@"fondo_fichasC_2048x1536.jpg"];
     [self unselectLeftPanelButtons];
     [self hideContentViews];
     [self showReviewsPanelButton];
@@ -195,10 +198,14 @@
 
 - (IBAction)darkSidePushButton:(UIButton *)sender {
     
+    _backgroundImageView.image = [UIImage imageNamed:@"fondo_lado_oscuro_2048x1536.jpg"];
     //[_contentView bringSubviewToFront:_trailersScrollView];
+    _contentTitleLabel.attributedText = nil;
     [self unselectLeftPanelButtons];
     [self hideReviewsPanelButton];
     [_darkSideButton setSelected:YES];
+    
+    
 }
 
 - (IBAction)rateMoviePushButton:(UIButton *)sender {
