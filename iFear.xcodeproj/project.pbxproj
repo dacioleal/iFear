@@ -106,12 +106,12 @@
 		48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48313A76195591EE00BA71D4 /* IfearAlertView.m */; };
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
-		4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
-		4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */ = {isa = PBXBuildFile; fileRef = 4846601519559A28004BEE1A /* ventana_alerta_820x510.png */; };
-		484660201955B7E2004BEE1A /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4846601F1955B7E2004BEE1A /* IfearAlertView.xib */; };
 		48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */; };
 		48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */; };
+		F301FF3E1964675F0068033E /* LadoOscuroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */; };
+		F301FF4219646EA10068033E /* PuntuacionUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = F301FF4119646EA10068033E /* PuntuacionUsuario.m */; };
+		F301FF451964886D0068033E /* boton_lado_osc_ON_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = F301FF441964886D0068033E /* boton_lado_osc_ON_330x126.png */; };
 		F304101E18B752CC006273F0 /* ahorcado.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101018B752CC006273F0 /* ahorcado.png */; };
 		F304101F18B752CC006273F0 /* barrotes.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101118B752CC006273F0 /* barrotes.png */; };
 		F304102018B752CC006273F0 /* boton_buscar.png in Resources */ = {isa = PBXBuildFile; fileRef = F304101218B752CC006273F0 /* boton_buscar.png */; };
@@ -240,6 +240,8 @@
 		F3BF77E7188450CC00818986 /* icono_info.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E0188450CC00818986 /* icono_info.png */; };
 		F3BF77E8188450CC00818986 /* icono_mentes_oscuras.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */; };
 		F3BF77E9188450CC00818986 /* icono_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = F3BF77E2188450CC00818986 /* icono_menu.png */; };
+		F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */; };
+		F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */; };
 		F3E76A9A1946F4F800AFEFA8 /* CriticasFlashTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */; };
 		F3E76A9E1946FC3800AFEFA8 /* CriticasFlashSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76A9D1946FC3800AFEFA8 /* CriticasFlashSearch.m */; };
 		F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E76AA11946FE2900AFEFA8 /* CriticaFlash.m */; };
@@ -383,16 +385,18 @@
 		48313A76195591EE00BA71D4 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
 		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
-		4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banda_secciones_2048x134.png; sourceTree = "<group>"; };
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
 		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
 		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
-		4846601519559A28004BEE1A /* ventana_alerta_820x510.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ventana_alerta_820x510.png; sourceTree = "<group>"; };
-		4846601F1955B7E2004BEE1A /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IfearAlertView.xib; sourceTree = "<group>"; };
 		48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
 		48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSearchTableViewCell.h; sourceTree = "<group>"; };
 		48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultSearchTableViewCell.m; sourceTree = "<group>"; };
+		F301FF3C1964675F0068033E /* LadoOscuroTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LadoOscuroTableViewController.h; sourceTree = "<group>"; };
+		F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LadoOscuroTableViewController.m; sourceTree = "<group>"; };
+		F301FF4019646EA10068033E /* PuntuacionUsuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntuacionUsuario.h; sourceTree = "<group>"; };
+		F301FF4119646EA10068033E /* PuntuacionUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntuacionUsuario.m; sourceTree = "<group>"; };
+		F301FF441964886D0068033E /* boton_lado_osc_ON_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_osc_ON_330x126.png; sourceTree = "<group>"; };
 		F304101018B752CC006273F0 /* ahorcado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ahorcado.png; sourceTree = "<group>"; };
 		F304101118B752CC006273F0 /* barrotes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrotes.png; sourceTree = "<group>"; };
 		F304101218B752CC006273F0 /* boton_buscar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_buscar.png; sourceTree = "<group>"; };
@@ -544,6 +548,8 @@
 		F3BF77E0188450CC00818986 /* icono_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_info.png; sourceTree = "<group>"; };
 		F3BF77E1188450CC00818986 /* icono_mentes_oscuras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_mentes_oscuras.png; sourceTree = "<group>"; };
 		F3BF77E2188450CC00818986 /* icono_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_menu.png; sourceTree = "<group>"; };
+		F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_fichasC_2048x1536.jpg; sourceTree = "<group>"; };
+		F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_lado_oscuro_2048x1536.jpg; sourceTree = "<group>"; };
 		F3E76A981946F4F800AFEFA8 /* CriticasFlashTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashTableViewController.h; sourceTree = "<group>"; };
 		F3E76A991946F4F800AFEFA8 /* CriticasFlashTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticasFlashTableViewController.m; sourceTree = "<group>"; };
 		F3E76A9C1946FC3800AFEFA8 /* CriticasFlashSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticasFlashSearch.h; sourceTree = "<group>"; };
@@ -745,19 +751,9 @@
 			path = "Sección subgéneros";
 			sourceTree = "<group>";
 		};
-		48313A78195591F200BA71D4 /* IfearAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				48313A75195591EE00BA71D4 /* IfearAlertView.h */,
-				48313A76195591EE00BA71D4 /* IfearAlertView.m */,
-			);
-			name = IfearAlertView;
-			sourceTree = "<group>";
-		};
 		4832EE41194DE5E400373420 /* Resultados */ = {
 			isa = PBXGroup;
 			children = (
-				4832EE42194DE63C00373420 /* banda_secciones_2048x134.png */,
 				4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */,
 				4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */,
 			);
@@ -824,6 +820,24 @@
 				48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */,
 			);
 			name = ListadoResultadosBusquedas;
+			sourceTree = "<group>";
+		};
+		F301FF3F196467650068033E /* LadoOscuroTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F301FF3C1964675F0068033E /* LadoOscuroTableViewController.h */,
+				F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */,
+			);
+			name = LadoOscuroTableViewController;
+			sourceTree = "<group>";
+		};
+		F301FF4319646EA70068033E /* PuntuacionUsuario */ = {
+			isa = PBXGroup;
+			children = (
+				F301FF4019646EA10068033E /* PuntuacionUsuario.h */,
+				F301FF4119646EA10068033E /* PuntuacionUsuario.m */,
+			);
+			name = PuntuacionUsuario;
 			sourceTree = "<group>";
 		};
 		F304100F18B752A5006273F0 /* menu */ = {
@@ -937,6 +951,7 @@
 				F3F7F8D2190FA41000DA3D6B /* CriticasTableViewController */,
 				F3E76A9B1946F4FE00AFEFA8 /* CriticasFlashTableViewController */,
 				F346D986194864C900829E1A /* CriticasUsuariosTableViewController */,
+				F301FF3F196467650068033E /* LadoOscuroTableViewController */,
 				F321D7C0195B2C97008FBAE5 /* ScoreBar */,
 			);
 			name = DetalleViewController;
@@ -945,7 +960,6 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				4846601519559A28004BEE1A /* ventana_alerta_820x510.png */,
 				F342D994193CD319000598FD /* queEs */,
 				48254B941927D8B80018DC55 /* Buscar película */,
 				F358E29218E0BDBE00F6C934 /* app icons */,
@@ -996,8 +1010,8 @@
 				F3F927DB1897BC5200BE7964 /* FireParticle.sks */,
 				F3F927DC1897BC5200BE7964 /* spark.png */,
 				F32D9928187D536F0004D618 /* iFear */,
-				F32D9932187D536F0004D618 /* AppDelegate.m */,
 				F32D9931187D536F0004D618 /* AppDelegate.h */,
+				F32D9932187D536F0004D618 /* AppDelegate.m */,
 				F32D9937187D53700004D618 /* Images.xcassets */,
 				F32D9934187D536F0004D618 /* iFear.xcdatamodeld */,
 				F32D9929187D536F0004D618 /* Supporting Files */,
@@ -1043,6 +1057,7 @@
 				F331BE65193F5EDD00AF9902 /* CriticaMedio */,
 				F3E76AA31946FE2F00AFEFA8 /* CriticaFlash */,
 				F346D98E1948667700829E1A /* CriticaUsuario */,
+				F301FF4319646EA70068033E /* PuntuacionUsuario */,
 				F3F927D31897B36100BE7964 /* EntradaViewController */,
 				F3F927D71897B69700BE7964 /* MainScene */,
 				F314498F189A48010007B9B6 /* MainViewController */,
@@ -1055,7 +1070,6 @@
 				F31CB03618D0774B00E6DF2C /* DetalleViewController */,
 				F3926F7718E2FD62004A7570 /* EstrenosCollectionViewController */,
 				F342D9B9193CD34A000598FD /* QueEsViewController */,
-				48313A78195591F200BA71D4 /* IfearAlertView */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -1125,6 +1139,8 @@
 				F346D97D19485B2D00829E1A /* selector_critica_OFF_236x84.png */,
 				F346D97E19485B2D00829E1A /* selector_critica_ON_236x84.png */,
 				F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */,
+				F3D20D2119645E02002D6D30 /* fondo_fichasC_2048x1536.jpg */,
+				F3D20D2319645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg */,
 				F33D145A18F809E400604463 /* fondo_central_1090x1144.png */,
 				F346D97919485B1400829E1A /* marco_centralC_1106x1268.png */,
 				F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */,
@@ -1133,6 +1149,7 @@
 				F37CEB1918FC04050085701C /* boton_panel_izq_330x102.png */,
 				F37CEB1A18FC04050085701C /* boton_panel_izq_ON_330x102.png */,
 				F3FD0511190A534300A1B516 /* boton_lado_oscuro_330x126.png */,
+				F301FF441964886D0068033E /* boton_lado_osc_ON_330x126.png */,
 				F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */,
 				F3B169AD195C3D220090F565 /* tramo_amarillo_girado180_47x6.png */,
 				F3B169AE195C3D220090F565 /* tramo_azul_girado180_47x6.png */,
@@ -1549,7 +1566,6 @@
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F342D9AC193CD334000598FD /* cartelera_big_ON_270x270.png in Resources */,
 				48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */,
-				484660201955B7E2004BEE1A /* IfearAlertView.xib in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */,
 				F342D9B8193CD334000598FD /* sombra_central.png in Resources */,
@@ -1584,6 +1600,7 @@
 				F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
+				F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
 				F3B169B2195C3D220090F565 /* tramo_azul_girado180_47x6.png in Resources */,
@@ -1617,6 +1634,7 @@
 				48254C901927D8B90018DC55 /* trozo_barra_terror_50x70.png in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				48254CDC1927D8B90018DC55 /* boton_extraterre_465x127.png in Resources */,
+				F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
 				48254CE51927D8B90018DC55 /* boton_jhorror_ON_465x127.png in Resources */,
@@ -1640,8 +1658,8 @@
 				48254C821927D8B90018DC55 /* rotulo_terror_116x35.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */,
-				4832EE43194DE63C00373420 /* banda_secciones_2048x134.png in Resources */,
 				48254C581927D8B90018DC55 /* buscar_sensacion_ON_540x48.png in Resources */,
+				F301FF451964886D0068033E /* boton_lado_osc_ON_330x126.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
@@ -1695,6 +1713,7 @@
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,
 				F3E76A9A1946F4F800AFEFA8 /* CriticasFlashTableViewController.m in Sources */,
 				F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */,
+				F301FF3E1964675F0068033E /* LadoOscuroTableViewController.m in Sources */,
 				F3F927D21897B35B00BE7964 /* EntradaViewController.m in Sources */,
 				F346D9891948662B00829E1A /* CriticasUsuariosSearch.m in Sources */,
 				48254B781927D46D0018DC55 /* SensationsSearch.m in Sources */,
@@ -1707,7 +1726,6 @@
 				F3E76AA21946FE2900AFEFA8 /* CriticaFlash.m in Sources */,
 				48348F0519535718005B943E /* ParametersSearch.m in Sources */,
 				F3144996189A515A0007B9B6 /* ActividadViewController.m in Sources */,
-				48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */,
 				48254B8B1927D4F80018DC55 /* BusquedaSensacionesViewController.m in Sources */,
 				F30F42E018A4E9BD005841A6 /* Pelicula.m in Sources */,
 				F3F7F8D5191005C400DA3D6B /* TrailersSearch.m in Sources */,
@@ -1721,6 +1739,7 @@
 				F3BF77DA18844D9600818986 /* CarteleraViewController.m in Sources */,
 				F3A68CDF18E59415008929FA /* MoviesSearch.m in Sources */,
 				F3E76A9E1946FC3800AFEFA8 /* CriticasFlashSearch.m in Sources */,
+				F301FF4219646EA10068033E /* PuntuacionUsuario.m in Sources */,
 				F314499B189A53840007B9B6 /* MentesViewController.m in Sources */,
 				F321C43B1880128100B02097 /* MenuViewController.m in Sources */,
 				F346D98D1948667200829E1A /* CriticaUsuario.m in Sources */,

@@ -10,6 +10,7 @@
 
 @interface CriticaUsuario : NSObject
 
+@property (nonatomic, strong) NSString *idUsuario;
 @property (nonatomic, strong) NSString *usuario;
 @property (nonatomic, strong) NSString *titulo;
 @property (nonatomic, strong) NSString *contenido;

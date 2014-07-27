@@ -11,6 +11,7 @@
 
 @interface DetalleViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *trailersScrollView;
@@ -20,6 +21,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
 @property (weak, nonatomic) IBOutlet UIView *scoresView;
+
+@property (weak, nonatomic) IBOutlet UILabel *terrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *calidadLabel;
+@property (weak, nonatomic) IBOutlet UILabel *puntuacionMediaLabel;
 
 @property (strong, nonatomic) Pelicula * movie;
 

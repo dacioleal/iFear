@@ -8,28 +8,17 @@
 
 #import "SensationsSearch.h"
 #import "Pelicula.h"
-#import "IfearAlertView.h"
 
 @interface SensationsSearch ()
 {
     NSMutableArray *movies;
     NSMutableDictionary *parameters;
-    IfearAlertView * alert;
 }
 
 @end
 
 @implementation SensationsSearch
-@synthesize associateVC;
 
--(id)init{
-    self = [super init];
-    
-    if (self) {
-        alert = [IfearAlertView new];
-    }
-    return self;
-}
 - (NSMutableArray *) movies
 {
     if (!movies) {
@@ -145,14 +134,8 @@
 #pragma mark - NSURLSessionDataDelegate
 
 
-// Al recibir los datos
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    // Se parsea el JSON
-    NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    // Se recupera si ha tenido
-    BOOL exito = [[respuestaDictionario objectForKey:@"exito"] boolValue];
     
     NSLog(@"%@",respuestaDictionario);
     
@@ -216,6 +199,8 @@
 }
 
 
+
+
 // Al finalizar
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
@@ -260,6 +245,8 @@ didCompleteWithError:(NSError *)error
         
     });
 }
+
+
 
 
 @end

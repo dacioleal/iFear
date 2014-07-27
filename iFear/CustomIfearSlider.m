@@ -13,11 +13,13 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 @interface CustomIfearSlider ()
 
+@property (strong, nonatomic) UIImageView *leftHandler;
+@property (strong, nonatomic) UIView *currentMovingHandler;
+
 @end
 
 @implementation CustomIfearSlider
 
-@synthesize leftHandler,currentMovingHandler;
 #pragma mark - Public
 
 - (id)initWithFrame:(CGRect)frame numberOfValues:(NSUInteger)values {
@@ -25,7 +27,7 @@ CGFloat const kDefaultHandlerSize = 44.0;
     
     if (self) {
         self.values = values;
-        self.currentLeftSegment = values;
+        self.currentLeftSegment = 20;
     }
     
     return self;
@@ -100,7 +102,6 @@ CGFloat const kDefaultHandlerSize = 44.0;
     
     NSUInteger leftSegment = [self segmentForXPosition:CGRectGetMidX(self.leftHandler.frame)];
     
-    
     if (leftSegment != self.currentLeftSegment) {
         self.currentLeftSegment = leftSegment;
         [self sendActionsForControlEvents:UIControlEventValueChanged];
@@ -121,10 +122,10 @@ CGFloat const kDefaultHandlerSize = 44.0;
     CGPoint previousLocation = [touch previousLocationInView:self];
     CGFloat xOffset = location.x - previousLocation.x;
     CGFloat newHandlerCenterX = CGRectGetMidX(handler.frame) + xOffset;
+    
     if ([self isValue:newHandlerCenterX betweenAllowedHorizontalBoundsForHandler:handler]) {
         handler.frame = CGRectOffset(handler.frame, xOffset, 0.0);
     }
-    
 }
 
 - (BOOL)isValue:(CGFloat)value betweenAllowedHorizontalBoundsForHandler:(UIView *)handler {
@@ -165,12 +166,6 @@ CGFloat const kDefaultHandlerSize = 44.0;
     self.leftHandler.image = self.leftHandlerImage;
     self.leftHandler.center = CGPointMake(0.0, CGRectGetMidY(self.bounds));
     [self addSubview:self.leftHandler];
-}
-
-- (void) resetHandler
-{
-
-    self.leftHandler.center = CGPointMake(0.0, CGRectGetMidY(self.bounds));
 }
 
 

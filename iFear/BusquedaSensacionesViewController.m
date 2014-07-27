@@ -3,7 +3,7 @@
 //  iFear
 //
 //  Created by José Alberto Martín Falcón on 20/04/14.
-//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
+//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
 //
 
 #import "BusquedaSensacionesViewController.h"
@@ -24,7 +24,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
     }
     return self;
 }
@@ -150,6 +149,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
     //UIGraphicsBeginImageContext(newSize);
     // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
@@ -165,6 +175,7 @@
 {
     CustomIfearSlider *auxSlider =  (CustomIfearSlider *) sender;
     NSUInteger currentValue =  ((int)((auxSlider.currentLeftSegment + 2.5) / 5) * 5);;
+   
     switch (auxSlider.tag) {
         case 1:
             if (currentValue == 0){
@@ -214,6 +225,7 @@
             
             break;
     }
+    //NSLog(@"%@",sensationValues);
     [self.delegate getSensationsValues:sensationValues];
 }
 
