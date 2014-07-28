@@ -32,6 +32,10 @@
     movies = [[NSMutableArray alloc] init];
     parameters = param;
     [parameters setObject:@"searchBySensations"  forKey:@"function"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:YES];
+        
+    });
     NSLog(@"%@",parameters);
     [self retrieveData];
     return movies;
@@ -49,7 +53,8 @@
     
     //NSDictionary *parameters = [[NSDictionary alloc] initWithObjectsAndKeys:@"getTodasPeliculas", @"f",nil];
     
-    NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    //NSString  * url = @"http://localhost/EjemploConexionBD/peticion.php?XDEBUG_SESSION_START=netbeans-xdebug";
+    NSString * url = @"http://ifear.esy.es/EjemploConexionBD/peticion.php";
     [self setConnectionWithParameters:parameters toUrl:url];
     
 }
@@ -132,59 +137,64 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
     
-    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSLog(@"%@",respuestaDictionario);
     
-    NSArray * retorno = (NSArray *)[responseDictionary objectForKey:@"retorno"];
-    
-    
-    Pelicula * pelicula;
-    NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada;
-    int idPelicula,anio,duracion;
-    
-     NSLog(@"%@",responseDictionary);
-    
-    //    for (NSDictionary * fila in retorno) {
-    //
-    //        titulo = [fila objectForKey:@"titulo"];
-    //        titulo_original = [fila objectForKey:@"titulo_original"];
-    //        pais = [fila objectForKey:@"pais"];
-    //        director = [fila objectForKey:@"director"];
-    //        guion = [fila objectForKey:@"guion"];
-    //        musica = [fila objectForKey:@"musica"];
-    //        fotografia = [fila objectForKey:@"fotografia"];
-    //        reparto = [fila objectForKey:@"reparto"];
-    //        productora = [fila objectForKey:@"productora"];
-    //        web = [fila objectForKey:@"web"];
-    //        sinopsis = [fila objectForKey:@"sinopsis"];
-    //        portada = [fila objectForKey:@"portada"];
-    //        anio = [[fila objectForKey:@"anio"] intValue];
-    //        duracion = [[fila objectForKey:@"duracion"] intValue];
-    //        idPelicula = [[fila objectForKey:@"id"] intValue];
-    //
-    //
-    //        pelicula = [[Pelicula alloc] initConParametros:idPelicula
-    //                                      tituloDePelicula:titulo
-    //                              tituloOriginalDePelicula:titulo_original
-    //                                      anioDeLaPelicula:anio
-    //                                    duracionDePelicula:duracion
-    //                                        paisDePelicula:pais
-    //                                    directorDePelicula:director
-    //                                       guionDePelicula:guion
-    //                                      musicaDePelicula:musica
-    //                                fotografiaDeLaPelicula:fotografia
-    //                                   repartoDeLaPelicula:reparto
-    //                                productoraDeLaPelicula:productora
-    //                                       webDeLaPelicula:web
-    //                                  sinopsisDeLaPelicula:sinopsis
-    //                                   portadaDeLaPelicula:portada];
-    //
-    //        NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
-    //        [strUrlImagen appendString:portada];
-    //        pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
-    //
-    //        [movies addObject:pelicula];
-    //
-    //    }
+    if (exito) {
+        // Se recupera la parte de JSON de la película
+        NSArray * retorno = (NSArray *)[respuestaDictionario objectForKey:@"retorno"];
+        Pelicula * pelicula;
+        NSString * titulo, * titulo_original, * pais, * director,* guion,* musica,* fotografia,* reparto,* productora,* web,* sinopsis,* portada, *cartelera, *estreno, *fechaEstreno;
+        int idPelicula,anio,duracion;
+        
+        for (NSDictionary * fila in retorno) {
+            
+            titulo = [fila objectForKey:@"titulo"];
+            titulo_original = [fila objectForKey:@"titulo_original"];
+            pais = [fila objectForKey:@"pais"];
+            director = [fila objectForKey:@"director"];
+            guion = [fila objectForKey:@"guion"];
+            musica = [fila objectForKey:@"musica"];
+            fotografia = [fila objectForKey:@"fotografia"];
+            reparto = [fila objectForKey:@"reparto"];
+            productora = [fila objectForKey:@"productora"];
+            web = [fila objectForKey:@"web"];
+            sinopsis = [fila objectForKey:@"sinopsis"];
+            portada = [fila objectForKey:@"portada"];
+            anio = [[fila objectForKey:@"anio"] intValue];
+            duracion = [[fila objectForKey:@"duracion"] intValue];
+            idPelicula = [[fila objectForKey:@"id"] intValue];
+            cartelera = [fila objectForKey:@"cartelera"];
+            estreno = [fila objectForKey:@"estrenos"];
+            fechaEstreno = [fila objectForKey:@"fecha_estreno"];
+            
+            
+            pelicula = [[Pelicula alloc] initConParametros:idPelicula
+                                          tituloDePelicula:titulo
+                                  tituloOriginalDePelicula:titulo_original
+                                          anioDeLaPelicula:anio
+                                        duracionDePelicula:duracion
+                                            paisDePelicula:pais
+                                        directorDePelicula:director
+                                           guionDePelicula:guion
+                                          musicaDePelicula:musica
+                                    fotografiaDeLaPelicula:fotografia
+                                       repartoDeLaPelicula:reparto
+                                    productoraDeLaPelicula:productora
+                                           webDeLaPelicula:web
+                                      sinopsisDeLaPelicula:sinopsis
+                                       portadaDeLaPelicula:portada
+                                     carteleraDeLaPelicula:cartelera
+                                       estrenoDeLaPelicula:estreno
+                                  fechaEstrenoDeLaPelicula:fechaEstreno];
+            
+            // Url de la imagen
+            NSMutableString *strUrlImagen = [[NSMutableString alloc] initWithString:@"http://ifear.esy.es/ifearphp/"];
+            [strUrlImagen appendString:portada];
+            pelicula.urlImagen = [NSURL URLWithString:strUrlImagen];
+            [movies addObject:pelicula];
+        }
+        
+    }
     
 }
 
@@ -196,46 +206,44 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
-    //    if(error == nil)
-    //    {
-    //        //NSLog(@"Éxito al bajar");
-    //
-    //        if (movies.count != 0) {
-    //
-    //            // Una vez obtenidas todas las películas e insertadas en el array de películas movieList descargamos las imágenes
-    //            for (Pelicula *movie in movies) {
-    //                movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
-    //            }
-    //
-    //            dispatch_async(dispatch_get_main_queue(), ^{
-    //
-    //                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    //                [defaultCenter postNotificationName:@"dataFinished" object:self];
-    //            });
-    //
-    //
-    //        } else {
-    //
-    //            [self retrieveData];
-    //
-    //        }
-    //
-    //    } else {
-    //
-    //        NSLog(@"Error %@",[error userInfo]);
-    //
-    //        dispatch_async(dispatch_get_main_queue(), ^{
-    //            
-    //            [self displayAlertView];
-    //        });
-    //    }
-}
-
-#pragma mark - AlertView Delegate method
-
-- (void) alertViewCancel:(UIAlertView *)alertView {
+    if(error == nil)
+    {
+        if (movies.count != 0) {
+            
+            // Una vez obtenidas todas las películas e insertadas en el array de películas movies descargamos las imágenes
+            for (Pelicula *movie in movies) {
+                movie.imagen = [UIImage imageWithData:[NSData dataWithContentsOfURL:movie.urlImagen]];
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+                [defaultCenter postNotificationName:@"dataFinished" object:self];
+            });
+            
+            
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                
+            });
+            //            [self retrieveData];
+            
+        }
+        
+    } else {
+        
+        NSLog(@"Error %@",[error userInfo]);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [alert showAlert:associateVC withMessage:@"Push button to retry"];
+        });
+    }
     
-    [self retrieveData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:NO];
+        
+    });
 }
 
 

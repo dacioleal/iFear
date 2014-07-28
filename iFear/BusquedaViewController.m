@@ -81,6 +81,8 @@
     subGenreSearch = [[SubGenreSearch alloc] init];
     sensationSearch = [[SensationsSearch alloc] init];
     parameterSearch = [[ParametersSearch alloc]init];
+    [parameterSearch setAssociateVC:self];
+    
     // Variables auxiliares para los distintos parámetros de búsqueda
     sub_genre_list = [[NSMutableArray alloc] init];
     sensationsValues = [[NSMutableDictionary alloc] init];
@@ -107,6 +109,12 @@
     // Se inicializa el parámetro a título para el caso de que el usuario busque por título, al estar la opción por defecto de título puesto es la que se manda.
     [movieParameterSearch setObject:@"titulo" forKey:@"parametro"];
     
+    // Se inicializa el alert
+    alert = [IfearAlertView new];
+    
+    // Se oculta el icono de carga
+    [self showLoadingView:NO];
+    
     
 }
 
@@ -120,6 +128,7 @@
 
 // Método que se usa cuando se pulsa el botón buscar
 - (IBAction)pushBuscarButton:(id)sender {
+    
     // Se pregunta que botón de tipo búsqueda está seleccionado para saber que búsqueda está realizando
     
     // BÚSQUEDA POR CAJA DE TEXTO
@@ -129,18 +138,22 @@
         
         // Se obtiene que ha introducido el usuario
         NSString * busqueda = [self.textFieldSearch.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
         // Comprueba que no esté vacio para realizar la búsqueda
         if (! [busqueda isEqualToString:@""]) {
+            // Se comprueba que view de búsqueda está activa para seleccionar un botón u otro
+            if ([onScreenViewController.title isEqualToString:@"BusquedaSubgenero"]) {
+                [self.buscarSubGenButton setSelected:true];
+            }else{
+                [self.buscarSensacionesButton setSelected:true];
+            }
+            
+            // Se realiza la búsqueda
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 [self searchByMovieParameter];
             });
         }else{
-            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
-                                                              message:@"No ha escrito ningún valor para la búsqueda"
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles:nil];
-            [message show];
+            [alert showAlert:self withMessage:@"No ha escrito ningún valor para la búsqueda"];
         }
     // BÚSQUEDA POR SUBGENERO
     }else if ([self.buscarSubGenButton isSelected]) {
@@ -159,9 +172,17 @@
         }
     // BÚSQUEDA POR SENSACIONES
     }else{
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self searchBySensations];
-        });
+        // Se controla si se ha seleccionado algo
+        // TODO preguntar si esto irá así o hay que seleccionar algo verdaderamente
+        if ([sensationsValues count] > 0) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                [self searchBySensations];
+            });
+        }else{
+            [alert showAlert:self withMessage:@"No ha seleccionado ninguna sensación"];
+        }
+       
     }
 }
 
@@ -176,9 +197,23 @@
          * caso de que vuelva a pulsar el mismo botón que no ocurra nada
          */
         if (! [self.buscarSubGenButton isSelected]) {
-            if (![self.buscarSensacionesButton isSelected]) {
-                // Resetea la búsqueda por caja de texto
-                [self resetTextField];
+            // Resetea la búsqueda por caja de texto
+            [self resetTextField];
+            
+            // Si se viene de la vista de sensaciones se cambia a subgenero
+            if ([onScreenViewController.title isEqualToString:@"BusquedaSensaciones"]) {
+                self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
+                self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
+                // Se cambia el tipo de búsqueda en el container.
+                [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
+                
+                // Se activan los sliders para el caso de que estuviesen desactivados
+                [busquedaSensacionesVC enableAllSliders:true];
+                // Se resetean los slider de sensaciones para que no queden guardados
+                [busquedaSensacionesVC resetSliders];
+                //[sensationsValues removeAllObjects];
+                
+            }else{
                 // Activa los botones de subgeneros
                 [busquedaSubGenereVC enabledAllButtons:true];
                 // Activa el botón de búsqueda por subgenero a SI
@@ -236,6 +271,17 @@
 
 
 #pragma mark - Métodos propios -
+
+- (void) showLoadingView: (BOOL) shown
+{
+    if (shown) {
+        self.loadingView.hidden = NO;
+        [self.activityIndicator startAnimating];
+    }else{
+        self.loadingView.hidden = YES;
+        [self.activityIndicator stopAnimating];
+    }
+}
 
 // Método para establecer las imagenes según el estado del Botón
 -(void)setImageForAllButtons
@@ -307,6 +353,7 @@
 -(void) goToResultViewController
 {
     [self performSegueWithIdentifier:@"goToResultSearchView" sender:self];
+    //[sensationsValues removeAllObjects];
     [busquedaSubGenereVC selectAllButtons:false];
     [sub_genre_list removeAllObjects];
 }

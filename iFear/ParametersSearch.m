@@ -29,6 +29,11 @@
     movies = [[NSMutableArray alloc] init];
     parameters = param;
     [parameters setObject:@"searchByMovieParameter"  forKey:@"function"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:YES];
+        
+    });
+    
     NSLog(@"%@",parameters);
     [self retrieveData];
     return movies;
@@ -239,6 +244,11 @@ didCompleteWithError:(NSError *)error
             [self displayAlertView:@"Downloading Error" andMessage:@"Push button to retry"];
         });
     }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.associateVC showLoadingView:NO];
+    });
+    
 }
 
 #pragma mark - AlertView Delegate method

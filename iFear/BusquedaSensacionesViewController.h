@@ -23,10 +23,13 @@
 @property (nonatomic, weak) id<BusquedaSensacionesDelegate> delegate;
 
 
+// Sliders
 @property (weak, nonatomic) IBOutlet ProgresSlider *progressTerrorSlider;
 @property (weak, nonatomic) IBOutlet ProgresSlider *progressGoreSlider;
 @property (weak, nonatomic) IBOutlet ProgresSlider *progressHumorSlider;
 @property (weak, nonatomic) IBOutlet ProgresSlider *progressCalidadSlider;
+
+// Porcentaje
 @property (weak, nonatomic) IBOutlet UILabel *terrorPercent;
 @property (weak, nonatomic) IBOutlet UILabel *gorePercent;
 @property (weak, nonatomic) IBOutlet UILabel *humorPercent;

@@ -103,6 +103,7 @@
 		48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */; };
 		48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C471927D8B90018DC55 /* boton_zombies_465x127.png */; };
 		48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */; };
+		48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48313A76195591EE00BA71D4 /* IfearAlertView.m */; };
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
@@ -164,7 +165,6 @@
 		F32D9942187D53700004D618 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32D9926187D536F0004D618 /* CoreData.framework */; };
 		F32D994A187D53700004D618 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F32D9948187D53700004D618 /* InfoPlist.strings */; };
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
-		F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */; };
 		F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */ = {isa = PBXBuildFile; fileRef = F331BE63193F5ED700AF9902 /* CriticaMedio.m */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
 		F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145A18F809E400604463 /* fondo_central_1090x1144.png */; };
@@ -381,6 +381,8 @@
 		48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
 		48254C471927D8B90018DC55 /* boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_465x127.png; sourceTree = "<group>"; };
 		48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
+		48313A75195591EE00BA71D4 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
+		48313A76195591EE00BA71D4 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
 		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
@@ -459,7 +461,6 @@
 		F32D9947187D53700004D618 /* iFearTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iFearTests-Info.plist"; sourceTree = "<group>"; };
 		F32D9949187D53700004D618 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F32D994B187D53700004D618 /* iFearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iFearTests.m; sourceTree = "<group>"; };
-		F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F331BE62193F5ED700AF9902 /* CriticaMedio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticaMedio.h; sourceTree = "<group>"; };
 		F331BE63193F5ED700AF9902 /* CriticaMedio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaMedio.m; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
@@ -1046,8 +1047,8 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
-				F32D9955187D538F0004D618 /* iPad_Storyboard.storyboard */,
 				48254B791927D47B0018DC55 /* ConnectionServer */,
+				4846601F1955B7E2004BEE1A /* IfearAlertView.xib */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
@@ -1487,6 +1488,7 @@
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
 				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
+				4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
 				48254C871927D8B90018DC55 /* signo_menos_amarillo_69x69.png in Resources */,
@@ -1667,7 +1669,6 @@
 				F358E29718E0BDE300F6C934 /* icono_app_152x152.png in Resources */,
 				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				48254CC71927D8B90018DC55 /* boton_animacion_ON_465x127.png in Resources */,
-				F32D9956187D538F0004D618 /* iPad_Storyboard.storyboard in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
 				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
