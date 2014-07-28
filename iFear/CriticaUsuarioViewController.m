@@ -32,8 +32,8 @@
     [self.navigationController.navigationBar setHidden:NO];
     self.navigationItem.title = nil;
     
-    self.view.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
-    _descriptionTextView.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:1.0];
+    self.view.backgroundColor = [[UIColor alloc] initWithRed:239.0/255.0 green:210.0/255.0 blue:213.0/255.0 alpha:1.0];
+    _descriptionTextView.backgroundColor = [[UIColor alloc] initWithRed:239.0/255.0 green:210.0/255.0 blue:213.0/255.0 alpha:1.0];
     
     NSString *usuario = _criticaUsuario.usuario;
     NSString *titulo = _criticaUsuario.titulo;

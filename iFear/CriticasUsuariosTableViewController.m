@@ -109,9 +109,9 @@
     
     
     if ((indexPath.row % 2) == 0) {
-        cell.backgroundColor = [[UIColor alloc] initWithRed:0.89 green:0.65 blue:0.08 alpha:0.8];
+        cell.backgroundColor = [[UIColor alloc] initWithRed:239.0/255.0 green:210.0/255.0 blue:213.0/255.0 alpha:1.0];
     } else {
-        cell.backgroundColor = [[UIColor alloc] initWithWhite:1.0 alpha:0.2];
+        cell.backgroundColor = [[UIColor alloc] initWithRed:238.0/255.0 green:223.0/255.0 blue:226.0/255.0 alpha:1.0];
         
     }
     
