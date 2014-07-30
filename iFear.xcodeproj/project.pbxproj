@@ -103,7 +103,6 @@
 		48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */; };
 		48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C471927D8B90018DC55 /* boton_zombies_465x127.png */; };
 		48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */; };
-		48313A77195591EE00BA71D4 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48313A76195591EE00BA71D4 /* IfearAlertView.m */; };
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
@@ -211,6 +210,7 @@
 		F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */; };
 		F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */; };
 		F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */; };
+		F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */; };
 		F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */; };
 		F37CEB1618FBED0D0085701C /* panel_barras_404x1010.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */; };
 		F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */; };
@@ -381,8 +381,6 @@
 		48254C461927D8B90018DC55 /* boton_vampiros_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_vampiros_ON_465x127.png; sourceTree = "<group>"; };
 		48254C471927D8B90018DC55 /* boton_zombies_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_465x127.png; sourceTree = "<group>"; };
 		48254C481927D8B90018DC55 /* boton_zombies_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_zombies_ON_465x127.png; sourceTree = "<group>"; };
-		48313A75195591EE00BA71D4 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
-		48313A76195591EE00BA71D4 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotulo_resultados_534x112.png; sourceTree = "<group>"; };
 		4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_resultados_2020x290.png; sourceTree = "<group>"; };
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
@@ -514,6 +512,7 @@
 		F358E29418E0BDE300F6C934 /* icono_appstore_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_appstore_1024x1024.png; sourceTree = "<group>"; };
 		F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_settings_58x58.png; sourceTree = "<group>"; };
 		F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_spotlight_80x80.png; sourceTree = "<group>"; };
+		F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad_Storyboard.storyboard; path = iFear/iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_izq_rojo_400x560.png; sourceTree = "<group>"; };
 		F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_barras_404x1010.png; sourceTree = "<group>"; };
 		F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_votar_400x284.png; sourceTree = "<group>"; };
@@ -1006,6 +1005,7 @@
 		F32D9914187D536F0004D618 = {
 			isa = PBXGroup;
 			children = (
+				F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */,
 				F3F927DA1897BC5200BE7964 /* SmokeParticle.sks */,
 				F3F927DB1897BC5200BE7964 /* FireParticle.sks */,
 				F3F927DC1897BC5200BE7964 /* spark.png */,
@@ -1048,7 +1048,6 @@
 			isa = PBXGroup;
 			children = (
 				48254B791927D47B0018DC55 /* ConnectionServer */,
-				4846601F1955B7E2004BEE1A /* IfearAlertView.xib */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
 				F321C4361880070500B02097 /* images */,
@@ -1488,7 +1487,6 @@
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
 				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
-				4846601619559A28004BEE1A /* ventana_alerta_820x510.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
 				48254C871927D8B90018DC55 /* signo_menos_amarillo_69x69.png in Resources */,
@@ -1512,6 +1510,7 @@
 				F342D9B4193CD334000598FD /* menu_big_270x270.png in Resources */,
 				F397F25518EC2470000D6309 /* icono_cine_estrenos_194x143.png in Resources */,
 				F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */,
+				F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */,
 				F37CEB1B18FC04050085701C /* boton_panel_izq_330x102.png in Resources */,
 				F30EE4BC18A23AF60040CCDD /* lineas_arco.png in Resources */,
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,

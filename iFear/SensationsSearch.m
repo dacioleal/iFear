@@ -136,6 +136,11 @@
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
+    // Se parsea el JSON
+    NSDictionary *respuestaDictionario = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    
+    // Se recupera si ha tenido
+    BOOL exito = [[respuestaDictionario objectForKey:@"exito"] boolValue];
     
     NSLog(@"%@",respuestaDictionario);
     
@@ -224,8 +229,11 @@ didCompleteWithError:(NSError *)error
             
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                //[alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
                 
+                /////// MODIFICADO////////
+                NSLog(@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros");
+                /////// ---------- //////
             });
             //            [self retrieveData];
             
@@ -236,7 +244,11 @@ didCompleteWithError:(NSError *)error
         NSLog(@"Error %@",[error userInfo]);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [alert showAlert:associateVC withMessage:@"Push button to retry"];
+            //[alert showAlert:associateVC withMessage:@"Push button to retry"];
+            
+            /////// MODIFICADO////////
+            NSLog(@"Push button to retry");
+            /////// ---------- //////
         });
     }
     

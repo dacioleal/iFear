@@ -36,5 +36,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *calidadPercent;
 
 - (void)sliderValueChanged:(id)sender;
-
+- (void) resetSliders;
+- (void) enableAllSliders: (BOOL) state;
 @end

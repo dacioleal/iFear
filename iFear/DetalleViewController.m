@@ -64,7 +64,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    contentViews = @[_descriptionTextView, _trailersScrollView, _reviewsContainerView];
+    contentViews = @[_descriptionTextView, _trailersScrollView, _reviewsContainerView, _contentDarkSideView];
     leftPanelButtons = @[_descriptionButton, _trailersButton, _reviewsButton, _darkSideButton];
     reviewsPanelButtons = @[_mediaButton, _flashButton, _usersButton];
     
@@ -97,6 +97,7 @@
     [self configureReviewsPanelButtons];
     [self hideReviewsPanelButton];
     [self mediaPushButton:_mediaButton];
+    [self configureDarkSideView]; //Temporal hasta que se implemente la carga de las puntuaciones y la recogida de la notificacion
     
     
     //Creamos un objeto de la clase TrailersSearch para obtener los datos de los trailers de la película desde el servidor
@@ -208,10 +209,14 @@
 - (IBAction)darkSidePushButton:(UIButton *)sender {
     
     _backgroundImageView.image = [UIImage imageNamed:@"fondo_lado_oscuro_2048x1536.jpg"];
-    //[_contentView bringSubviewToFront:_trailersScrollView];
+    
+    [_contentView bringSubviewToFront:_contentDarkSideView];
     _contentTitleLabel.attributedText = nil;
+    [self hideContentViews];
     [self unselectLeftPanelButtons];
     [self hideReviewsPanelButton];
+    _contentDarkSideView.hidden = NO;
+    darkSideView.hidden = NO;
     [_darkSideButton setSelected:YES];
     
     
@@ -574,7 +579,7 @@
     
     [self addChildViewController:ladoOscuroNC];
     darkSideView = ladoOscuroNC.view;
-    [_reviewsContainerView addSubview:darkSideView];
+    [_contentDarkSideView addSubview:darkSideView];
     darkSideView.frame = CGRectMake(0, 0, darkSideView.superview.frame.size.width, darkSideView.superview.frame.size.height);
     darkSideView.hidden = YES;
     

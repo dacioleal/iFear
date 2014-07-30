@@ -47,6 +47,8 @@
     // Booleano para controlar si ha pulsado sobre la caja de texto
     Boolean pushInTextSearchField;
     
+    UIAlertView *alert;
+    
 }
 
 @end
@@ -110,12 +112,13 @@
     [movieParameterSearch setObject:@"titulo" forKey:@"parametro"];
     
     // Se inicializa el alert
-    alert = [IfearAlertView new];
+    //alert = [IfearAlertView new];
+    alert = [[UIAlertView alloc] init];
     
     // Se oculta el icono de carga
     [self showLoadingView:NO];
     
-    
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -153,7 +156,7 @@
                 [self searchByMovieParameter];
             });
         }else{
-            [alert showAlert:self withMessage:@"No ha escrito ningún valor para la búsqueda"];
+            //[alert showAlert:self withMessage:@"No ha escrito ningún valor para la búsqueda"];
         }
     // BÚSQUEDA POR SUBGENERO
     }else if ([self.buscarSubGenButton isSelected]) {
@@ -180,7 +183,14 @@
                 [self searchBySensations];
             });
         }else{
-            [alert showAlert:self withMessage:@"No ha seleccionado ninguna sensación"];
+           // [alert showAlert:self withMessage:@"No ha seleccionado ninguna sensación"];
+            
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Búsqueda"
+                                                              message:@"No ha seleccionado ninguna sensación"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
         }
        
     }
@@ -201,7 +211,7 @@
             [self resetTextField];
             
             // Si se viene de la vista de sensaciones se cambia a subgenero
-            if ([onScreenViewController.title isEqualToString:@"BusquedaSensaciones"]) {
+            if ([onScreenViewController isMemberOfClass:busquedaSensacionesVC.class]) {
                 self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
                 self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
                 // Se cambia el tipo de búsqueda en el container.
@@ -212,22 +222,24 @@
                 // Se resetean los slider de sensaciones para que no queden guardados
                 [busquedaSensacionesVC resetSliders];
                 //[sensationsValues removeAllObjects];
-                
-            }else{
+            
+            } else {
                 // Activa los botones de subgeneros
                 [busquedaSubGenereVC enabledAllButtons:true];
                 // Activa el botón de búsqueda por subgenero a SI
                 [self.buscarSubGenButton setSelected:true];
-            }else{
-                self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
-                self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
-                
-                // Se cambia el tipo de búsqueda en el container.
-                [self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
             }
-            
         }
-    // SENSACIONES
+//        } else {
+//                self.buscarSubGenButton.selected = !self.buscarSubGenButton.selected;
+//                self.buscarSensacionesButton.selected = !self.buscarSubGenButton.selected;
+//                
+//                // Se cambia el tipo de búsqueda en el container.
+//                //[self cycleFromViewController:onScreenViewController toViewController:busquedaSubGenereVC];
+//        }
+            
+        
+        // SENSACIONES
     }else{
         if (! [self.buscarSensacionesButton isSelected]) {
             [self resetTextField];

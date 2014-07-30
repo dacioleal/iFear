@@ -60,7 +60,7 @@
     [self initCustomSlider:2 withValues:100];
     [self initCustomSlider:3 withValues:100];
     
-    
+   
 }
 
 
@@ -262,7 +262,11 @@
     self.progressCalidadSlider.value = 0;
     
     for (CustomIfearSlider * slider in listCustomSliders) {
-        [slider resetHandler];
+        
+        /// MODIFICADO /////////
+        //[slider resetHandler];
+        
+        
     }
     
     [self setFontAndColor:self.terrorPercent withText: @"0"];

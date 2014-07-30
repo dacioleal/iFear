@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentTitleLabel;
 @property (weak, nonatomic) IBOutlet UIView *scoresView;
+@property (weak, nonatomic) IBOutlet UIView *contentDarkSideView;
 
 @property (weak, nonatomic) IBOutlet UILabel *terrorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *goreLabel;
