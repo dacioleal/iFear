@@ -17,6 +17,7 @@
 #import "CriticasFlashSearch.h"
 #import "CriticasUsuariosSearch.h"
 #import "PuntuacionesMediasSearch.h"
+#import "PuntuacionesPeliculaSearch.h"
 #import "ScoreBar.h"
 #import <AVFoundation/AVFoundation.h>
 
@@ -33,6 +34,7 @@
     NSArray *criticasUsuariosArray;
     NSArray *puntuacionesUsuariosArray;
     NSDictionary *puntuacionesMediasDictionary;
+    NSArray *puntuacionesPeliculaDictionary;
     NSArray *contentViews;
     UIView *mediaView;
     UIView *flashView;
@@ -97,7 +99,7 @@
     [self configureReviewsPanelButtons];
     [self hideReviewsPanelButton];
     [self mediaPushButton:_mediaButton];
-    [self configureDarkSideView]; //Temporal hasta que se implemente la carga de las puntuaciones y la recogida de la notificacion
+    //[self configureDarkSideView]; //Temporal hasta que se implemente la carga de las puntuaciones y la recogida de la notificacion
     
     
     //Creamos un objeto de la clase TrailersSearch para obtener los datos de los trailers de la película desde el servidor
@@ -127,6 +129,11 @@
     puntuacionesMediasDictionary = [puntuacionesMediasSearch searchWithParameters:parametersPuntuacionesMedias];
     
     
+    //Creamos un objeto de la clase PuntuacionesPelicula para obtener las puntuaciones de los usuarios para la pelicula
+    PuntuacionesPeliculaSearch *puntuacionesPeliculaSearch = [[PuntuacionesPeliculaSearch alloc] init];
+    NSDictionary *parametersPuntuacionesPelicula = [[NSDictionary alloc] initWithObjectsAndKeys:@"getPuntuacionesPelicula", @"function", movieID, @"idMovie",nil];
+    puntuacionesUsuariosArray = [puntuacionesPeliculaSearch searchWithParameters:parametersPuntuacionesPelicula];
+    
     //Añadimos al propio viewcontroller como observador de las notificaciones producidas por las distintos objetos de las clases Search que obtienen los datos del servidor y que cuando terminan de obtener estos datos lo comunican mediante la notificación correspondiente
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(configureTrailersView) name:@"trailersFinished" object:trailersSearch];
@@ -138,6 +145,7 @@
     [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosFinished" object:criticasUsuariosSearch];
     [defaultCenter addObserver:self selector:@selector(configureCriticasUsuariosView) name:@"CriticasUsuariosEmpty" object:criticasUsuariosSearch];
     [defaultCenter addObserver:self selector:@selector(configurePuntuacionesMediasView) name:@"PuntuacionesMediasFinished" object:puntuacionesMediasSearch];
+    [defaultCenter addObserver:self selector:@selector(configureDarkSideView) name:@"PuntuacionesPeliculaFinished" object:puntuacionesPeliculaSearch];
     
 }
 
