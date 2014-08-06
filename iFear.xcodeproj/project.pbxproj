@@ -213,6 +213,7 @@
 		F360039C199282C70035FB0B /* PuntuacionesPeliculaSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F360039B199282C70035FB0B /* PuntuacionesPeliculaSearch.m */; };
 		F36003A1199295EF0035FB0B /* UserScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F360039F199295EF0035FB0B /* UserScoreCell.m */; };
 		F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36003A0199295EF0035FB0B /* UserScoreCell.xib */; };
+		F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */ = {isa = PBXBuildFile; fileRef = F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */; };
 		F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */; };
 		F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */; };
 		F37CEB1618FBED0D0085701C /* panel_barras_404x1010.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */; };
@@ -520,6 +521,7 @@
 		F360039E199295EF0035FB0B /* UserScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserScoreCell.h; sourceTree = "<group>"; };
 		F360039F199295EF0035FB0B /* UserScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserScoreCell.m; sourceTree = "<group>"; };
 		F36003A0199295EF0035FB0B /* UserScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserScoreCell.xib; sourceTree = "<group>"; };
+		F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casillas_emociones_1008x114.png; sourceTree = "<group>"; };
 		F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad_Storyboard.storyboard; path = iFear/iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_izq_rojo_400x560.png; sourceTree = "<group>"; };
 		F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_barras_404x1010.png; sourceTree = "<group>"; };
@@ -1166,6 +1168,7 @@
 				F3B169AE195C3D220090F565 /* tramo_azul_girado180_47x6.png */,
 				F3B169AF195C3D220090F565 /* tramo_rojo_girado180_47x6.png */,
 				F3B169B0195C3D220090F565 /* tramo_verde_girado180_47x6.png */,
+				F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */,
 			);
 			name = detalle;
 			sourceTree = "<group>";
@@ -1570,6 +1573,7 @@
 				48254C8F1927D8B90018DC55 /* trozo_barra_humor_50x70.png in Resources */,
 				48254CCC1927D8B90018DC55 /* boton_casas_enc_465x127.png in Resources */,
 				48254CE71927D8B90018DC55 /* boton_licantropo_ON_465x127.png in Resources */,
+				F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */,
 				F3B169B4195C3D220090F565 /* tramo_verde_girado180_47x6.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,

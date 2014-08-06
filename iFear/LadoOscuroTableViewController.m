@@ -33,7 +33,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    [self.navigationController.navigationBar setHidden:YES];
     NSLog(@"Puntuaciones Usuarios: %@", _puntuacionesUsuariosArray);
 }
 
@@ -63,11 +63,47 @@
     [tableView registerNib:[UINib nibWithNibName:@"UserScoreCell" bundle:nil] forCellReuseIdentifier:@"scoreCell"];
     UserScoreCell *cell = (UserScoreCell *)[tableView dequeueReusableCellWithIdentifier:@"scoreCell" forIndexPath:indexPath];
     // Configure the cell...
-   
+    
     NSDictionary *dict = [_puntuacionesUsuariosArray objectAtIndex:indexPath.row];
     NSString *userName = [dict objectForKey:@"nombre_usuario"];
+    NSString *terrorString = [dict valueForKey:@"terror"];
+    NSString *goreString = [dict valueForKey:@"gore"];
+    NSString *humorString = [dict valueForKey:@"humor"];
+    NSString *calidadString = [dict valueForKey:@"calidad"];
     
-    cell.userNameLabel.text = userName;
+     cell.userNameLabel.text = userName;
+    
+    UIColor *textColor = [[UIColor alloc] initWithRed:172.0/255.0 green:143.0/255.0 blue:40.0/255.0 alpha:1.0];
+    UIFont *font = [UIFont fontWithName:@"Impact" size:32.0];
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:terrorString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+
+    
+    cell.terrorLabel.textAlignment = NSTextAlignmentCenter;
+    cell.terrorLabel.attributedText = attrString;
+    
+    attrString = [[NSAttributedString alloc] initWithString:goreString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.goreLabel.textAlignment = NSTextAlignmentCenter;
+    cell.goreLabel.attributedText = attrString;
+    
+    attrString = [[NSAttributedString alloc] initWithString:humorString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.humorLabel.textAlignment = NSTextAlignmentCenter;
+    cell.humorLabel.attributedText = attrString;
+    
+    attrString = [[NSAttributedString alloc] initWithString:calidadString attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.calidadLabel.textAlignment = NSTextAlignmentCenter;
+    cell.calidadLabel.attributedText = attrString;
+    
+    textColor = [[UIColor alloc] initWithRed:56.0/255.0 green:21.0/255.0 blue:20.0/255.0 alpha:1.0];
+    font = [UIFont fontWithName:@"Futura-Medium" size:16.0];
+    attrString = [[NSAttributedString alloc] initWithString:userName attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+    cell.userNameLabel.attributedText = attrString;
+    
+    if ((indexPath.row % 2) == 0) {
+        cell.backgroundColor = [[UIColor alloc] initWithRed:191.0/255.0 green:176.0/255.0 blue:166.0/255.0 alpha:1.0];
+    } else {
+        cell.backgroundColor = [[UIColor alloc] initWithRed:154.0/255.0 green:136.0/255.0 blue:127.0/255.0 alpha:1.0];
+        
+    }
     
     return cell;
 }
