@@ -7,6 +7,7 @@
 //
 
 #import "LadoOscuroTableViewController.h"
+#import "UserScoreCell.h"
 
 @interface LadoOscuroTableViewController ()
 
@@ -53,15 +54,20 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return _puntuacionesUsuariosArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"scoreCell" forIndexPath:indexPath];
-    
+    [tableView registerNib:[UINib nibWithNibName:@"UserScoreCell" bundle:nil] forCellReuseIdentifier:@"scoreCell"];
+    UserScoreCell *cell = (UserScoreCell *)[tableView dequeueReusableCellWithIdentifier:@"scoreCell" forIndexPath:indexPath];
     // Configure the cell...
+   
+    NSDictionary *dict = [_puntuacionesUsuariosArray objectAtIndex:indexPath.row];
+    NSString *userName = [dict objectForKey:@"nombre_usuario"];
+    
+    cell.userNameLabel.text = userName;
     
     return cell;
 }

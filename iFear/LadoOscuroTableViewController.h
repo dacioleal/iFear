@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSArray *puntuacionesUsuariosArray;
 @property (nonatomic, strong) NSString *movieID;
 
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @end

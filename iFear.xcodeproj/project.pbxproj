@@ -211,6 +211,8 @@
 		F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29518E0BDE300F6C934 /* icono_settings_58x58.png */; };
 		F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */; };
 		F360039C199282C70035FB0B /* PuntuacionesPeliculaSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F360039B199282C70035FB0B /* PuntuacionesPeliculaSearch.m */; };
+		F36003A1199295EF0035FB0B /* UserScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F360039F199295EF0035FB0B /* UserScoreCell.m */; };
+		F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36003A0199295EF0035FB0B /* UserScoreCell.xib */; };
 		F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */; };
 		F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */; };
 		F37CEB1618FBED0D0085701C /* panel_barras_404x1010.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */; };
@@ -515,6 +517,9 @@
 		F358E29618E0BDE300F6C934 /* icono_spotlight_80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_spotlight_80x80.png; sourceTree = "<group>"; };
 		F360039A199282C70035FB0B /* PuntuacionesPeliculaSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntuacionesPeliculaSearch.h; sourceTree = "<group>"; };
 		F360039B199282C70035FB0B /* PuntuacionesPeliculaSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntuacionesPeliculaSearch.m; sourceTree = "<group>"; };
+		F360039E199295EF0035FB0B /* UserScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserScoreCell.h; sourceTree = "<group>"; };
+		F360039F199295EF0035FB0B /* UserScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserScoreCell.m; sourceTree = "<group>"; };
+		F36003A0199295EF0035FB0B /* UserScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserScoreCell.xib; sourceTree = "<group>"; };
 		F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad_Storyboard.storyboard; path = iFear/iPad_Storyboard.storyboard; sourceTree = "<group>"; };
 		F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_izq_rojo_400x560.png; sourceTree = "<group>"; };
 		F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_barras_404x1010.png; sourceTree = "<group>"; };
@@ -830,6 +835,9 @@
 			children = (
 				F301FF3C1964675F0068033E /* LadoOscuroTableViewController.h */,
 				F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */,
+				F360039E199295EF0035FB0B /* UserScoreCell.h */,
+				F360039F199295EF0035FB0B /* UserScoreCell.m */,
+				F36003A0199295EF0035FB0B /* UserScoreCell.xib */,
 			);
 			name = LadoOscuroTableViewController;
 			sourceTree = "<group>";
@@ -1509,6 +1517,7 @@
 				F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */,
 				48254CD51927D8B90018DC55 /* boton_cortomet_ON_465x127.png in Resources */,
 				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
+				F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */,
 				48254C851927D8B90018DC55 /* signo_mas_rojo_69x69.png in Resources */,
 				F346D9961948C1B600829E1A /* banda_secciones_2048x134.png in Resources */,
 				4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */,
@@ -1714,6 +1723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */,
+				F36003A1199295EF0035FB0B /* UserScoreCell.m in Sources */,
 				F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */,
 				F360039C199282C70035FB0B /* PuntuacionesPeliculaSearch.m in Sources */,
 				F346D9911948A2F900829E1A /* CriticaUsuarioViewController.m in Sources */,
