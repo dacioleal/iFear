@@ -106,6 +106,8 @@
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
+		48816628199E29B400821A71 /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48816625199E29B400821A71 /* IfearAlertView.xib */; };
+		48816629199E29B400821A71 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48816626199E29B400821A71 /* IfearAlertView.m */; };
 		48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */; };
 		48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */; };
 		F301FF3E1964675F0068033E /* LadoOscuroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */; };
@@ -390,6 +392,9 @@
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
 		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
 		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
+		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IfearAlertView.xib; sourceTree = "<group>"; };
+		48816626199E29B400821A71 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
+		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
 		48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
 		48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSearchTableViewCell.h; sourceTree = "<group>"; };
@@ -783,6 +788,16 @@
 			name = BusquedasSearch;
 			sourceTree = "<group>";
 		};
+		4881662A199E29C300821A71 /* IfearAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				48816625199E29B400821A71 /* IfearAlertView.xib */,
+				48816626199E29B400821A71 /* IfearAlertView.m */,
+				48816627199E29B400821A71 /* IfearAlertView.h */,
+			);
+			name = IfearAlertView;
+			sourceTree = "<group>";
+		};
 		48DB70A21943369200371E10 /* Popover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,6 +1076,7 @@
 		F32D9928187D536F0004D618 /* iFear */ = {
 			isa = PBXGroup;
 			children = (
+				4881662A199E29C300821A71 /* IfearAlertView */,
 				48254B791927D47B0018DC55 /* ConnectionServer */,
 				F3FD0515190A737200A1B516 /* fonts */,
 				F392B4D91898176A00BAFA21 /* sounds */,
@@ -1676,6 +1692,7 @@
 				F304102418B752CC006273F0 /* boton_que_es_iFear.png in Resources */,
 				48254CEC1927D8B90018DC55 /* boton_monstruos_465x127.png in Resources */,
 				48254C881927D8B90018DC55 /* signo_menos_azul_69x69.png in Resources */,
+				48816628199E29B400821A71 /* IfearAlertView.xib in Resources */,
 				48254C7F1927D8B90018DC55 /* rotulo_calidad_124x35.png in Resources */,
 				48254CDD1927D8B90018DC55 /* boton_extraterre_ON_465x127.png in Resources */,
 				F342D9AA193CD334000598FD /* buscar_big_ON_270x270.png in Resources */,
@@ -1731,6 +1748,7 @@
 				F3926F7618E2FD3B004A7570 /* EstrenosCollectionViewController.m in Sources */,
 				F360039C199282C70035FB0B /* PuntuacionesPeliculaSearch.m in Sources */,
 				F346D9911948A2F900829E1A /* CriticaUsuarioViewController.m in Sources */,
+				48816629199E29B400821A71 /* IfearAlertView.m in Sources */,
 				F3F927D61897B68E00BE7964 /* MainScene.m in Sources */,
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
