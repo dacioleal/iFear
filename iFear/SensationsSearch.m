@@ -8,17 +8,28 @@
 
 #import "SensationsSearch.h"
 #import "Pelicula.h"
+#import "IfearAlertView.h"
 
 @interface SensationsSearch ()
 {
     NSMutableArray *movies;
     NSMutableDictionary *parameters;
+    IfearAlertView * alert;
 }
 
 @end
 
 @implementation SensationsSearch
+@synthesize associateVC;
 
+-(id)init{
+    self = [super init];
+    
+    if (self) {
+        alert = [IfearAlertView new];
+    }
+    return self;
+}
 - (NSMutableArray *) movies
 {
     if (!movies) {
@@ -134,6 +145,7 @@
 #pragma mark - NSURLSessionDataDelegate
 
 
+// Al recibir los datos
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
     // Se parsea el JSON
@@ -204,8 +216,6 @@
 }
 
 
-
-
 // Al finalizar
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
@@ -229,11 +239,8 @@ didCompleteWithError:(NSError *)error
             
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                //[alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
+                [alert showAlert:associateVC withMessage:@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros"];
                 
-                /////// MODIFICADO////////
-                NSLog(@"La búsqueda no ha obtenido resultados, por favor inténtelo con otros parámetros");
-                /////// ---------- //////
             });
             //            [self retrieveData];
             
@@ -244,11 +251,7 @@ didCompleteWithError:(NSError *)error
         NSLog(@"Error %@",[error userInfo]);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            //[alert showAlert:associateVC withMessage:@"Push button to retry"];
-            
-            /////// MODIFICADO////////
-            NSLog(@"Push button to retry");
-            /////// ---------- //////
+            [alert showAlert:associateVC withMessage:@"Push button to retry"];
         });
     }
     
@@ -257,8 +260,6 @@ didCompleteWithError:(NSError *)error
         
     });
 }
-
-
 
 
 @end
