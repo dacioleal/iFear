@@ -34,7 +34,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationController.navigationBar setHidden:YES];
+
     NSLog(@"Puntuaciones Usuarios: %@", _puntuacionesUsuariosArray);
+    /// Comentarios de prueba de commit en github
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,7 +106,7 @@
         cell.backgroundColor = [[UIColor alloc] initWithRed:154.0/255.0 green:136.0/255.0 blue:127.0/255.0 alpha:1.0];
         
     }
-    
+   
     return cell;
 }
 
