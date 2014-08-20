@@ -217,6 +217,8 @@
 		F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36003A0199295EF0035FB0B /* UserScoreCell.xib */; };
 		F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */ = {isa = PBXBuildFile; fileRef = F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */; };
 		F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */; };
+		F37CE2F319A53B9B003F877E /* boton_asesinatos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */; };
+		F37CE2F519A53BB1003F877E /* boton_asesinatos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */; };
 		F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */; };
 		F37CEB1618FBED0D0085701C /* panel_barras_404x1010.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */; };
 		F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */; };
@@ -528,6 +530,8 @@
 		F36003A0199295EF0035FB0B /* UserScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserScoreCell.xib; sourceTree = "<group>"; };
 		F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casillas_emociones_1008x114.png; sourceTree = "<group>"; };
 		F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad_Storyboard.storyboard; path = iFear/iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinatos_465x127.png; sourceTree = "<group>"; };
+		F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinatos_ON_465x127.png; sourceTree = "<group>"; };
 		F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_izq_rojo_400x560.png; sourceTree = "<group>"; };
 		F37CEB1518FBED0D0085701C /* panel_barras_404x1010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_barras_404x1010.png; sourceTree = "<group>"; };
 		F37CEB1718FBF4A00085701C /* panel_votar_400x284.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_votar_400x284.png; sourceTree = "<group>"; };
@@ -714,6 +718,8 @@
 				48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */,
 				48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */,
 				48254C181927D8B80018DC55 /* boton_asesinos_ON_465x127.png */,
+				F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */,
+				F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */,
 				48254C191927D8B80018DC55 /* boton_brujeria_465x127.png */,
 				48254C1A1927D8B80018DC55 /* boton_brujeria_ON_465x127.png */,
 				48254C1B1927D8B80018DC55 /* boton_casas_enc_465x127.png */,
@@ -1675,6 +1681,7 @@
 				48254C901927D8B90018DC55 /* trozo_barra_terror_50x70.png in Resources */,
 				F30EE4BE18A23AF60040CCDD /* color_arco_exterior.png in Resources */,
 				48254CDC1927D8B90018DC55 /* boton_extraterre_465x127.png in Resources */,
+				F37CE2F319A53B9B003F877E /* boton_asesinatos_465x127.png in Resources */,
 				F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
@@ -1715,6 +1722,7 @@
 				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
 				48254C591927D8B90018DC55 /* buscar_subgenero_OFF_540x48.png in Resources */,
+				F37CE2F519A53BB1003F877E /* boton_asesinatos_ON_465x127.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
 				F342D9B5193CD334000598FD /* menu_big_ON_270x270.png in Resources */,
 				48254CF11927D8B90018DC55 /* boton_sectas_ON_465x127.png in Resources */,
