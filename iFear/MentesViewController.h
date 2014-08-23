@@ -16,4 +16,8 @@
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listMovieTitle;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listIntroText;
 
+- (IBAction)pushProfileButton:(id)sender;
+
+
+
 @end

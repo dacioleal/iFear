@@ -7,6 +7,7 @@
 //
 
 #import "MentesViewController.h"
+#import "ModalMentesOscurasViewController.h"
 
 @interface MentesViewController ()
 
@@ -32,6 +33,7 @@
     [self setStyleAfin];
     [self setStyleLabelDataUser];
     [self setStyleIntroText];
+    [self setModalPresentationStyle:UIModalPresentationCurrentContext];
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,4 +105,10 @@
 
 
 
+
+- (IBAction)pushProfileButton:(id)sender {
+    ModalMentesOscurasViewController * popupVC = [[ModalMentesOscurasViewController alloc]init];
+    
+    [popupVC showProfile:self];
+}
 @end
