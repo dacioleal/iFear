@@ -1728,7 +1728,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es3-sk-p3j">
-                                <rect key="frame" x="55" y="356" width="233" height="64"/>
+                                <rect key="frame" x="291" y="356" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_monstruos_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1737,10 +1737,20 @@
                                     <action selector="pushCategoriesButton:" destination="iYg-nx-vnc" eventType="touchUpInside" id="XrJ-Yj-fQR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="27" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4n-SG-PlQ">
+                                <rect key="frame" x="55" y="356" width="233" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="boton_sobrenatural_465x127.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushCategoriesButton:" destination="iYg-nx-vnc" eventType="touchUpInside" id="qfd-AO-e7o"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="7" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0p-R5-lMe">
                                 <rect key="frame" x="291" y="1" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="boton_asesinos_465x127.png">
+                                <state key="normal" image="boton_asesinatos_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1788,7 +1798,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chY-7L-DNW">
-                                <rect key="frame" x="291" y="356" width="233" height="64"/>
+                                <rect key="frame" x="532" y="356" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_sectas_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1848,7 +1858,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="19" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A11-0b-Zux">
-                                <rect key="frame" x="532" y="356" width="233" height="64"/>
+                                <rect key="frame" x="773" y="356" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_secuela_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1858,7 +1868,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-mw-Vao">
-                                <rect key="frame" x="291" y="427" width="233" height="64"/>
+                                <rect key="frame" x="532" y="427" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_vampiros_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1868,7 +1878,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="20" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-oT-dm8">
-                                <rect key="frame" x="532" y="427" width="233" height="64"/>
+                                <rect key="frame" x="773" y="427" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_zombies_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1928,13 +1938,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="26" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyJ-wQ-F6W">
-                                <rect key="frame" x="771" y="356" width="233" height="64"/>
+                                <rect key="frame" x="55" y="427" width="233" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="boton_serie_465x127.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="pushCategoriesButton:" destination="iYg-nx-vnc" eventType="touchUpInside" id="Vzu-tp-0Jx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="28" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-Cg-49i">
+                                <rect key="frame" x="291" y="427" width="233" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="boton_psicologico_465x127.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushCategoriesButton:" destination="iYg-nx-vnc" eventType="touchUpInside" id="yoi-fi-7gD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1965,6 +1985,8 @@
                         <outlet property="manicomiosButton" destination="OY6-Ir-BYT" id="TVc-GY-0wd"/>
                         <outlet property="metrajeEncontradoButton" destination="OiU-8C-cDb" id="w9K-5Z-Pc8"/>
                         <outlet property="monstruosButton" destination="es3-sk-p3j" id="IB1-1G-JIo"/>
+                        <outlet property="poderesButton" destination="G4n-SG-PlQ" id="cmb-eU-ygd"/>
+                        <outlet property="psicologicoButton" destination="Ykt-Cg-49i" id="SVu-MZ-y8W"/>
                         <outlet property="sciFyButton" destination="Z8e-NS-6mS" id="dkO-s9-CW5"/>
                         <outlet property="sectasButton" destination="chY-7L-DNW" id="hbf-2r-A4q"/>
                         <outlet property="secuelaButton" destination="A11-0b-Zux" id="3jr-Oo-FA9"/>
@@ -1997,6 +2019,8 @@
                         <outletCollection property="listButons" destination="OiU-8C-cDb" id="led-11-48B"/>
                         <outletCollection property="listButons" destination="YyJ-wQ-F6W" id="cjc-sA-ABJ"/>
                         <outletCollection property="listButons" destination="Jjd-mu-zDE" id="PbX-fK-FZH"/>
+                        <outletCollection property="listButons" destination="G4n-SG-PlQ" id="MeA-uP-16A"/>
+                        <outletCollection property="listButons" destination="Ykt-Cg-49i" id="S7s-nk-DPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nE-Mh-inY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2336,7 +2360,7 @@
         <image name="base_estreno_421x1177.png" width="425" height="1177"/>
         <image name="boton_Ci_Fi_465x127.png" width="465" height="127"/>
         <image name="boton_animacion_465x127.png" width="465" height="127"/>
-        <image name="boton_asesinos_465x127.png" width="465" height="127"/>
+        <image name="boton_asesinatos_465x127.png" width="465" height="127"/>
         <image name="boton_brujeria_465x127.png" width="465" height="127"/>
         <image name="boton_buscar.png" width="595" height="231"/>
         <image name="boton_buscar_580x100.png" width="580" height="100"/>
@@ -2364,11 +2388,13 @@
         <image name="boton_opciones.png" width="265" height="84"/>
         <image name="boton_panel_izq_330x102.png" width="330" height="102"/>
         <image name="boton_panel_izq_ON_330x102.png" width="330" height="102"/>
+        <image name="boton_psicologico_465x127.png" width="465" height="127"/>
         <image name="boton_que_es_iFear.png" width="672" height="228"/>
         <image name="boton_realidad_465x127.png" width="465" height="127"/>
         <image name="boton_sectas_465x127.png" width="465" height="127"/>
         <image name="boton_secuela_465x127.png" width="465" height="127"/>
         <image name="boton_serie_465x127.png" width="465" height="127"/>
+        <image name="boton_sobrenatural_465x127.png" width="465" height="127"/>
         <image name="boton_vampiros_465x127.png" width="465" height="127"/>
         <image name="boton_votar_346x156.png" width="346" height="156"/>
         <image name="boton_zombies_465x127.png" width="465" height="127"/>

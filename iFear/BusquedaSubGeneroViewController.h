@@ -49,6 +49,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *comediaButton;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *listButons;
 
+@property (weak, nonatomic) IBOutlet UIButton *poderesButton;
+@property (weak, nonatomic) IBOutlet UIButton *psicologicoButton;
 
 // Método llamado cuando se pulsa algún botón de subgénero
 - (IBAction)pushCategoriesButton:(id)sender;
