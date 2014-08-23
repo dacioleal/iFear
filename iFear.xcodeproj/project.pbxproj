@@ -53,8 +53,6 @@
 		48254C901927D8B90018DC55 /* trozo_barra_terror_50x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254BDE1927D8B80018DC55 /* trozo_barra_terror_50x70.png */; };
 		48254CC61927D8B90018DC55 /* boton_animacion_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C151927D8B80018DC55 /* boton_animacion_465x127.png */; };
 		48254CC71927D8B90018DC55 /* boton_animacion_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */; };
-		48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */; };
-		48254CC91927D8B90018DC55 /* boton_asesinos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C181927D8B80018DC55 /* boton_asesinos_ON_465x127.png */; };
 		48254CCA1927D8B90018DC55 /* boton_brujeria_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C191927D8B80018DC55 /* boton_brujeria_465x127.png */; };
 		48254CCB1927D8B90018DC55 /* boton_brujeria_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C1A1927D8B80018DC55 /* boton_brujeria_ON_465x127.png */; };
 		48254CCC1927D8B90018DC55 /* boton_casas_enc_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48254C1B1927D8B80018DC55 /* boton_casas_enc_465x127.png */; };
@@ -339,8 +337,6 @@
 		48254BDE1927D8B80018DC55 /* trozo_barra_terror_50x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trozo_barra_terror_50x70.png; sourceTree = "<group>"; };
 		48254C151927D8B80018DC55 /* boton_animacion_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_animacion_465x127.png; sourceTree = "<group>"; };
 		48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_animacion_ON_465x127.png; sourceTree = "<group>"; };
-		48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinos_465x127.png; sourceTree = "<group>"; };
-		48254C181927D8B80018DC55 /* boton_asesinos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinos_ON_465x127.png; sourceTree = "<group>"; };
 		48254C191927D8B80018DC55 /* boton_brujeria_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_brujeria_465x127.png; sourceTree = "<group>"; };
 		48254C1A1927D8B80018DC55 /* boton_brujeria_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_brujeria_ON_465x127.png; sourceTree = "<group>"; };
 		48254C1B1927D8B80018DC55 /* boton_casas_enc_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_casas_enc_465x127.png; sourceTree = "<group>"; };
@@ -716,8 +712,6 @@
 			children = (
 				48254C151927D8B80018DC55 /* boton_animacion_465x127.png */,
 				48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */,
-				48254C171927D8B80018DC55 /* boton_asesinos_465x127.png */,
-				48254C181927D8B80018DC55 /* boton_asesinos_ON_465x127.png */,
 				F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */,
 				F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */,
 				48254C191927D8B80018DC55 /* boton_brujeria_465x127.png */,
@@ -1612,7 +1606,6 @@
 				F346D97A19485B1400829E1A /* marco_centralC_1106x1268.png in Resources */,
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F342D9AC193CD334000598FD /* cartelera_big_ON_270x270.png in Resources */,
-				48254CC81927D8B90018DC55 /* boton_asesinos_465x127.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
 				48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */,
 				F342D9B8193CD334000598FD /* sombra_central.png in Resources */,
@@ -1672,7 +1665,6 @@
 				F304102B18B752CC006273F0 /* zombie_05.png in Resources */,
 				48254CEF1927D8B90018DC55 /* boton_realidad_ON_465x127.png in Resources */,
 				48254CE61927D8B90018DC55 /* boton_licantropo_465x127.png in Resources */,
-				48254CC91927D8B90018DC55 /* boton_asesinos_ON_465x127.png in Resources */,
 				48254C8E1927D8B90018DC55 /* trozo_barra_gore_50x70.png in Resources */,
 				F3BF77E5188450CC00818986 /* icono_buscar.png in Resources */,
 				F3E85D5F1880539800EA17E2 /* icono_volver.png in Resources */,
