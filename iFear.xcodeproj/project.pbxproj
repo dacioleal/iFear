@@ -420,9 +420,9 @@
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
 		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
 		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
-		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IfearAlertView.xib; sourceTree = "<group>"; };
+		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IfearAlertView.xib; path = iFear/IfearAlertView.xib; sourceTree = "<group>"; };
 		48816626199E29B400821A71 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
-		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfearAlertView.h; path = iFear/IfearAlertView.h; sourceTree = "<group>"; };
+		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
 		48B8D01819A8AF9300F12E87 /* boton_psicologico_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_psicologico_465x127.png; sourceTree = "<group>"; };
 		48B8D01919A8AF9300F12E87 /* boton_psicologico_ON_465x12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_psicologico_ON_465x12.png; sourceTree = "<group>"; };
 		48B8D01A19A8AF9300F12E87 /* boton_sobrenatural_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_sobrenatural_465x127.png; sourceTree = "<group>"; };
@@ -849,7 +849,7 @@
 		4881662A199E29C300821A71 /* IfearAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				48816625199E29B400821A71 /* IfearAlertView.xib */,
+				48816627199E29B400821A71 /* IfearAlertView.h */,
 				48816626199E29B400821A71 /* IfearAlertView.m */,
 			);
 			name = IfearAlertView;
@@ -1093,7 +1093,7 @@
 			isa = PBXGroup;
 			children = (
 				F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */,
-				48816627199E29B400821A71 /* IfearAlertView.h */,
+				48816625199E29B400821A71 /* IfearAlertView.xib */,
 				F3F927DA1897BC5200BE7964 /* SmokeParticle.sks */,
 				F3F927DB1897BC5200BE7964 /* FireParticle.sks */,
 				F3F927DC1897BC5200BE7964 /* spark.png */,

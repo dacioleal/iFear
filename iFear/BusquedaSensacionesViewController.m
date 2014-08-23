@@ -3,7 +3,7 @@
 //  iFear
 //
 //  Created by José Alberto Martín Falcón on 20/04/14.
-//  Copyright (c) 2014 Dacio Leal Rodriguez. All rights reserved.
+//  Copyright (c) 2014 José Alberto Martín Falcón. All rights reserved.
 //
 
 #import "BusquedaSensacionesViewController.h"
@@ -24,6 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
     }
     return self;
 }
@@ -60,7 +61,7 @@
     [self initCustomSlider:2 withValues:100];
     [self initCustomSlider:3 withValues:100];
     
-   
+    
 }
 
 
@@ -149,17 +150,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
     //UIGraphicsBeginImageContext(newSize);
     // In next line, pass 0.0 to use the current device's pixel scaling factor (and thus account for Retina resolution).
@@ -175,7 +165,6 @@
 {
     CustomIfearSlider *auxSlider =  (CustomIfearSlider *) sender;
     NSUInteger currentValue =  ((int)((auxSlider.currentLeftSegment + 2.5) / 5) * 5);;
-   
     switch (auxSlider.tag) {
         case 1:
             if (currentValue == 0){
@@ -186,7 +175,7 @@
                 self.progressTerrorSlider.value = currentValue;
                 [self setFontAndColor:self.terrorPercent withText: [NSNumber numberWithInteger:currentValue].stringValue];
             }
-           
+            
             [sensationValues setValue:[NSNumber numberWithInt:self.progressTerrorSlider.value] forKey:@"Terror"];
             break;
         case 2:
@@ -225,7 +214,6 @@
             
             break;
     }
-    //NSLog(@"%@",sensationValues);
     [self.delegate getSensationsValues:sensationValues];
 }
 
@@ -235,9 +223,9 @@
 //{
 //    float sliderRange = aSlider.frame.size.width - aSlider.currentThumbImage.size.width;
 //    float sliderOrigin = aSlider.frame.origin.x + (aSlider.currentThumbImage.size.width / 2.0);
-//    
+//
 //    float sliderValueToPixels = (((aSlider.value-aSlider.minimumValue)/(aSlider.maximumValue-aSlider.minimumValue)) * sliderRange) + sliderOrigin;
-//    
+//
 //    return sliderValueToPixels;
 //}
 
@@ -262,11 +250,7 @@
     self.progressCalidadSlider.value = 0;
     
     for (CustomIfearSlider * slider in listCustomSliders) {
-        
-        /// MODIFICADO /////////
-        //[slider resetHandler];
-        
-        
+        [slider resetHandler];
     }
     
     [self setFontAndColor:self.terrorPercent withText: @"0"];
