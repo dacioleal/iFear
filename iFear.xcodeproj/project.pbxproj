@@ -106,6 +106,10 @@
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
 		48816628199E29B400821A71 /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48816625199E29B400821A71 /* IfearAlertView.xib */; };
 		48816629199E29B400821A71 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48816626199E29B400821A71 /* IfearAlertView.m */; };
+		48B8D01C19A8AF9300F12E87 /* boton_psicologico_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B8D01819A8AF9300F12E87 /* boton_psicologico_465x127.png */; };
+		48B8D01D19A8AF9300F12E87 /* boton_psicologico_ON_465x12.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B8D01919A8AF9300F12E87 /* boton_psicologico_ON_465x12.png */; };
+		48B8D01E19A8AF9300F12E87 /* boton_sobrenatural_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B8D01A19A8AF9300F12E87 /* boton_sobrenatural_465x127.png */; };
+		48B8D01F19A8AF9300F12E87 /* boton_sobrenatural_ON_465x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B8D01B19A8AF9300F12E87 /* boton_sobrenatural_ON_465x1.png */; };
 		48DB70AC19433EF900371E10 /* ResultadosBusquedaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */; };
 		48DB70AF19436EB200371E10 /* ResultSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DB70AE19436EB200371E10 /* ResultSearchTableViewCell.m */; };
 		F301FF3E1964675F0068033E /* LadoOscuroTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F301FF3D1964675F0068033E /* LadoOscuroTableViewController.m */; };
@@ -393,6 +397,10 @@
 		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IfearAlertView.xib; sourceTree = "<group>"; };
 		48816626199E29B400821A71 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
+		48B8D01819A8AF9300F12E87 /* boton_psicologico_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_psicologico_465x127.png; sourceTree = "<group>"; };
+		48B8D01919A8AF9300F12E87 /* boton_psicologico_ON_465x12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_psicologico_ON_465x12.png; sourceTree = "<group>"; };
+		48B8D01A19A8AF9300F12E87 /* boton_sobrenatural_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_sobrenatural_465x127.png; sourceTree = "<group>"; };
+		48B8D01B19A8AF9300F12E87 /* boton_sobrenatural_ON_465x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_sobrenatural_ON_465x1.png; sourceTree = "<group>"; };
 		48DB70AA19433EF900371E10 /* ResultadosBusquedaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadosBusquedaViewController.h; sourceTree = "<group>"; };
 		48DB70AB19433EF900371E10 /* ResultadosBusquedaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadosBusquedaViewController.m; sourceTree = "<group>"; };
 		48DB70AD19436EB200371E10 /* ResultSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultSearchTableViewCell.h; sourceTree = "<group>"; };
@@ -710,6 +718,10 @@
 		48254BDF1927D8B80018DC55 /* Sección subgéneros */ = {
 			isa = PBXGroup;
 			children = (
+				48B8D01819A8AF9300F12E87 /* boton_psicologico_465x127.png */,
+				48B8D01919A8AF9300F12E87 /* boton_psicologico_ON_465x12.png */,
+				48B8D01A19A8AF9300F12E87 /* boton_sobrenatural_465x127.png */,
+				48B8D01B19A8AF9300F12E87 /* boton_sobrenatural_ON_465x1.png */,
 				48254C151927D8B80018DC55 /* boton_animacion_465x127.png */,
 				48254C161927D8B80018DC55 /* boton_animacion_ON_465x127.png */,
 				F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */,
@@ -1543,6 +1555,7 @@
 				48254C8B1927D8B90018DC55 /* signo_porcentaje_41x37.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
 				F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */,
+				48B8D01C19A8AF9300F12E87 /* boton_psicologico_465x127.png in Resources */,
 				48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */,
 				F342D9A9193CD334000598FD /* buscar_big_270x270.png in Resources */,
 				F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */,
@@ -1629,6 +1642,7 @@
 				48254CF51927D8B90018DC55 /* boton_serie_ON_465x127.png in Resources */,
 				48254C551927D8B90018DC55 /* barra_busqueda_1810x78.png in Resources */,
 				48254CD01927D8B90018DC55 /* boton_Ci_Fi_465x127.png in Resources */,
+				48B8D01D19A8AF9300F12E87 /* boton_psicologico_ON_465x12.png in Resources */,
 				48254CD71927D8B90018DC55 /* boton_documental_ON_465x127.png in Resources */,
 				F304102918B752CC006273F0 /* zombie_03.png in Resources */,
 				F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */,
@@ -1701,6 +1715,7 @@
 				48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */,
 				48254C581927D8B90018DC55 /* buscar_sensacion_ON_540x48.png in Resources */,
 				F301FF451964886D0068033E /* boton_lado_osc_ON_330x126.png in Resources */,
+				48B8D01E19A8AF9300F12E87 /* boton_sobrenatural_465x127.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
 				F3144A04189AC9560007B9B6 /* entrada_muestra_01.jpg in Resources */,
@@ -1716,6 +1731,7 @@
 				48254C591927D8B90018DC55 /* buscar_subgenero_OFF_540x48.png in Resources */,
 				F37CE2F519A53BB1003F877E /* boton_asesinatos_ON_465x127.png in Resources */,
 				F304101E18B752CC006273F0 /* ahorcado.png in Resources */,
+				48B8D01F19A8AF9300F12E87 /* boton_sobrenatural_ON_465x1.png in Resources */,
 				F342D9B5193CD334000598FD /* menu_big_ON_270x270.png in Resources */,
 				48254CF11927D8B90018DC55 /* boton_sectas_ON_465x127.png in Resources */,
 				F304102618B752CC006273F0 /* punto_de_mira.png in Resources */,
