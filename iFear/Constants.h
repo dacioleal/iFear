@@ -36,4 +36,6 @@ extern NSString * const EXTRATERRESTRES;
 extern NSString * const GIALLO;
 extern NSString * const METRAJE;
 extern NSString * const SERIETV;
+extern NSString * const TERRORPSICOLOGICO;
+extern NSString * const PODERESSOBRENATURALES;
 @end

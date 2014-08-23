@@ -207,12 +207,12 @@
             
             // Poderes Sobrenaturales
         case 27:
-            [self searchInArray:SERIETV];
+            [self searchInArray:PODERESSOBRENATURALES];
             break;
             
             // Terror Psicológico
         case 28:
-            [self searchInArray:SERIETV];
+            [self searchInArray:TERRORPSICOLOGICO];
             break;
     }
     
