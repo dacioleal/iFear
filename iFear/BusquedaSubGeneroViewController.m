@@ -204,6 +204,16 @@
         case 26:
             [self searchInArray:SERIETV];
             break;
+            
+            // Poderes Sobrenaturales
+        case 27:
+            [self searchInArray:SERIETV];
+            break;
+            
+            // Terror Psicológico
+        case 28:
+            [self searchInArray:SERIETV];
+            break;
     }
     
 }
@@ -285,8 +295,8 @@
     [self.monstruosButton setImage:[UIImage imageNamed:@"boton_monstruos_ON_465x127.png"] forState:UIControlStateSelected];
     [self.monstruosButton setImage:[UIImage imageNamed:@"boton_monstruos_465x127.png"] forState:UIControlStateNormal];
     
-    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinos_ON_465x127.png"] forState:UIControlStateSelected];
-    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinos_465x127.png"] forState:UIControlStateNormal];
+    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinatos_ON_465x127.png"] forState:UIControlStateSelected];
+    [self.asesinosSeriesButton setImage:[UIImage imageNamed:@"boton_asesinatos_465x127.png"] forState:UIControlStateNormal];
     
     [self.sciFyButton setImage:[UIImage imageNamed:@"boton_Ci_Fi_ON_465x127.png"] forState:UIControlStateSelected];
     [self.sciFyButton setImage:[UIImage imageNamed:@"boton_Ci_Fi_465x127.png"] forState:UIControlStateNormal];
@@ -345,6 +355,12 @@
     
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_ON_465x127.png"] forState:UIControlStateSelected];
     [self.serieTvButton setImage:[UIImage imageNamed:@"boton_serie_465x127.png"] forState:UIControlStateNormal];
+    
+    [self.poderesButton setImage:[UIImage imageNamed:@"boton_sobrenatural_ON_465x1.png"] forState:UIControlStateSelected];
+    [self.poderesButton setImage:[UIImage imageNamed:@"boton_sobrenatural_465x127.png"] forState:UIControlStateNormal];
+    
+    [self.psicologicoButton setImage:[UIImage imageNamed:@"boton_psicologico_ON_465x12.png"] forState:UIControlStateSelected];
+    [self.psicologicoButton setImage:[UIImage imageNamed:@"boton_psicologico_465x127.png"] forState:UIControlStateNormal];
 }
 
 - (void)showMessage {
