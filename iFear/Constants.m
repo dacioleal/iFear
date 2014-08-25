@@ -36,5 +36,7 @@ NSString * const EXTRATERRESTRES = @"Extraterrestres";
 NSString * const GIALLO = @"Giallo";
 NSString * const METRAJE = @"Metraje encontrado";
 NSString * const SERIETV = @"Serie TV";
+NSString * const TERRORPSICOLOGICO = @"Terror psicológico";
+NSString * const PODERESSOBRENATURALES = @"Poderes sobrenaturales";
 
 @end
