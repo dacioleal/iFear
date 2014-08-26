@@ -15,5 +15,10 @@
 @property (nonatomic, strong) Pelicula *movie;
 @property (nonatomic, strong) NSDictionary *scores;
 
+@property (weak, nonatomic) IBOutlet UILabel *terrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *goreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *calidadLabel;
+@property (weak, nonatomic) IBOutlet UILabel *puntuacionMediaLabel;
 - (IBAction)backPushButton:(UIButton *)sender;
 @end
