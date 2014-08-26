@@ -63,6 +63,10 @@
         NSString *goreString = (NSString *) [_scores valueForKey:@"gore"];
         NSString *humorString = (NSString *) [_scores valueForKey:@"humor"];
         NSString *calidadString = (NSString *) [_scores valueForKey:@"calidad"];
+        terrorString = [terrorString stringByAppendingString:@"\%"];
+        goreString = [goreString stringByAppendingString:@"\%"];
+        humorString = [humorString stringByAppendingString:@"\%"];
+        calidadString = [calidadString stringByAppendingString:@"\%"];
         
         UIColor *textColor = [[UIColor alloc] initWithRed:234.0/255.0 green:185.0/255.0 blue:12.0/255.0 alpha:1.0];
         UIFont *font = [UIFont fontWithName:@"Impact" size:22.0];
