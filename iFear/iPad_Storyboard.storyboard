@@ -1684,11 +1684,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PpJ-dw-FTp" userLabel="View - Opiniones">
-                                <rect key="frame" x="440" y="112" width="408" height="558"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="top_hits" translatesAutoresizingMaskIntoConstraints="NO" id="IN0-ji-cni" userLabel="View - Top hits">
                                 <rect key="frame" x="440" y="112" width="408" height="558"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1740,7 +1735,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="El resplandor (1978)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEO-RD-dNB">
-                                        <rect key="frame" x="80" y="528" width="321" height="21"/>
+                                        <rect key="frame" x="0.0" y="168" width="321" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
@@ -1809,28 +1804,106 @@
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="casilla_impar_000x000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nPQ-01-djq" userLabel="ImageView - Casilla Impar 1">
-                                        <rect key="frame" x="0.0" y="0.0" width="408" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="casilla_impar_000x000.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bul-Vu-UHE" userLabel="ImageView - Casilla Impar 2">
-                                        <rect key="frame" x="0.0" y="290" width="408" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="casilla_par_816x292.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kIU-bM-IG1" userLabel="ImageView - Casilla Par 1">
-                                        <rect key="frame" x="0.0" y="144" width="408" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="casilla_par_816x292.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Tko-Ah-aiy" userLabel="ImageView - Casilla Par 2">
-                                        <rect key="frame" x="0.0" y="435" width="408" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grn-QV-54Q" userLabel="ImageView - CasillaEmociones 1">
-                                        <rect key="frame" x="13" y="8" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PpJ-dw-FTp" userLabel="View - Opiniones">
+                                <rect key="frame" x="440" y="112" width="408" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SWt-97-iYZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="408" height="558"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="eXK-gL-DNm" customClass="MentesOscurasOpinionesCellTableViewCell">
+                                                <rect key="frame" x="0.0" y="22" width="408" height="146"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eXK-gL-DNm" id="Ngf-8A-MVb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="145"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INSIDIOUS: CHAPTER 2 (2013)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXJ-cz-Byc">
+                                                            <rect key="frame" x="10" y="0.0" width="388" height="28"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayo_lado_oscuro_62x80.png" translatesAutoresizingMaskIntoConstraints="NO" id="tjW-Te-8Gg">
+                                                            <rect key="frame" x="10" y="28" width="20" height="25"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLASH:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNg-am-Mye">
+                                                            <rect key="frame" x="34" y="30" width="59" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Un remake que rejuvence el clásico atemporal&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYN-T2-BdC">
+                                                            <rect key="frame" x="101" y="30" width="369" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="casillas_emociones_1008x114.png" translatesAutoresizingMaskIntoConstraints="NO" id="xP5-6Y-gyy">
+                                                            <rect key="frame" x="10" y="59" width="388" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CRÍTICA:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxQ-lA-RZl">
+                                                            <rect key="frame" x="10" y="113" width="72" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(No disponible)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1H-HW-jip">
+                                                            <rect key="frame" x="90" y="113" width="308" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quF-dV-fW8">
+                                                            <rect key="frame" x="52" y="68" width="47" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8C-BW-irL">
+                                                            <rect key="frame" x="152" y="68" width="47" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX4-SF-dEZ">
+                                                            <rect key="frame" x="249" y="68" width="47" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRP-Py-cKN">
+                                                            <rect key="frame" x="351" y="68" width="47" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="lblFlash" destination="GNg-am-Mye" id="7HE-v5-Zgo"/>
+                                                    <outlet property="lblFlashReview" destination="aYN-T2-BdC" id="QiV-IQ-ywT"/>
+                                                    <outlet property="lblMovieTitle" destination="RXJ-cz-Byc" id="RgK-Qj-0j0"/>
+                                                    <outlet property="lblReviewTitle" destination="AxQ-lA-RZl" id="gmE-td-o5e"/>
+                                                    <outlet property="lblReviewUser" destination="N1H-HW-jip" id="kgJ-sB-jWd"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1848,21 +1921,21 @@
                         <outletCollection property="listLabelUserData" destination="qih-nl-hcc" id="jmq-Oj-JKK"/>
                         <outletCollection property="listLabelUserData" destination="1z4-GB-iSz" id="BtZ-to-o9R"/>
                         <outletCollection property="listLabelUserData" destination="zYp-aF-vnI" id="lO6-wp-Lwo"/>
-                        <outletCollection property="listTitleTopHits" destination="ijP-LV-8Oq" id="GHc-b8-DZs"/>
-                        <outletCollection property="listTitleTopHits" destination="cAx-Ua-oKY" id="k9j-Kf-dra"/>
-                        <outletCollection property="listTitleTopHits" destination="0YC-XN-S3d" id="2VL-Zp-mcg"/>
-                        <outletCollection property="listTitleTopHits" destination="MAM-57-drd" id="zj9-Zc-sQF"/>
-                        <outletCollection property="listTitleTopHits" destination="VPw-sA-2Ve" id="dJU-Ec-glE"/>
-                        <outletCollection property="listTitleTopHits" destination="Zhy-PK-Y5N" id="nZb-jx-vD6"/>
-                        <outletCollection property="listLabelTitleTopHits" destination="37z-Fe-kjA" id="QIJ-Xr-uD8"/>
                         <outletCollection property="listLabelTitleTopHits" destination="nIu-fe-Q5F" id="QyK-wb-YFh"/>
-                        <outletCollection property="listLabelTitleTopHits" destination="sY2-pg-Fe1" id="Kjf-o6-dTm"/>
-                        <outletCollection property="listLabelTitleTopHits" destination="EM6-hi-IVQ" id="G0L-Vg-wzb"/>
-                        <outletCollection property="listLabelTitleTopHits" destination="Uoc-al-J8l" id="Xm8-r7-uLT"/>
                         <outletCollection property="listLabelTitleTopHits" destination="sbT-tm-8jF" id="1H9-1P-b9r"/>
                         <outletCollection property="listLabelTitleTopHits" destination="pNQ-i2-rYU" id="bsr-8n-0RP"/>
-                        <outletCollection property="listTitleTopHits" destination="hrN-kL-Wuf" id="FOn-El-6Ey"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="37z-Fe-kjA" id="QIJ-Xr-uD8"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="EM6-hi-IVQ" id="G0L-Vg-wzb"/>
+                        <outletCollection property="listTitleTopHits" destination="Zhy-PK-Y5N" id="nZb-jx-vD6"/>
+                        <outletCollection property="listTitleTopHits" destination="VPw-sA-2Ve" id="dJU-Ec-glE"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="Uoc-al-J8l" id="Xm8-r7-uLT"/>
                         <outletCollection property="listTitleTopHits" destination="hrN-kL-Wuf" id="ibW-YP-Mlk"/>
+                        <outletCollection property="listTitleTopHits" destination="0YC-XN-S3d" id="2VL-Zp-mcg"/>
+                        <outletCollection property="listTitleTopHits" destination="hrN-kL-Wuf" id="FOn-El-6Ey"/>
+                        <outletCollection property="listTitleTopHits" destination="ijP-LV-8Oq" id="GHc-b8-DZs"/>
+                        <outletCollection property="listTitleTopHits" destination="cAx-Ua-oKY" id="k9j-Kf-dra"/>
+                        <outletCollection property="listTitleTopHits" destination="MAM-57-drd" id="zj9-Zc-sQF"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="sY2-pg-Fe1" id="Kjf-o6-dTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9H-dZ-cNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3091,8 +3164,7 @@
         <image name="calavera.png" width="190" height="236"/>
         <image name="cartelera_big_270x270.png" width="270" height="270"/>
         <image name="cartelera_big_ON_270x270.png" width="270" height="270"/>
-        <image name="casilla_impar_000x000.jpg" width="816" height="292"/>
-        <image name="casilla_par_816x292.jpg" width="816" height="292"/>
+        <image name="casillas_emociones_1008x114.png" width="1008" height="114"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cart_busq_2048x1536.jpg" width="2048" height="1536"/>
@@ -3128,6 +3200,7 @@
         <image name="panel_cuchillo_608x1180.png" width="608" height="1180"/>
         <image name="panel_usuario_1624x1300.png" width="1624" height="1300"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
+        <image name="rayo_lado_oscuro_62x80.png" width="62" height="80"/>
         <image name="rotulo_calidad_124x35.png" width="124" height="35"/>
         <image name="rotulo_cartelera_476x134.png" width="476" height="134"/>
         <image name="rotulo_gore_79x35.png" width="79" height="35"/>
