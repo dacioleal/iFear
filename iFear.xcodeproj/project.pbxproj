@@ -117,6 +117,20 @@
 		4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3C194DE5DE00373420 /* rotulo_resultados_534x112.png */; };
 		4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832EE3D194DE5DE00373420 /* sombra_resultados_2020x290.png */; };
 		48348F0519535718005B943E /* ParametersSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 48348F0319535718005B943E /* ParametersSearch.m */; };
+		483DF17519C5E60800701C7E /* ._boton_lado_osc_ON_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16719C5E60800701C7E /* ._boton_lado_osc_ON_330x126.png */; };
+		483DF17619C5E60800701C7E /* ._boton_panel_osc_330x102.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16819C5E60800701C7E /* ._boton_panel_osc_330x102.png */; };
+		483DF17719C5E60800701C7E /* ._boton_votar_osc_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16919C5E60800701C7E /* ._boton_votar_osc_346x156.png */; };
+		483DF17819C5E60800701C7E /* ._casillas_emociones_1008x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16A19C5E60800701C7E /* ._casillas_emociones_1008x114.png */; };
+		483DF17919C5E60800701C7E /* ._flecha_critica_24x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16B19C5E60800701C7E /* ._flecha_critica_24x40.png */; };
+		483DF17A19C5E60800701C7E /* ._fondo_lado_oscuro_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16C19C5E60800701C7E /* ._fondo_lado_oscuro_2048x1536.jpg */; };
+		483DF17B19C5E60800701C7E /* ._rayo_lado_oscuro_62x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16D19C5E60800701C7E /* ._rayo_lado_oscuro_62x80.png */; };
+		483DF17C19C5E60800701C7E /* boton_lado_osc_ON_330x126.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16E19C5E60800701C7E /* boton_lado_osc_ON_330x126.png */; };
+		483DF17D19C5E60800701C7E /* boton_panel_osc_330x102.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF16F19C5E60800701C7E /* boton_panel_osc_330x102.png */; };
+		483DF17E19C5E60800701C7E /* boton_votar_osc_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17019C5E60800701C7E /* boton_votar_osc_346x156.png */; };
+		483DF17F19C5E60800701C7E /* casillas_emociones_1008x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17119C5E60800701C7E /* casillas_emociones_1008x114.png */; };
+		483DF18019C5E60800701C7E /* flecha_critica_24x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17219C5E60800701C7E /* flecha_critica_24x40.png */; };
+		483DF18119C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17319C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg */; };
+		483DF18219C5E60800701C7E /* rayo_lado_oscuro_62x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17419C5E60800701C7E /* rayo_lado_oscuro_62x80.png */; };
 		48816628199E29B400821A71 /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48816625199E29B400821A71 /* IfearAlertView.xib */; };
 		48816629199E29B400821A71 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48816626199E29B400821A71 /* IfearAlertView.m */; };
 		4890F2FC19A8F42D00089740 /* ModalMentesOscurasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4890F2FB19A8F42D00089740 /* ModalMentesOscurasViewController.m */; };
@@ -428,6 +442,20 @@
 		4832EE44194E02A800373420 /* Futura-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Medium.ttf"; sourceTree = "<group>"; };
 		48348F0319535718005B943E /* ParametersSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametersSearch.m; sourceTree = "<group>"; };
 		48348F0419535718005B943E /* ParametersSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametersSearch.h; sourceTree = "<group>"; };
+		483DF16719C5E60800701C7E /* ._boton_lado_osc_ON_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_lado_osc_ON_330x126.png; sourceTree = "<group>"; };
+		483DF16819C5E60800701C7E /* ._boton_panel_osc_330x102.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_panel_osc_330x102.png; sourceTree = "<group>"; };
+		483DF16919C5E60800701C7E /* ._boton_votar_osc_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._boton_votar_osc_346x156.png; sourceTree = "<group>"; };
+		483DF16A19C5E60800701C7E /* ._casillas_emociones_1008x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._casillas_emociones_1008x114.png; sourceTree = "<group>"; };
+		483DF16B19C5E60800701C7E /* ._flecha_critica_24x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._flecha_critica_24x40.png; sourceTree = "<group>"; };
+		483DF16C19C5E60800701C7E /* ._fondo_lado_oscuro_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ._fondo_lado_oscuro_2048x1536.jpg; sourceTree = "<group>"; };
+		483DF16D19C5E60800701C7E /* ._rayo_lado_oscuro_62x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ._rayo_lado_oscuro_62x80.png; sourceTree = "<group>"; };
+		483DF16E19C5E60800701C7E /* boton_lado_osc_ON_330x126.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_lado_osc_ON_330x126.png; sourceTree = "<group>"; };
+		483DF16F19C5E60800701C7E /* boton_panel_osc_330x102.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_panel_osc_330x102.png; sourceTree = "<group>"; };
+		483DF17019C5E60800701C7E /* boton_votar_osc_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_osc_346x156.png; sourceTree = "<group>"; };
+		483DF17119C5E60800701C7E /* casillas_emociones_1008x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casillas_emociones_1008x114.png; sourceTree = "<group>"; };
+		483DF17219C5E60800701C7E /* flecha_critica_24x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flecha_critica_24x40.png; sourceTree = "<group>"; };
+		483DF17319C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_lado_oscuro_2048x1536.jpg; sourceTree = "<group>"; };
+		483DF17419C5E60800701C7E /* rayo_lado_oscuro_62x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rayo_lado_oscuro_62x80.png; sourceTree = "<group>"; };
 		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IfearAlertView.xib; path = iFear/IfearAlertView.xib; sourceTree = "<group>"; };
 		48816626199E29B400821A71 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
@@ -864,6 +892,28 @@
 			name = BusquedasSearch;
 			sourceTree = "<group>";
 		};
+		483DF16619C5E60800701C7E /* el_lado_oscuro */ = {
+			isa = PBXGroup;
+			children = (
+				483DF16719C5E60800701C7E /* ._boton_lado_osc_ON_330x126.png */,
+				483DF16819C5E60800701C7E /* ._boton_panel_osc_330x102.png */,
+				483DF16919C5E60800701C7E /* ._boton_votar_osc_346x156.png */,
+				483DF16A19C5E60800701C7E /* ._casillas_emociones_1008x114.png */,
+				483DF16B19C5E60800701C7E /* ._flecha_critica_24x40.png */,
+				483DF16C19C5E60800701C7E /* ._fondo_lado_oscuro_2048x1536.jpg */,
+				483DF16D19C5E60800701C7E /* ._rayo_lado_oscuro_62x80.png */,
+				483DF16E19C5E60800701C7E /* boton_lado_osc_ON_330x126.png */,
+				483DF16F19C5E60800701C7E /* boton_panel_osc_330x102.png */,
+				483DF17019C5E60800701C7E /* boton_votar_osc_346x156.png */,
+				483DF17119C5E60800701C7E /* casillas_emociones_1008x114.png */,
+				483DF17219C5E60800701C7E /* flecha_critica_24x40.png */,
+				483DF17319C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg */,
+				483DF17419C5E60800701C7E /* rayo_lado_oscuro_62x80.png */,
+			);
+			name = el_lado_oscuro;
+			path = "El lado oscuro";
+			sourceTree = "<group>";
+		};
 		4881662A199E29C300821A71 /* IfearAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1065,6 +1115,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				483DF16619C5E60800701C7E /* el_lado_oscuro */,
 				F3358E2619ACF9E0003F90C8 /* valoracion */,
 				48223C9419A8B0DE00583687 /* mentes_oscuras */,
 				F342D994193CD319000598FD /* queEs */,
@@ -1639,12 +1690,15 @@
 				F3F927E51897DF1400BE7964 /* sonido_antorcha.mp3 in Resources */,
 				48223CAC19A8B0F100583687 /* panel_cuchillo_608x1180.png in Resources */,
 				F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */,
+				483DF18119C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg in Resources */,
 				48223CA419A8B0F100583687 /* boton_opiniones_OFF_390x116.png in Resources */,
 				48254CD51927D8B90018DC55 /* boton_cortomet_ON_465x127.png in Resources */,
+				483DF18019C5E60800701C7E /* flecha_critica_24x40.png in Resources */,
 				F358E29A18E0BDE300F6C934 /* icono_spotlight_80x80.png in Resources */,
 				F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */,
 				48254C851927D8B90018DC55 /* signo_mas_rojo_69x69.png in Resources */,
 				F346D9961948C1B600829E1A /* banda_secciones_2048x134.png in Resources */,
+				483DF17E19C5E60800701C7E /* boton_votar_osc_346x156.png in Resources */,
 				4832EE3F194DE5DE00373420 /* rotulo_resultados_534x112.png in Resources */,
 				48254C8B1927D8B90018DC55 /* signo_porcentaje_41x37.png in Resources */,
 				F304102318B752CC006273F0 /* boton_opciones.png in Resources */,
@@ -1665,6 +1719,7 @@
 				F31449A0189A55920007B9B6 /* fondo_actividad_zombie.jpg in Resources */,
 				F31449FC189ABC890007B9B6 /* arco_exterior_logo.png in Resources */,
 				48254C831927D8B90018DC55 /* signo_mas_amarillo_69x69.png in Resources */,
+				483DF17B19C5E60800701C7E /* ._rayo_lado_oscuro_62x80.png in Resources */,
 				F358E29818E0BDE300F6C934 /* icono_appstore_1024x1024.png in Resources */,
 				48254CD11927D8B90018DC55 /* boton_Ci_Fi_ON_465x127.png in Resources */,
 				48223CAE19A8B0F100583687 /* rotulo_mentes_oscuras_794x1.png in Resources */,
@@ -1692,6 +1747,7 @@
 				4832EE40194DE5DE00373420 /* sombra_resultados_2020x290.png in Resources */,
 				F304102118B752CC006273F0 /* boton_cartelera.png in Resources */,
 				48254CE01927D8B90018DC55 /* boton_fantasmas_465x127.png in Resources */,
+				483DF17719C5E60800701C7E /* ._boton_votar_osc_346x156.png in Resources */,
 				48254CE41927D8B90018DC55 /* boton_jhorror_465x127.png in Resources */,
 				48254CEA1927D8B90018DC55 /* boton_metraje_465x127.png in Resources */,
 				F342D9B2193CD334000598FD /* mentes_osc_big_270x270.png in Resources */,
@@ -1703,6 +1759,8 @@
 				48254CCC1927D8B90018DC55 /* boton_casas_enc_465x127.png in Resources */,
 				48254CE71927D8B90018DC55 /* boton_licantropo_ON_465x127.png in Resources */,
 				F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */,
+				483DF17A19C5E60800701C7E /* ._fondo_lado_oscuro_2048x1536.jpg in Resources */,
+				483DF17919C5E60800701C7E /* ._flecha_critica_24x40.png in Resources */,
 				F3B169B4195C3D220090F565 /* tramo_verde_girado180_47x6.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
 				F3358E2F19ACFA04003F90C8 /* fondo_ficha_valoracion.jpg in Resources */,
@@ -1721,6 +1779,7 @@
 				F392B4D81898176100BAFA21 /* sonido_fondo.mp3 in Resources */,
 				F342D9AC193CD334000598FD /* cartelera_big_ON_270x270.png in Resources */,
 				F3F927DE1897BC5200BE7964 /* FireParticle.sks in Resources */,
+				483DF17C19C5E60800701C7E /* boton_lado_osc_ON_330x126.png in Resources */,
 				48254CF91927D8B90018DC55 /* boton_zombies_ON_465x127.png in Resources */,
 				F342D9B8193CD334000598FD /* sombra_central.png in Resources */,
 				F3BF77E9188450CC00818986 /* icono_menu.png in Resources */,
@@ -1760,6 +1819,7 @@
 				F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */,
 				F3926F7318E2FBD2004A7570 /* base_estreno_421x1177.png in Resources */,
 				F31449FF189ABC890007B9B6 /* cadena_completa.png in Resources */,
+				483DF17D19C5E60800701C7E /* boton_panel_osc_330x102.png in Resources */,
 				F3B169B2195C3D220090F565 /* tramo_azul_girado180_47x6.png in Resources */,
 				48254C7D1927D8B90018DC55 /* icono_terror_136x160.png in Resources */,
 				48223CAA19A8B0F100583687 /* casilla_par_816x292.jpg in Resources */,
@@ -1770,6 +1830,7 @@
 				F342D9B0193CD334000598FD /* mascara_central_1040x1040.png in Resources */,
 				F32D992D187D536F0004D618 /* InfoPlist.strings in Resources */,
 				48254C8A1927D8B90018DC55 /* signo_menos_verde_69x69.png in Resources */,
+				483DF17619C5E60800701C7E /* ._boton_panel_osc_330x102.png in Resources */,
 				F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */,
 				48254CD81927D8B90018DC55 /* boton_enfermedad_465x127.png in Resources */,
 				48223CA219A8B0F100583687 /* base_top_hits_816x1116.png in Resources */,
@@ -1800,6 +1861,7 @@
 				F3358E3019ACFA04003F90C8 /* icono_facebook_86x86.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
+				483DF17819C5E60800701C7E /* ._casillas_emociones_1008x114.png in Resources */,
 				48254CE51927D8B90018DC55 /* boton_jhorror_ON_465x127.png in Resources */,
 				48254CF41927D8B90018DC55 /* boton_serie_465x127.png in Resources */,
 				F397F25418EC2470000D6309 /* icono_cine_197x148.png in Resources */,
@@ -1815,6 +1877,7 @@
 				48254CEC1927D8B90018DC55 /* boton_monstruos_465x127.png in Resources */,
 				48254C881927D8B90018DC55 /* signo_menos_azul_69x69.png in Resources */,
 				48816628199E29B400821A71 /* IfearAlertView.xib in Resources */,
+				483DF18219C5E60800701C7E /* rayo_lado_oscuro_62x80.png in Resources */,
 				48254C7F1927D8B90018DC55 /* rotulo_calidad_124x35.png in Resources */,
 				48254CDD1927D8B90018DC55 /* boton_extraterre_ON_465x127.png in Resources */,
 				F342D9AA193CD334000598FD /* buscar_big_ON_270x270.png in Resources */,
@@ -1822,8 +1885,10 @@
 				48254C821927D8B90018DC55 /* rotulo_terror_116x35.png in Resources */,
 				F32D9938187D53700004D618 /* Images.xcassets in Resources */,
 				48254CF71927D8B90018DC55 /* boton_vampiros_ON_465x127.png in Resources */,
+				483DF17F19C5E60800701C7E /* casillas_emociones_1008x114.png in Resources */,
 				48254C581927D8B90018DC55 /* buscar_sensacion_ON_540x48.png in Resources */,
 				F301FF451964886D0068033E /* boton_lado_osc_ON_330x126.png in Resources */,
+				483DF17519C5E60800701C7E /* ._boton_lado_osc_ON_330x126.png in Resources */,
 				48B8D01E19A8AF9300F12E87 /* boton_sobrenatural_465x127.png in Resources */,
 				F37CEB1818FBF4A00085701C /* panel_votar_400x284.png in Resources */,
 				F3BF77E7188450CC00818986 /* icono_info.png in Resources */,
