@@ -13,5 +13,16 @@
 
 - (void) showProfile: (id) sender;
 - (IBAction)pushReturnButton:(id)sender;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelTitleTopHits;
 
+
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *
+listTitleTopHits;
+@property (weak, nonatomic) IBOutlet UILabel *labelWorstMovieTerror;
+@property (weak, nonatomic) IBOutlet UILabel *titleWorstMovieTerror;
+@property (weak, nonatomic) IBOutlet UILabel *labelUserName;
+
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelUserData;
 @end
