@@ -11,6 +11,7 @@
 #import "CriticasFlashTableViewController.h"
 #import "CriticasUsuariosTableViewController.h"
 #import "LadoOscuroTableViewController.h"
+#import "ValoracionViewController.h"
 #import "Pelicula.h"
 #import "TrailersSearch.h"
 #import "CriticasMediosSearch.h"
@@ -291,6 +292,24 @@
         
     }
     
+}
+
+#pragma mark - Prepare for segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqual: @"goToValoracion"])
+    {
+        if ([segue.destinationViewController respondsToSelector:@selector(setMovie:)]) {
+            [segue.destinationViewController performSelector:@selector(setMovie:) withObject:_movie];
+
+        }
+        
+        if ([segue.destinationViewController respondsToSelector:@selector(setScores:)]) {
+            [segue.destinationViewController performSelector:@selector(setScores:) withObject:puntuacionesMediasDictionary];
+
+        }
+    }
 }
 
 #pragma mark - Personalized Methods

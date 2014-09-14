@@ -184,6 +184,13 @@
 		F32D994C187D53700004D618 /* iFearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F32D994B187D53700004D618 /* iFearTests.m */; };
 		F331BE64193F5ED700AF9902 /* CriticaMedio.m in Sources */ = {isa = PBXBuildFile; fileRef = F331BE63193F5ED700AF9902 /* CriticaMedio.m */; };
 		F332F85318AA99D200A12CEE /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F332F85218AA99D200A12CEE /* PageContentViewController.m */; };
+		F3358E2D19ACFA04003F90C8 /* boton_critica_comp_332x216.png in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2719ACFA04003F90C8 /* boton_critica_comp_332x216.png */; };
+		F3358E2E19ACFA04003F90C8 /* boton_guardar_332x100.png in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2819ACFA04003F90C8 /* boton_guardar_332x100.png */; };
+		F3358E2F19ACFA04003F90C8 /* fondo_ficha_valoracion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2919ACFA04003F90C8 /* fondo_ficha_valoracion.jpg */; };
+		F3358E3019ACFA04003F90C8 /* icono_facebook_86x86.png in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2A19ACFA04003F90C8 /* icono_facebook_86x86.png */; };
+		F3358E3119ACFA04003F90C8 /* icono_google_86x86.png in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2B19ACFA04003F90C8 /* icono_google_86x86.png */; };
+		F3358E3219ACFA04003F90C8 /* icono_twitter_86x86.png in Resources */ = {isa = PBXBuildFile; fileRef = F3358E2C19ACFA04003F90C8 /* icono_twitter_86x86.png */; };
+		F3358E3519ACFD91003F90C8 /* ValoracionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3358E3419ACFD91003F90C8 /* ValoracionViewController.m */; };
 		F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */ = {isa = PBXBuildFile; fileRef = F33D145A18F809E400604463 /* fondo_central_1090x1144.png */; };
 		F33F7494190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */; };
 		F342D9A7193CD334000598FD /* actualidad_big_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F342D995193CD334000598FD /* actualidad_big_270x270.png */; };
@@ -507,6 +514,14 @@
 		F331BE63193F5ED700AF9902 /* CriticaMedio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaMedio.m; sourceTree = "<group>"; };
 		F332F85118AA99D200A12CEE /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		F332F85218AA99D200A12CEE /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F3358E2719ACFA04003F90C8 /* boton_critica_comp_332x216.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_critica_comp_332x216.png; sourceTree = "<group>"; };
+		F3358E2819ACFA04003F90C8 /* boton_guardar_332x100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_guardar_332x100.png; sourceTree = "<group>"; };
+		F3358E2919ACFA04003F90C8 /* fondo_ficha_valoracion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_ficha_valoracion.jpg; sourceTree = "<group>"; };
+		F3358E2A19ACFA04003F90C8 /* icono_facebook_86x86.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_facebook_86x86.png; sourceTree = "<group>"; };
+		F3358E2B19ACFA04003F90C8 /* icono_google_86x86.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_google_86x86.png; sourceTree = "<group>"; };
+		F3358E2C19ACFA04003F90C8 /* icono_twitter_86x86.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icono_twitter_86x86.png; sourceTree = "<group>"; };
+		F3358E3319ACFD91003F90C8 /* ValoracionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValoracionViewController.h; sourceTree = "<group>"; };
+		F3358E3419ACFD91003F90C8 /* ValoracionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValoracionViewController.m; sourceTree = "<group>"; };
 		F33D145A18F809E400604463 /* fondo_central_1090x1144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo_central_1090x1144.png; sourceTree = "<group>"; };
 		F33F7493190E54F3003E07F6 /* fondo_fichas_2048x1536.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_fichas_2048x1536.jpg; sourceTree = "<group>"; };
 		F342D995193CD334000598FD /* actualidad_big_270x270.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actualidad_big_270x270.png; sourceTree = "<group>"; };
@@ -1050,6 +1065,7 @@
 		F321C4361880070500B02097 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3358E2619ACF9E0003F90C8 /* valoracion */,
 				48223C9419A8B0DE00583687 /* mentes_oscuras */,
 				F342D994193CD319000598FD /* queEs */,
 				48254B941927D8B80018DC55 /* Buscar película */,
@@ -1163,6 +1179,7 @@
 				F31CB03618D0774B00E6DF2C /* DetalleViewController */,
 				F3926F7718E2FD62004A7570 /* EstrenosCollectionViewController */,
 				F342D9B9193CD34A000598FD /* QueEsViewController */,
+				F3358E3619ACFD98003F90C8 /* ValoracionViewController */,
 			);
 			path = iFear;
 			sourceTree = "<group>";
@@ -1213,6 +1230,28 @@
 				F332F85218AA99D200A12CEE /* PageContentViewController.m */,
 			);
 			name = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		F3358E2619ACF9E0003F90C8 /* valoracion */ = {
+			isa = PBXGroup;
+			children = (
+				F3358E2719ACFA04003F90C8 /* boton_critica_comp_332x216.png */,
+				F3358E2819ACFA04003F90C8 /* boton_guardar_332x100.png */,
+				F3358E2919ACFA04003F90C8 /* fondo_ficha_valoracion.jpg */,
+				F3358E2A19ACFA04003F90C8 /* icono_facebook_86x86.png */,
+				F3358E2B19ACFA04003F90C8 /* icono_google_86x86.png */,
+				F3358E2C19ACFA04003F90C8 /* icono_twitter_86x86.png */,
+			);
+			name = valoracion;
+			sourceTree = "<group>";
+		};
+		F3358E3619ACFD98003F90C8 /* ValoracionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3358E3319ACFD91003F90C8 /* ValoracionViewController.h */,
+				F3358E3419ACFD91003F90C8 /* ValoracionViewController.m */,
+			);
+			name = ValoracionViewController;
 			sourceTree = "<group>";
 		};
 		F336503018EAAE8A00947CD9 /* MoviesSearch */ = {
@@ -1590,6 +1629,7 @@
 				F358E28618E0271E00F6C934 /* base_cuchillo_2020x348.png in Resources */,
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
+				F3358E2D19ACFA04003F90C8 /* boton_critica_comp_332x216.png in Resources */,
 				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
@@ -1611,6 +1651,7 @@
 				F397F25918EC2493000D6309 /* icono_DVD_estrenos_245x174.png in Resources */,
 				48B8D01C19A8AF9300F12E87 /* boton_psicologico_465x127.png in Resources */,
 				48254CF81927D8B90018DC55 /* boton_zombies_465x127.png in Resources */,
+				F3358E2E19ACFA04003F90C8 /* boton_guardar_332x100.png in Resources */,
 				F342D9A9193CD334000598FD /* buscar_big_270x270.png in Resources */,
 				F33D145B18F809E400604463 /* fondo_central_1090x1144.png in Resources */,
 				48254CE91927D8B90018DC55 /* boton_manicomio_ON_465x127.png in Resources */,
@@ -1654,6 +1695,7 @@
 				48254CE41927D8B90018DC55 /* boton_jhorror_465x127.png in Resources */,
 				48254CEA1927D8B90018DC55 /* boton_metraje_465x127.png in Resources */,
 				F342D9B2193CD334000598FD /* mentes_osc_big_270x270.png in Resources */,
+				F3358E3219ACFA04003F90C8 /* icono_twitter_86x86.png in Resources */,
 				48254CD41927D8B90018DC55 /* boton_cortomet_465x127.png in Resources */,
 				F34C0E3018E4369E0032C1C4 /* icono_spotlight@2x.png in Resources */,
 				F37CEB1C18FC04050085701C /* boton_panel_izq_ON_330x102.png in Resources */,
@@ -1663,6 +1705,7 @@
 				F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */,
 				F3B169B4195C3D220090F565 /* tramo_verde_girado180_47x6.png in Resources */,
 				F3BF77E6188450CC00818986 /* icono_cartelera.png in Resources */,
+				F3358E2F19ACFA04003F90C8 /* fondo_ficha_valoracion.jpg in Resources */,
 				F30EE4BB18A23AF60040CCDD /* efecto_antorchas.png in Resources */,
 				48254C7C1927D8B90018DC55 /* icono_humor_129x136.png in Resources */,
 				48254CE21927D8B90018DC55 /* boton_giallo_465x127.png in Resources */,
@@ -1754,6 +1797,7 @@
 				48254CDC1927D8B90018DC55 /* boton_extraterre_465x127.png in Resources */,
 				F37CE2F319A53B9B003F877E /* boton_asesinatos_465x127.png in Resources */,
 				F3D20D2419645FA4002D6D30 /* fondo_lado_oscuro_2048x1536.jpg in Resources */,
+				F3358E3019ACFA04003F90C8 /* icono_facebook_86x86.png in Resources */,
 				F304102518B752CC006273F0 /* fondo_menu2.jpg in Resources */,
 				48254CCD1927D8B90018DC55 /* boton_casas_enc_ON_465x127.png in Resources */,
 				48254CE51927D8B90018DC55 /* boton_jhorror_ON_465x127.png in Resources */,
@@ -1791,6 +1835,7 @@
 				F304102218B752CC006273F0 /* boton_mentes_oscuras.png in Resources */,
 				48254CC71927D8B90018DC55 /* boton_animacion_ON_465x127.png in Resources */,
 				F3144A01189ABC890007B9B6 /* calavera.png in Resources */,
+				F3358E3119ACFA04003F90C8 /* icono_google_86x86.png in Resources */,
 				F358E29918E0BDE300F6C934 /* icono_settings_58x58.png in Resources */,
 				F358E28818E096BC00F6C934 /* fondo_estrenos_2004x1324.png in Resources */,
 				48254C591927D8B90018DC55 /* buscar_subgenero_OFF_540x48.png in Resources */,
@@ -1846,6 +1891,7 @@
 				F3A68CD818E57ED7008929FA /* MovieCell.m in Sources */,
 				F314498E189A47FC0007B9B6 /* MainViewController.m in Sources */,
 				48254B771927D46D0018DC55 /* SubGenreSearch.m in Sources */,
+				F3358E3519ACFD91003F90C8 /* ValoracionViewController.m in Sources */,
 				F32D992F187D536F0004D618 /* main.m in Sources */,
 				48254B8A1927D4F80018DC55 /* BusquedaSubGeneroViewController.m in Sources */,
 				F342D9BC193CD369000598FD /* QueEsViewController.m in Sources */,

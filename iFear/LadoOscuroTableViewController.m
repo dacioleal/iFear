@@ -36,7 +36,7 @@
     [self.navigationController.navigationBar setHidden:YES];
 
     NSLog(@"Puntuaciones Usuarios: %@", _puntuacionesUsuariosArray);
-    /// Comentarios de prueba de commit en github
+   
 }
 
 - (void)didReceiveMemoryWarning

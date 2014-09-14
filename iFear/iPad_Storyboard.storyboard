@@ -636,6 +636,7 @@
                                         </state>
                                         <connections>
                                             <action selector="rateMoviePushButton:" destination="shG-3t-WQ0" eventType="touchUpInside" id="KHV-Pb-df3"/>
+                                            <segue destination="hjX-kH-56w" kind="modal" identifier="goToValoracion" modalTransitionStyle="coverVertical" id="PCE-H3-vLg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1922,6 +1923,89 @@
             </objects>
             <point key="canvasLocation" x="6525" y="-46"/>
         </scene>
+        <!--Valoracion View Controller-->
+        <scene sceneID="tED-Iu-UOe">
+            <objects>
+                <viewController storyboardIdentifier="valoracionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hjX-kH-56w" customClass="ValoracionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQu-nk-ZFp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZAl-iK-OG9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NTE-mC-zNX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo_ficha_valoracion.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4l5-ec-sRy">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvH-YN-bHO">
+                                <rect key="frame" x="967" y="30" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="icono_volver.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPushButton:" destination="hjX-kH-56w" eventType="touchUpInside" id="QrX-jp-tes"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeC-Bg-a8G">
+                                <rect key="frame" x="40" y="119" width="180" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2q-OL-yAi" userLabel="Label - terrorLabel">
+                                <rect key="frame" x="146" y="533" width="50" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCA-e6-KaO" userLabel="Label - goreLabel">
+                                <rect key="frame" x="146" y="581" width="50" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-HS-0W2" userLabel="Label - humorLabel">
+                                <rect key="frame" x="146" y="630" width="50" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZx-Uf-nJf" userLabel="Label - calidadLabel">
+                                <rect key="frame" x="146" y="678" width="50" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puntuacion media de 999 usuarios" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-ZC-l2u" userLabel="Label - puntuacionMediaLabel">
+                                <rect key="frame" x="40" y="471" width="180" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="calidadLabel" destination="hZx-Uf-nJf" id="ffU-HL-L8I"/>
+                        <outlet property="goreLabel" destination="FCA-e6-KaO" id="yb8-Yy-SR7"/>
+                        <outlet property="humorLabel" destination="bIt-HS-0W2" id="GS0-9n-8SW"/>
+                        <outlet property="movieImageView" destination="FeC-Bg-a8G" id="8y4-Oo-zTQ"/>
+                        <outlet property="puntuacionMediaLabel" destination="E9I-ZC-l2u" id="0WM-xz-jSi"/>
+                        <outlet property="terrorLabel" destination="d2q-OL-yAi" id="d8Z-sz-J4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE4-DP-bar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6317" y="882"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="2kJ-Nu-tSX">
             <objects>
@@ -2973,6 +3057,7 @@
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cart_busq_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_estrenos_2004x1324.png" width="2004" height="1324"/>
+        <image name="fondo_ficha_valoracion.jpg" width="2048" height="1536"/>
         <image name="fondo_fichasC_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_mentes_oscuras_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_menu2.jpg" width="2048" height="1536"/>
