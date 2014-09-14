@@ -26,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     // Se establece un color negro semi-transparene a la vista principal
     self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.6f];
@@ -44,7 +43,7 @@
     m2.minimumRelativeValue = @-10.0;
     UIMotionEffectGroup* g = [UIMotionEffectGroup new];
     g.motionEffects = @[m1,m2];
-    NSLog(@"ENTRA");
+    
     [self.popupView addMotionEffect:g];
     
     [self setStyleTopHits];
@@ -57,20 +56,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
 
 
-// Método para mostrar el alert.
-- (void) showProfile: (id) sender
-{
-    
-    UIViewController * auxVc = (UIViewController *) sender;
-    
-    [auxVc presentViewController:self animated:YES completion:nil];
-}
 
 - (IBAction)pushReturnButton:(id)sender
 {

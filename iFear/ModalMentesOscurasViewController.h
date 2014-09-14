@@ -11,7 +11,6 @@
 @interface ModalMentesOscurasViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *popupView;
 
-- (void) showProfile: (id) sender;
 - (IBAction)pushReturnButton:(id)sender;
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelTitleTopHits;
 
