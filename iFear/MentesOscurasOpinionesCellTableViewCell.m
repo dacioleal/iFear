@@ -10,6 +10,8 @@
 
 @implementation MentesOscurasOpinionesCellTableViewCell
 
+@synthesize lblMovieTitle,lblFlash,lblFlashReview,lblReviewUser,lblReviewTitle, lblTerror,lblGore,lblHumor,lblCalidad;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -30,5 +32,7 @@
 
     // Configure the view for the selected state
 }
+
+
 
 @end

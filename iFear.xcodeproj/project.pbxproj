@@ -132,6 +132,7 @@
 		483DF18119C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17319C5E60800701C7E /* fondo_lado_oscuro_2048x1536.jpg */; };
 		483DF18219C5E60800701C7E /* rayo_lado_oscuro_62x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 483DF17419C5E60800701C7E /* rayo_lado_oscuro_62x80.png */; };
 		483DF18519C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 483DF18419C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.m */; };
+		483DF18819C5EEAA00701C7E /* Opinion.m in Sources */ = {isa = PBXBuildFile; fileRef = 483DF18719C5EEAA00701C7E /* Opinion.m */; };
 		48816628199E29B400821A71 /* IfearAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48816625199E29B400821A71 /* IfearAlertView.xib */; };
 		48816629199E29B400821A71 /* IfearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48816626199E29B400821A71 /* IfearAlertView.m */; };
 		4890F2FC19A8F42D00089740 /* ModalMentesOscurasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4890F2FB19A8F42D00089740 /* ModalMentesOscurasViewController.m */; };
@@ -459,6 +460,8 @@
 		483DF17419C5E60800701C7E /* rayo_lado_oscuro_62x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rayo_lado_oscuro_62x80.png; sourceTree = "<group>"; };
 		483DF18319C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentesOscurasOpinionesCellTableViewCell.h; sourceTree = "<group>"; };
 		483DF18419C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentesOscurasOpinionesCellTableViewCell.m; sourceTree = "<group>"; };
+		483DF18619C5EEAA00701C7E /* Opinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Opinion.h; sourceTree = "<group>"; };
+		483DF18719C5EEAA00701C7E /* Opinion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Opinion.m; sourceTree = "<group>"; };
 		48816625199E29B400821A71 /* IfearAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IfearAlertView.xib; path = iFear/IfearAlertView.xib; sourceTree = "<group>"; };
 		48816626199E29B400821A71 /* IfearAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IfearAlertView.m; sourceTree = "<group>"; };
 		48816627199E29B400821A71 /* IfearAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IfearAlertView.h; sourceTree = "<group>"; };
@@ -1099,6 +1102,8 @@
 				4890F2FB19A8F42D00089740 /* ModalMentesOscurasViewController.m */,
 				483DF18319C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.h */,
 				483DF18419C5EA3000701C7E /* MentesOscurasOpinionesCellTableViewCell.m */,
+				483DF18619C5EEAA00701C7E /* Opinion.h */,
+				483DF18719C5EEAA00701C7E /* Opinion.m */,
 			);
 			name = MentesViewController;
 			sourceTree = "<group>";
@@ -1949,6 +1954,7 @@
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
 				F3278B471959D41F00760B92 /* PuntuacionesMediasSearch.m in Sources */,
+				483DF18819C5EEAA00701C7E /* Opinion.m in Sources */,
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,

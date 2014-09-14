@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModalMentesOscurasViewController : UIViewController
+@interface ModalMentesOscurasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *popupView;
 
 - (IBAction)pushReturnButton:(id)sender;
@@ -24,4 +24,10 @@ listTitleTopHits;
 
 
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelUserData;
+
+@property (weak, nonatomic) IBOutlet UIView *topHitsView;
+@property (weak, nonatomic) IBOutlet UIView *opinionView;
+@property (weak, nonatomic) IBOutlet UITableView *opinionTable;
+- (IBAction)changeView:(id)sender;
+
 @end

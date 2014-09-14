@@ -1670,19 +1670,25 @@
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-Y7-HkG">
-                                <rect key="frame" x="201" y="540" width="195" height="58"/>
+                            <button opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq6-Y7-HkG">
+                                <rect key="frame" x="201" y="541" width="195" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="boton_top_hits_ON_390x116.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeView:" destination="1NO-Iu-h1K" eventType="touchUpInside" id="TRJ-zZ-fh6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-Sd-Hlg">
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-Sd-Hlg">
                                 <rect key="frame" x="201" y="607" width="195" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="boton_opiniones_OFF_390x116.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeView:" destination="1NO-Iu-h1K" eventType="touchUpInside" id="dWT-wM-EHN"/>
+                                </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="top_hits" translatesAutoresizingMaskIntoConstraints="NO" id="IN0-ji-cni" userLabel="View - Top hits">
                                 <rect key="frame" x="440" y="112" width="408" height="558"/>
@@ -1816,7 +1822,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="eXK-gL-DNm" customClass="MentesOscurasOpinionesCellTableViewCell">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="opinionCell" rowHeight="146" id="eXK-gL-DNm" customClass="MentesOscurasOpinionesCellTableViewCell">
                                                 <rect key="frame" x="0.0" y="22" width="408" height="146"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eXK-gL-DNm" id="Ngf-8A-MVb">
@@ -1914,8 +1920,11 @@
                     <connections>
                         <outlet property="labelUserName" destination="1gs-AY-oR1" id="kgF-vc-m0j"/>
                         <outlet property="labelWorstMovieTerror" destination="UzX-Nc-WcD" id="guQ-pd-jmi"/>
+                        <outlet property="opinionTable" destination="SWt-97-iYZ" id="7sl-Le-PYz"/>
+                        <outlet property="opinionView" destination="PpJ-dw-FTp" id="kwG-io-7Ax"/>
                         <outlet property="popupView" destination="MUA-pf-pft" id="fmi-yP-Fay"/>
                         <outlet property="titleWorstMovieTerror" destination="zEO-RD-dNB" id="st0-oS-gcH"/>
+                        <outlet property="topHitsView" destination="IN0-ji-cni" id="IBy-kG-Pd7"/>
                         <outletCollection property="listLabelUserData" destination="CrK-er-9b2" id="ArP-yz-cIx"/>
                         <outletCollection property="listLabelUserData" destination="JDq-rK-G5W" id="sbd-t9-xj3"/>
                         <outletCollection property="listLabelUserData" destination="qih-nl-hcc" id="jmq-Oj-JKK"/>
