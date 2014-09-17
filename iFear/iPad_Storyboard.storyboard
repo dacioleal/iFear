@@ -1965,6 +1965,27 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-Un-A84" userLabel="Button - criticaButton">
+                                <rect key="frame" x="812" y="558" width="166" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="boton_critica_comp_332x216.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="criticaPushButton:" destination="hjX-kH-56w" eventType="touchUpInside" id="Rx2-0B-uhX"/>
+                                    <segue destination="ueu-YL-oPr" kind="modal" modalPresentationStyle="formSheet" modalTransitionStyle="coverVertical" id="kXe-Gz-Ezg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JbZ-zy-h0L" userLabel="Button - guardarButton">
+                                <rect key="frame" x="812" y="674" width="166" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="boton_guardar_332x100.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="guardarPushButton:" destination="hjX-kH-56w" eventType="touchUpInside" id="ZHQ-jW-DzM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2171,6 +2192,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LzN-1J-J93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7932" y="358"/>
+        </scene>
+        <!--Critica Completa View Controller-->
+        <scene sceneID="TUB-QN-WIM">
+            <objects>
+                <viewController id="ueu-YL-oPr" customClass="CriticaCompletaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pGD-bp-1Re"/>
+                        <viewControllerLayoutGuide type="bottom" id="hJh-mG-8hQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kv8-lA-5eK">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-QB-Isi">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Atrás">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPushButton:" destination="ueu-YL-oPr" eventType="touchUpInside" id="flP-Vu-kSn"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Escribe aquí tu crítica completa" translatesAutoresizingMaskIntoConstraints="NO" id="je6-DX-KMd">
+                                <rect key="frame" x="20" y="58" width="500" height="542"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-S3-Rex">
+                                <rect key="frame" x="474" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Listo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYq-au-995" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7535" y="1084"/>
         </scene>
         <!--Critica Usuario View Controller-->
         <scene sceneID="5KZ-NN-uxm">
@@ -2990,6 +3060,7 @@
         <image name="boton_cerrar_390x98.png" width="390" height="98"/>
         <image name="boton_comedia_465x127.png" width="465" height="127"/>
         <image name="boton_cortomet_465x127.png" width="465" height="127"/>
+        <image name="boton_critica_comp_332x216.png" width="332" height="216"/>
         <image name="boton_documental_465x127.png" width="465" height="127"/>
         <image name="boton_enfermedad_465x127.png" width="465" height="127"/>
         <image name="boton_entrar.png" width="843" height="284"/>
@@ -2998,6 +3069,7 @@
         <image name="boton_fake_465x127.png" width="465" height="127"/>
         <image name="boton_fantasmas_465x127.png" width="464" height="127"/>
         <image name="boton_giallo_465x127.png" width="465" height="127"/>
+        <image name="boton_guardar_332x100.png" width="332" height="100"/>
         <image name="boton_jhorror_465x127.png" width="465" height="127"/>
         <image name="boton_lado_osc_ON_330x126.png" width="330" height="126"/>
         <image name="boton_lado_oscuro_330x126.png" width="330" height="126"/>

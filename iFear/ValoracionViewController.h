@@ -21,4 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *calidadLabel;
 @property (weak, nonatomic) IBOutlet UILabel *puntuacionMediaLabel;
 - (IBAction)backPushButton:(UIButton *)sender;
+- (IBAction)criticaPushButton:(UIButton *)sender;
+- (IBAction)guardarPushButton:(UIButton *)sender;
 @end

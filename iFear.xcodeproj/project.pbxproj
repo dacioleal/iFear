@@ -212,6 +212,7 @@
 		F342D9B7193CD334000598FD /* opciones_big_ON_270x270.png in Resources */ = {isa = PBXBuildFile; fileRef = F342D9A5193CD334000598FD /* opciones_big_ON_270x270.png */; };
 		F342D9B8193CD334000598FD /* sombra_central.png in Resources */ = {isa = PBXBuildFile; fileRef = F342D9A6193CD334000598FD /* sombra_central.png */; };
 		F342D9BC193CD369000598FD /* QueEsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F342D9BB193CD369000598FD /* QueEsViewController.m */; };
+		F345C22319C8D2DB00A1949D /* CriticaCompletaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F345C22219C8D2DB00A1949D /* CriticaCompletaViewController.m */; };
 		F346D97A19485B1400829E1A /* marco_centralC_1106x1268.png in Resources */ = {isa = PBXBuildFile; fileRef = F346D97919485B1400829E1A /* marco_centralC_1106x1268.png */; };
 		F346D97F19485B2D00829E1A /* rayo_amarillo_78x98.png in Resources */ = {isa = PBXBuildFile; fileRef = F346D97B19485B2D00829E1A /* rayo_amarillo_78x98.png */; };
 		F346D98019485B2D00829E1A /* rayo_boton_flash_OFF_52x64.png in Resources */ = {isa = PBXBuildFile; fileRef = F346D97C19485B2D00829E1A /* rayo_boton_flash_OFF_52x64.png */; };
@@ -544,6 +545,8 @@
 		F342D9A6193CD334000598FD /* sombra_central.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra_central.png; sourceTree = "<group>"; };
 		F342D9BA193CD369000598FD /* QueEsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueEsViewController.h; sourceTree = "<group>"; };
 		F342D9BB193CD369000598FD /* QueEsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueEsViewController.m; sourceTree = "<group>"; };
+		F345C22119C8D2DB00A1949D /* CriticaCompletaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriticaCompletaViewController.h; sourceTree = "<group>"; };
+		F345C22219C8D2DB00A1949D /* CriticaCompletaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriticaCompletaViewController.m; sourceTree = "<group>"; };
 		F346D97919485B1400829E1A /* marco_centralC_1106x1268.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marco_centralC_1106x1268.png; sourceTree = "<group>"; };
 		F346D97B19485B2D00829E1A /* rayo_amarillo_78x98.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rayo_amarillo_78x98.png; sourceTree = "<group>"; };
 		F346D97C19485B2D00829E1A /* rayo_boton_flash_OFF_52x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rayo_boton_flash_OFF_52x64.png; sourceTree = "<group>"; };
@@ -1250,6 +1253,7 @@
 			children = (
 				F3358E3319ACFD91003F90C8 /* ValoracionViewController.h */,
 				F3358E3419ACFD91003F90C8 /* ValoracionViewController.m */,
+				F345C22419C8D2E700A1949D /* CriticaCompletaViewController */,
 			);
 			name = ValoracionViewController;
 			sourceTree = "<group>";
@@ -1324,6 +1328,15 @@
 				F342D9BB193CD369000598FD /* QueEsViewController.m */,
 			);
 			name = QueEsViewController;
+			sourceTree = "<group>";
+		};
+		F345C22419C8D2E700A1949D /* CriticaCompletaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F345C22119C8D2DB00A1949D /* CriticaCompletaViewController.h */,
+				F345C22219C8D2DB00A1949D /* CriticaCompletaViewController.m */,
+			);
+			name = CriticaCompletaViewController;
 			sourceTree = "<group>";
 		};
 		F346D986194864C900829E1A /* CriticasUsuariosTableViewController */ = {
@@ -1879,6 +1892,7 @@
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
 				F3278B471959D41F00760B92 /* PuntuacionesMediasSearch.m in Sources */,
+				F345C22319C8D2DB00A1949D /* CriticaCompletaViewController.m in Sources */,
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
 				F31CB03518D0774200E6DF2C /* DetalleViewController.m in Sources */,

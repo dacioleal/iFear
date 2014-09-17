@@ -55,6 +55,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)criticaPushButton:(UIButton *)sender {
+}
+
+- (IBAction)guardarPushButton:(UIButton *)sender {
+}
+
 - (void) configureScoreLabels
 {
     if (_scores.count > 0) {
