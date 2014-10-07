@@ -241,6 +241,8 @@
 		F36003A2199295EF0035FB0B /* UserScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36003A0199295EF0035FB0B /* UserScoreCell.xib */; };
 		F36003A419929FB50035FB0B /* casillas_emociones_1008x114.png in Resources */ = {isa = PBXBuildFile; fileRef = F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */; };
 		F3667D0D1986A1960096269A /* iPad_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */; };
+		F372552E19E47820009EFA76 /* Futura-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F372552D19E47820009EFA76 /* Futura-Book.ttf */; };
+		F372552F19E47820009EFA76 /* Futura-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F372552D19E47820009EFA76 /* Futura-Book.ttf */; };
 		F37CE2F319A53B9B003F877E /* boton_asesinatos_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */; };
 		F37CE2F519A53BB1003F877E /* boton_asesinatos_ON_465x127.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */; };
 		F37CEB1418FBD41A0085701C /* panel_izq_rojo_400x560.png in Resources */ = {isa = PBXBuildFile; fileRef = F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */; };
@@ -294,7 +296,6 @@
 		F3FD0514190A537E00A1B516 /* boton_votar_346x156.png in Resources */ = {isa = PBXBuildFile; fileRef = F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */; };
 		F3FEA6BF190EC35300A4F91C /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6BE190EC0F800A4F91C /* Impact.ttf */; };
 		F3FEA6C7190ECA6C00A4F91C /* FuturaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */; };
-		F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -581,6 +582,7 @@
 		F36003A0199295EF0035FB0B /* UserScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserScoreCell.xib; sourceTree = "<group>"; };
 		F36003A319929FB50035FB0B /* casillas_emociones_1008x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casillas_emociones_1008x114.png; sourceTree = "<group>"; };
 		F3667D0C1986A1960096269A /* iPad_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad_Storyboard.storyboard; path = iFear/iPad_Storyboard.storyboard; sourceTree = "<group>"; };
+		F372552D19E47820009EFA76 /* Futura-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Book.ttf"; sourceTree = "<group>"; };
 		F37CE2F219A53B9B003F877E /* boton_asesinatos_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinatos_465x127.png; sourceTree = "<group>"; };
 		F37CE2F419A53BB1003F877E /* boton_asesinatos_ON_465x127.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_asesinatos_ON_465x127.png; sourceTree = "<group>"; };
 		F37CEB1318FBD41A0085701C /* panel_izq_rojo_400x560.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panel_izq_rojo_400x560.png; sourceTree = "<group>"; };
@@ -647,7 +649,6 @@
 		F3FD0513190A537E00A1B516 /* boton_votar_346x156.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boton_votar_346x156.png; sourceTree = "<group>"; };
 		F3FEA6BE190EC0F800A4F91C /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaLight.ttf; sourceTree = "<group>"; };
-		F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura-Book.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1554,9 +1555,9 @@
 			isa = PBXGroup;
 			children = (
 				4832EE44194E02A800373420 /* Futura-Medium.ttf */,
+				F372552D19E47820009EFA76 /* Futura-Book.ttf */,
 				F3FEA6BE190EC0F800A4F91C /* Impact.ttf */,
 				F3FEA6C6190ECA6C00A4F91C /* FuturaLight.ttf */,
-				F3FEA6C8190ECB0B00A4F91C /* Futura-Book.ttf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -1643,6 +1644,7 @@
 				48254C8C1927D8B90018DC55 /* slider_1940x236.png in Resources */,
 				F358E29018E09CC200F6C934 /* triangulo_abajo_96x42.png in Resources */,
 				F3358E2D19ACFA04003F90C8 /* boton_critica_comp_332x216.png in Resources */,
+				F372552E19E47820009EFA76 /* Futura-Book.ttf in Resources */,
 				F3B169B1195C3D220090F565 /* tramo_amarillo_girado180_47x6.png in Resources */,
 				48254CDE1927D8B90018DC55 /* boton_fake_465x127.png in Resources */,
 				48254CDB1927D8B90018DC55 /* boton_exorcismos_ON_465x127.png in Resources */,
@@ -1767,7 +1769,6 @@
 				F34C0E2F18E4369E0032C1C4 /* icono_settings@2x.png in Resources */,
 				48254C5A1927D8B90018DC55 /* buscar_subgenero_ON_540x48.png in Resources */,
 				48254C5D1927D8B90018DC55 /* selector_reparto_318x54.png in Resources */,
-				F3FEA6C9190ECB0B00A4F91C /* Futura-Book.ttf in Resources */,
 				F31449FD189ABC890007B9B6 /* arco_interior.png in Resources */,
 				F304102018B752CC006273F0 /* boton_buscar.png in Resources */,
 				F3D20D2219645E02002D6D30 /* fondo_fichasC_2048x1536.jpg in Resources */,
@@ -1871,6 +1872,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F372552F19E47820009EFA76 /* Futura-Book.ttf in Resources */,
 				F32D994A187D53700004D618 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2057,7 +2059,7 @@
 				GCC_PREFIX_HEADER = "iFear/iFear-Prefix.pch";
 				INFOPLIST_FILE = "iFear/iFear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "54AB3218-CAF2-49E7-A79C-2EC7BD829267";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2073,7 +2075,7 @@
 				GCC_PREFIX_HEADER = "iFear/iFear-Prefix.pch";
 				INFOPLIST_FILE = "iFear/iFear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "54AB3218-CAF2-49E7-A79C-2EC7BD829267";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

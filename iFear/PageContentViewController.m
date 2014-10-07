@@ -126,9 +126,9 @@
             
             titleLabel.attributedText = titleAttributedString;
             
-            font = [UIFont fontWithName:@"Futura-Book" size:16.0];
+            UIFont *font2 = [UIFont fontWithName:@"Futura-Book" size:16.0];
             textColor = [UIColor whiteColor];
-            NSAttributedString *textAttributedString = [[NSAttributedString alloc] initWithString:movie.sinopsis attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: textColor}];
+            NSAttributedString *textAttributedString = [[NSAttributedString alloc] initWithString:movie.sinopsis attributes:@{NSFontAttributeName: font2, NSForegroundColorAttributeName: textColor}];
             
             textView.attributedText = textAttributedString;
             imageView.image = movie.imagen;
