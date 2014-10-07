@@ -1151,17 +1151,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="panel_cuchillo_608x1180.png" translatesAutoresizingMaskIntoConstraints="NO" id="7es-HF-3Nm">
                                 <rect key="frame" x="688" y="173" width="304" height="590"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ1-bI-6nd">
+                            <button opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ1-bI-6nd">
                                 <rect key="frame" x="144" y="688" width="175" height="43"/>
                                 <state key="normal" title="Button" image="boton_perfil_completo_350x8.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushProfileButton:" destination="VBh-ua-CR3" eventType="touchUpInside" id="9bf-Cs-und"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-zy-S7B">
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-zy-S7B">
                                 <rect key="frame" x="473" y="688" width="175" height="43"/>
                                 <state key="normal" title="Button" image="boton_perfil_completo_350x8.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushProfileButton:" destination="VBh-ua-CR3" eventType="touchUpInside" id="K7G-rY-gsy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-2k-i6b">
                                 <rect key="frame" x="800" y="688" width="175" height="43"/>
@@ -1169,7 +1175,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1NO-Iu-h1K" kind="modal" id="XWU-l7-nB7"/>
+                                    <action selector="pushProfileButton:" destination="VBh-ua-CR3" eventType="touchUpInside" id="rLP-2n-cPc"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-oj-dAn">
@@ -1491,12 +1497,18 @@
                                 <state key="normal" backgroundImage="boton_top_hits_ON_390x116.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeView:" destination="1NO-Iu-h1K" eventType="touchUpInside" id="TRJ-zZ-fh6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-Sd-Hlg">
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-Sd-Hlg">
                                 <rect key="frame" x="201" y="607" width="195" height="58"/>
                                 <state key="normal" backgroundImage="boton_opiniones_OFF_390x116.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeView:" destination="1NO-Iu-h1K" eventType="touchUpInside" id="dWT-wM-EHN"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="base_top_hits_816x1116.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCq-qs-XyF">
                                 <rect key="frame" x="437" y="107" width="408" height="558"/>
@@ -1602,7 +1614,33 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="labelUserName" destination="1gs-AY-oR1" id="kgF-vc-m0j"/>
+                        <outlet property="labelWorstMovieTerror" destination="UzX-Nc-WcD" id="guQ-pd-jmi"/>
+                        <outlet property="opinionTable" destination="SWt-97-iYZ" id="7sl-Le-PYz"/>
+                        <outlet property="opinionView" destination="PpJ-dw-FTp" id="kwG-io-7Ax"/>
                         <outlet property="popupView" destination="MUA-pf-pft" id="fmi-yP-Fay"/>
+                        <outlet property="titleWorstMovieTerror" destination="zEO-RD-dNB" id="st0-oS-gcH"/>
+                        <outlet property="topHitsView" destination="IN0-ji-cni" id="IBy-kG-Pd7"/>
+                        <outletCollection property="listLabelUserData" destination="CrK-er-9b2" id="ArP-yz-cIx"/>
+                        <outletCollection property="listLabelUserData" destination="JDq-rK-G5W" id="sbd-t9-xj3"/>
+                        <outletCollection property="listLabelUserData" destination="qih-nl-hcc" id="jmq-Oj-JKK"/>
+                        <outletCollection property="listLabelUserData" destination="1z4-GB-iSz" id="BtZ-to-o9R"/>
+                        <outletCollection property="listLabelUserData" destination="zYp-aF-vnI" id="lO6-wp-Lwo"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="nIu-fe-Q5F" id="QyK-wb-YFh"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="sbT-tm-8jF" id="1H9-1P-b9r"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="pNQ-i2-rYU" id="bsr-8n-0RP"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="37z-Fe-kjA" id="QIJ-Xr-uD8"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="EM6-hi-IVQ" id="G0L-Vg-wzb"/>
+                        <outletCollection property="listTitleTopHits" destination="Zhy-PK-Y5N" id="nZb-jx-vD6"/>
+                        <outletCollection property="listTitleTopHits" destination="VPw-sA-2Ve" id="dJU-Ec-glE"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="Uoc-al-J8l" id="Xm8-r7-uLT"/>
+                        <outletCollection property="listTitleTopHits" destination="hrN-kL-Wuf" id="ibW-YP-Mlk"/>
+                        <outletCollection property="listTitleTopHits" destination="0YC-XN-S3d" id="2VL-Zp-mcg"/>
+                        <outletCollection property="listTitleTopHits" destination="hrN-kL-Wuf" id="FOn-El-6Ey"/>
+                        <outletCollection property="listTitleTopHits" destination="ijP-LV-8Oq" id="GHc-b8-DZs"/>
+                        <outletCollection property="listTitleTopHits" destination="cAx-Ua-oKY" id="k9j-Kf-dra"/>
+                        <outletCollection property="listTitleTopHits" destination="MAM-57-drd" id="zj9-Zc-sQF"/>
+                        <outletCollection property="listLabelTitleTopHits" destination="sY2-pg-Fe1" id="Kjf-o6-dTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9H-dZ-cNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2807,6 +2845,7 @@
         <image name="calavera.png" width="190" height="236"/>
         <image name="cartelera_big_270x270.png" width="270" height="270"/>
         <image name="cartelera_big_ON_270x270.png" width="270" height="270"/>
+        <image name="casillas_emociones_1008x114.png" width="1008" height="114"/>
         <image name="fondo_actividad_zombie.jpg" width="2048" height="1536"/>
         <image name="fondo_buscar_2048x1536.jpg" width="2048" height="1536"/>
         <image name="fondo_cart_busq_2048x1536.jpg" width="2048" height="1536"/>
@@ -2842,6 +2881,7 @@
         <image name="panel_cuchillo_608x1180.png" width="608" height="1180"/>
         <image name="panel_usuario_1624x1300.png" width="1624" height="1300"/>
         <image name="punto_de_mira.png" width="488" height="493"/>
+        <image name="rayo_lado_oscuro_62x80.png" width="62" height="80"/>
         <image name="rotulo_calidad_124x35.png" width="124" height="35"/>
         <image name="rotulo_cartelera_476x134.png" width="476" height="134"/>
         <image name="rotulo_gore_79x35.png" width="79" height="35"/>

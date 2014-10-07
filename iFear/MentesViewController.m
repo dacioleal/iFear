@@ -19,7 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -27,19 +26,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
     [self setStyleUserName];
     [self setStylePercent];
     [self setStyleAfin];
     [self setStyleLabelDataUser];
     [self setStyleIntroText];
+    
+    [[self navigationController] setModalPresentationStyle:UIModalPresentationCurrentContext];
     [self setModalPresentationStyle:UIModalPresentationCurrentContext];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -107,8 +107,9 @@
 
 
 - (IBAction)pushProfileButton:(id)sender {
-    ModalMentesOscurasViewController * popupVC = [[ModalMentesOscurasViewController alloc]init];
     
-    [popupVC showProfile:self];
+    ModalMentesOscurasViewController * popupVC = (ModalMentesOscurasViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"ModalMentesOscuras"];
+    
+    [self presentViewController:popupVC animated:YES completion:nil];
 }
 @end

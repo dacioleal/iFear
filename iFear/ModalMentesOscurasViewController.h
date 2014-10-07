@@ -8,10 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModalMentesOscurasViewController : UIViewController
+@interface ModalMentesOscurasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *popupView;
 
-- (void) showProfile: (id) sender;
 - (IBAction)pushReturnButton:(id)sender;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelTitleTopHits;
+
+
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *
+listTitleTopHits;
+@property (weak, nonatomic) IBOutlet UILabel *labelWorstMovieTerror;
+@property (weak, nonatomic) IBOutlet UILabel *titleWorstMovieTerror;
+@property (weak, nonatomic) IBOutlet UILabel *labelUserName;
+
+
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *listLabelUserData;
+
+@property (weak, nonatomic) IBOutlet UIView *topHitsView;
+@property (weak, nonatomic) IBOutlet UIView *opinionView;
+@property (weak, nonatomic) IBOutlet UITableView *opinionTable;
+- (IBAction)changeView:(id)sender;
 
 @end
