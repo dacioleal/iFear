@@ -1969,6 +1969,7 @@
 				F32D9933187D536F0004D618 /* AppDelegate.m in Sources */,
 				F398C6F51941E062007D56A8 /* CriticaMedioViewController.m in Sources */,
 				F3278B471959D41F00760B92 /* PuntuacionesMediasSearch.m in Sources */,
+				483DF18819C5EEAA00701C7E /* Opinion.m in Sources */,
 				F345C22319C8D2DB00A1949D /* CriticaCompletaViewController.m in Sources */,
 				48254B811927D4F20018DC55 /* CustomIfearSlider.m in Sources */,
 				48254B821927D4F20018DC55 /* BusquedaViewController.m in Sources */,
