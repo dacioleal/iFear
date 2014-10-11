@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="NOX-yb-x9h">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -2122,42 +2121,101 @@
                                 <rect key="frame" x="1" y="0.0" width="553" height="634"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-QB-Isi">
-                                <rect key="frame" x="20" y="20" width="46" height="30"/>
-                                <state key="normal" title="Atrás">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOn-QB-Isi">
+                                <rect key="frame" x="379" y="15" width="46" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Atrás">
+                                            <attributes>
+                                                <color key="NSColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="21" name="Impact"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="backPushButton:" destination="ueu-YL-oPr" eventType="touchUpInside" id="flP-Vu-kSn"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je6-DX-KMd">
-                                <rect key="frame" x="10" y="93" width="533" height="521"/>
-                                <color key="backgroundColor" red="0.93333333333333335" green="0.87450980392156863" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="10" y="105" width="533" height="509"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.74901960784313726" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Escribe aquí tu crítica completa">
                                         <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <color key="NSColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Futura-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="2" paragraphSpacingBefore="2" firstLineHeadIndent="1" defaultTabInterval="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrS-ku-yt6" userLabel="View - reviewTitleView">
+                                <rect key="frame" x="10" y="58" width="533" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-oo-ViD">
+                                        <rect key="frame" x="8" y="8" width="91" height="32"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="TÍTULO:">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="24" name="Futura-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Escribe aquí el título" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Hc-Bx-hxj" userLabel="titleTextField">
+                                        <rect key="frame" x="107" y="9" width="418" height="30"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66274509803921566" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZN-mb-Qes">
+                                <rect key="frame" x="25" y="12" width="229" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Escribe tu crítica">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="32" name="Impact"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-S3-Rex">
-                                <rect key="frame" x="474" y="20" width="46" height="30"/>
-                                <state key="normal" title="Listo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-S3-Rex">
+                                <rect key="frame" x="480" y="15" width="46" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Listo">
+                                            <attributes>
+                                                <color key="NSColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="21" name="Impact"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="donePushButton:" destination="ueu-YL-oPr" eventType="touchUpInside" id="mOv-F9-Pb0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.27843137254901962" green="0.015686274509803921" blue="0.015686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="553" height="634"/>
+                    <connections>
+                        <outlet property="reviewTextView" destination="je6-DX-KMd" id="mcG-5u-VQ1"/>
+                        <outlet property="titleTextField" destination="5Hc-Bx-hxj" id="wjw-7n-TD9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYq-au-995" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

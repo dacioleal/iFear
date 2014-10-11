@@ -27,6 +27,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
+    [defaultCenter addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,4 +58,44 @@
 - (IBAction)backPushButton:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)donePushButton:(UIButton *)sender {
+}
+
+- (void)keyboardWasShown:(NSNotification*)notification {
+    NSDictionary* info = [notification userInfo];
+    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    self.reviewTextView.contentInset = UIEdgeInsetsMake(0, 0, keyboardSize.height - 80, 0);
+    self.reviewTextView.scrollIndicatorInsets = self.reviewTextView.contentInset;
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)notification {
+    self.reviewTextView.contentInset = UIEdgeInsetsZero;
+    self.reviewTextView.scrollIndicatorInsets = UIEdgeInsetsZero;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
